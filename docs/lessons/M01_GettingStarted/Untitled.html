@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.262">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Programming for Data Science – untitled</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../references.html" rel="next">
+<link href="../../index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Programming for Data Science</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Programming for Data Science</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../lessons/M01_GettingStarted/Untitled.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Untitled.html</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">references.html</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"/Users/rca2t1/Downloads/DS 5100 Code Level Survey.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>Start time</th>
+      <th>Completion time</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Total points</th>
+      <th>Quiz feedback</th>
+      <th>What kind of degree do you have? Check all that apply</th>
+      <th>Points - What kind of degree do you have? Check all that apply</th>
+      <th>Feedback - What kind of degree do you have? Check all that apply</th>
+      <th>...</th>
+      <th>Feedback - What is your operating system of choice?</th>
+      <th>Do you enjoy writing code?</th>
+      <th>Feedback - Do you enjoy writing code?</th>
+      <th>Points - Do you enjoy writing code?</th>
+      <th>Enter your GitHub user ID</th>
+      <th>Feedback - Enter your GitHub user ID</th>
+      <th>Points - Enter your GitHub user ID</th>
+      <th>JavaScript</th>
+      <th>Feedback - JavaScript</th>
+      <th>Points - JavaScript</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1/17/23 11:59:52</td>
+      <td>1/17/23 12:03:05</td>
+      <td>sme5qyx@virginia.edu</td>
+      <td>Sarah Elmasry</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Not sure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>sasa793</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1/17/23 15:09:46</td>
+      <td>1/17/23 15:13:26</td>
+      <td>xkr9pe@virginia.edu</td>
+      <td>Lorinda Couch</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Zentater  (https://github.com/zentater)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>1/17/23 20:13:41</td>
+      <td>1/17/23 20:14:41</td>
+      <td>bdr6qz@virginia.edu</td>
+      <td>Wyatt Scott</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>WD-Scott</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>1/17/23 20:21:18</td>
+      <td>1/17/23 20:23:04</td>
+      <td>pah4rw@virginia.edu</td>
+      <td>Brett Genz</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>brettgenz</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>1/18/23 11:21:03</td>
+      <td>1/18/23 11:23:15</td>
+      <td>ymb7fb@virginia.edu</td>
+      <td>Brittny Hopwood</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Natural Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>brittnyhopwood</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>1/18/23 13:41:01</td>
+      <td>1/18/23 13:42:14</td>
+      <td>atr8ec@virginia.edu</td>
+      <td>Austin Rivera</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Engineering;Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>austin-t-rivera</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>1/18/23 14:25:14</td>
+      <td>1/18/23 14:26:17</td>
+      <td>zsk4gm@virginia.edu</td>
+      <td>Hallie Parten</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Not sure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>hparten</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>1/18/23 14:33:41</td>
+      <td>1/18/23 14:36:44</td>
+      <td>nph4zk@virginia.edu</td>
+      <td>Nick Cagliuso</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>n-cagliuso</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>1/18/23 18:43:00</td>
+      <td>1/18/23 18:43:38</td>
+      <td>jyw8jcu@virginia.edu</td>
+      <td>Jack Warner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Computer Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Not sure</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>jackywarner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>1/18/23 23:18:22</td>
+      <td>1/18/23 23:20:55</td>
+      <td>fju4ek@virginia.edu</td>
+      <td>Naomi Ohashi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>ohashin2G</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>1/21/23 14:35:55</td>
+      <td>1/21/23 14:36:47</td>
+      <td>hek3bm@virginia.edu</td>
+      <td>Hannah Koizumi</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Humanities;Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://github.com/HANNAHKOIZUMI</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>1/21/23 15:18:46</td>
+      <td>1/21/23 22:55:16</td>
+      <td>tzs5dd@virginia.edu</td>
+      <td>Ran Gao</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>#123283670</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>1/22/23 11:05:54</td>
+      <td>1/22/23 11:07:26</td>
+      <td>ahg8ee@virginia.edu</td>
+      <td>Will Struckmeyer</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Natural Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>1/22/23 18:00:22</td>
+      <td>1/22/23 18:01:38</td>
+      <td>bab3fq@virginia.edu</td>
+      <td>Brian Blancato</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Math;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>BrianBlancato</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>1/22/23 18:24:27</td>
+      <td>1/22/23 18:32:12</td>
+      <td>vat5jy@virginia.edu</td>
+      <td>Victor Teelucksingh</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Math;Unlisted Non-STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>VTGH23</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Inter-mediate</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>1/22/23 21:28:31</td>
+      <td>1/22/23 21:37:05</td>
+      <td>ces9ra@virginia.edu</td>
+      <td>Catherine Strawley</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>cestrawley</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>1/22/23 22:00:08</td>
+      <td>1/22/23 22:07:09</td>
+      <td>ccm4dz@virginia.edu</td>
+      <td>Tom Flynn</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Flynn-stagram</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>1/23/23 9:34:32</td>
+      <td>1/23/23 9:37:06</td>
+      <td>sf8dc@virginia.edu</td>
+      <td>Shawn Feng</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Engineering;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>zeitgeistf</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Inter-mediate</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>1/23/23 15:45:41</td>
+      <td>1/23/23 15:53:36</td>
+      <td>bws5dk@virginia.edu</td>
+      <td>Rishi Sharma</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Engineering;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>122746839</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>1/23/23 16:36:42</td>
+      <td>1/23/23 16:43:08</td>
+      <td>adk8cy@virginia.edu</td>
+      <td>Aveline Knoop</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Humanities;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://github.com/aveline-k</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>1/23/23 18:47:33</td>
+      <td>1/23/23 18:48:28</td>
+      <td>swm5pc@virginia.edu</td>
+      <td>Christa Lesher</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Math;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22</td>
+      <td>1/23/23 20:59:13</td>
+      <td>1/23/23 21:00:00</td>
+      <td>ml4sg@virginia.edu</td>
+      <td>Maria Liu</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>https://github.com/Liu-Maria</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23</td>
+      <td>1/23/23 21:58:22</td>
+      <td>1/23/23 22:00:09</td>
+      <td>zxr5fv@virginia.edu</td>
+      <td>Michael Macfarlan</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Unlisted STEM;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>mdmacfar</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24</td>
+      <td>1/24/23 12:14:05</td>
+      <td>1/24/23 12:18:28</td>
+      <td>elk7ed@virginia.edu</td>
+      <td>Eashan Kaw</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Computer Science;Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>No</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>@elkaw</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25</td>
+      <td>1/24/23 16:22:52</td>
+      <td>1/24/23 16:23:49</td>
+      <td>zxv6mt@virginia.edu</td>
+      <td>Isidro Pride</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Math;Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Isidro5004</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26</td>
+      <td>1/24/23 16:56:00</td>
+      <td>1/24/23 16:56:52</td>
+      <td>ays8ms@virginia.edu</td>
+      <td>Alyssa Samuel</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Social Science;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Alyssa-Samuel</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27</td>
+      <td>1/24/23 18:02:21</td>
+      <td>1/24/23 18:07:07</td>
+      <td>aap3uc@virginia.edu</td>
+      <td>Sophia Williams</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Math;</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>Yes</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>swilli21</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Beginner</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>27 rows × 42 columns</p>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bg <span class="op">=</span> pd.Series(<span class="st">"Engineering;Unlisted Non-STEM;Social Science;Social Science;Unlisted Non-STEM;Computer Science;Unlisted Non-STEM;Humanities;Unlisted Non-STEM;Unlisted Non-STEM;Natural Science;Math;Math;Unlisted Non-STEM;Social Science;Unlisted STEM;Engineering;Engineering;Humanities;Math;Unlisted STEM;Unlisted STEM;Computer Science;Social Science;Math;Social Science;Social Science;Math"</span>.split(<span class="st">";"</span>)).value_counts().to_frame(<span class="st">'n'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bg.index.name <span class="op">=</span> <span class="st">'field'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bg <span class="co">#.plot.pie()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>n</th>
+    </tr>
+    <tr>
+      <th>field</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Unlisted Non-STEM</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Social Science</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Math</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Engineering</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Unlisted STEM</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Computer Science</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Humanities</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Natural Science</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bg[<span class="st">'cat'</span>] <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>bg.reset_index().set_index([<span class="st">'field'</span>, <span class="st">'cat'</span>]).unstack().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<pre><code>   cat
+n  0      14.0
+   1      14.0
+dtype: float64</code></pre>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../references.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">references.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

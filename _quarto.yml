@@ -9,6 +9,7 @@ book:
   date: "05/08/2021"
   chapters:
     - index.qmd
+    - lessons/M01_GettingStarted/Untitled.ipynb
     - references.qmd
 
 format:
