@@ -11,9 +11,38 @@ book:
     - part: "Introduction"
       chapters:
         - index.qmd
-    - part: "Getting Started"  
+    - part: "M01 Getting Started"  
       chapters:  
-        - lessons/M01_GettingStarted/Untitled.ipynb
+        - lessons/M01_GettingStarted/M01_Lesson.qmd
+        - lessons/M01_GettingStarted/M01_Activity_GitHub.qmd
+        # - lessons/M01_GettingStarted/Untitled.ipynb
+    # - part: "M02 Introducing Python"
+    #   chapters:
+    # - part: "M03 Python Control Structures"
+    #   chapters:
+    # - part: "M04 Python Functions"
+    #   chapters:
+    # - part: "M05 Numeric Python (NumPy)"
+    #   chapters:
+    # - part: "M06 Python Pandas"
+    #   chapters:
+    # - part: "M07 Python Classes"
+    #   chapters:
+    # - part: "M08 Python Testing"
+    #   chapters:
+    # - part: "M09 Python Modules"
+    #   chapters:
+    # - part: "M10 R Basics"
+    #   chapters:
+    # - part: "M11 R Tidyverse"
+    #   chapters:
+    # - part: "M12 R Visualization"
+    #   chapters:
+    # - part: "M13 Project Management"
+    #   chapters:
+    # # - part: "M14 Conclusion"
+      # chapters:
+      
     - part: "Appendices"
       chapters:
         - references.qmd

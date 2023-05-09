@@ -1,0 +1,31 @@
+---
+title: "M01 Lesson"
+---
+
+# Preparation
+
+During the technical orientation, you set up a GitHub account.
+
+You also spent a little time browsing a sample repository, which you may wish to revisit:
+
+https://github.com/UVADS/orientation-technical
+
+You also should be able check off the following boxes:
+
+- [ ] Understand the difference between Git and GitHub.
+- [ ] Understand the purpose of Git and Github for data science work.
+- [ ] Ensure Git is installed on your computer.
+- [ ] Understand how to find a repository on GitHub.
+
+# Discussion 
+
+- Welcome! Introductions.
+- Review SurveyLinks to an external site.
+- Review Syllabus (if questions)
+- Review setup, etc.:
+    - [VPN](https://in.virginia.edu/vpn) &mdash; use UVA Anywhere
+    - O'Reilly
+    - Canvas site and docs
+    - Rivanna access and file system
+- Questions regarding readings, etc.
+- In-class activity (see next item in module)
