@@ -215,10 +215,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link active" data-scroll-target="#git-and-github"><span class="toc-section-number">4</span>  Git and GitHub</a></li>
-  <li><a href="#using-git-and-github-together" id="toc-using-git-and-github-together" class="nav-link" data-scroll-target="#using-git-and-github-together"><span class="toc-section-number">5</span>  Using Git and GitHub Together</a></li>
-  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity"><span class="toc-section-number">6</span>  In-Class Activity</a></li>
-  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward"><span class="toc-section-number">7</span>  Going Forward</a></li>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link active" data-scroll-target="#git-and-github"><span class="toc-section-number">3.1</span>  Git and GitHub</a></li>
+  <li><a href="#using-git-and-github-together" id="toc-using-git-and-github-together" class="nav-link" data-scroll-target="#using-git-and-github-together"><span class="toc-section-number">3.2</span>  Using Git and GitHub Together</a></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity"><span class="toc-section-number">3.3</span>  In-Class Activity</a></li>
+  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward"><span class="toc-section-number">3.4</span>  Going Forward</a></li>
   </ul>
 </nav>
     </div>
@@ -242,8 +242,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="git-and-github" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Git and GitHub</h1>
+<section id="git-and-github" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="git-and-github"><span class="header-section-number">3.1</span> Git and GitHub</h2>
 <p>Git and GitHub are two tools that work together, but it is important to understand what each does and how they are different to each other.</p>
 <p>Here are some basic things to know:</p>
 <ol type="1">
@@ -254,8 +254,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Git does not have a fork command. GitHub (and other hosting services such as GitLab) have added this command as a convenient way to copy repositories.</li>
 </ol>
 </section>
-<section id="using-git-and-github-together" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Using Git and GitHub Together</h1>
+<section id="using-git-and-github-together" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="using-git-and-github-together"><span class="header-section-number">3.2</span> Using Git and GitHub Together</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://www.tomasbeuzen.com/post/git-fork-branch-pull/image_2.png" class="img-fluid figure-img"></p>
@@ -315,17 +315,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<blockquote class="blockquote">
-<p>Note: This is not the only pattern to use with Git. Here is another — <a href="https://www.tomasbeuzen.com/post/git-fork-branch-pull/">the Git Fork-Branch-Pull Workflow</a></p>
-</blockquote>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is not the only pattern to use with Git. Here is another — <a href="https://www.tomasbeuzen.com/post/git-fork-branch-pull/">the Git Fork-Branch-Pull Workflow</a></p>
+</div>
+</div>
 <p>Here is a visualization of the process:</p>
-<p><img src="https://canvas.its.virginia.edu/courses/58396/files/1005744/preview.png" class="img-fluid" alt="Diagram of common git workflow"> Diagram of common git workflow</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://canvas.its.virginia.edu/courses/58396/files/1005744/preview.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Diagram of common git workflow</figcaption><p></p>
+</figure>
+</div>
 <p>In this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.</p>
 <p>Note also that the here “Remote workstation” may be confusing; it means remote relative to your laptop, e.g.&nbsp;Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo.</p>
 <hr>
 </section>
-<section id="in-class-activity" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> In-Class Activity</h1>
+<section id="in-class-activity" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="in-class-activity"><span class="header-section-number">3.3</span> In-Class Activity</h2>
 <p>Let’s try this now with our course repo. Be sure you are inside the course directory we created earlier. Also, we assume you have already created a GitHub account.</p>
 <p><strong><em>Fork</em> the course GitHub hosted repository (“repo”) to your GitHub account.</strong></p>
 <p>Go to https://github.com/ontoligent/DS5100-2023-07-R in your web browser.</p>
@@ -417,8 +432,8 @@ Danger
 <p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
 <hr>
 </section>
-<section id="going-forward" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Going Forward</h1>
+<section id="going-forward" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="going-forward"><span class="header-section-number">3.4</span> Going Forward</h2>
 <p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
 <p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
 <ol type="1">

@@ -2,7 +2,7 @@
 title: "Activity: Using Git and GitHub"
 ---
 
-# Git and GitHub
+## Git and GitHub
 
 Git and GitHub are two tools that work together, but it is important to understand what each does and how they are different to each other.
 
@@ -14,7 +14,7 @@ Here are some basic things to know:
 4. GitHub builds on top of Git and adds some functionality to it, while Git can interact with GitHub through actions like cloning, pushing, and pulling. However, Git does not require GitHub to function.
 5. Git does not have a fork command. GitHub (and other hosting services such as GitLab) have added this command as a convenient way to copy repositories. 
 
-# Using Git and GitHub Together
+## Using Git and GitHub Together
 
 ![Alt text](https://www.tomasbeuzen.com/post/git-fork-branch-pull/image_2.png)
 
@@ -33,12 +33,13 @@ A basic series of actions one continually makes with Git are the following:
 | **Pull Request**	| This is a request made to the owner of the original repo to pull in the changes you've made to your forked copy.	| This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests)\ ![](https://canvas.its.virginia.edu/courses/58396/files/648662/preview). |
 | **Fetch Upstream** | This refreshes the content of your forked repo with the content from the original repo. | This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).\ ![Diagram of sync fork button on GitHub](https://canvas.its.virginia.edu/courses/58396/files/648663/preview) | 
 
-> Note: This is not the only pattern to use with Git. Here is another — [the Git Fork-Branch-Pull Workflow](https://www.tomasbeuzen.com/post/git-fork-branch-pull/)
+::: {.callout-note}
+This is not the only pattern to use with Git. Here is another — [the Git Fork-Branch-Pull Workflow](https://www.tomasbeuzen.com/post/git-fork-branch-pull/)
+:::
 
 Here is a visualization of the process:
 
 ![Diagram of common git workflow](https://canvas.its.virginia.edu/courses/58396/files/1005744/preview)
-Diagram of common git workflow
 
 In this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.
 
@@ -46,7 +47,7 @@ Note also that the here "Remote workstation" may be confusing; it means remote r
 
 ----
 
-# In-Class Activity
+## In-Class Activity
 
 Let's try this now with our course repo. Be sure you are inside the course directory we created earlier. Also, we assume you have already created a GitHub account.
 
@@ -154,7 +155,7 @@ Now the ball is in the instructor's court to merge the request with the original
 
 ----
 
-# Going Forward
+## Going Forward
 
 During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.  
 
