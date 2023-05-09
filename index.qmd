@@ -1,3 +1,13 @@
 ## Preface
 
-Welcome to DS 5100 Programming for Data Science!
+Welcome to Programming for Data Science, a collection of materials designed to support the course DS 5100 in the Data Science curriculum at UVA. 
+
+In this course, you will develop skills in Python and R Programming, as well as GitHub. 
+
+The objective of this course is to introduce essential programming concepts, structures, and techniques. 
+
+You will gain confidence in not only reading code, but learning what it means to write good quality code. 
+
+Additionally, essential and complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization. 
+
+This course is project based, consisting of a semester project and final project presentations.

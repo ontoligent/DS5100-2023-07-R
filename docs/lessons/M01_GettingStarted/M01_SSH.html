@@ -158,9 +158,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="toc-section-number">3.1</span>  Overview</a></li>
-  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps"><span class="toc-section-number">3.2</span>  Steps</a></li>
-  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video"><span class="toc-section-number">3.3</span>  <strong>Video</strong></a></li>
-  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources"><span class="toc-section-number">3.4</span>  <strong>Sources</strong></a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps"><span class="toc-section-number">3.2</span>  Steps</a>
+  <ul class="collapse">
+  <li><a href="#part-a" id="toc-part-a" class="nav-link" data-scroll-target="#part-a"><span class="toc-section-number">3.2.1</span>  Part A</a></li>
+  <li><a href="#part-b" id="toc-part-b" class="nav-link" data-scroll-target="#part-b"><span class="toc-section-number">3.2.2</span>  Part B</a></li>
+  </ul></li>
+  <li><a href="#information-sources" id="toc-information-sources" class="nav-link" data-scroll-target="#information-sources"><span class="toc-section-number">3.3</span>  Information Sources</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +199,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="steps" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="steps"><span class="header-section-number">3.2</span> Steps</h2>
-<p><strong>Part A: On your local machine</strong></p>
+<section id="part-a" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="part-a"><span class="header-section-number">3.2.1</span> Part A</h3>
+<p><strong>On your local machine</strong></p>
 <ol type="1">
 <li>Get to the command line (i.e.&nbsp;the shell).
 <ol type="1">
@@ -208,29 +213,32 @@ ul.task-list li input[type="checkbox"] {
 <li>Generate the key.</li>
 </ol>
 <ul>
-<li>Enter: <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></li>
+<li>Enter: <code>ssh-keygen -t ed25519 -C "your_email_id@example.com"</code></li>
 <li>Be sure to use the email address associated with your GitHub account in the above command.</li>
 </ul>
 <ol start="4" type="1">
-<li><p>At the prompt, type in a secure passphrase</p>
+<li>At the prompt, type in a secure passphrase
 <ul>
 <li>You don't have to do this, but it is advised.</li>
 <li>Create a memorable sentence.</li>
 <li>A good passphrase should have at least 15, preferably 20 characters and be difficult to guess. It should contain upper case letters, lower case letters, digits, and preferably at least one punctuation character.</li>
 </ul></li>
-<li><p>Add the key to <code>ssh-agent</code>.</p>
+<li>Add the key to <code>ssh-agent</code>.
 <ol type="1">
-<li><p>Enter: <code>eval "$(ssh-agent -s)"</code></p></li>
-<li><p>Enter: <code>ssh-add ~/.ssh/id_ed25519</code></p></li>
+<li>Enter: <code>eval "$(ssh-agent -s)"</code></li>
+<li>Enter: <code>ssh-add ~/.ssh/id_ed25519</code></li>
 </ol></li>
-<li><p>If you're using macOS Sierra 10.12.2 or later, you will need to modify your <code>~/.ssh/config</code> file to automatically load keys into the ssh-agent and store passphrases in your keychain. Follow the instructions <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent">here</a> (at step 2).</p></li>
+<li>If you're using macOS Sierra 10.12.2 or later, you will need to modify your <code>~/.ssh/config</code> file to automatically load keys into the ssh-agent and store passphrases in your keychain. Follow the instructions <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent">here</a> (at step 2).</li>
 </ol>
-<p><strong>Part B: On your GitHub account</strong></p>
+</section>
+<section id="part-b" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="part-b"><span class="header-section-number">3.2.2</span> Part B</h3>
+<p><strong>On your GitHub account</strong></p>
 <p>Get the public key that was just generated.</p>
 <ol type="1">
-<li><p>Enter: <code>more ~/.ssh/id_ed25519.pub</code></p></li>
-<li><p>Copy the result to your clipboard (e.g.&nbsp;by blocking off the line and entering Ctrl-C).</p></li>
-<li><p>The key should begin <code>ssh-ed25519</code> and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.</p></li>
+<li>Enter: <code>more ~/.ssh/id_ed25519.pub</code></li>
+<li>Copy the result to your clipboard (e.g.&nbsp;by blocking off the line and entering Ctrl-C).</li>
+<li>The key should begin <code>ssh-ed25519</code> and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.</li>
 </ol>
 <p>On GitHub, go to your account settings and select "SSH and GPG Keys" from the side menu.</p>
 <ol type="1">
@@ -238,38 +246,21 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Under "SSH keys," press the "New SSH Key" button.</p>
 <ol type="1">
-<li><p>Add a brief title describing the context of the key, i.e.&nbsp;the local machine where it was generated, e.g.&nbsp;Rivanna.</p></li>
-<li><p>Choose "Authentication Key" as the Key type.</p></li>
-<li><p>Paste the key into the Key text area.</p></li>
-<li><p>Submit the form by pressing "Add SSH key."</p></li>
+<li>Add a brief title describing the context of the key, i.e.&nbsp;the local machine where it was generated, e.g.&nbsp;Rivanna.</li>
+<li>Choose "Authentication Key" as the Key type.</li>
+<li>Paste the key into the Key text area.</li>
+<li>Submit the form by pressing "Add SSH key."</li>
 </ol>
 <p>You are now good to go. Whenever you clone a site from your GitHub account, choose the SSH link.</p>
 </section>
-<section id="video" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="video"><span class="header-section-number">3.3</span> <strong>Video</strong></h2>
 </section>
-<section id="sources" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sources"><span class="header-section-number">3.4</span> <strong>Sources</strong></h2>
-<p>About SSH</p>
-<ul>
-<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh</a></li>
-</ul>
-<p>Generate the key</p>
-<ul>
-<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></li>
-</ul>
-<p>About pass phrases</p>
-<ul>
-<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases</a></li>
-</ul>
-<p>Adding the key to GitHub</p>
-<ul>
-<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></li>
-</ul>
-<p>Updating repos with SSH</p>
-<ul>
-<li><a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh" class="uri">https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh</a></li>
-</ul>
+<section id="information-sources" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="information-sources"><span class="header-section-number">3.3</span> Information Sources</h2>
+<p>About SSH - <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh</a></p>
+<p>Generate the key - <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></p>
+<p>About pass phrases - <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases</a></p>
+<p>Adding the key to GitHub - <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></p>
+<p>Updating repos with SSH - <a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh" class="uri">https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh</a></p>
 
 
 </section>
