@@ -69,7 +69,7 @@ You will now have a copy of the repo in your GitHub account.
 
 Find the green Code button and click on it. You should see something like this:
 
-![](https://canvas.its.virginia.edu/courses/58396/files/648661/previewß)
+![](https://canvas.its.virginia.edu/courses/58396/files/648661/preview)
 
 Make sure you have selected the SSH option.
 
