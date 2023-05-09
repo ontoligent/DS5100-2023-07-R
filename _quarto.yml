@@ -8,9 +8,15 @@ book:
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   chapters:
-    - index.qmd
-    - lessons/M01_GettingStarted/Untitled.ipynb
-    - references.qmd
+    - part: "Introduction"
+      chapters:
+        - index.qmd
+    - part: "Getting Started"  
+      chapters:  
+        - lessons/M01_GettingStarted/Untitled.ipynb
+    - part: "Appendices"
+      chapters:
+        - references.qmd
 
 format:
   html:
