@@ -7,11 +7,18 @@
     "text": "Welcome to DS 5100 Programming for Data Science!"
   },
   {
-    "objectID": "lessons/M01_GettingStarted/M01_Lesson.html",
-    "href": "lessons/M01_GettingStarted/M01_Lesson.html",
-    "title": "2  M01 Lesson",
-    "section": "",
-    "text": "3 Preparation\nDuring the technical orientation, you set up a GitHub account.\nYou also spent a little time browsing a sample repository, which you may wish to revisit:\nhttps://github.com/UVADS/orientation-technical\nYou also should be able check off the following boxes:\n\nUnderstand the difference between Git and GitHub.\nUnderstand the purpose of Git and Github for data science work.\nEnsure Git is installed on your computer.\nUnderstand how to find a repository on GitHub.\n\n\n\n4 Discussion\n\nWelcome! Introductions.\nReview SurveyLinks to an external site.\nReview Syllabus (if questions)\nReview setup, etc.:\n\nVPN — use UVA Anywhere\nO’Reilly\nCanvas site and docs\nRivanna access and file system\n\nQuestions regarding readings, etc.\nIn-class activity (see next item in module)"
+    "objectID": "lessons/M01_GettingStarted/M01_Lesson.html#preparation",
+    "href": "lessons/M01_GettingStarted/M01_Lesson.html#preparation",
+    "title": "2  Lesson",
+    "section": "2.1 Preparation",
+    "text": "2.1 Preparation\nDuring the technical orientation, you set up a GitHub account.\nYou also spent a little time browsing a sample repository, which you may wish to revisit:\nhttps://github.com/UVADS/orientation-technical\nYou also should be able check off the following boxes:\n\nUnderstand the difference between Git and GitHub.\nUnderstand the purpose of Git and Github for data science work.\nEnsure Git is installed on your computer.\nUnderstand how to find a repository on GitHub."
+  },
+  {
+    "objectID": "lessons/M01_GettingStarted/M01_Lesson.html#discussion",
+    "href": "lessons/M01_GettingStarted/M01_Lesson.html#discussion",
+    "title": "2  Lesson",
+    "section": "2.2 Discussion",
+    "text": "2.2 Discussion\n\nWelcome and Introductions.\nReview Survey.\nReview Syllabus.\nReview setup, etc.:\n\nVPN — use UVA Anywhere.\nO’Reilly Media site.\nCanvas site and docs.\nRivanna access and file system.\n\nQuestions regarding readings, etc.\nIn-class activity (see next item in module)"
   },
   {
     "objectID": "lessons/M01_GettingStarted/M01_Activity_GitHub.html#git-and-github",

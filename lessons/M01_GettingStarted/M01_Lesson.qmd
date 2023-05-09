@@ -1,8 +1,8 @@
 ---
-title: "M01 Lesson"
+title: "Lesson"
 ---
 
-# Preparation
+## Preparation
 
 During the technical orientation, you set up a GitHub account.
 
@@ -17,15 +17,15 @@ You also should be able check off the following boxes:
 - [ ] Ensure Git is installed on your computer.
 - [ ] Understand how to find a repository on GitHub.
 
-# Discussion 
+## Discussion 
 
-- Welcome! Introductions.
-- Review SurveyLinks to an external site.
-- Review Syllabus (if questions)
+- Welcome and Introductions.
+- Review Survey.
+- Review Syllabus.
 - Review setup, etc.:
-    - [VPN](https://in.virginia.edu/vpn) &mdash; use UVA Anywhere
-    - O'Reilly
-    - Canvas site and docs
-    - Rivanna access and file system
+    - [VPN](https://in.virginia.edu/vpn) &mdash; use UVA Anywhere.
+    - O'Reilly Media site.
+    - Canvas site and docs.
+    - Rivanna access and file system.
 - Questions regarding readings, etc.
 - In-class activity (see next item in module)
