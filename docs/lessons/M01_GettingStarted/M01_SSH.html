@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - 2&nbsp; Lesson</title>
+<title>Programming for Data Science - 3&nbsp; Setting up SSH for GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../lessons/M01_GettingStarted/M01_SSH.html" rel="next">
-<link href="../../index.html" rel="prev">
+<link href="../../lessons/M01_GettingStarted/M01_Activity_GitHub.html" rel="next">
+<link href="../../lessons/M01_GettingStarted/M01_Lesson.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up SSH for GitHub</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -118,12 +118,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lessons/M01_GettingStarted/M01_Lesson.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson</span></a>
+  <a href="../../lessons/M01_GettingStarted/M01_Lesson.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../lessons/M01_GettingStarted/M01_SSH.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up SSH for GitHub</span></a>
+  <a href="../../lessons/M01_GettingStarted/M01_SSH.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up SSH for GitHub</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -157,8 +157,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preparation" id="toc-preparation" class="nav-link active" data-scroll-target="#preparation"><span class="toc-section-number">2.1</span>  Preparation</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="toc-section-number">2.2</span>  Discussion</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="toc-section-number">3.1</span>  Overview</a></li>
+  <li><a href="#steps" id="toc-steps" class="nav-link" data-scroll-target="#steps"><span class="toc-section-number">3.2</span>  Steps</a></li>
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video"><span class="toc-section-number">3.3</span>  <strong>Video</strong></a></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources"><span class="toc-section-number">3.4</span>  <strong>Sources</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up SSH for GitHub</span></h1>
 </div>
 
 
@@ -182,34 +184,91 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preparation" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="preparation"><span class="header-section-number">2.1</span> Preparation</h2>
-<p>During the technical orientation, you set up a GitHub account.</p>
-<p>You also spent a little time browsing a sample repository, which you may wish to revisit:</p>
-<p>https://github.com/UVADS/orientation-technical</p>
-<p>You also should be able check off the following boxes:</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled="">Understand the difference between Git and GitHub.</li>
-<li><input type="checkbox" disabled="">Understand the purpose of Git and Github for data science work.</li>
-<li><input type="checkbox" disabled="">Ensure Git is installed on your computer.</li>
-<li><input type="checkbox" disabled="">Understand how to find a repository on GitHub.</li>
+<section id="overview" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">3.1</span> Overview</h2>
+<ul>
+<li>This method will allow you to interact with your repos hosted on GitHub without having to enter your login credentials each time.</li>
+<li>You will create an SSH key on your local machine. By "local machine," we mean the machine where you will be working and pulling to, e.g your laptop or Rivanna. In other words, it's local relative to GitHub.</li>
+<li>SSH keys have a public and private component. These are hash strings that are stored in files. Both will be generated on your machine.</li>
+<li>You will copy and paste the generate public key to your GitHub account.</li>
+<li>Going forward, you will clone from your account using the SSH protocol.</li>
 </ul>
 </section>
-<section id="discussion" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="discussion"><span class="header-section-number">2.2</span> Discussion</h2>
+<section id="steps" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="steps"><span class="header-section-number">3.2</span> Steps</h2>
+<p><strong>Part A: On your local machine</strong></p>
+<ol type="1">
+<li>Get to the command line (i.e.&nbsp;the shell).
+<ol type="1">
+<li>On a Mac, open Terminal.</li>
+<li>If you are on Windows and you have admin rights, first install <code>git-bash</code>. Otherwise try to access the Linux subsystem.</li>
+<li>On <a href="https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu">Rivanna</a>, either connect via SSH or use Rivanna Shell Access (under Clusters).</li>
+</ol></li>
+<li>Move into your root directory and enter <code>cd</code>.</li>
+<li>Generate the key.</li>
+</ol>
 <ul>
-<li>Welcome and Introductions.</li>
-<li>Review Survey.</li>
-<li>Review Syllabus.</li>
-<li>Review setup, etc.:
+<li>Enter: <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></li>
+<li>Be sure to use the email address associated with your GitHub account in the above command.</li>
+</ul>
+<ol start="4" type="1">
+<li><p>At the prompt, type in a secure passphrase</p>
 <ul>
-<li><a href="https://in.virginia.edu/vpn">VPN</a> — use UVA Anywhere.</li>
-<li>O’Reilly Media site.</li>
-<li>Canvas site and docs.</li>
-<li>Rivanna access and file system.</li>
+<li>You don't have to do this, but it is advised.</li>
+<li>Create a memorable sentence.</li>
+<li>A good passphrase should have at least 15, preferably 20 characters and be difficult to guess. It should contain upper case letters, lower case letters, digits, and preferably at least one punctuation character.</li>
 </ul></li>
-<li>Questions regarding readings, etc.</li>
-<li>In-class activity (see next item in module)</li>
+<li><p>Add the key to <code>ssh-agent</code>.</p>
+<ol type="1">
+<li><p>Enter: <code>eval "$(ssh-agent -s)"</code></p></li>
+<li><p>Enter: <code>ssh-add ~/.ssh/id_ed25519</code></p></li>
+</ol></li>
+<li><p>If you're using macOS Sierra 10.12.2 or later, you will need to modify your <code>~/.ssh/config</code> file to automatically load keys into the ssh-agent and store passphrases in your keychain. Follow the instructions <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac#adding-your-ssh-key-to-the-ssh-agent">here</a> (at step 2).</p></li>
+</ol>
+<p><strong>Part B: On your GitHub account</strong></p>
+<p>Get the public key that was just generated.</p>
+<ol type="1">
+<li><p>Enter: <code>more ~/.ssh/id_ed25519.pub</code></p></li>
+<li><p>Copy the result to your clipboard (e.g.&nbsp;by blocking off the line and entering Ctrl-C).</p></li>
+<li><p>The key should begin <code>ssh-ed25519</code> and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.</p></li>
+</ol>
+<p>On GitHub, go to your account settings and select "SSH and GPG Keys" from the side menu.</p>
+<ol type="1">
+<li>A link to your account settings can be found in the drop-down list produced by clicking on your user icon in the upper right of the website.</li>
+</ol>
+<p>Under "SSH keys," press the "New SSH Key" button.</p>
+<ol type="1">
+<li><p>Add a brief title describing the context of the key, i.e.&nbsp;the local machine where it was generated, e.g.&nbsp;Rivanna.</p></li>
+<li><p>Choose "Authentication Key" as the Key type.</p></li>
+<li><p>Paste the key into the Key text area.</p></li>
+<li><p>Submit the form by pressing "Add SSH key."</p></li>
+</ol>
+<p>You are now good to go. Whenever you clone a site from your GitHub account, choose the SSH link.</p>
+</section>
+<section id="video" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="video"><span class="header-section-number">3.3</span> <strong>Video</strong></h2>
+</section>
+<section id="sources" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sources"><span class="header-section-number">3.4</span> <strong>Sources</strong></h2>
+<p>About SSH</p>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh</a></li>
+</ul>
+<p>Generate the key</p>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></li>
+</ul>
+<p>About pass phrases</p>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases</a></li>
+</ul>
+<p>Adding the key to GitHub</p>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" class="uri">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a></li>
+</ul>
+<p>Updating repos with SSH</p>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh" class="uri">https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh</a></li>
 </ul>
 
 
@@ -351,13 +410,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></span>
+      <a href="../../lessons/M01_GettingStarted/M01_Lesson.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Lesson</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../lessons/M01_GettingStarted/M01_SSH.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Setting up SSH for GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../lessons/M01_GettingStarted/M01_Activity_GitHub.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

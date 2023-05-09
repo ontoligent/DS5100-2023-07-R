@@ -8,10 +8,13 @@ book:
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   chapters:
-    - index.qmd
+    - part: "Frontmatter"
+      chapters:
+      - index.qmd
     - part: "M01 Getting Started"  
       chapters:  
         - lessons/M01_GettingStarted/M01_Lesson.qmd
+        - lessons/M01_GettingStarted/M01_SSH.qmd
         - lessons/M01_GettingStarted/M01_Activity_GitHub.qmd
         # - lessons/M01_GettingStarted/Untitled.ipynb
     # - part: "M02 Introducing Python"
@@ -38,9 +41,11 @@ book:
     #   chapters:
     # - part: "M13 Project Management"
     #   chapters:
-    # # - part: "M14 Conclusion"
-      # chapters:
-    - references.qmd
+    # - part: "M14 Conclusion"
+    #   chapters:
+    - part: "Backmatter"
+      chapters:
+      - references.qmd
 
 format:
   html:

@@ -16,9 +16,8 @@ Here are some basic things to know:
 
 ## Using Git and GitHub Together
 
-![](https://www.tomasbeuzen.com/post/git-fork-branch-pull/image_2.png)
-
-Source: [XKCD #1597](https://xkcd.com/1597)
+![XKCD #1597](../media/xkcd-git.png)\ 
+[Source](https://xkcd.com/1597)
  
 A basic series of actions one continually makes with Git are the following:
 
@@ -30,8 +29,8 @@ A basic series of actions one continually makes with Git are the following:
 | **Commit** | Committing the changes made to the file by adding them to the repo's database of changes. This is accompanied by a brief, descriptive message of the changes made. | `git commit -m "What you did"` |
 | **Push** | Pushing the changes to the remote repo that you cloned from. This uploads both the files and the database changes to the repo. | `git push` |
 | **Pull** | Pulling, i.e. downloading, any changes that have been made to the remote repo to your local repo. This usually happens if you are working in teams on the same project. | `git pull` |
-| **Pull Request**	| This is a request made to the owner of the original repo to pull in the changes you've made to your forked copy.	| This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests).\ ![](https://canvas.its.virginia.edu/courses/58396/files/648662/preview) |
-| **Fetch Upstream** | This refreshes the content of your forked repo with the content from the original repo. | This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).\ ![Diagram of sync fork button on GitHub](https://canvas.its.virginia.edu/courses/58396/files/648663/preview) | 
+| **Pull Request**	| This is a request made to the owner of the original repo to pull in the changes you've made to your forked copy.	| This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests).\ ![](../media/pull-request-button.jpg) |
+| **Fetch Upstream** | This refreshes the content of your forked repo with the content from the original repo. | This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).\ ![Diagram of sync fork button on GitHub](../media/sync-fork.jpg) | 
 
 ::: {.callout-note}
 This is not the only pattern to use with Git. Here is another — [the Git Fork-Branch-Pull Workflow](https://www.tomasbeuzen.com/post/git-fork-branch-pull/)
@@ -39,7 +38,7 @@ This is not the only pattern to use with Git. Here is another — [the Git Fork-
 
 Here is a visualization of the process:
 
-![Diagram of common git workflow](https://canvas.its.virginia.edu/courses/58396/files/1005744/preview)
+![Diagram of common git workflow](../media/git.png)
 
 In this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.
 
@@ -47,7 +46,11 @@ Note also that the here "Remote workstation" may be confusing; it means remote r
 
 ## In-Class Activity
 
-Let's try this now with our course repo. Be sure you are inside the course directory we created earlier. Also, we assume you have already created a GitHub account.
+Let's try this now with our course repo. 
+
+Be sure you are inside the course directory we created earlier. 
+
+Also, we assume you have already created a GitHub account.
 
 **_Fork_ the course GitHub hosted repository ("repo") to your GitHub account.**
 
@@ -67,7 +70,7 @@ You will now have a copy of the repo in your GitHub account.
 
 Find the green Code button and click on it. You should see something like this:
 
-![](https://canvas.its.virginia.edu/courses/58396/files/648661/preview)
+![](../media/git-clone.jpg)
 
 Make sure you have selected the SSH option.
 
@@ -80,7 +83,9 @@ Then click on the copy icon and paste the value into the following command:
 ```bash
 git clone https://github.com:ontoligent-design/DS5100-2023-01-O.git
 ```
-> Be sure to clone the repo from your account – i.e. do not cut-and-paste the line above!
+::: {.callout-important}
+Be sure to clone the repo from your account – i.e. do not cut-and-paste the line above!
+:::
 
 You now have a copy the course repo to your account on Rivanna.
 
@@ -94,7 +99,7 @@ Use `cd` to move into the directory just created by the clone operation.
 
 Move into the directory `lessons/M01_GettingStarted/hello`
 
-::: {.callout-caution}
+::: {.callout-important}
 Make sure you are in this directory before proceeding.
 :::
 
@@ -123,17 +128,23 @@ git commit -m "Created file for class"
  
 **_Push_ your new file to the repo on GitHub.**
 
+Since you have SSH set up, you can issue the following command without having to enter a password:
+
+<!--
 Before proceeding, you will need to create personal access token to be able to write to your repo on GitHub. To get one, follow the instructions here --- [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 Once you have created and copied your PAT to a safe place, do the following:
+-->
 
 ```bash
 git push
 ```
 
+<!-- 
 When prompted for a password, use your PAT instead. 
 
 Note: A more efficient way to work with GitHub is to use SSH. You are free to use this option if you are comfortable following through with [the instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+-->
 
 **Create a _Pull Request_**
 
@@ -141,7 +152,7 @@ Finally, make a pull request to have your file added to the original site. To do
 
 Click on the "Pull requests" menu item (see image below) on the web page for your repo.
 
-![Image of pull request button on GitHub](https://canvas.its.virginia.edu/courses/58396/files/648662/preview)
+![Image of pull request button on GitHub](../media/pull-request-button.jpg)
 
 Click on the green "New pull request" button.
 
