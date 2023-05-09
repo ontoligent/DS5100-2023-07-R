@@ -16,7 +16,7 @@ Here are some basic things to know:
 
 ## Using Git and GitHub Together
 
-![Alt text](https://www.tomasbeuzen.com/post/git-fork-branch-pull/image_2.png)
+![](https://www.tomasbeuzen.com/post/git-fork-branch-pull/image_2.png)
 
 Source: [XKCD #1597](https://xkcd.com/1597)
  
@@ -30,7 +30,7 @@ A basic series of actions one continually makes with Git are the following:
 | **Commit** | Committing the changes made to the file by adding them to the repo's database of changes. This is accompanied by a brief, descriptive message of the changes made. | `git commit -m "What you did"` |
 | **Push** | Pushing the changes to the remote repo that you cloned from. This uploads both the files and the database changes to the repo. | `git push` |
 | **Pull** | Pulling, i.e. downloading, any changes that have been made to the remote repo to your local repo. This usually happens if you are working in teams on the same project. | `git pull` |
-| **Pull Request**	| This is a request made to the owner of the original repo to pull in the changes you've made to your forked copy.	| This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests)\ ![](https://canvas.its.virginia.edu/courses/58396/files/648662/preview). |
+| **Pull Request**	| This is a request made to the owner of the original repo to pull in the changes you've made to your forked copy.	| This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests).\ ![](https://canvas.its.virginia.edu/courses/58396/files/648662/preview) |
 | **Fetch Upstream** | This refreshes the content of your forked repo with the content from the original repo. | This is done through GitHub's web interface. Read the [docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).\ ![Diagram of sync fork button on GitHub](https://canvas.its.virginia.edu/courses/58396/files/648663/preview) | 
 
 ::: {.callout-note}
@@ -44,8 +44,6 @@ Here is a visualization of the process:
 In this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.
 
 Note also that the here "Remote workstation" may be confusing; it means remote relative to your laptop, e.g. Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo. 
-
-----
 
 ## In-Class Activity
 
@@ -152,8 +150,6 @@ Click on the green "Create pull request" button.
 Give the request the title "In-class activity" and then press the green "Create pull request" button at the bottom of the form.
 
 Now the ball is in the instructor's court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.
-
-----
 
 ## Going Forward
 
