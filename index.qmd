@@ -1,5 +1,3 @@
----
-title: "Introduction"
----
+## Preface
 
 Welcome to DS 5100 Programming for Data Science!

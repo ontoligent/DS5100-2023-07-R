@@ -8,9 +8,7 @@ book:
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   chapters:
-    - part: "Introduction"
-      chapters:
-        - index.qmd
+    - index.qmd
     - part: "M01 Getting Started"  
       chapters:  
         - lessons/M01_GettingStarted/M01_Lesson.qmd
@@ -42,10 +40,7 @@ book:
     #   chapters:
     # # - part: "M14 Conclusion"
       # chapters:
-      
-    - part: "Appendices"
-      chapters:
-        - references.qmd
+    - references.qmd
 
 format:
   html:
