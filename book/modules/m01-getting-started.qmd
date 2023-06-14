@@ -1,0 +1,14 @@
+# Getting Started
+
+During the technical orientation, you set up a GitHub account.
+
+You also spent a little time browsing a sample repository, which you may wish to revisit:
+
+https://github.com/UVADS/orientation-technical
+
+You also should be able check off the following items:
+
+- Understand the difference between Git and GitHub.
+- Understand the purpose of Git and Github for data science work.
+- Ensure Git is installed on your computer.
+- Understand how to find a repository on GitHub.

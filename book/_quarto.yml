@@ -1,0 +1,32 @@
+project:
+  title: "Programming for Data Science"
+  type: book
+  output-dir: ../docs
+
+book:
+  title: "Programming for Data Science"
+  author: "Rafael C. Alvarado"
+  date: "05/08/2021"
+  chapters:
+    - index.qmd
+    - part: modules/m01-getting-started.qmd
+      chapters:
+      - topics/rivanna.qmd
+      - topics/unix.qmd
+      - topics/on-data.qmd
+      - topics/python-object-types.qmd
+      - modules/m01-activity-github.qmd
+      
+format:
+  html:
+    toc: true
+    theme: cosmo
+  pdf:
+    documentclass: scrreport    
+
+bibliography:
+  - refs.bib
+
+
+
+

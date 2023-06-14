@@ -1,0 +1,5 @@
+---
+title: Python Object Types
+---
+
+![](media/Python_3._The_standard_type_hierarchy.png)
