@@ -21,7 +21,6 @@ book:
       - topics/setting-up-ssh.qmd
       - modules/m01-using-rivanna.qmd
       - modules/m01-activity-github.qmd
-      - ../lessons/M01_GettingStarted/M01_ImportHello.ipynb
       
 format:
   html:

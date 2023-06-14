@@ -2,42 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/index.html</loc>
-    <lastmod>2023-06-14T16:17:42.961Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.410Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-getting-started.html</loc>
-    <lastmod>2023-06-14T16:17:42.962Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.411Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/rivanna.html</loc>
-    <lastmod>2023-06-14T16:17:42.962Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.411Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/unix.html</loc>
-    <lastmod>2023-06-14T16:17:42.963Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.412Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/on-data.html</loc>
-    <lastmod>2023-06-14T16:17:42.963Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.412Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/python-object-types.html</loc>
-    <lastmod>2023-06-14T16:17:42.964Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.413Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/setting-up-ssh.html</loc>
-    <lastmod>2023-06-14T16:17:42.964Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.413Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-using-rivanna.html</loc>
-    <lastmod>2023-06-14T16:17:42.965Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.414Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-activity-github.html</loc>
-    <lastmod>2023-06-14T16:17:42.966Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/../lessons/M01_GettingStarted/M01_ImportHello.html</loc>
-    <lastmod>2023-06-14T16:17:42.966Z</lastmod>
+    <lastmod>2023-06-14T16:26:43.415Z</lastmod>
   </url>
 </urlset>

@@ -123,7 +123,7 @@
     "href": "topics/setting-up-ssh.html#information-sources",
     "title": "5  SSH for GitHub",
     "section": "5.3 Information Sources",
-    "text": "5.3 Information Sources\nAbout SSH - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh\nGenerate the key - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent\nAbout pass phrases - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases\nAdding the key to GitHub - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account\nUpdating repos with SSH - https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh"
+    "text": "5.3 Information Sources\n\nAbout SSH\nGenerate the key\nAbout pass phrases\nAdding the key to GitHub\nUpdating repos with SSH"
   },
   {
     "objectID": "modules/m01-using-rivanna.html",
@@ -159,12 +159,5 @@
     "title": "7  Activity: Using Git and GitHub",
     "section": "7.4 Going Forward",
     "text": "7.4 Going Forward\nDuring the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.\nInstead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:\n\nThe Course Repo, which is where you will get course materials.\nYour Assessments Repo, which is where you will be your finished work as assigned."
-  },
-  {
-    "objectID": "../lessons/M01_GettingStarted/M01_ImportHello.html",
-    "href": "../lessons/M01_GettingStarted/M01_ImportHello.html",
-    "title": "Programming for Data Science",
-    "section": "",
-    "text": "import glob\n\nfiles = glob.glob(\"./hello/*_*.txt\")\n\nn = 0\nfor file in files:\n    sid = file.split(\"/\")[2].split(\"_\")[0]\n    n += 1\n    line = open(file, 'r').read().strip()\n    print(str(n).zfill(2), sid, line, sep=' | ')\n    # print(\"-\" * 80)"
   }
 ]
