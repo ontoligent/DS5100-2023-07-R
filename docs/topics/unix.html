@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - 3&nbsp; On Unix</title>
+<title>Programming for Data Science - 2&nbsp; On Unix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">On Unix</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -93,42 +93,40 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Preface</span></a>
-  </div>
-</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">Preface</span>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../modules/m01-getting-started.html" class="sidebar-item-text sidebar-link">Getting Started</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
+  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></a>
+  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">On Unix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
+  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
+  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
+  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
       </ul>
@@ -142,11 +140,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">3.1</span>  Introduction</a></li>
-  <li><a href="#basic-commands" id="toc-basic-commands" class="nav-link" data-scroll-target="#basic-commands"><span class="toc-section-number">3.2</span>  Basic Commands</a></li>
-  <li><a href="#text-file-commands" id="toc-text-file-commands" class="nav-link" data-scroll-target="#text-file-commands"><span class="toc-section-number">3.3</span>  Text file commands</a></li>
-  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous"><span class="toc-section-number">3.4</span>  Miscellaneous</a></li>
-  <li><a href="#command-line-cool" id="toc-command-line-cool" class="nav-link" data-scroll-target="#command-line-cool"><span class="toc-section-number">3.5</span>  Command Line Cool</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">2.1</span>  Introduction</a></li>
+  <li><a href="#basic-commands" id="toc-basic-commands" class="nav-link" data-scroll-target="#basic-commands"><span class="toc-section-number">2.2</span>  Basic Commands</a></li>
+  <li><a href="#text-file-commands" id="toc-text-file-commands" class="nav-link" data-scroll-target="#text-file-commands"><span class="toc-section-number">2.3</span>  Text file commands</a></li>
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous"><span class="toc-section-number">2.4</span>  Miscellaneous</a></li>
+  <li><a href="#command-line-cool" id="toc-command-line-cool" class="nav-link" data-scroll-target="#command-line-cool"><span class="toc-section-number">2.5</span>  Command Line Cool</a></li>
   </ul>
 </nav>
     </div>
@@ -155,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">On Unix</span></h1>
 </div>
 
 
@@ -170,8 +168,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
 <p>The Unix family of operating systems provide users with&nbsp;a command line interface&nbsp;(CLI) to execute commands and get things done. They also, typically provide GUIs but we won’t go into those here.</p>
 <p>The Unix family includes all varieties of Linux and the Mac OS (which is based on FreeBSD).</p>
 <p>The command line that you actually interact with – the set of commands available to you – is called a&nbsp;shell, and there are several shells that you can run on your system. The most typical shell in use today is called&nbsp;bash&nbsp;which stands for Bourne Again Shell, since it is an improved version of&nbsp;bsh&nbsp;(The Bourne Shell). New versions of MacOS use the Z shell (zsh). The commands in these two shells are mostly similar, but there are subtle differences.</p>
@@ -184,8 +182,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Neal Stephenson, 1999,&nbsp;<a href="http://project.cyberpunk.ru/lib/in_the_beginning_was_the_command_line/">In the Beginning Was The Command Line</a>. (<a href="http://public-library.uk/ebooks/23/31.pdf">PDF version</a>.)</li>
 </ul>
 </section>
-<section id="basic-commands" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="basic-commands"><span class="header-section-number">3.2</span> Basic Commands</h2>
+<section id="basic-commands" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="basic-commands"><span class="header-section-number">2.2</span> Basic Commands</h2>
 <p>In this course, you don’t need to know very many Unix shell commands, but you should be&nbsp;comfortable&nbsp;working from the command line to perform basic tasks. This is because&nbsp;some things can only be performed from the command line, such as installing some essential software. Here is a list of basic commands.</p>
 <p>Navigating filesystems and managing directories:</p>
 <ul>
@@ -205,8 +203,8 @@ ul.task-list li input[type="checkbox"] {
 <li><code>chown</code> – change file/directory ownership</li>
 </ul>
 </section>
-<section id="text-file-commands" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="text-file-commands"><span class="header-section-number">3.3</span> Text file commands</h2>
+<section id="text-file-commands" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="text-file-commands"><span class="header-section-number">2.3</span> Text file commands</h2>
 <p>Most of important configuration in Unix is in plain text files, these commands will let you quickly inspect files or view logs:</p>
 <ul>
 <li><code>cat</code> – concatenate files and show contents to the standard output</li>
@@ -217,15 +215,15 @@ ul.task-list li input[type="checkbox"] {
 <li><code>grep</code> – search for patterns in text files</li>
 </ul>
 </section>
-<section id="miscellaneous" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="miscellaneous"><span class="header-section-number">3.4</span> Miscellaneous</h2>
+<section id="miscellaneous" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="miscellaneous"><span class="header-section-number">2.4</span> Miscellaneous</h2>
 <ul>
 <li><code>clear</code> – clear screen</li>
 <li><code>history</code> – show history of previous commands</li>
 </ul>
 </section>
-<section id="command-line-cool" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="command-line-cool"><span class="header-section-number">3.5</span> Command Line Cool</h2>
+<section id="command-line-cool" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="command-line-cool"><span class="header-section-number">2.5</span> Command Line Cool</h2>
 <p>Although we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book&nbsp;<a href="https://datascienceatthecommandline.com/2e/">Data Science from the Command Line</a>&nbsp;makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e.&nbsp;bloated) tools such as Python and R.&nbsp; At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!</p>
 <p><img src="https://datascienceatthecommandline.com/2e/images/cover-small.png" class="img-fluid"></p>
 <p>One last thing – for fun you may want to read Neal Stephenson’s&nbsp;<a href="http://project.cyberpunk.ru/lib/in_the_beginning_was_the_command_line/">“In the Beginning Was The Command Line”</a>, a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term “metaverse” in the novel&nbsp;<em>Snowcrash</em>.</p>
@@ -370,12 +368,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../topics/rivanna.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../topics/on-data.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data and Code</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

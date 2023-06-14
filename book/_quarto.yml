@@ -7,8 +7,9 @@ book:
   title: "Programming for Data Science"
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
+  page-navigation: true
   chapters:
-    - index.qmd
+    - part: index.qmd 
     - part: modules/m01-getting-started.qmd
       chapters:
       - topics/rivanna.qmd
