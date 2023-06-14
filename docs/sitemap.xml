@@ -2,38 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/index.html</loc>
-    <lastmod>2023-06-14T16:26:43.410Z</lastmod>
+    <lastmod>2023-06-14T19:02:48.690Z</lastmod>
   </url>
   <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-getting-started.html</loc>
-    <lastmod>2023-06-14T16:26:43.411Z</lastmod>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-getting-started.html</loc>
+    <lastmod>2023-06-14T19:02:48.690Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/rivanna.html</loc>
-    <lastmod>2023-06-14T16:26:43.411Z</lastmod>
+    <lastmod>2023-06-14T19:02:48.691Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/unix.html</loc>
-    <lastmod>2023-06-14T16:26:43.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/on-data.html</loc>
-    <lastmod>2023-06-14T16:26:43.412Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/python-object-types.html</loc>
-    <lastmod>2023-06-14T16:26:43.413Z</lastmod>
+    <lastmod>2023-06-14T19:02:48.692Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/setting-up-ssh.html</loc>
-    <lastmod>2023-06-14T16:26:43.413Z</lastmod>
+    <lastmod>2023-06-14T19:02:48.692Z</lastmod>
   </url>
   <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-using-rivanna.html</loc>
-    <lastmod>2023-06-14T16:26:43.414Z</lastmod>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/git-and-github.html</loc>
+    <lastmod>2023-06-14T19:02:48.693Z</lastmod>
   </url>
   <url>
-    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01-activity-github.html</loc>
-    <lastmod>2023-06-14T16:26:43.415Z</lastmod>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-using-rivanna.html</loc>
+    <lastmod>2023-06-14T19:02:48.693Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-activity-github.html</loc>
+    <lastmod>2023-06-14T19:02:48.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-notebooks.html</loc>
+    <lastmod>2023-06-14T19:02:48.695Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-introducing-python.html</loc>
+    <lastmod>2023-06-14T19:02:48.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/on-data.html</loc>
+    <lastmod>2023-06-14T19:02:48.696Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/python-object-types.html</loc>
+    <lastmod>2023-06-14T19:02:48.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-activity-hello-world.html</loc>
+    <lastmod>2023-06-14T19:02:48.697Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-activity-jupyter-lab-on-rivanna.html</loc>
+    <lastmod>2023-06-14T19:02:48.698Z</lastmod>
   </url>
 </urlset>

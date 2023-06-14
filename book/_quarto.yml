@@ -12,16 +12,26 @@ book:
   site-url: https://ontoligent.github.io/DS5100-2023-07-R
   chapters:
     - part: index.qmd 
-    - part: modules/m01-getting-started.qmd
+    - part: modules/m01/m01-getting-started.qmd
       chapters:
       - topics/rivanna.qmd
       - topics/unix.qmd
+      - topics/setting-up-ssh.qmd
+      - topics/git-and-github.qmd
+      - modules/m01/m01-using-rivanna.qmd
+      - modules/m01/m01-activity-github.qmd
+      - modules/m01/m01-notebooks.qmd
+      # - lessons/M01_GettingStarted/M01_ImportHello.ipynb
+      # - lessons/M01_GettingStarted/M01_SurveyResponses.ipynb
+    - part: modules/m02/m02-introducing-python.qmd
+      chapters:
       - topics/on-data.qmd
       - topics/python-object-types.qmd
-      - topics/setting-up-ssh.qmd
-      - modules/m01-using-rivanna.qmd
-      - modules/m01-activity-github.qmd
-      
+      - modules/m02/m02-activity-hello-world.qmd
+      - modules/m02/m02-activity-jupyter-lab-on-rivanna.qmd
+      # - lessons/M02_BasicPython/M02-01-DataTypes.ipynb
+      # - lessons/M02_BasicPython/M02-02-Numbers.ipynb
+
 format:
   html:
     toc: true
