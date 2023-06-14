@@ -1,4 +1,4 @@
-# Getting Started
+# 01 Getting Started
 
 During the technical orientation, you set up a GitHub account.
 

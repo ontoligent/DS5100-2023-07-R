@@ -8,6 +8,8 @@ book:
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   page-navigation: true
+  twitter-card: true
+  site-url: https://ontoligent.github.io/DS5100-2023-07-R
   chapters:
     - part: index.qmd 
     - part: modules/m01-getting-started.qmd
@@ -16,14 +18,17 @@ book:
       - topics/unix.qmd
       - topics/on-data.qmd
       - topics/python-object-types.qmd
+      - topics/setting-up-ssh.qmd
+      - modules/m01-using-rivanna.qmd
       - modules/m01-activity-github.qmd
+      - ../lessons/M01_GettingStarted/M01_ImportHello.ipynb
       
 format:
   html:
     toc: true
     theme: cosmo
-  pdf:
-    documentclass: scrreport    
+  # pdf:
+  #   documentclass: scrreport    
 
 bibliography:
   - refs.bib

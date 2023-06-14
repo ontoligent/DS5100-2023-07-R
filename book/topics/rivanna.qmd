@@ -1,10 +1,10 @@
-# Rivanna: UVA's HPC Cluster
+# About Rivanna
 
 ## Introduction
 
-A useful infrastructural resource for this course is Rivanna, UVA's high-performance computing cluster. Each student has an account on Rivanna and access to resources there based on participation in this course.
+A useful infrastructural resource for this course is Rivanna, UVA's high-performance computing (HPC) cluster. Each student has an account on Rivanna and access to resources there based on participation in this course. We will use Rivanna in our class for both Python and R.  
 
-Rivanna is UVA's High Performance Computing Cluster. We will use it in our class for both Python and R.  This page describes some of the tools available for your use in this course. For information about Rivanna, see this introduction.  Resources for getting help, including a knowledge base and ticket system, are found here www.rc.virginia.edu/support/.
+This page describes some of the tools available for your use in this course. For information about Rivanna, see this introduction. Resources for getting help, including a knowledge base and ticket system, are found at [the Support Option's Page](http://www.rc.virginia.edu/support/) on UVA's Research Computing website.
 
 You may need to use VPN to access Rivanna from an off-grounds location. To install VPN on your computer, go to the ITS VPN page for instructions. Note that you should connect to "UVA Anywhere," not to any of the higher security options.
 Course Allocation
@@ -12,7 +12,7 @@ Course Allocation
 This course has been allocated compute and space resources on Rivanna. The names of the resources are given below. The allocation ID needs to be entered to access certain tools. The storage path is accessible to you on the remote server.
 
 * Allocation ID: `msds_ds5100`
-* Storage path: `/project/MSDS_DS5100`  ← don't use unless directed to
+* Storage path: `/project/MSDS_DS5100`  (Don't use unless directed to.)
 
 ## Tools 
 

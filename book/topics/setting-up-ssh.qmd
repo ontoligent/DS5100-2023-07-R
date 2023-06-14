@@ -1,4 +1,4 @@
-# Setting up SSH for GitHub
+# SSH for GitHub
 
 ## Overview
 
