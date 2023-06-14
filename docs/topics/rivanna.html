@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - 3&nbsp; Rivanna: UVA’s HPC Cluster</title>
+<title>Programming for Data Science - 2&nbsp; Rivanna: UVA’s HPC Cluster</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../topics/unix.html" rel="next">
-<link href="../modules/m01-activity-github.html" rel="prev">
+<link href="../modules/m01-getting-started.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -127,13 +127,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -171,27 +171,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
+  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
+  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">On Unix</span></a>
+  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
+  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
+  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
       </ul>
@@ -200,13 +200,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">2.1</span>  Introduction</a></li>
+  <li><a href="#tools" id="toc-tools" class="nav-link" data-scroll-target="#tools"><span class="toc-section-number">2.2</span>  Tools&nbsp;</a></li>
+  <li><a href="#interactive-spps" id="toc-interactive-spps" class="nav-link" data-scroll-target="#interactive-spps"><span class="toc-section-number">2.3</span>  Interactive Spps</a></li>
+  <li><a href="#for-more-information" id="toc-for-more-information" class="nav-link" data-scroll-target="#for-more-information"><span class="toc-section-number">2.4</span>  For More Information</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></h1>
 </div>
 
 
@@ -221,8 +232,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="introduction" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">3.1</span> Introduction</h2>
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
 <p>A useful infrastructural resource for this course is Rivanna, UVA’s high-performance computing cluster. Each student has an account on Rivanna and access to resources there based on participation in this course.</p>
 <p>Rivanna is UVA’s High Performance Computing Cluster. We will use it in our class for both Python and R.&nbsp; This page describes some of the tools available for your use in this course. For information about Rivanna, see&nbsp;this introduction. &nbsp;Resources for getting help, including a knowledge base and ticket system, are found here&nbsp;www.rc.virginia.edu/support/.</p>
 <p>You may need to use VPN to access Rivanna from an off-grounds location. To install VPN on your computer, go to the&nbsp;ITS VPN page&nbsp;for instructions. Note that you should connect to “UVA Anywhere,” not to any of the higher security options. Course Allocation</p>
@@ -232,8 +243,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Storage path: <code>/project/MSDS_DS5100</code>&nbsp; ← don’t use unless directed to</li>
 </ul>
 </section>
-<section id="tools" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="tools"><span class="header-section-number">3.2</span> Tools&nbsp;</h2>
+<section id="tools" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="tools"><span class="header-section-number">2.2</span> Tools&nbsp;</h2>
 <p>UVA Research Computing provides you with a suite of tools to access Rivanna. These tools are accessible through the menu on the UVA&nbsp;OpenOnDemand Dashboard page. Below are some brief descriptions of the tools.</p>
 <p><strong>File Explorer</strong>. A web-based GUI to access the file system of the remote server. Can be used to create, move, and delete directories and files, and to edit the contents of files (see Editor). You can also upload and download files through this interface. The File Explorer is useful to view your remote content and manage files and directories without having to use the command line. Note that not all operations can be performed through this interface.</p>
 <p>Find under “Files” in the menu.&nbsp;</p>
@@ -246,8 +257,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Replace&nbsp;<code>&lt;userid&gt;</code>&nbsp;with your UVA Net ID, e.g.&nbsp;<code>abc2x</code>.&nbsp;</p>
 <p>Be suer to be running VPN if you are accessing Rivanna from an off-grounds location.</p>
 </section>
-<section id="interactive-spps" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="interactive-spps"><span class="header-section-number">3.3</span> Interactive Spps</h2>
+<section id="interactive-spps" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="interactive-spps"><span class="header-section-number">2.3</span> Interactive Spps</h2>
 <p>These tools must be launched by specifying a set of parameters, including the allocation you are using. They are also timed and will close when time is up. Be sure to give yourself enough time when launching these, and to be aware of how much time you have when working.</p>
 <p>Note also that you should allocate the fewest resources necessary to do the work you plan to do. This saves resources on the remote host, but also allows your app to launch more quickly. If you ask for an excessive amount of resources, you may wait a long time (e.g.&nbsp;hours) to have your app launched.</p>
 <p><strong>Desktop</strong>.&nbsp;Access to a GUI desktop to the remote server. This provides a access to various applications on the server, including a web browser, a file explorer, and terminal windows.&nbsp; Using this is not necessary if you can get by with the tools listed above.</p>
@@ -258,8 +269,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>RStudio</strong>. Access to Jupyter Lab on the remote server.</p>
 <p>Find under “Interactive Apps &gt; RStudio Server” in the menu.</p>
 </section>
-<section id="for-more-information" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="for-more-information"><span class="header-section-number">3.4</span> For More Information</h2>
+<section id="for-more-information" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="for-more-information"><span class="header-section-number">2.4</span> For More Information</h2>
 <p>UVA’s Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:</p>
 <ul>
 <li>Introduction to Rivanna</li>
@@ -405,13 +416,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/m01-activity-github.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></span>
+      <a href="../modules/m01-getting-started.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting Started</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../topics/unix.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">On Unix</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

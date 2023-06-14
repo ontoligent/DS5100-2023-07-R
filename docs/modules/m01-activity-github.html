@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - 2&nbsp; Activity: Using Git and GitHub</title>
+<title>Programming for Data Science - 6&nbsp; Activity: Using Git and GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../topics/rivanna.html" rel="next">
-<link href="../modules/m01-getting-started.html" rel="prev">
+<link href="../topics/python-object-types.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -127,13 +126,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -171,27 +170,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
+  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
+  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">On Unix</span></a>
+  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
+  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
+  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
       </ul>
@@ -200,13 +199,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#git-and-github" id="toc-git-and-github" class="nav-link active" data-scroll-target="#git-and-github"><span class="toc-section-number">6.1</span>  Git and GitHub</a></li>
+  <li><a href="#using-git-and-github-together" id="toc-using-git-and-github-together" class="nav-link" data-scroll-target="#using-git-and-github-together"><span class="toc-section-number">6.2</span>  Using Git and GitHub Together</a></li>
+  <li><a href="#in-class-activity" id="toc-in-class-activity" class="nav-link" data-scroll-target="#in-class-activity"><span class="toc-section-number">6.3</span>  In-Class Activity</a></li>
+  <li><a href="#going-forward" id="toc-going-forward" class="nav-link" data-scroll-target="#going-forward"><span class="toc-section-number">6.4</span>  Going Forward</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></h1>
 </div>
 
 
@@ -221,8 +231,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="git-and-github" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="git-and-github"><span class="header-section-number">2.1</span> Git and GitHub</h2>
+<section id="git-and-github" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="git-and-github"><span class="header-section-number">6.1</span> Git and GitHub</h2>
 <p>Git and GitHub are two tools that work together, but it is important to understand what each does and how they are different to each other.</p>
 <p>Here are some basic things to know:</p>
 <ol type="1">
@@ -233,8 +243,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Git does not have a fork command. GitHub (and other hosting services such as GitLab) have added this command as a convenient way to copy repositories.</li>
 </ol>
 </section>
-<section id="using-git-and-github-together" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="using-git-and-github-together"><span class="header-section-number">2.2</span> Using Git and GitHub Together</h2>
+<section id="using-git-and-github-together" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="using-git-and-github-together"><span class="header-section-number">6.2</span> Using Git and GitHub Together</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../media/xkcd-git.png" class="img-fluid figure-img"></p>
@@ -317,8 +327,8 @@ Note
 <p>In this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.</p>
 <p>Note also that the here “Remote workstation” may be confusing; it means remote relative to your laptop, e.g.&nbsp;Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo.</p>
 </section>
-<section id="in-class-activity" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="in-class-activity"><span class="header-section-number">2.3</span> In-Class Activity</h2>
+<section id="in-class-activity" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="in-class-activity"><span class="header-section-number">6.3</span> In-Class Activity</h2>
 <p>Let’s try this now with our course repo.</p>
 <p>Be sure you are inside the course directory we created earlier.</p>
 <p>Also, we assume you have already created a GitHub account.</p>
@@ -429,8 +439,8 @@ Note: A more efficient way to work with GitHub is to use SSH. You are free to us
 <p>Give the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.</p>
 <p>Now the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged.</p>
 </section>
-<section id="going-forward" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="going-forward"><span class="header-section-number">2.4</span> Going Forward</h2>
+<section id="going-forward" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="going-forward"><span class="header-section-number">6.4</span> Going Forward</h2>
 <p>During the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.</p>
 <p>Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:</p>
 <ol type="1">
@@ -577,14 +587,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../modules/m01-getting-started.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Getting Started</span>
+      <a href="../topics/python-object-types.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../topics/rivanna.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

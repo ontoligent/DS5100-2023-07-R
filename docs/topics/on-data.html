@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programming for Data Science - 5&nbsp; Data and Code</title>
+<title>Programming for Data Science - 4&nbsp; Data and Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,13 +64,13 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data and Code</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -108,27 +108,27 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
+  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rivanna: UVA’s HPC Cluster</span></a>
+  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/unix.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">On Unix</span></a>
+  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/on-data.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data and Code</span></a>
+  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../topics/python-object-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Object Types</span></a>
+  <a href="../modules/m01-activity-github.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Activity: Using Git and GitHub</span></a>
   </div>
 </li>
       </ul>
@@ -137,13 +137,23 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </nav>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#code-should-be-simple" id="toc-code-should-be-simple" class="nav-link active" data-scroll-target="#code-should-be-simple"><span class="toc-section-number">4.1</span>  Code should be simple</a></li>
+  <li><a href="#simplicity-of-code-follows-from-the-structure-of-data" id="toc-simplicity-of-code-follows-from-the-structure-of-data" class="nav-link" data-scroll-target="#simplicity-of-code-follows-from-the-structure-of-data"><span class="toc-section-number">4.2</span>  Simplicity of code follows from the structure of data</a></li>
+  <li><a href="#supporting-references" id="toc-supporting-references" class="nav-link" data-scroll-target="#supporting-references"><span class="toc-section-number">4.3</span>  Supporting References</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data and Code</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and Code</span></h1>
 </div>
 
 
@@ -158,8 +168,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="code-should-be-simple" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="code-should-be-simple"><span class="header-section-number">5.1</span> Code should be simple</h2>
+<section id="code-should-be-simple" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="code-should-be-simple"><span class="header-section-number">4.1</span> Code should be simple</h2>
 <p>An important principle for writing effective and intelligible code is that code should be simple — to quote Einstein, as simple as possible but no simpler.</p>
 <ul>
 <li>A contributing factor to code simplicity is how it is related to the data it is designed to process.</li>
@@ -167,8 +177,8 @@ ul.task-list li input[type="checkbox"] {
 <li>A program is always written with data in mind — what kind of data it is and how it is structured.</li>
 </ul>
 </section>
-<section id="simplicity-of-code-follows-from-the-structure-of-data" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="simplicity-of-code-follows-from-the-structure-of-data"><span class="header-section-number">5.2</span> Simplicity of code follows from the structure of data</h2>
+<section id="simplicity-of-code-follows-from-the-structure-of-data" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="simplicity-of-code-follows-from-the-structure-of-data"><span class="header-section-number">4.2</span> Simplicity of code follows from the structure of data</h2>
 <p>There is a view among programmers which, although not orthodoxy, is commonplace.</p>
 <ul>
 <li>It is the idea that the complexity of a program — its algorithms — is a function of the quality of the data structure it processes.</li>
@@ -176,8 +186,8 @@ ul.task-list li input[type="checkbox"] {
 <li>However if a data structure is well designed, the algorithms that process them are more robust and intelligible.</li>
 </ul>
 </section>
-<section id="supporting-references" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="supporting-references"><span class="header-section-number">5.3</span> Supporting References</h2>
+<section id="supporting-references" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="supporting-references"><span class="header-section-number">4.3</span> Supporting References</h2>
 <p>Consider these quotes cited in an essay on <a href="https://medium.com/webdevops/data-structures-548cbea9c520">Data Structures</a>. by Igor Budasov, reproduced here:</p>
 <p>Here’s <a href="https://lwn.net/Articles/193245/">a quote from Linus Torvalds in 2006</a>:</p>
 <blockquote class="blockquote">
@@ -341,12 +351,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../topics/unix.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">On Unix</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">On Unix</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../topics/python-object-types.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Python Object Types</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Python Object Types</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
