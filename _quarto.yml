@@ -32,7 +32,11 @@ book:
       - topics/python-object-types.qmd
       - modules/m02/m02-activity-hello-world.qmd
       - modules/m02/m02-activity-jupyter-lab-on-rivanna.qmd
-      - modules/m02/M02-01-DataTypes.ipynb
+      - notebooks/M02_BasicPython/M02-01-DataTypes.ipynb
+      - notebooks/M02_BasicPython/M02-02-Numbers.ipynb
+      - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
+      - notebooks/M02_BasicPython/M02-04-Strings.ipynb
+      - notebooks/M02_BasicPython/M02-05-Structures.ipynb
     - part: "03 Control Structures"
       chapters:
       - modules/m03/m03-intro.qmd

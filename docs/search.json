@@ -123,7 +123,7 @@
     "href": "topics/git-and-github.html#to-learn-more",
     "title": "Git and GitHub",
     "section": "To Learn More",
-    "text": "To Learn More\n\nVideos https://git-scm.com/videos\nBook https://git-scm.com/book/en/v2"
+    "text": "To Learn More\n\nVideos\nBook"
   },
   {
     "objectID": "modules/m01/m01-using-rivanna.html",
@@ -222,6 +222,314 @@
     "title": "Activity: Jupyter Lab",
     "section": "",
     "text": "Now that we have run Python on Rivanna from the command line, let’s try it using a Jupyter Notebook.\nGo the OnDemand site to access Rivanna. As a reminder, the URL is https://rivanna-portal.hpc.virginia.edu/.\nFrom the Interactive Apps menu, select JupyterLab and fill out the form to initiate a new session.\nRemember to select just the resources needed and to enter our course allocations (msds_ds5100).\nOnce the session is ready, launch the notebook.\nOnce you are in the notebook, use file system tab on the left to get to the directory of your personal assessments repo. Remember, you created two repos for this class – one for course content from the instructor, and one for your own course work. Use the latter for this exercise.\nIn a code cell in the notebook, enter the code to print \"Hello, World!\", and run the cell.\nSave your notebook as hello-world.ipynb."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "",
+    "text": "Python Data Types\nWe declare a number of variables with different value types.\nBy ‘type’ we mean object type.\nData types and data structures are both types of object.\nData types are created by the way they are written or as keywords …\nHere is a series of literal values (called literals):\nIntegers\nFloats (decimals)\nStrings\nType of quote does not matter, but they must be straight quotes, not “smart quotes” that some word processors use.\nNote that there is no explicit character type as in Java and other languages.\nBoolean\nNothing\nIt evaluates to nothing!\nComplex\nFor the physicists and signal processors.\nYou can always find out what kind of type you are working with by calling the type() function.\nData are assigned to variables using the assignment operator =.\nThe variable is always on the left, the value assigned to it on the right.\nThis is not the same as mathemtical equality.\nVariables are assigned types dynamically.\nThis is in contrast to static typing, where you have define variables by asserting what kind of data values they can hold.\nPython figures out what type of data is being set to the variable and implicitly stores that info.\nNote that type() returns the type of the value that a variable holds, not the type “variable”.\nYou can’t delete values!\nThis function returns the identity of an object.\nThe identity is a number that is guaranteed to be unique and constant for this object during its lifetime (during the program session).\nYou can think of it as the address of the object in memory.\nIt is possible to convert between types (when it makes sense to do so).\nSometimes conversions are “lossy” – you lose information in the process\nIf variables are nouns, and values meanings, then operators are verbs.\nIn effect, they are elementary functions that are expressed in sequential syntax.\na + b could have been expressed as add(a, b).\nBasically, each data type is associated with a set of operators that allow you to manipulate the data in way that makes sense for its type. Numeric data types are subject to mathematical operations, booleans to logical ones, and so forth.\nThere are also operations appropriate to structures. For example, list-like things have membership.\nThe relationship between types and operators is a microcosm of the relationship betweed data structures and algorithms. Data structures imply algorithms and algorithms assume data structures.\nThe w3schools site has a good summary.\nHere are some you may not have seen.\nPython offers a short-cut for most operators. When updating a variable with an operation to that variable, such as:\nYou can do this:\nPython supports many operators this way. Here are some:\nVariables, literal values, and operators are the building blocks of ebxpressions.\nFor example, the following combines three operators and four variables:\nPython employs operator precedence when evaluating expressions:\nYou can use parentheses to group them to force the order of operations you want:\nVariables and literal values can be combined:\nExpresssion can be very complex.\nExpressions evaluate to a value, just as single variables do.\nTherefore, they can be put anywhere a value is accepted."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#int",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#int",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "int()",
+    "text": "int()\n\nint?\n\nInit signature: int(self, /, *args, **kwargs)\nDocstring:     \nint([x]) -> integer\nint(x, base=10) -> integer\n\nConvert a number or string to an integer, or return 0 if no arguments\nare given.  If x is a number, return x.__int__().  For floating point\nnumbers, this truncates towards zero.\n\nIf x is not a number or if base is given, then x must be a string,\nbytes, or bytearray instance representing an integer literal in the\ngiven base.  The literal can be preceded by '+' or '-' and be surrounded\nby whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.\nBase 0 means to interpret the base from the string as an integer literal.\n>>> int('0b100', base=0)\n4\nType:           type\nSubclasses:     bool, IntEnum, IntFlag, _NamedIntConstant\n\n\nFloat to Int\n\nval = 3.8\nprint(val, type(val))\n\n3.8 <class 'float'>\n\n\n\nval_int = int(val)\nprint(val_int, type(val_int))\n\n3 <class 'int'>\n\n\nString to Float\n\nval = '3.8'\nprint(val, type(val))\n\n3.8 <class 'str'>\n\n\n\nval_int = float(val)\nprint(val_int, type(val_int))\n\n3.8 <class 'float'>\n\n\nConverting string decimal to integer will fail:\n\nval = '3.8'\nprint(val, type(val))\n\n3.8 <class 'str'>\n\n\n\nval_int = int(val)\nprint(val_int, type(val_int))\n\nValueError: invalid literal for int() with base 10: '3.8'"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#ord",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#ord",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "ord()",
+    "text": "ord()\nConverting a character to it’s code point\n\nord?\n\nSignature: ord(c, /)\nDocstring: Return the Unicode code point for a one-character string.\nType:      builtin_function_or_method\n\n\n\nord('a'), ord('A')\n\n(97, 65)"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#arithmetic-operators",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#arithmetic-operators",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "Arithmetic Operators",
+    "text": "Arithmetic Operators\n\nfloor division //\n\n5 // 2\n\n2\n\n\n\n-5 // 2\n\n-3\n\n\n\n5.5 // 2\n\n2.0\n\n\n\n\nmodulus %\nReturns the remainder\n\n5 % 2\n\n1\n\n\nodd integers % 2 = 1\neven integers % 2 = 0\nLook at this …\n\n5.5 / 2, 5.5 // 2, 5.5 % 2\n\n(2.75, 2.0, 1.5)\n\n\n\n\nexponentiation **\n\n5**3\n\n125"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#string-operators",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#string-operators",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "String Operators",
+    "text": "String Operators\n\nconcatenation +\nThe plus sign is an ovderloaded operator in Python.\n\nmyString = 'This: '\n\n\nmy2ndString = myString + ' Goodbye, world!'\n\n\nmy2ndString\n\n'This:  Goodbye, world!'\n\n\n\n\nrepetition *\n\nmyString*2                     \n\n'This: This: '\n\n\n\nmyString * 5\n\n'This: This: This: This: This: '\n\n\n\nbart_S1E3 = 'I will not skateboard in the halls'\n\n\nprint((bart_S1E3 + '\\n') * 5)\n\nI will not skateboard in the halls\nI will not skateboard in the halls\nI will not skateboard in the halls\nI will not skateboard in the halls\nI will not skateboard in the halls\n\n\n\n\nprint('-' * 80)\n\n--------------------------------------------------------------------------------\n\n\nSee them all :-)"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#assignment-operator",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#assignment-operator",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "Assignment Operator =",
+    "text": "Assignment Operator =\nWe’ve used this already, but it too is an operator.\n\nepoch = 20\nprint('epoch:', epoch)\n\nepoch: 20"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#comparison-operators",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#comparison-operators",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "Comparison Operators",
+    "text": "Comparison Operators\nComparisons are questions.\nThey return a boolean value.\n\nequality ==\n\n0 == (10 % 5)\n\nTrue\n\n\n\n'Boo' == 'Hoo'\n\nFalse\n\n\nCan we compare strings\n\n'A' < 'B'\n\nTrue\n\n\n\nord('A'), ord('B')\n\n(65, 66)\n\n\n\n\ninequality !=\n\n5/9 != 0.5555\n\nTrue"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-01-DataTypes.html#logical-operators",
+    "href": "notebooks/M02_BasicPython/M02-01-DataTypes.html#logical-operators",
+    "title": "Python Types, Operators, and Expressions",
+    "section": "Logical Operators",
+    "text": "Logical Operators\nPython uses words where other languages will use other symbols.\n\nConjunctions and, or, not\nNote the we group comparisons with parentheses.\n\nx = 10\n\n(x % 10 == 0) or (x < -1)\n\nTrue\n\n\n\n(x % 10 == 0) and (x < -1)\n\nFalse\n\n\n\nnot x == 5\n\nTrue\n\n\n\n\nIdentity is\nThe is keyword is used to test if two variables refer to the same object.\nThe test returns True if the two objects are the same object.\nThe test returns False if they are not the same object, even if the two objects are 100% equal.\nUse the == operator to test if two variables are equal.\n– from W3Schools on Identity Operators\nis\n\nx = 'fail'\n\n\nx is 'fail'\n\n<>:1: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n<>:1: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/ipykernel_53814/1139635342.py:1: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  x is 'fail'\n\n\nTrue\n\n\nis not\n\nx is not 'fail'\n\n<>:1: SyntaxWarning: \"is not\" with a literal. Did you mean \"!=\"?\n<>:1: SyntaxWarning: \"is not\" with a literal. Did you mean \"!=\"?\n/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/ipykernel_53814/1754352910.py:1: SyntaxWarning: \"is not\" with a literal. Did you mean \"!=\"?\n  x is not 'fail'\n\n\nFalse\n\n\n\nx = 'foo'\ny = 'foo'\nx is y\n\nTrue\n\n\n\nx = ['a']\ny = ['a']\nx is y\n\nFalse\n\n\n\n\nNegation not\n\nnot True, not False, not 0, not 1, not 1000, not None\n\n(False, True, True, False, False, True)"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html",
+    "title": "Python Numbers",
+    "section": "",
+    "text": "Built-in Functions\nThese are built-in mathematical functions for numbers.\nSee the Python docs on the math library.\nSee random — Generate pseudo-random numbers for more info."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#pow-power",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#pow-power",
+    "title": "Python Numbers",
+    "section": "pow() Power",
+    "text": "pow() Power\n\npow(2,3) # 2 raised to 3 = 8"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#abs-absolute-value",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#abs-absolute-value",
+    "title": "Python Numbers",
+    "section": "abs() Absolute value",
+    "text": "abs() Absolute value\n\nabs(-2) # returns 2, the absolute value of its argument"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#round-round",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#round-round",
+    "title": "Python Numbers",
+    "section": "round() Round",
+    "text": "round() Round\nRounding up or down its argument (to closest whole number).\n\nround(2.8) # rounds up to 3.0\n\n3\n\n\n\nround(1.1) # rounds down to 1.0\n\n1"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#math.sqrt-square-root",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#math.sqrt-square-root",
+    "title": "Python Numbers",
+    "section": "math.sqrt() Square root",
+    "text": "math.sqrt() Square root\n\nmath.sqrt?\n\nSignature: math.sqrt(x, /)\nDocstring: Return the square root of x.\nType:      builtin_function_or_method\n\n\n\n# sqrt(intOne)\n\n\nmath.sqrt(12) # using the square-root function from the math library\n\n3.4641016151377544\n\n\n\nprint(math.floor(2.5)) # returns largest whole number less than the argument\nprint(math.floor(2.9))\nprint(math.floor(2.1))\n\n2\n2\n2"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#math.log",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#math.log",
+    "title": "Python Numbers",
+    "section": "math.log()",
+    "text": "math.log()\n\nmath.log?\n\n\nmath.log(100, 10)\n\n\nmath.log(256, 2)"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#random.random",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#random.random",
+    "title": "Python Numbers",
+    "section": "random.random()",
+    "text": "random.random()\n\nrandom.random?\n\n\nprint(random.random()) # using random() function in random library\n    # will return a number between 0 and 1"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-02-Numbers.html#random.randint",
+    "href": "notebooks/M02_BasicPython/M02-02-Numbers.html#random.randint",
+    "title": "Python Numbers",
+    "section": "random.randint()",
+    "text": "random.randint()\n\nrandom.randint?\n\n\nprint(random.randint(1,100)) # specify a range in the parenthesis\n    # this will return a random integer in the range 1-100"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-03-Booleans.html",
+    "href": "notebooks/M02_BasicPython/M02-03-Booleans.html",
+    "title": "Python Booleans",
+    "section": "",
+    "text": "A boolean value takes one of True or False, which are built-in values\ncheck if cache is True, using if statement\nif statement using a bool evaluates to True or False\n\ncache = True\n\nif cache:\n   print('data will be cached')\n\ndata will be cached\n\n\n\nprint(type(cache))\n\n<class 'bool'>\n\n\nBooleans are frequently used in if/then statements.\nWe’ll cover these later.\n\ncache = True\noome = False\n\nif cache or oome:\n    print('condition met!')\nelse:\n    print(\"No dice.\")\n\nAND statements will short circuit if an early condition fails.\n\nif oome and cache:\n    print('condition met!')\n\nIn this case, since oome is False, the check on cache never happens."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html",
+    "title": "Python Strings",
+    "section": "",
+    "text": "Kinds of quotes\nStrings are signified by quotes.\nSingle and double quotes are identical in function.\nThey must be “straight quotes” though – cutting and pasting from a Word document with smart quotes won’t work.\nPython uses a print function.\nPython supports special “escape characters” in strings that produce effects when printed.\nNote that these are not unique to Python. They are part of almost all languages.\nThe print function puts spaces between strings and a newline at the end, but you can change that:\nComments are lines of code that aren’t read by the interpreter.\nThey are used to explain blocks of code, or to remove code from execution when debugging.\nThese following are multiline strings that can serve as comments:\nNote that multiline comments also evaluate as values.\nActually, they are list-like.\nHere are some functions applicable to strings because they are lists."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#quote-prefixes",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#quote-prefixes",
+    "title": "Python Strings",
+    "section": "Quote prefixes",
+    "text": "Quote prefixes\n\nr strings\nPrefixing a string causes escape characters to be uninterpreted.\n\nprint(\"Sentence one.\\nSentence two.\")\n\n\nprint(r\"Sentence one.\\nSentence two.\")\n\n\n\nf strings\nPrefixing a string with f allows variable interpolation – inplace evaluation of variables in strings.\n\nppl = 'knights'\ngreeting = 'Ni'\n\n\nprint(f'We are the {ppl} who say {greeting}!') # Output: We are the knights who say Ni!\n\nThe brackets and characters within them (called format fields) are replaced with the passed objects.\n\nprint(b\"This is a sentence.\")\n\n\nprint(\"This is a sentence.\")"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#lower-.upper",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#lower-.upper",
+    "title": "Python Strings",
+    "section": ".lower(), .upper()",
+    "text": ".lower(), .upper()\n\n'BOB'.lower().upper()"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#split",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#split",
+    "title": "Python Strings",
+    "section": ".split()",
+    "text": ".split()\nParase a string based on a delimiter, which defaults to whitespace.\nNOTE: This does not use regular expressions.\nThis returns a list.\n\nmontyPythonQuote = 'are.you.suggesting.coconuts.migrate'\n\n\n'are.you.suggesting.coconuts.migrate'.split('.')\n\n\nmontyPythonQuote\n\n\nmontyPythonQuote.split('.') # split by the '.' delimiter. Result: a list!"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#strip-.rstrip-lstrip-strip-methods",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#strip-.rstrip-lstrip-strip-methods",
+    "title": "Python Strings",
+    "section": ".strip(), .rstrip(), lstrip() Strip methods",
+    "text": ".strip(), .rstrip(), lstrip() Strip methods\nStrip out extra whitespace using strip(), rstrip() and lstrip() functions\n.strip() removes white space from anywhere\n.rstrip() only removes white space from the right-hand-side of the string\n.lstrip() only removes white space from the left-hand-side of the string\n\nstr1 = '  hello, world!'    # white space at the beginning\nstr2 = '  hello, world!  '  # white space at both ends\nstr3 = 'hello, world!  '    # white space at the end\n\n\nstr1, str2, str3\n\n\nstr1.lstrip(), str1.rstrip()\n\n\nstr2.strip(), str2.rstrip()\n\n\nstr2.lstrip(), str3.rstrip()\n\n\nstatus.startswith('a')\n\n\nstatus.endswith('s')"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#replace",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#replace",
+    "title": "Python Strings",
+    "section": ".replace()",
+    "text": ".replace()\n\n\"latina\".replace(\"a\", \"x\")"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#format",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#format",
+    "title": "Python Strings",
+    "section": ".format()",
+    "text": ".format()\nVariable values can be embedding in strings using the format() function.\nPlace {} in the string in order from left to right. followed by .format(var1, var2, ...)`\n\nepoch = 20\nloss = 1.55\n\nprint('Epoch: {}, loss: {}'.format(epoch, loss))\n\nThis breaks, as three variables are required based on number of {}\n\nprint('Epoch: {}, loop: {}, loss: {}'.format(epoch, loss))"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#zfill",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#zfill",
+    "title": "Python Strings",
+    "section": ".zfill()",
+    "text": ".zfill()\nBasic usage of the str.zfill() method (pads a numeric string on the left with zeros) It understands about plus and minus signs\n\nprint('12'.zfill(5))       # Output: 00012\nprint('-3.14'.zfill(7))    # Output: -003.14\nprint('3.141592'.zfill(5)) # Output: 3.141592"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-04-Strings.html#len-length",
+    "href": "notebooks/M02_BasicPython/M02-04-Strings.html#len-length",
+    "title": "Python Strings",
+    "section": "len() Length",
+    "text": "len() Length\nThis is built-in length funciton tells us how many characters in the string.\nIt also applys to any list-like object, including strings, lists, dicts, sets, and dataframes.\n\nlen?\n\n\nmy_new_tring = 'This is a string'\n\n\nlen(my_new_tring)\n\n\nIndexing\nSince strings are sequences in Python, each character of the string has a unique position that can be indexed.\nIndexes are indicated by suffixed brackets, e.g. foo[]\n\nmy_new_tring[0] # displays the first character of the string\n            # first position is position zero. Will display 'h'\n\n\nmy_new_tring[-1] # displays the last character. Negatives count backwords.\n\n\n\nSlicing\nWe can used the colon to ‘slice’ strings (and lists)\n\nmy_new_tring[0:4] # First four characters (index positions 0-3)\n\n\nmy_new_tring[:4]  # Beginning (0) to (n-1) position\n\n\nmy_new_tring[4:]  # Fifth character and onwards until the end of the string\n\nit is NOT possible to reassign elements of a string. Python strings are immutable.\n\nstatus = 'success'\nstatus[0] = 't'\n\nAdd strings and handle pathing"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html",
+    "title": "Data Structures",
+    "section": "",
+    "text": "Lists\nA list is an ordered sequence of items.\nEach element of a list is associated with an integer that represents the order in which the element appears.\nLists are indexed with brackets [].\nList elements are accessed by providing their order number in the brackets.\nLists are mutable, meaning you can modify them after they have been created.\nThey can contain mixed types.\nLike a hash table.\nHas key-value pairs.\nElements are indexed using brackets [] (like lists).\nBut they are constructed used braces {}.\nKey names are unique. If you re-use a key, you overwrite its value.\nKeys don’t have to be strings – they can be numbers or tuples or expressions that evaluate to one of these.\nA tuple is like a list but with one big difference: a tuple is an immutable object!\nYou can’t change a tuple once it’s created.\nA tuple can contain any number of elements of any datatype.\nAccessed with brackets [] but constructed with parentheses ().\nA set is an unordered collection of unique objects.\nThey are subject to set operations.\nNote the set is deduped\nSince sets are unordered, they don’t have an index. This will break:\nCheck if a value is in the set using in\nCombine two sets\nThis fails:\nThis succeeds:\nGet the set intersection\nA range is a sequence of integers, from start to stop by step. - The start point is zero by default.\n- The step is one by default.\n- The stop point is NOT included.\nRanges can be assigned to a variable.\nMore often, ranges are used in iterations, which we will cover later.\nanother range:\nVery often you will want to build a dictionary from some data source, and add keys as they appear. The default dict type in Python, however, requires that the key exists before you can mutate it. The defaultdict type in the collections module solves this problem. Here’s an example."
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing",
+    "title": "Data Structures",
+    "section": "Constructing",
+    "text": "Constructing\nThey can be constructed in several ways:\n\nlist1 = []\nlist2 = list()\nlist3 = \"some string\".split()\nnumbers = [1,2,3,4]"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#indexing",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#indexing",
+    "title": "Data Structures",
+    "section": "Indexing",
+    "text": "Indexing\nZero-based indexing\nPython uses xzero-based indexing, which means for a collection mylist\nmylist[0] references the first element\nmylist[1] references the second element, etc\nFor any iterable object of length N:\nmylist[:n] will return the first n elements from index 0 to n-1\nmylist[-n:] will return the last n elements from index N-n to N-1\n\nnumbers[0] # Access first element (output: 1)\n\n\nnumbers[0] + numbers[3] # doing arithmetic with the values (output: 5)\n\n\nnumbers[len(numbers)]"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#slicing",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#slicing",
+    "title": "Data Structures",
+    "section": "Slicing",
+    "text": "Slicing\n\nnumbers[0:2] # Output: [1, 2]\n\n\nnumbers[1:3] # Output: [2, 3]\n\n\nlen(numbers) # use len() function to find the size. Output: 4\n\n\nnumbers[2:]  # Output: [3, 4]"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#multiply-lists-by-a-scalar",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#multiply-lists-by-a-scalar",
+    "title": "Data Structures",
+    "section": "Multiply lists by a scalar",
+    "text": "Multiply lists by a scalar\nA scalar is a single value number.\n\nnumbers * 2"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#concatenate-lists-with",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#concatenate-lists-with",
+    "title": "Data Structures",
+    "section": "Concatenate lists with +",
+    "text": "Concatenate lists with +\n\nnumbers2 = [30, 40, 50]\n\n\nnumbers + numbers2 # concatenate two lists"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-mix-types",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-mix-types",
+    "title": "Data Structures",
+    "section": "Lists can mix types",
+    "text": "Lists can mix types\n\nmyList = ['coconuts', 777, 7.25, 'Sir Robin', 80.0, True]\n\n\nmyList\n\nWhat happens if we multiply a list with strings?\n\n# myList * 2"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-be-nested",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-be-nested",
+    "title": "Data Structures",
+    "section": "Lists can be nested",
+    "text": "Lists can be nested\n\nnames = ['Darrell', 'Clayton', ['Billie', 'Arthur'], 'Samantha']\nnames[2] # returns a *list*\nnames[0] # returns a *string*\n\ncannot subset into a float, will break\n\nnames[2][0]"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-concatenated-with",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#lists-can-concatenated-with",
+    "title": "Data Structures",
+    "section": "Lists can concatenated with +",
+    "text": "Lists can concatenated with +\n\nvariables = ['x1', 'x2', 'x3']\nresponse = ['y']\n\n\nvariables + response"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing-1",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing-1",
+    "title": "Data Structures",
+    "section": "Constructing",
+    "text": "Constructing\n\ndict1 = {\n    'a': 1,\n    'b': 2,\n    'c': 3\n}\n\n\ndict2 = dict(x=55, y=29, z=99) # Note the absence of quotes around keys\n\n\ndict2\n\n\ndict3 = {'A': 'foo', 99: 'bar', (1,2): 'baz'}\n\n\ndict3"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#retrieve-a-value",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#retrieve-a-value",
+    "title": "Data Structures",
+    "section": "Retrieve a value",
+    "text": "Retrieve a value\nJust write a key as the index.\n\nphonelist = {'Tom':123, 'Bob':456, 'Sam':897}\n\n\nphonelist['Bob']"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#print-list-of-keys-values-or-both",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#print-list-of-keys-values-or-both",
+    "title": "Data Structures",
+    "section": "Print list of keys, values, or both",
+    "text": "Print list of keys, values, or both\nUse the .keys(), .values()', or.items()` methods.\nKeys are not sorted. For example, they are not ordered in order in which they were added.\n\nphonelist.keys() # Returns a list\n\n\nphonelist.values() # Returns a list\n\n\nphonelist.items() # Returns a list of tuples\n\n\nphonelist # note the data returned is not the same as the data entered"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing-2",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#constructing-2",
+    "title": "Data Structures",
+    "section": "Constructing",
+    "text": "Constructing\nCreated with comma-separated values, with or without parenthesis.\n\nletters = 'a', 'b', 'c', 'd'\n\n\nletters\n\n\nnumbers = (1,2,3,4) # numbers 1,2,3,4 stored in a tuple\n\nA single valued tuple must include a comma ,, e.g.\n\ntuple0 = (29)\n\n\ntuple0, type(tuple0)\n\n\ntuple1 = (29,)\n\n\ntuple1, type(tuple1)\n\n\nlen(numbers)\n\n\nnumbers[0] = 5 # Trying to assign a new value 5 to the first position"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#membership-with-in",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#membership-with-in",
+    "title": "Data Structures",
+    "section": "Membership with in",
+    "text": "Membership with in\nReturns a boolean.\n\n'Sam' in phonelist"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#try-with-dict",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#try-with-dict",
+    "title": "Data Structures",
+    "section": "Try with dict",
+    "text": "Try with dict\n\nwords = {}\nfor word in source_data:\n    words[word] += 1"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#use-try-and-except",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#use-try-and-except",
+    "title": "Data Structures",
+    "section": "Use try and except",
+    "text": "Use try and except\n\nfor word in source_data:\n    try:\n        words[word] += 1\n    except KeyError:\n        words[word] = 1\n\n\nwords"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#or-use-.get",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#or-use-.get",
+    "title": "Data Structures",
+    "section": "Or use .get()",
+    "text": "Or use .get()\n\nfor word in source_data:\n    words[word] = words.get(word, 0) + 1"
+  },
+  {
+    "objectID": "notebooks/M02_BasicPython/M02-05-Structures.html#use-collections.defaultdict",
+    "href": "notebooks/M02_BasicPython/M02-05-Structures.html#use-collections.defaultdict",
+    "title": "Data Structures",
+    "section": "Use collections.defaultdict",
+    "text": "Use collections.defaultdict\n\nfrom collections import defaultdict\n\n\nwords2 = defaultdict(int) # Not the type must be set\n\n\nfor word in source_data:\n    words2[word] += 1\n\n\nwords2"
   },
   {
     "objectID": "modules/m03/m03-intro.html#topics",
