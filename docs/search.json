@@ -7,220 +7,262 @@
     "text": "Welcome to Programming for Data Science, a collection of materials designed to support the course DS 5100 in the Data Science curriculum at UVA.\nIn this course, you will develop skills in Python and R Programming, as well as how to use the command line and GitHub.\nThe objective of this course is to introduce essential programming concepts, structures, and techniques.\nYou will gain confidence in not only reading code, but learning what it means to write good quality code.\nAdditionally, essential and complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization."
   },
   {
-    "objectID": "modules/m01/m01-getting-started.html#topics",
-    "href": "modules/m01/m01-getting-started.html#topics",
-    "title": "01 Getting Started",
+    "objectID": "modules/m01/m01-intro.html#topics",
+    "href": "modules/m01/m01-intro.html#topics",
+    "title": "Introduction",
     "section": "Topics",
     "text": "Topics\n\nIntroduce the course\nAccess Rivanna\nExplore the Unix command line\nExplore use of Git and GitHub"
   },
   {
-    "objectID": "modules/m01/m01-getting-started.html#outcomes",
-    "href": "modules/m01/m01-getting-started.html#outcomes",
-    "title": "01 Getting Started",
+    "objectID": "modules/m01/m01-intro.html#outcomes",
+    "href": "modules/m01/m01-intro.html#outcomes",
+    "title": "Introduction",
     "section": "Outcomes",
     "text": "Outcomes\n\nBecome familiar with UVA’s compute resources Rivanna\nBecome familiar with the command line, e.g. bash\nKnow the difference between Git and GitHub\nKnow how to fork and clone a repository for personal use\nKnow how to push content to a repository that you own\nKnow how to make a pull request to a repository that you don’t own"
   },
   {
     "objectID": "topics/rivanna.html#introduction",
     "href": "topics/rivanna.html#introduction",
-    "title": "1  About Rivanna",
-    "section": "1.1 Introduction",
-    "text": "1.1 Introduction\nA useful infrastructural resource for this course is Rivanna, UVA’s high-performance computing (HPC) cluster. Each student has an account on Rivanna and access to resources there based on participation in this course. We will use Rivanna in our class for both Python and R. \nThis page describes some of the tools available for your use in this course. For information about Rivanna, see this introduction. Resources for getting help, including a knowledge base and ticket system, are found at the Support Option’s Page on UVA’s Research Computing website.\nYou may need to use VPN to access Rivanna from an off-grounds location. To install VPN on your computer, go to the ITS VPN page for instructions. Note that you should connect to “UVA Anywhere,” not to any of the higher security options. Course Allocation\nThis course has been allocated compute and space resources on Rivanna. The names of the resources are given below. The allocation ID needs to be entered to access certain tools. The storage path is accessible to you on the remote server.\n\nAllocation ID: msds_ds5100\nStorage path: /project/MSDS_DS5100  (Don’t use unless directed to.)"
+    "title": "About Rivanna",
+    "section": "Introduction",
+    "text": "Introduction\nA useful infrastructural resource for this course is Rivanna, UVA’s high-performance computing (HPC) cluster. Each student has an account on Rivanna and access to resources there based on participation in this course. We will use Rivanna in our class for both Python and R. \nThis page describes some of the tools available for your use in this course. For information about Rivanna, see this introduction. Resources for getting help, including a knowledge base and ticket system, are found at the Support Option’s Page on UVA’s Research Computing website.\nYou may need to use VPN to access Rivanna from an off-grounds location. To install VPN on your computer, go to the ITS VPN page for instructions. Note that you should connect to “UVA Anywhere,” not to any of the higher security options. Course Allocation\nThis course has been allocated compute and space resources on Rivanna. The names of the resources are given below. The allocation ID needs to be entered to access certain tools. The storage path is accessible to you on the remote server.\n\nAllocation ID: msds_ds5100\nStorage path: /project/MSDS_DS5100  (Don’t use unless directed to.)"
   },
   {
     "objectID": "topics/rivanna.html#tools",
     "href": "topics/rivanna.html#tools",
-    "title": "1  About Rivanna",
-    "section": "1.2 Tools ",
-    "text": "1.2 Tools \nUVA Research Computing provides you with a suite of tools to access Rivanna. These tools are accessible through the menu on the UVA OpenOnDemand Dashboard page. Below are some brief descriptions of the tools.\nFile Explorer. A web-based GUI to access the file system of the remote server. Can be used to create, move, and delete directories and files, and to edit the contents of files (see Editor). You can also upload and download files through this interface. The File Explorer is useful to view your remote content and manage files and directories without having to use the command line. Note that not all operations can be performed through this interface.\nFind under “Files” in the menu. \nEditor. A web-based text editor launched from the File Explorer to view and edit text files on the remote server.  Although not as sophisticated as VS Code (below), this is very useful for editing data and code files without having to use a command line editor. One advantage over VS Code is that it does not need to be launched – which means it does not time out like the Interactive Apps listed below.\nThe Editor is launched from the File Explorer.\nSSH Shell Access (Terminal). Access to the command line of the remote server.  Use this to open a terminal window to perform Linux commands directly.  Note that It is necessary to use a terminal to install and run certain programs on the remote server.\nFind under “Clusters” in the menu. \nYou can also access the remote command line via SSH on your local computer. Just enter the following on the command line of either a PC or Mac:\nssh -Y <userid>@hpc.rivanna.virginia.edu\nReplace <userid> with your UVA Net ID, e.g. abc2x. \nBe suer to be running VPN if you are accessing Rivanna from an off-grounds location."
+    "title": "About Rivanna",
+    "section": "Tools ",
+    "text": "Tools \nUVA Research Computing provides you with a suite of tools to access Rivanna. These tools are accessible through the menu on the UVA OpenOnDemand Dashboard page. Below are some brief descriptions of the tools.\nFile Explorer. A web-based GUI to access the file system of the remote server. Can be used to create, move, and delete directories and files, and to edit the contents of files (see Editor). You can also upload and download files through this interface. The File Explorer is useful to view your remote content and manage files and directories without having to use the command line. Note that not all operations can be performed through this interface.\nFind under “Files” in the menu. \nEditor. A web-based text editor launched from the File Explorer to view and edit text files on the remote server.  Although not as sophisticated as VS Code (below), this is very useful for editing data and code files without having to use a command line editor. One advantage over VS Code is that it does not need to be launched – which means it does not time out like the Interactive Apps listed below.\nThe Editor is launched from the File Explorer.\nSSH Shell Access (Terminal). Access to the command line of the remote server.  Use this to open a terminal window to perform Linux commands directly.  Note that It is necessary to use a terminal to install and run certain programs on the remote server.\nFind under “Clusters” in the menu. \nYou can also access the remote command line via SSH on your local computer. Just enter the following on the command line of either a PC or Mac:\nssh -Y <userid>@hpc.rivanna.virginia.edu\nReplace <userid> with your UVA Net ID, e.g. abc2x. \nBe suer to be running VPN if you are accessing Rivanna from an off-grounds location."
   },
   {
     "objectID": "topics/rivanna.html#interactive-spps",
     "href": "topics/rivanna.html#interactive-spps",
-    "title": "1  About Rivanna",
-    "section": "1.3 Interactive Spps",
-    "text": "1.3 Interactive Spps\nThese tools must be launched by specifying a set of parameters, including the allocation you are using. They are also timed and will close when time is up. Be sure to give yourself enough time when launching these, and to be aware of how much time you have when working.\nNote also that you should allocate the fewest resources necessary to do the work you plan to do. This saves resources on the remote host, but also allows your app to launch more quickly. If you ask for an excessive amount of resources, you may wait a long time (e.g. hours) to have your app launched.\nDesktop. Access to a GUI desktop to the remote server. This provides a access to various applications on the server, including a web browser, a file explorer, and terminal windows.  Using this is not necessary if you can get by with the tools listed above.\nFind under “Interactive Apps > Desktop” in the menu.\nVS Code. Access to Visual Studio Code on the remote server. This is a fully functional instance of the IDE.\nFind under “Interactive Apps > Code Server” in the menu.\nJupyter. Access to Jupyter Lab on the remote server. Find under “Interactive Apps > Jupyter Lab” in the menu.\nRStudio. Access to Jupyter Lab on the remote server.\nFind under “Interactive Apps > RStudio Server” in the menu."
+    "title": "About Rivanna",
+    "section": "Interactive Spps",
+    "text": "Interactive Spps\nThese tools must be launched by specifying a set of parameters, including the allocation you are using. They are also timed and will close when time is up. Be sure to give yourself enough time when launching these, and to be aware of how much time you have when working.\nNote also that you should allocate the fewest resources necessary to do the work you plan to do. This saves resources on the remote host, but also allows your app to launch more quickly. If you ask for an excessive amount of resources, you may wait a long time (e.g. hours) to have your app launched.\nDesktop. Access to a GUI desktop to the remote server. This provides a access to various applications on the server, including a web browser, a file explorer, and terminal windows.  Using this is not necessary if you can get by with the tools listed above.\nFind under “Interactive Apps > Desktop” in the menu.\nVS Code. Access to Visual Studio Code on the remote server. This is a fully functional instance of the IDE.\nFind under “Interactive Apps > Code Server” in the menu.\nJupyter. Access to Jupyter Lab on the remote server. Find under “Interactive Apps > Jupyter Lab” in the menu.\nRStudio. Access to Jupyter Lab on the remote server.\nFind under “Interactive Apps > RStudio Server” in the menu."
   },
   {
     "objectID": "topics/rivanna.html#for-more-information",
     "href": "topics/rivanna.html#for-more-information",
-    "title": "1  About Rivanna",
-    "section": "1.4 For More Information",
-    "text": "1.4 For More Information\nUVA’s Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:\n\nIntroduction to Rivanna\nUsing Rivanna from the Command Line"
+    "title": "About Rivanna",
+    "section": "For More Information",
+    "text": "For More Information\nUVA’s Research Computing unit provides resources for learning how to use Rivanna. Here are two slide decks that you may find useful:\n\nIntroduction to Rivanna\nUsing Rivanna from the Command Line"
   },
   {
     "objectID": "topics/unix.html#introduction",
     "href": "topics/unix.html#introduction",
-    "title": "2  Using Unix",
-    "section": "2.1 Introduction",
-    "text": "2.1 Introduction\nThe Unix family of operating systems provide users with a command line interface (CLI) to execute commands and get things done. They also, typically provide GUIs but we won’t go into those here.\nThe Unix family includes all varieties of Linux and the Mac OS (which is based on FreeBSD).\nThe command line that you actually interact with – the set of commands available to you – is called a shell, and there are several shells that you can run on your system. The most typical shell in use today is called bash which stands for Bourne Again Shell, since it is an improved version of bsh (The Bourne Shell). New versions of MacOS use the Z shell (zsh). The commands in these two shells are mostly similar, but there are subtle differences.\nWindows has shells too for its command line interface. The default shell is DOS, but is also has PowerShell  as an advanced (and very capable) option.\nFor more information, check out these resources:\n\nUVA Research Computing’s Unix tutorial.\nNewham, 2005, Learning the bash Shell, O’Reilly Media.\nJeroen Janssens, 2021, Data Science From the Command Line, O’Reilly Media.\nNeal Stephenson, 1999, In the Beginning Was The Command Line. (PDF version.)"
+    "title": "Using Unix",
+    "section": "Introduction",
+    "text": "Introduction\nThe Unix family of operating systems provide users with a command line interface (CLI) to execute commands and get things done. They also, typically provide GUIs but we won’t go into those here.\nThe Unix family includes all varieties of Linux and the Mac OS (which is based on FreeBSD).\nThe command line that you actually interact with – the set of commands available to you – is called a shell, and there are several shells that you can run on your system. The most typical shell in use today is called bash which stands for Bourne Again Shell, since it is an improved version of bsh (The Bourne Shell). New versions of MacOS use the Z shell (zsh). The commands in these two shells are mostly similar, but there are subtle differences.\nWindows has shells too for its command line interface. The default shell is DOS, but is also has PowerShell  as an advanced (and very capable) option.\nFor more information, check out these resources:\n\nUVA Research Computing’s Unix tutorial.\nNewham, 2005, Learning the bash Shell, O’Reilly Media.\nJeroen Janssens, 2021, Data Science From the Command Line, O’Reilly Media.\nNeal Stephenson, 1999, In the Beginning Was The Command Line. (PDF version.)"
   },
   {
     "objectID": "topics/unix.html#basic-commands",
     "href": "topics/unix.html#basic-commands",
-    "title": "2  Using Unix",
-    "section": "2.2 Basic Commands",
-    "text": "2.2 Basic Commands\nIn this course, you don’t need to know very many Unix shell commands, but you should be comfortable working from the command line to perform basic tasks. This is because some things can only be performed from the command line, such as installing some essential software. Here is a list of basic commands.\nNavigating filesystems and managing directories:\n\ncd – change directory\npwd – show the current directory\nln – make links and symlinks to files and directories\nmkdir – make new directory\nrmdir – remove directories in Unix\n\nNavigating filesystem and managing files and access permissions:\n\nls – list files and directories\ncp – copy files (work in progress)\nrm – remove files and directories (work in progress)\nmv – rename or move files and directories to another location\nchmod – change file/directory access permissions\nchown – change file/directory ownership"
+    "title": "Using Unix",
+    "section": "Basic Commands",
+    "text": "Basic Commands\nIn this course, you don’t need to know very many Unix shell commands, but you should be comfortable working from the command line to perform basic tasks. This is because some things can only be performed from the command line, such as installing some essential software. Here is a list of basic commands.\nNavigating filesystems and managing directories:\n\ncd – change directory\npwd – show the current directory\nln – make links and symlinks to files and directories\nmkdir – make new directory\nrmdir – remove directories in Unix\n\nNavigating filesystem and managing files and access permissions:\n\nls – list files and directories\ncp – copy files (work in progress)\nrm – remove files and directories (work in progress)\nmv – rename or move files and directories to another location\nchmod – change file/directory access permissions\nchown – change file/directory ownership"
   },
   {
     "objectID": "topics/unix.html#text-file-commands",
     "href": "topics/unix.html#text-file-commands",
-    "title": "2  Using Unix",
-    "section": "2.3 Text file commands",
-    "text": "2.3 Text file commands\nMost of important configuration in Unix is in plain text files, these commands will let you quickly inspect files or view logs:\n\ncat – concatenate files and show contents to the standard output\nmore – basic pagination when viewing text files or parsing Unix commands output\nless – an improved pagination tool for viewing text files (better than more command)\nhead – show the first 10 lines of text file (you can specify any number of lines)\ntail – show the last 10 lines of text file (any number can be specified)\ngrep – search for patterns in text files"
+    "title": "Using Unix",
+    "section": "Text file commands",
+    "text": "Text file commands\nMost of important configuration in Unix is in plain text files, these commands will let you quickly inspect files or view logs:\n\ncat – concatenate files and show contents to the standard output\nmore – basic pagination when viewing text files or parsing Unix commands output\nless – an improved pagination tool for viewing text files (better than more command)\nhead – show the first 10 lines of text file (you can specify any number of lines)\ntail – show the last 10 lines of text file (any number can be specified)\ngrep – search for patterns in text files"
   },
   {
     "objectID": "topics/unix.html#miscellaneous",
     "href": "topics/unix.html#miscellaneous",
-    "title": "2  Using Unix",
-    "section": "2.4 Miscellaneous",
-    "text": "2.4 Miscellaneous\n\nclear – clear screen\nhistory – show history of previous commands"
+    "title": "Using Unix",
+    "section": "Miscellaneous",
+    "text": "Miscellaneous\n\nclear – clear screen\nhistory – show history of previous commands"
   },
   {
     "objectID": "topics/unix.html#command-line-cool",
     "href": "topics/unix.html#command-line-cool",
-    "title": "2  Using Unix",
-    "section": "2.5 Command Line Cool",
-    "text": "2.5 Command Line Cool\nAlthough we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book Data Science from the Command Line makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e. bloated) tools such as Python and R.  At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!\n\nOne last thing – for fun you may want to read Neal Stephenson’s “In the Beginning Was The Command Line”, a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term “metaverse” in the novel Snowcrash."
+    "title": "Using Unix",
+    "section": "Command Line Cool",
+    "text": "Command Line Cool\nAlthough we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book Data Science from the Command Line makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e. bloated) tools such as Python and R.  At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!\n\nOne last thing – for fun you may want to read Neal Stephenson’s “In the Beginning Was The Command Line”, a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term “metaverse” in the novel Snowcrash."
   },
   {
     "objectID": "topics/setting-up-ssh.html#overview",
     "href": "topics/setting-up-ssh.html#overview",
-    "title": "3  SSH for GitHub",
-    "section": "3.1 Overview",
-    "text": "3.1 Overview\n\nThis method will allow you to interact with your repos hosted on GitHub without having to enter your login credentials each time.\nYou will create an SSH key on your local machine. By “local machine,” we mean the machine where you will be working and pulling to, e.g your laptop or Rivanna. In other words, it’s local relative to GitHub.\nSSH keys have a public and private component. These are hash strings that are stored in files. Both will be generated on your machine.\nYou will copy and paste the generate public key to your GitHub account.\nGoing forward, you will clone from your account using the SSH protocol."
+    "title": "SSH for GitHub",
+    "section": "Overview",
+    "text": "Overview\n\nThis method will allow you to interact with your repos hosted on GitHub without having to enter your login credentials each time.\nYou will create an SSH key on your local machine. By “local machine,” we mean the machine where you will be working and pulling to, e.g your laptop or Rivanna. In other words, it’s local relative to GitHub.\nSSH keys have a public and private component. These are hash strings that are stored in files. Both will be generated on your machine.\nYou will copy and paste the generate public key to your GitHub account.\nGoing forward, you will clone from your account using the SSH protocol."
   },
   {
     "objectID": "topics/setting-up-ssh.html#steps",
     "href": "topics/setting-up-ssh.html#steps",
-    "title": "3  SSH for GitHub",
-    "section": "3.2 Steps",
-    "text": "3.2 Steps\n\n3.2.1 Part A\nOn your local machine\nGet to the command line (i.e. the shell).\n\nOn a Mac, open Terminal.\nIf you are on Windows and you have admin rights, first install git-bash. Otherwise try to access the Linux subsystem.\nOn Rivanna, either connect via SSH or use Rivanna Shell Access (under Clusters).\n\nMove into your root directory and enter cd.\nGenerate the key.\n\nEnter: ssh-keygen -t ed25519 -C \"your_email_id@example.com\", using your email address.\nBe sure to use the email address associated with your GitHub account in the above command.\n\nAt the prompt, type in a secure passphrase.\n\nYou don’t have to do this, but it is advised.\nCreate a memorable sentence.\nA good passphrase should have at least 15, preferably 20 characters and be difficult to guess. It should contain upper case letters, lower case letters, digits, and preferably at least one punctuation character.\n\nAdd the key to ssh-agent.\n\nEnter: eval \"$(ssh-agent -s)\"\nEnter: ssh-add ~/.ssh/id_ed25519\n\nIf you’re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain. Follow the instructions here (at step 2).\n\n\n3.2.2 Part B\nOn your GitHub account\nGet the public key that was just generated.\n\nEnter: more ~/.ssh/id_ed25519.pub\nCopy the result to your clipboard (e.g. by blocking off the line and entering Ctrl-C).\nThe key should begin ssh-ed25519 and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.\n\nOn GitHub, go to your account settings and select “SSH and GPG Keys” from the side menu.\n\nA link to your account settings can be found in the drop-down list produced by clicking on your user icon in the upper right of the website.\n\nUnder “SSH keys,” press the “New SSH Key” button.\n\nAdd a brief title describing the context of the key, i.e. the local machine where it was generated, e.g. Rivanna.\nChoose “Authentication Key” as the Key type.\nPaste the key into the Key text area.\nSubmit the form by pressing “Add SSH key.”\n\nYou are now good to go. Whenever you clone a site from your GitHub account, choose the SSH link."
+    "title": "SSH for GitHub",
+    "section": "Steps",
+    "text": "Steps\n\nPart A\nOn your local machine\nGet to the command line (i.e. the shell).\n\nOn a Mac, open Terminal.\nIf you are on Windows and you have admin rights, first install git-bash. Otherwise try to access the Linux subsystem.\nOn Rivanna, either connect via SSH or use Rivanna Shell Access (under Clusters).\n\nMove into your root directory and enter cd.\nGenerate the key.\n\nEnter: ssh-keygen -t ed25519 -C \"your_email_id@example.com\", using your email address.\nBe sure to use the email address associated with your GitHub account in the above command.\n\nAt the prompt, type in a secure passphrase.\n\nYou don’t have to do this, but it is advised.\nCreate a memorable sentence.\nA good passphrase should have at least 15, preferably 20 characters and be difficult to guess. It should contain upper case letters, lower case letters, digits, and preferably at least one punctuation character.\n\nAdd the key to ssh-agent.\n\nEnter: eval \"$(ssh-agent -s)\"\nEnter: ssh-add ~/.ssh/id_ed25519\n\nIf you’re using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain. Follow the instructions here (at step 2).\n\n\nPart B\nOn your GitHub account\nGet the public key that was just generated.\n\nEnter: more ~/.ssh/id_ed25519.pub\nCopy the result to your clipboard (e.g. by blocking off the line and entering Ctrl-C).\nThe key should begin ssh-ed25519 and end with the email address you used in generating the key. In between it will have a long string of alphanumeric characters.\n\nOn GitHub, go to your account settings and select “SSH and GPG Keys” from the side menu.\n\nA link to your account settings can be found in the drop-down list produced by clicking on your user icon in the upper right of the website.\n\nUnder “SSH keys,” press the “New SSH Key” button.\n\nAdd a brief title describing the context of the key, i.e. the local machine where it was generated, e.g. Rivanna.\nChoose “Authentication Key” as the Key type.\nPaste the key into the Key text area.\nSubmit the form by pressing “Add SSH key.”\n\nYou are now good to go. Whenever you clone a site from your GitHub account, choose the SSH link."
   },
   {
     "objectID": "topics/setting-up-ssh.html#information-sources",
     "href": "topics/setting-up-ssh.html#information-sources",
-    "title": "3  SSH for GitHub",
-    "section": "3.3 Information Sources",
-    "text": "3.3 Information Sources\n\nAbout SSH\nGenerate the key\nAbout pass phrases\nAdding the key to GitHub\nUpdating repos with SSH"
+    "title": "SSH for GitHub",
+    "section": "Information Sources",
+    "text": "Information Sources\n\nAbout SSH\nGenerate the key\nAbout pass phrases\nAdding the key to GitHub\nUpdating repos with SSH"
   },
   {
     "objectID": "topics/git-and-github.html#introduction",
     "href": "topics/git-and-github.html#introduction",
-    "title": "4  Git and GitHub",
-    "section": "4.1 Introduction",
-    "text": "4.1 Introduction\nGit and GitHub are two tools that work together, but it is important to understand what each does and how they are different to each other.\nHere are some basic things to know:\n\nGit is a stand-alone version control system that runs on a variety of platforms, including Linux, MacOS, and Windows.\nGitHub is a company that offers a cloud-based Git repository hosting service that makes it easy to use Git for version control, collaboration, and sharing code. This service is offered through a website.\nThere are other Git hosting services out there, including GitLab, and open source tool that can be installed on a local server.\nGitHub builds on top of Git and adds some functionality to it, while Git can interact with GitHub through actions like cloning, pushing, and pulling. However, Git does not require GitHub to function.\nGit does not have a fork command. GitHub (and other hosting services such as GitLab) have added this command as a convenient way to copy repositories."
+    "title": "Git and GitHub",
+    "section": "Introduction",
+    "text": "Introduction\nGit and GitHub are two tools that work together, but it is important to understand what each does and how they are different to each other.\nHere are some basic things to know:\n\nGit is a stand-alone version control system that runs on a variety of platforms, including Linux, MacOS, and Windows.\nGitHub is a company that offers a cloud-based Git repository hosting service that makes it easy to use Git for version control, collaboration, and sharing code. This service is offered through a website.\nThere are other Git hosting services out there, including GitLab, and open source tool that can be installed on a local server.\nGitHub builds on top of Git and adds some functionality to it, while Git can interact with GitHub through actions like cloning, pushing, and pulling. However, Git does not require GitHub to function.\nGit does not have a fork command. GitHub (and other hosting services such as GitLab) have added this command as a convenient way to copy repositories."
   },
   {
     "objectID": "topics/git-and-github.html#using-git-and-github-together",
     "href": "topics/git-and-github.html#using-git-and-github-together",
-    "title": "4  Git and GitHub",
-    "section": "4.2 Using Git and GitHub Together",
-    "text": "4.2 Using Git and GitHub Together\n\n\n\nXKCD #1597\n\n\nSource\nA basic series of actions one continually makes with Git are the following:\n\n\n\nAction\nDescription\nCommand\n\n\n\n\nFork\nForking a repo makes a copy of someone else’s repo in your GitHub account, which you can now modify. Note: Forking does not have to be performed if you are not interested in altering the code. You can clone it directlty.\nThis is done through GitHub’s web interface by clicking on the Fork button.\n\n\nClone\nCloning the repo to a workspace to which you have access, whether a local machine or a remote resource (e.g. Rivanna).\ngit clone <repo>\n\n\nAdd\nCreating or editing a file locally and then adding it to the list of files git will keep track of.\ngit add <filename>Note that you may use wildcards here, e.g. *, to add more than one file at a time.\n\n\nCommit\nCommitting the changes made to the file by adding them to the repo’s database of changes. This is accompanied by a brief, descriptive message of the changes made.\ngit commit -m \"What you did\"\n\n\nPush\nPushing the changes to the remote repo that you cloned from. This uploads both the files and the database changes to the repo.\ngit push\n\n\nPull\nPulling, i.e. downloading, any changes that have been made to the remote repo to your local repo. This usually happens if you are working in teams on the same project.\ngit pull\n\n\nPull Request\nThis is a request made to the owner of the original repo to pull in the changes you’ve made to your forked copy.\nThis is done through GitHub’s web interface. Read the docs. \n\n\nFetch Upstream\nThis refreshes the content of your forked repo with the content from the original repo.\nThis is done through GitHub’s web interface. Read the docs. \n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is not the only pattern to use with Git. Here is another — the Git Fork-Branch-Pull Workflow\n\n\nHere is a visualization of the process:\n\n\n\nDiagram of common git workflow\n\n\nIn this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.\nNote also that the here “Remote workstation” may be confusing; it means remote relative to your laptop, e.g. Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo."
+    "title": "Git and GitHub",
+    "section": "Using Git and GitHub Together",
+    "text": "Using Git and GitHub Together\n\n\n\nXKCD #1597\n\n\nSource\nA basic series of actions one continually makes with Git are the following:\n\n\n\nAction\nDescription\nCommand\n\n\n\n\nFork\nForking a repo makes a copy of someone else’s repo in your GitHub account, which you can now modify. Note: Forking does not have to be performed if you are not interested in altering the code. You can clone it directlty.\nThis is done through GitHub’s web interface by clicking on the Fork button.\n\n\nClone\nCloning the repo to a workspace to which you have access, whether a local machine or a remote resource (e.g. Rivanna).\ngit clone <repo>\n\n\nAdd\nCreating or editing a file locally and then adding it to the list of files git will keep track of.\ngit add <filename>Note that you may use wildcards here, e.g. *, to add more than one file at a time.\n\n\nCommit\nCommitting the changes made to the file by adding them to the repo’s database of changes. This is accompanied by a brief, descriptive message of the changes made.\ngit commit -m \"What you did\"\n\n\nPush\nPushing the changes to the remote repo that you cloned from. This uploads both the files and the database changes to the repo.\ngit push\n\n\nPull\nPulling, i.e. downloading, any changes that have been made to the remote repo to your local repo. This usually happens if you are working in teams on the same project.\ngit pull\n\n\nPull Request\nThis is a request made to the owner of the original repo to pull in the changes you’ve made to your forked copy.\nThis is done through GitHub’s web interface. Read the docs. \n\n\nFetch Upstream\nThis refreshes the content of your forked repo with the content from the original repo.\nThis is done through GitHub’s web interface. Read the docs. \n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis is not the only pattern to use with Git. Here is another — the Git Fork-Branch-Pull Workflow\n\n\nHere is a visualization of the process:\n\n\n\nDiagram of common git workflow\n\n\nIn this diagram, the dashed lines refer to actions performed only once for a give repo. Forking and cloning are done to acquire a repo, while fetch upstream (aka sync fork) and pull requests on the GitHub server, and pull/push on your local machine, are done repeatedly as you develop and share code.\nNote also that the here “Remote workstation” may be confusing; it means remote relative to your laptop, e.g. Rivanna, which we sometimes call local relative to the GitHub repo. In any case, note that these two copies of the same repo do not communicate with each other directly, but rather through their common relationship with the GitHub hosted instance of the repo."
   },
   {
     "objectID": "topics/git-and-github.html#to-learn-more",
     "href": "topics/git-and-github.html#to-learn-more",
-    "title": "4  Git and GitHub",
-    "section": "4.3 To Learn More",
-    "text": "4.3 To Learn More\n\nVideos https://git-scm.com/videos\nBook https://git-scm.com/book/en/v2"
+    "title": "Git and GitHub",
+    "section": "To Learn More",
+    "text": "To Learn More\n\nVideos https://git-scm.com/videos\nBook https://git-scm.com/book/en/v2"
   },
   {
     "objectID": "modules/m01/m01-using-rivanna.html",
     "href": "modules/m01/m01-using-rivanna.html",
-    "title": "5  Activity: Using Rivanna",
+    "title": "Activity: Using Rivanna",
     "section": "",
     "text": "After reading the previous documents on Rivanna and Unix, try to complete this activity before class.\nTo get started, go to OpenOnDemand Dashboard page and from the main menu select Clusters → Rivanna Shell Access.\nThis should open a terminal to what is called the “shell” of the operating system.\n\n\n\nScreenshot of Rivanna shell\n\n\nRivanna uses Linux, a member of the Unix family of operating systems. Many cloud resources use Linux.\nUnderstanding how to do work from the command line on such systems is an essential skill of the data scientist.\nIf you have never used the command line, have no fear! Just enter the commands exactly as shown and ask questions in the Teams chat if you are stuck.\nNow, create a directory for your course and this course by entering the following commands:\ncd Documents \nmdkir MSDS \ncd MSDS \nmkdir DS5100 \ncd DS5100\nIf the Documents directory does not exist, create that first using the mkdir command.\n\ncd means “change directory,” and is a basic Unix command.\nmkdir means “make directory.” It’s also a basic Unix command.\n\nNote that you can use the tab key to complete path and command names as you type.\nYou don’t have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.\nMore information about Unix shell commands can be found the document Unix Shell Commands."
   },
   {
     "objectID": "modules/m01/m01-activity-github.html#introduction",
     "href": "modules/m01/m01-activity-github.html#introduction",
-    "title": "6  Activity: Using Git and GitHub",
-    "section": "6.1 Introduction",
-    "text": "6.1 Introduction\nDuring the technical orientation, you set up a GitHub account.\nYou also spent a little time browsing a sample repository, which you may wish to revisit:\n\nhttps://github.com/UVADS/orientation-technical\n\nYou also should be able check off the following items:\n\nUnderstand the difference between Git and GitHub.\nUnderstand the purpose of Git and Github for data science work.\nEnsure Git is installed on your computer.\nUnderstand how to find a repository on GitHub.\n\nLet’s apply and extend this knowledge now with our course repo.\nBe sure you are inside the course directory we created earlier.\nAlso, we assume you have already created a GitHub account. å Fork the course GitHub hosted repository (“repo”) to your GitHub account.\nGo to https://github.com/ontoligent/DS5100-2023-07-R in your web browser.\n\n\n\n\n\n\nNote\n\n\n\nThis is the course repo — all of the course notebooks and other code will be available here. Each week, you will access your course materials here.\n\n\nClick on the Fork icon in the upper right and follow the prompts to finish the process.\nYou should end up at the web page of your newly forked repo.\nYou will now have a copy of the repo in your GitHub account.\nClone the forked repo for this course inside of your course directory on Rivanna.\nFind the green Code button and click on it. You should see something like this:\n\nMake sure you have selected the SSH option.\n\n\n\n\n\n\nImportant\n\n\n\nNote: This requires that you have SSH set up.\n\n\nThen click on the copy icon and paste the value into the following command:\ngit clone https://github.com:<github_user_name>/DS5100-2023-07-R.git\n\n\n\n\n\n\nImportant\n\n\n\nBe sure to clone the repo from your GitHub account, replacing <github_user_name> with your GitHub user name. Do not just cut-and-paste the line above!\n\n\nYou now have a copy the course repo to your account on Rivanna.\nThis will be the directory you created in your pre-class activities under Documents/.\nCreate a new file in your newly cloned repo.\nGo to your command line window on Rivanna.\nUse cd to move into the directory just created by the clone operation.\nMove into the directory lessons/M01_GettingStarted/hello\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you are in this directory before proceeding.\n\n\nIf you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:\ncd ~/Documents/MSDS/DS5100/DS5100-2023-07-R/lessons/M01_GettingStarted/hello \nNote that the tilde sign ~ stands for the path to your home directory.\nUsing the file editor on Rivanna, create and save new file called <userid>_hello.txt, replacing <userid> with your actual user ID, e.g. rca2t_hello.txt.\nIn the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?\nSave the file.\nAdd and commit the changes you made.\nNow do the following:\ngit add <userid>_hello.txt\ngit commit -m \"Created file for class\"\nPush your new file to the repo on GitHub.\nSince you have SSH set up, you can issue the following command without having to enter a password:\n\ngit push\n\n\nCreate a Pull Request\nFinally, make a pull request to have your file added to the original site. To do this, follow these steps:\nClick on the “Pull requests” menu item (see image below) on the web page for your repo.\n\n\n\nImage of pull request button on GitHub\n\n\nClick on the green “New pull request” button.\nClick on the green “Create pull request” button.\nGive the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.\nNow the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged."
+    "title": "Activity: Using Git and GitHub",
+    "section": "Introduction",
+    "text": "Introduction\nDuring the technical orientation, you set up a GitHub account.\nYou also spent a little time browsing a sample repository, which you may wish to revisit:\n\nhttps://github.com/UVADS/orientation-technical\n\nYou also should be able check off the following items:\n\nUnderstand the difference between Git and GitHub.\nUnderstand the purpose of Git and Github for data science work.\nEnsure Git is installed on your computer.\nUnderstand how to find a repository on GitHub.\n\nLet’s apply and extend this knowledge now with our course repo.\nBe sure you are inside the course directory we created earlier.\nAlso, we assume you have already created a GitHub account. å Fork the course GitHub hosted repository (“repo”) to your GitHub account.\nGo to https://github.com/ontoligent/DS5100-2023-07-R in your web browser.\n\n\n\n\n\n\nNote\n\n\n\nThis is the course repo — all of the course notebooks and other code will be available here. Each week, you will access your course materials here.\n\n\nClick on the Fork icon in the upper right and follow the prompts to finish the process.\nYou should end up at the web page of your newly forked repo.\nYou will now have a copy of the repo in your GitHub account.\nClone the forked repo for this course inside of your course directory on Rivanna.\nFind the green Code button and click on it. You should see something like this:\n\nMake sure you have selected the SSH option.\n\n\n\n\n\n\nImportant\n\n\n\nNote: This requires that you have SSH set up.\n\n\nThen click on the copy icon and paste the value into the following command:\ngit clone https://github.com:<github_user_name>/DS5100-2023-07-R.git\n\n\n\n\n\n\nImportant\n\n\n\nBe sure to clone the repo from your GitHub account, replacing <github_user_name> with your GitHub user name. Do not just cut-and-paste the line above!\n\n\nYou now have a copy the course repo to your account on Rivanna.\nThis will be the directory you created in your pre-class activities under Documents/.\nCreate a new file in your newly cloned repo.\nGo to your command line window on Rivanna.\nUse cd to move into the directory just created by the clone operation.\nMove into the directory lessons/M01_GettingStarted/hello\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you are in this directory before proceeding.\n\n\nIf you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:\ncd ~/Documents/MSDS/DS5100/DS5100-2023-07-R/lessons/M01_GettingStarted/hello \nNote that the tilde sign ~ stands for the path to your home directory.\nUsing the file editor on Rivanna, create and save new file called <userid>_hello.txt, replacing <userid> with your actual user ID, e.g. rca2t_hello.txt.\nIn the file, introduce yourself by answering the question: What is the most recent film you watched and enjoyed?\nSave the file.\nAdd and commit the changes you made.\nNow do the following:\ngit add <userid>_hello.txt\ngit commit -m \"Created file for class\"\nPush your new file to the repo on GitHub.\nSince you have SSH set up, you can issue the following command without having to enter a password:\n\ngit push\n\n\nCreate a Pull Request\nFinally, make a pull request to have your file added to the original site. To do this, follow these steps:\nClick on the “Pull requests” menu item (see image below) on the web page for your repo.\n\n\n\nImage of pull request button on GitHub\n\n\nClick on the green “New pull request” button.\nClick on the green “Create pull request” button.\nGive the request the title “In-class activity” and then press the green “Create pull request” button at the bottom of the form.\nNow the ball is in the instructor’s court to merge the request with the original. If you put your file in the right place and named it properly, it will be merged."
   },
   {
     "objectID": "modules/m01/m01-activity-github.html#going-forward",
     "href": "modules/m01/m01-activity-github.html#going-forward",
-    "title": "6  Activity: Using Git and GitHub",
-    "section": "6.2 Going Forward",
-    "text": "6.2 Going Forward\nDuring the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.\nInstead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:\n\nThe Course Repo, which is where you will get course materials.\nYour Assessments Repo, which is where you will be your finished work as assigned."
+    "title": "Activity: Using Git and GitHub",
+    "section": "Going Forward",
+    "text": "Going Forward\nDuring the semester, you will not be making pull requests to submit your work. We do it here to demonstrate the concept since it is so basic to working with GitHub in the real world.\nInstead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:\n\nThe Course Repo, which is where you will get course materials.\nYour Assessments Repo, which is where you will be your finished work as assigned."
   },
   {
     "objectID": "modules/m01/m01-notebooks.html",
     "href": "modules/m01/m01-notebooks.html",
-    "title": "7  Notebooks",
+    "title": "Notebooks",
     "section": "",
     "text": "Class notebooks"
   },
   {
-    "objectID": "modules/m02/m02-introducing-python.html#topics",
-    "href": "modules/m02/m02-introducing-python.html#topics",
-    "title": "02 Introducting Python",
+    "objectID": "modules/m02/m02-intro.html#topics",
+    "href": "modules/m02/m02-intro.html#topics",
+    "title": "Introduction",
     "section": "Topics",
     "text": "Topics\n\nRunning Python code.\nPython’s basic data types.\nPython’s primary operators associated with each data type.\nPython’s built-in data structures."
   },
   {
-    "objectID": "modules/m02/m02-introducing-python.html#outcomes",
-    "href": "modules/m02/m02-introducing-python.html#outcomes",
-    "title": "02 Introducting Python",
+    "objectID": "modules/m02/m02-intro.html#outcomes",
+    "href": "modules/m02/m02-intro.html#outcomes",
+    "title": "Introduction",
     "section": "Outcomes",
     "text": "Outcomes\n\nRun Python from the command line on Rivanna.\nCreate and run a Jupyter Notebook on Rivanna.\nDescribe the difference between data from the perspective of data science versus computer science.\nKnow the primary data types in Python and their basic operators.\nKnow the built-in list-like data structures in Python and the basic methods and functions associated with them."
   },
   {
-    "objectID": "modules/m02/m02-introducing-python.html#readings",
-    "href": "modules/m02/m02-introducing-python.html#readings",
-    "title": "02 Introducting Python",
+    "objectID": "modules/m02/m02-intro.html#readings",
+    "href": "modules/m02/m02-intro.html#readings",
+    "title": "Introduction",
     "section": "Readings",
     "text": "Readings\n\nRequired\n\n\nKatz and Katz 2019, Section 1, Preparing the Workspace\n\n\nLutz, Learning Python, Part I: Getting Started, Chapter 2\n\n\nLutz, Learning Python, Part I: Getting Started, Chapter 3\n\n\nLutz, Learning Python, Part II: Types and Operations, Chapters 4–9\n\n\n\n\nOptional\n\n\nKatz and Katz 2019, Section 1, First Steps in Coding - Variables and Data Types\n\n\nBuilt-in Types (Official)\n\n\nPython Data Types (GFG)\n\n\nPython Operators (W3S)\n\n\nImmutable vs Mutable Data Types in Python (Medium)"
   },
   {
     "objectID": "topics/on-data.html#code-should-be-simple",
     "href": "topics/on-data.html#code-should-be-simple",
-    "title": "8  Data and Code",
-    "section": "8.1 Code should be simple",
-    "text": "8.1 Code should be simple\nAn important principle for writing effective and intelligible code is that code should be simple — to quote Einstein, as simple as possible but no simpler.\n\nA contributing factor to code simplicity is how it is related to the data it is designed to process.\nThis relationship depends largely on how the data are structured.\nA program is always written with data in mind — what kind of data it is and how it is structured."
+    "title": "Data and Code",
+    "section": "Code should be simple",
+    "text": "Code should be simple\nAn important principle for writing effective and intelligible code is that code should be simple — to quote Einstein, as simple as possible but no simpler.\n\nA contributing factor to code simplicity is how it is related to the data it is designed to process.\nThis relationship depends largely on how the data are structured.\nA program is always written with data in mind — what kind of data it is and how it is structured."
   },
   {
     "objectID": "topics/on-data.html#simplicity-of-code-follows-from-the-structure-of-data",
     "href": "topics/on-data.html#simplicity-of-code-follows-from-the-structure-of-data",
-    "title": "8  Data and Code",
-    "section": "8.2 Simplicity of code follows from the structure of data",
-    "text": "8.2 Simplicity of code follows from the structure of data\nThere is a view among programmers which, although not orthodoxy, is commonplace.\n\nIt is the idea that the complexity of a program — its algorithms — is a function of the quality of the data structure it processes.\nIf a data structure is not well designed, algorithms may be excessively complex and hard to understand.\nHowever if a data structure is well designed, the algorithms that process them are more robust and intelligible."
+    "title": "Data and Code",
+    "section": "Simplicity of code follows from the structure of data",
+    "text": "Simplicity of code follows from the structure of data\nThere is a view among programmers which, although not orthodoxy, is commonplace.\n\nIt is the idea that the complexity of a program — its algorithms — is a function of the quality of the data structure it processes.\nIf a data structure is not well designed, algorithms may be excessively complex and hard to understand.\nHowever if a data structure is well designed, the algorithms that process them are more robust and intelligible."
   },
   {
     "objectID": "topics/on-data.html#supporting-references",
     "href": "topics/on-data.html#supporting-references",
-    "title": "8  Data and Code",
-    "section": "8.3 Supporting References",
-    "text": "8.3 Supporting References\nConsider these quotes cited in an essay on Data Structures. by Igor Budasov, reproduced here:\nHere’s a quote from Linus Torvalds in 2006:\n\nI’m a huge proponent of designing your code around the data, rather than the other way around, and I think it’s one of the reasons git has been fairly successful . . . I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his [sic] code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships.\n\nWhich sounds a lot like Eric Raymond’s “Rule of Representation” from 2003:\n\nFold knowledge into data, so program logic can be stupid and robust.\n\nWhich was just his summary of ideas like this one from Rob Pike in 1989:\n\nData dominates. If you’ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.\n\nWhich cites Fred Brooks from 1975:\n\nRepresentation is the Essence of Programming\n\nBeyond craftsmanship lies invention, and it is here that lean, spare, fast programs are born. Almost always these are the result of strategic breakthrough rather than tactical cleverness. Sometimes the strategic breakthrough will be a new algorithm, such as the Cooley-Tukey Fast Fourier Transform or the substitution of an n log n sort for an n 2 set of comparisons.\n\n\nMuch more often, strategic breakthrough will come from redoing the representation of the data or tables. This is where the heart of your program lies. Show me your flowcharts and conceal your tables, and I shall be continued to be mystified. Show me your tables, and I won’t usually need your flowcharts; they’ll be obvious."
+    "title": "Data and Code",
+    "section": "Supporting References",
+    "text": "Supporting References\nConsider these quotes cited in an essay on Data Structures. by Igor Budasov, reproduced here:\nHere’s a quote from Linus Torvalds in 2006:\n\nI’m a huge proponent of designing your code around the data, rather than the other way around, and I think it’s one of the reasons git has been fairly successful . . . I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his [sic] code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships.\n\nWhich sounds a lot like Eric Raymond’s “Rule of Representation” from 2003:\n\nFold knowledge into data, so program logic can be stupid and robust.\n\nWhich was just his summary of ideas like this one from Rob Pike in 1989:\n\nData dominates. If you’ve chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming.\n\nWhich cites Fred Brooks from 1975:\n\nRepresentation is the Essence of Programming\n\nBeyond craftsmanship lies invention, and it is here that lean, spare, fast programs are born. Almost always these are the result of strategic breakthrough rather than tactical cleverness. Sometimes the strategic breakthrough will be a new algorithm, such as the Cooley-Tukey Fast Fourier Transform or the substitution of an n log n sort for an n 2 set of comparisons.\n\n\nMuch more often, strategic breakthrough will come from redoing the representation of the data or tables. This is where the heart of your program lies. Show me your flowcharts and conceal your tables, and I shall be continued to be mystified. Show me your tables, and I won’t usually need your flowcharts; they’ll be obvious."
   },
   {
     "objectID": "topics/python-object-types.html",
     "href": "topics/python-object-types.html",
-    "title": "9  Python Object Types",
+    "title": "Python Object Types",
     "section": "",
     "text": "Python is organized into a hierarchy of object types. Sometimes, these are just call types.\nObjects are the basic unit out of which the language is constructed.\nWe’ll learn about objects later – what they are and how to create your own – but for now just understand that they have two main things associated with them:\n\nFirst, they can contain data.\nSecond, they can have behaviors, frequently in relation to the data they contain.\n\nData types and data structures are kinds of objects."
   },
   {
     "objectID": "modules/m02/m02-activity-hello-world.html#the-python-interactive-shell",
     "href": "modules/m02/m02-activity-hello-world.html#the-python-interactive-shell",
-    "title": "10  Activity: Hello, World!",
-    "section": "10.1 The Python Interactive Shell",
-    "text": "10.1 The Python Interactive Shell\nLog onto the Rivanna shell and move into in the course directory you created for this class.\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)\nTo exit the Python Shell, enter quit() or exit() and hit return."
+    "title": "Activity: Hello, World!",
+    "section": "The Python Interactive Shell",
+    "text": "The Python Interactive Shell\nLog onto the Rivanna shell and move into in the course directory you created for this class.\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)\nTo exit the Python Shell, enter quit() or exit() and hit return."
   },
   {
     "objectID": "modules/m02/m02-activity-hello-world.html#python-files",
     "href": "modules/m02/m02-activity-hello-world.html#python-files",
-    "title": "10  Activity: Hello, World!",
-    "section": "10.2 Python Files",
-    "text": "10.2 Python Files\nNow create a file called hello.py using the command line editor nano.\nThen run it from the command line by directly invoking the Python interpreter python."
+    "title": "Activity: Hello, World!",
+    "section": "Python Files",
+    "text": "Python Files\nNow create a file called hello.py using the command line editor nano.\nThen run it from the command line by directly invoking the Python interpreter python."
   },
   {
     "objectID": "modules/m02/m02-activity-jupyter-lab-on-rivanna.html",
     "href": "modules/m02/m02-activity-jupyter-lab-on-rivanna.html",
-    "title": "11  Activity: Jupyter Lab",
+    "title": "Activity: Jupyter Lab",
     "section": "",
     "text": "Now that we have run Python on Rivanna from the command line, let’s try it using a Jupyter Notebook.\nGo the OnDemand site to access Rivanna. As a reminder, the URL is https://rivanna-portal.hpc.virginia.edu/.\nFrom the Interactive Apps menu, select JupyterLab and fill out the form to initiate a new session.\nRemember to select just the resources needed and to enter our course allocations (msds_ds5100).\nOnce the session is ready, launch the notebook.\nOnce you are in the notebook, use file system tab on the left to get to the directory of your personal assessments repo. Remember, you created two repos for this class – one for course content from the instructor, and one for your own course work. Use the latter for this exercise.\nIn a code cell in the notebook, enter the code to print \"Hello, World!\", and run the cell.\nSave your notebook as hello-world.ipynb."
+  },
+  {
+    "objectID": "modules/m03/m03-intro.html#topics",
+    "href": "modules/m03/m03-intro.html#topics",
+    "title": "Introduction",
+    "section": "Topics",
+    "text": "Topics\n\nMore on Statements and Syntax\nControl Structures and Loops\nIterators\nComprehensions"
+  },
+  {
+    "objectID": "modules/m03/m03-intro.html#outcomes",
+    "href": "modules/m03/m03-intro.html#outcomes",
+    "title": "Introduction",
+    "section": "Outcomes",
+    "text": "Outcomes\n\nRecognize primary control structures available in Python and their basic use cases\nWrite comprehensions for each of Python’s list-like data structures\nRecognize when iterators are used by Python functions (such as open())\nUnderstand basic conditional logic statements and their role in designing data flow in a program"
+  },
+  {
+    "objectID": "modules/m03/m03-intro.html#readings",
+    "href": "modules/m03/m03-intro.html#readings",
+    "title": "Introduction",
+    "section": "Readings",
+    "text": "Readings\n\nRequired\n\n\nLutz, 2019, Part III, Chapter 10. Introducing Python Statements\n\n\nLutz, 2019, Part III, Chapter 11. Assignments, Expressions, and Prints\n\n\nRead only up to and including “The Python 3.X print Function.”\n\n\n\n\nLutz, 2019, Part III, Chapter 12. if Tests and Syntax Rules\n\n\nLutz, 2019, Part III, Chapter 13. while and for Loops\n\n\nLutz, 2019, Part III, Chapter 14. Iterations and Comprehensions\n\n\nLutz, 2019, Part III, Chapter 15: The Documentations Interlude\n\n\n\n\nOptional\n\n\nVariables, Expressions, Statements, Types (Python Notes)\n\n\nMore Control Flow Tools (Python Docs)\n\n\nIf … Then (W3S)\n\n\nIterators (GFG)"
+  },
+  {
+    "objectID": "modules/m04/m04-intro.html#topics",
+    "href": "modules/m04/m04-intro.html#topics",
+    "title": "Introduction",
+    "section": "Topics",
+    "text": "Topics\n\nBuilt-in functions\nUser-defined functions\nVariable scope\nLambda functions\nDesign of functions\nRecursion"
+  },
+  {
+    "objectID": "modules/m04/m04-intro.html#outcomes",
+    "href": "modules/m04/m04-intro.html#outcomes",
+    "title": "Introduction",
+    "section": "Outcomes",
+    "text": "Outcomes\n\nBe able to use Pythons native and imported functions\nBe able to write your own functions\nUnderstand concept of variable scope\nBe able to write lambda functions and understand their use cases\nGrasp basic principles of function design\nImplement simple recursion functions"
+  },
+  {
+    "objectID": "modules/m04/m04-intro.html#readings",
+    "href": "modules/m04/m04-intro.html#readings",
+    "title": "Introduction",
+    "section": "Readings",
+    "text": "Readings\n\nRequired\n\n\nLutz 2019, Part IV, Chapter 16: Function Basics\n\n\nLutz 2019, Part IV, Chapter 17: Scopes\n\n\nNon-local is for advanced users\n\n\n\n\nLutz 2019, Part IV, Chapter 18. Arguments\n\n\nLutz 2019, Part IV, Chapter 19: Advanced Function Topics\n\n\n\n\nOptional\n\n\nMcKinney, Python for Data Analysis, Appendix A: Python Language Essentials\n\n\nRead section on Functions\n\n\nFunctions (W3S)\n\n\nGlobal and Local Variables (GFG)\n\n\nLambda Functions (Real Python)"
   }
 ]

@@ -1,0 +1,69 @@
+project:
+  title: "Programming for Data Science"
+  type: book
+  output-dir: docs
+
+website:
+  twitter-card: true
+  site-url: https://ontoligent.github.io/DS5100-2023-07-R
+
+book:
+  title: "Programming for Data Science"
+  author: "Rafael C. Alvarado"
+  date: "05/08/2021"
+  page-navigation: true
+  repo-url: https://github.com/ontoligent/DS5100-2023-07-R
+  chapters:
+    - part: index.qmd 
+    - part: "01 Getting Started"
+      chapters:
+      - modules/m01/m01-intro.qmd
+      - topics/rivanna.qmd
+      - topics/unix.qmd
+      - topics/setting-up-ssh.qmd
+      - topics/git-and-github.qmd
+      - modules/m01/m01-using-rivanna.qmd
+      - modules/m01/m01-activity-github.qmd
+      - modules/m01/m01-notebooks.qmd
+    - part: "02 Introducing Python"
+      chapters:
+      - modules/m02/m02-intro.qmd
+      - topics/on-data.qmd
+      - topics/python-object-types.qmd
+      - modules/m02/m02-activity-hello-world.qmd
+      - modules/m02/m02-activity-jupyter-lab-on-rivanna.qmd
+      - modules/m02/M02-01-DataTypes.ipynb
+    - part: "03 Control Structures"
+      chapters:
+      - modules/m03/m03-intro.qmd
+    - part: "04 Functions"
+      chapters: 
+        - modules/m04/m04-intro.qmd
+    - part: "05 NumPy"
+    - part: "06 Pandas"
+    - part: "07 Classes"
+    - part: "08 Testing"
+    - part: "09 Modules"
+    - part: "10 Basic R"
+    - part: "11 Dplyr"
+    - part: "12 Visualization"
+    - part: "13 Agile"
+  sidebar:
+    style: docked
+    background: light
+    
+format:
+  html:
+    toc: true
+    theme: cosmo
+    number-sections: false
+
+  # pdf:
+  #   documentclass: scrreport    
+
+bibliography:
+  - refs.bib
+
+
+
+
