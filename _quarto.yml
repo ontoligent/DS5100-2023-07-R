@@ -2,18 +2,16 @@ project:
   title: "DS 5100: Programming for Data Science"
   type: book
   output-dir: docs
-
-# website:
   
 book:
   title: "DS 5001: Programming for Data Science"
+  subtitle: "{{< var academic_term >}}"
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   page-navigation: true
-  navbar: 
-    search: true
-    pinned: true
-    collapse: true
+  repo-actions: [edit]
+  downloads: [pdf]
+  sharing: [twitter, facebook, linkedin]
   site-url: https://ontoligent.github.io/DS5100-2023-07-R
   repo-url: https://github.com/ontoligent/DS5100-2023-07-R
   chapters:
@@ -67,16 +65,17 @@ book:
     style: floating
     background: light
     collapse-level: 1
-    
+
+# comments:
+#   hypothesis: true
+
 format:
   html:
     toc: true
     theme: cosmo
     number-sections: false
-    # number-depth: 1
-
-  # pdf:
-  #   documentclass: scrreport    
+  pdf:
+    documentclass: scrreport    
 
 bibliography:
   - refs.bib

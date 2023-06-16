@@ -40,7 +40,7 @@ Replace `<userid>` with your UVA Net ID, e.g. `abc2x`. 
 
 Be suer to be running VPN if you are accessing Rivanna from an off-grounds location.
 
-## Interactive Spps
+## Interactive Apps
 
 These tools must be launched by specifying a set of parameters, including the allocation you are using. They are also timed and will close when time is up. Be sure to give yourself enough time when launching these, and to be aware of how much time you have when working.
 

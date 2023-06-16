@@ -58,6 +58,6 @@ Most of important configuration in Unix is in plain text files, these commands w
 
 Although we will not be using the command line to this degree, you should know that it is a powerful environment for doing data science work. The book [Data Science from the Command Line](https://datascienceatthecommandline.com/2e/) makes the case for using the command line to perform many tasks that we often perform with more resource intensive (i.e. bloated) tools such as Python and R.  At some point in your early DS career, you may want to look at this. The book itself is also a great introduction to data science!
 
-![](https://datascienceatthecommandline.com/2e/images/cover-small.png)
+![](../media/dsatcl-cover-small.png)
 
 One last thing – for fun you may want to read Neal Stephenson's ["In the Beginning Was The Command Line"](http://project.cyberpunk.ru/lib/in_the_beginning_was_the_command_line/), a kind of cyberpunk history of the topic. Stephenson, by the way, is the author who coined the term "metaverse" in the novel _Snowcrash_.

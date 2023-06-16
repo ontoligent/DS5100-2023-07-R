@@ -2,126 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/index.html</loc>
-    <lastmod>2023-06-16T12:18:38.620Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.304Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m00/syllabus.html</loc>
-    <lastmod>2023-06-16T12:18:38.621Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.306Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/oreilly-accounts.html</loc>
-    <lastmod>2023-06-16T12:18:38.622Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.308Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-intro.html</loc>
-    <lastmod>2023-06-16T12:18:38.623Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.309Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/rivanna.html</loc>
-    <lastmod>2023-06-16T12:18:38.623Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.310Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/unix.html</loc>
-    <lastmod>2023-06-16T12:18:38.624Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.311Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/setting-up-ssh.html</loc>
-    <lastmod>2023-06-16T12:18:38.625Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.312Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/git-and-github.html</loc>
-    <lastmod>2023-06-16T12:18:38.626Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.313Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-using-rivanna.html</loc>
-    <lastmod>2023-06-16T12:18:38.626Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.314Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m01/m01-activity-github.html</loc>
-    <lastmod>2023-06-16T12:18:38.628Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.316Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-intro.html</loc>
-    <lastmod>2023-06-16T12:18:38.628Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.316Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/on-data.html</loc>
-    <lastmod>2023-06-16T12:18:38.629Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.317Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/topics/python-object-types.html</loc>
-    <lastmod>2023-06-16T12:18:38.630Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.319Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-activity-hello-world.html</loc>
-    <lastmod>2023-06-16T12:18:38.630Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.320Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m02/m02-activity-jupyter-lab-on-rivanna.html</loc>
-    <lastmod>2023-06-16T12:18:38.631Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.321Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M02_BasicPython/M02-01-DataTypes.html</loc>
-    <lastmod>2023-06-16T12:18:38.634Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.324Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M02_BasicPython/M02-02-Numbers.html</loc>
-    <lastmod>2023-06-16T12:18:38.635Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.325Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M02_BasicPython/M02-03-Booleans.html</loc>
-    <lastmod>2023-06-16T12:18:38.636Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.326Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M02_BasicPython/M02-04-Strings.html</loc>
-    <lastmod>2023-06-16T12:18:38.640Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.328Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M02_BasicPython/M02-05-Structures.html</loc>
-    <lastmod>2023-06-16T12:18:38.642Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.331Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m03/m03-intro.html</loc>
-    <lastmod>2023-06-16T12:18:38.643Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.332Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M03_ControlStructures/M03-01-ControlStructures.html</loc>
-    <lastmod>2023-06-16T12:18:38.645Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.334Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.html</loc>
-    <lastmod>2023-06-16T12:18:38.647Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.336Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M03_ControlStructures/M03-03-Comprehensions.html</loc>
-    <lastmod>2023-06-16T12:18:38.648Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.337Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/modules/m04/m04-intro.html</loc>
-    <lastmod>2023-06-16T12:18:38.649Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.338Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-01-Importing.html</loc>
-    <lastmod>2023-06-16T12:18:38.650Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.340Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-02-Functions.html</loc>
-    <lastmod>2023-06-16T12:18:38.652Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.343Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-03-LambdaFunctions.html</loc>
-    <lastmod>2023-06-16T12:18:38.652Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.344Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.html</loc>
-    <lastmod>2023-06-16T12:18:38.655Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.347Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-05-Scope.html</loc>
-    <lastmod>2023-06-16T12:18:38.656Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.349Z</lastmod>
   </url>
   <url>
     <loc>https://ontoligent.github.io/DS5100-2023-07-R/notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.html</loc>
-    <lastmod>2023-06-16T12:18:38.658Z</lastmod>
+    <lastmod>2023-06-16T13:10:55.352Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ontoligent.github.io/DS5100-2023-07-R/DS-5001--Programming-for-Data-Science.pdf</loc>
+    <lastmod>2023-06-16T13:10:53.584Z</lastmod>
   </url>
 </urlset>
