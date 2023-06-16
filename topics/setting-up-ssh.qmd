@@ -17,7 +17,7 @@
 Get to the command line (i.e. the shell).
 
 1. On a Mac, open Terminal.
-2. If you are on Windows and you have admin rights, first install `git-bash`. Otherwise try to access the Linux subsystem.
+2. If you are on Windows and you have admin rights, first install `git-bash`. Otherwise follow [this tutorial from Microsoft](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement).
 3. On [Rivanna](https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu), either connect via SSH or use Rivanna Shell Access (under Clusters).
 
 Move into your root directory and enter `cd`.
@@ -74,6 +74,8 @@ You are now good to go. Whenever you clone a site from your GitHub
 account, choose the SSH link.
 
 ## Information Sources
+
+The GitHub site has lots of excellent documentation. Here are some pages you may find useful.
 
 * [About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
 * [Generate the key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
