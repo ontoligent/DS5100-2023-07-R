@@ -1,5 +1,5 @@
 ---
-title: Preface
+title: Welcome
 ---
 
 Welcome to Programming for Data Science, a collection of materials designed to support the course DS 5100 in the Data Science curriculum at UVA. 

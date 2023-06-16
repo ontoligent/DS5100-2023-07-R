@@ -41,7 +41,7 @@ You will now have a copy of the repo in your GitHub account.
 
 Find the green Code button and click on it. You should see something like this:
 
-![](../media/git-clone.jpg)
+![](../../media/git-clone.jpg)
 
 Make sure you have selected the SSH option.
 
@@ -123,7 +123,7 @@ Finally, make a pull request to have your file added to the original site. To do
 
 Click on the "Pull requests" menu item (see image below) on the web page for your repo.
 
-![Image of pull request button on GitHub](../media/pull-request-button.jpg)
+![Image of pull request button on GitHub](../../media/pull-request-button.jpg)
 
 Click on the green "New pull request" button.
 

@@ -1,4 +1,4 @@
-# Introduction
+# M04 Functions
 
 ## Topics
 - Built-in functions
@@ -22,11 +22,7 @@
 
 <ul>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch16.html">Lutz 2019, Part IV, Chapter 16: Function Basics</a></li>
-<li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch17.html">Lutz 2019, Part IV, Chapter 17: Scopes</a>
-<ul>
-<li>Non-local is for advanced users</li>
-</ul>
-</li>
+<li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch17.html">Lutz 2019, Part IV, Chapter 17: Scopes</a> Non-local is for advanced users</li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch18.html">Lutz 2019, Part IV, Chapter 18. Arguments</a></li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch19.html">Lutz 2019, Part IV, Chapter 19: Advanced Function Topics</a></li>
 </ul>

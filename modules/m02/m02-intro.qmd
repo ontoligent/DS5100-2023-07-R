@@ -1,4 +1,4 @@
-# Introduction
+# M02 Introducing Python
 
 ## Topics
 

@@ -1,4 +1,4 @@
-# Introduction
+# M03 Control Structures
 
 ## Topics
 
@@ -21,10 +21,7 @@
 <ul>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch10.html">Lutz, 2019, Part III, Chapter 10. Introducing Python Statements</a></li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch11.html">Lutz, 2019, Part III, Chapter 11. Assignments, Expressions, and Prints</a>
-<ul>
-<li>Read only up to and including "<span>The Python 3.X print Function."</span></li>
-</ul>
-</li>
+Read only up to and including "<span>The Python 3.X print Function."</li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch12.html">Lutz, 2019, Part III, Chapter 12. if Tests and Syntax Rules</a></li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch13.html">Lutz, 2019, Part III, Chapter 13. while and for Loops</a></li>
 <li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/ch14.html">Lutz, 2019, Part III, Chapter 14. Iterations and Comprehensions</a></li>

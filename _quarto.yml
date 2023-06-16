@@ -1,33 +1,36 @@
 project:
-  title: "Programming for Data Science"
+  title: "DS 5100: Programming for Data Science"
   type: book
   output-dir: docs
 
-website:
-  twitter-card: true
-  site-url: https://ontoligent.github.io/DS5100-2023-07-R
-
+# website:
+  
 book:
-  title: "Programming for Data Science"
+  title: "DS 5001: Programming for Data Science"
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
   page-navigation: true
+  navbar: 
+    search: true
+    pinned: true
+    collapse: true
+  site-url: https://ontoligent.github.io/DS5100-2023-07-R
   repo-url: https://github.com/ontoligent/DS5100-2023-07-R
   chapters:
     - part: index.qmd 
-    - part: "01 Getting Started"
       chapters:
-      - modules/m01/m01-intro.qmd
+      - modules/m00/syllabus.qmd
+      - topics/oreilly-accounts.qmd
+    - part: modules/m01/m01-intro.qmd
+      chapters:
       - topics/rivanna.qmd
       - topics/unix.qmd
       - topics/setting-up-ssh.qmd
       - topics/git-and-github.qmd
       - modules/m01/m01-using-rivanna.qmd
       - modules/m01/m01-activity-github.qmd
-      - modules/m01/m01-notebooks.qmd
-    - part: "02 Introducing Python"
+    - part: modules/m02/m02-intro.qmd
       chapters:
-      - modules/m02/m02-intro.qmd
       - topics/on-data.qmd
       - topics/python-object-types.qmd
       - modules/m02/m02-activity-hello-world.qmd
@@ -37,30 +40,40 @@ book:
       - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
       - notebooks/M02_BasicPython/M02-04-Strings.ipynb
       - notebooks/M02_BasicPython/M02-05-Structures.ipynb
-    - part: "03 Control Structures"
+    - part: modules/m03/m03-intro.qmd
       chapters:
-      - modules/m03/m03-intro.qmd
-    - part: "04 Functions"
+      - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
+      - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
+      - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
+    - part: modules/m04/m04-intro.qmd
       chapters: 
-        - modules/m04/m04-intro.qmd
-    - part: "05 NumPy"
-    - part: "06 Pandas"
-    - part: "07 Classes"
-    - part: "08 Testing"
-    - part: "09 Modules"
-    - part: "10 Basic R"
-    - part: "11 Dplyr"
-    - part: "12 Visualization"
-    - part: "13 Agile"
+      - notebooks/M04_PythonFunctions/M04-01-Importing.ipynb
+      - notebooks/M04_PythonFunctions/M04-02-Functions.ipynb
+      - notebooks/M04_PythonFunctions/M04-03-LambdaFunctions.ipynb
+      - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
+      - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
+      - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
+    # - part: "05 NumPy"
+    # - part: "06 Pandas"
+    # - part: "07 Classes"
+    # - part: "08 Testing"
+    # - part: "09 Modules"
+    # - part: "10 Basic R"
+    # - part: "11 Dplyr"
+    # - part: "12 Visualization"
+    # - part: "13 Agile"
   sidebar:
-    style: docked
+    # style: docked
+    style: floating
     background: light
+    collapse-level: 1
     
 format:
   html:
     toc: true
     theme: cosmo
     number-sections: false
+    # number-depth: 1
 
   # pdf:
   #   documentclass: scrreport    
