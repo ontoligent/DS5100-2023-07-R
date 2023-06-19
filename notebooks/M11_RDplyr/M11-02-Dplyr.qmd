@@ -1,4 +1,4 @@
-# The `dplyr` package
+# NB: The `dplyr` package
 
 > Based on [Peng 2022](https://bookdown.org/rdpeng/rprogdatascience/)
 

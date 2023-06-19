@@ -103,11 +103,14 @@ book:
         - topics/project-management.qmd
         - topics/agile-dev.qmd
         - topics/user-stories.qmd
+    - appendix:
+      - topics/try-except-finally.qmd
   sidebar:
     style: docked
     # style: floating
     background: light
     collapse-level: 1
+    subtitle: Summer 2023
 
 # comments:
 #   hypothesis: true

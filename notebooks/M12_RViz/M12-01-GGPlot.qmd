@@ -1,4 +1,4 @@
-# GGPlot2
+# NB: GGPlot2
 
 ## Introduction
 

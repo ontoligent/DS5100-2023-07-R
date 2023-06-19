@@ -1,4 +1,4 @@
-# Introducing Tibbles
+# NB: Introducing Tibbles
 
 > Based on [Wikham and Grolemund 2017](https://r4ds.had.co.nz/index.html)
 
