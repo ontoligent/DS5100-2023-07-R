@@ -19,7 +19,7 @@ editor_options:
 Packages need to be installed once.
 
 ```{r}
-install.packages("tm")
+# install.packages("tm")  
 ```
 
 You can also install thing using the Package window.

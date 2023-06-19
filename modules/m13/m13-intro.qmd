@@ -1,0 +1,24 @@
+# M13 Agile
+
+## Topics
+- General concept of project management (PM)
+- Rationale for PM
+- Main types of PM
+- Deeper dive into Agile PM
+- Basic artifacts, tools, and processes for PM
+
+## Readings
+
+### Required
+
+<ul>
+<li><a target="_new" href="https://agilemanifesto.org/">Manifesto for Agile Software Development (agilemanifesto.org)</a></li>
+<li><a target="_new" href="https://agilemanifesto.org/principles.html">Twelve Principles of Agile Software (agilemanifesto.org)</a></li>
+<li><a target="_new" href="https://www.digite.com/agile/user-stories/">User Stories: An Overview (Digit&eacute;)</a></li>
+<li><a target="_new" href="https://cdh.princeton.edu/research/project-management/charters/">Project Charters (Princeton)</a></li>
+<li><a target="_new" href="https://cdh.princeton.edu/documents/11/dataset_curation_charter_template_(2).pdf">Dataset Curation Template (Princeton)</a></li>
+</ul>
+
+<!--
+### Optional
+-->

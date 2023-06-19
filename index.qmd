@@ -1,3 +1,5 @@
+# Welcome
+
 **Welcome to website for DS 5100 Programming for Data Science, {{< var academic_term >}}.**
 
 ::: {.callout-note}

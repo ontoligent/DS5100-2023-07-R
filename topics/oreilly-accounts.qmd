@@ -10,7 +10,7 @@ You should see this dialog box:
 
 ![](../media/oreilly-01.png)
 
-Click on Institution not listed? This will produce the following dialog box:
+Click on **Institution not listed?** This will produce the following dialog box:
 
 ![](../media/oreilly-02.png)
 
@@ -20,4 +20,4 @@ This should produce the following message:
 
 ![](../media/oreilly-03.png)
 
-Now you can access all the books in the collection. When you return, click on Already a user? in the second dialog box.
+Now you can access all the books in the collection. When you return, click on **Already a user?** in the second dialog box.
