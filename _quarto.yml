@@ -2,6 +2,9 @@ project:
   title: "DS 5100: Programming for Data Science"
   type: book
   output-dir: docs
+
+execute:
+  freeze: true
   
 book:
   title: "DS 5001: Programming for Data Science"
@@ -103,8 +106,8 @@ book:
         - topics/project-management.qmd
         - topics/agile-dev.qmd
         - topics/user-stories.qmd
-    - appendix:
-      - topics/try-except-finally.qmd
+    # - appendices:
+    #   - topics/try-except-finally.qmd
   sidebar:
     style: docked
     # style: floating
@@ -120,8 +123,8 @@ format:
     toc: true
     theme: cosmo
     number-sections: false
-  pdf:
-    documentclass: scrreport    
+  # pdf:
+  #   documentclass: scrreport    
 
 bibliography:
   - refs.bib
