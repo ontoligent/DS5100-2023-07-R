@@ -123,6 +123,9 @@ format:
     toc: true
     theme: cosmo
     number-sections: false
+    fig-cap-location: bottom
+    link-external-icon: true
+    link-external-newwindow: true
   # pdf:
   #   documentclass: scrreport    
 
