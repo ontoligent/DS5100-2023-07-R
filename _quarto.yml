@@ -13,7 +13,7 @@ book:
   date: "05/08/2021"
   page-navigation: true
   repo-actions: [edit]
-  downloads: [pdf]
+  # downloads: [pdf]
   sharing: [twitter, facebook, linkedin]
   site-url: https://ontoligent.github.io/DS5100-2023-07-R
   repo-url: https://github.com/ontoligent/DS5100-2023-07-R
