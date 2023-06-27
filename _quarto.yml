@@ -126,8 +126,8 @@ format:
     fig-cap-location: bottom
     link-external-icon: true
     link-external-newwindow: true
-  # pdf:
-  #   documentclass: scrreport    
+  pdf:
+    documentclass: scrreport    
 
 bibliography:
   - refs.bib
