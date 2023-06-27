@@ -1,0 +1,24 @@
+# Schedule
+
+| Week | Day | Date | Topic | Assessments |
+|-----|-----|------|-------|-------------|
+| 1 | Mon | 07/17 | [M01 Getting Started](../m01/m01-intro.qmd) |  |
+| 2 | Tue | 07/18 | [M02 Introducing Python](../m02/m02-intro.qmd) |  |
+| 3 | Wed | 07/19 | [M03 Python Control Structures](../m03/m03-intro.qmd) |  |
+| 4 | Thu | 07/20 | [M04 Python Functions](../m04/m04-intro.qmd) |  |
+| 5 | Fri | 07/21 | Review Day |  |
+| 6 | Mon | 07/24 | [M05](../m05/m05-intro.qmd) |  |
+| 7 | Tue | 07/25 | [M06](../m06/m06-intro.qmd) |  |
+| 8 | Wed | 07/26 |  |  |
+| 9 | Thu | 07/27 |  |  |
+| 10 | Fri | 07/28 |  |  |
+| 11 | Mon | 07/31 |  |  |
+| 12 | Tue | 08/01 |  |  |
+| 13 | Wed | 08/02 |  |  |
+| 14 | Thu | 08/03 |  |  |
+| 15 | Fri | 08/04 |  |  |
+| 16 | Mon | 08/07 |  |  |
+| 17 | Tue | 08/08 |  |  |
+| 18 | Wed | 08/09 |  |  |
+| 19 | Thu | 08/10 |  |  |
+| 20 | Fri | 08/11 |  |  |

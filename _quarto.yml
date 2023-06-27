@@ -21,8 +21,9 @@ book:
     - part: index.qmd 
       chapters:
         - modules/m00/syllabus.qmd
+        - modules/m00/schedule.qmd
         - topics/oreilly-accounts.qmd
-    - part: modules/m01/m01-intro.qmd
+    - part: modules/m01/m01-intro.qmd # "01 Getting Started"
       chapters:
         - topics/rivanna.qmd
         - topics/unix.qmd
@@ -30,7 +31,7 @@ book:
         - topics/git-and-github.qmd
         - modules/m01/m01-using-rivanna.qmd
         - modules/m01/m01-activity-github.qmd
-    - part: modules/m02/m02-intro.qmd
+    - part: modules/m02/m02-intro.qmd # "02 Introducing Python"
       chapters:
         - topics/on-data.qmd
         - topics/python-object-types.qmd
@@ -41,12 +42,12 @@ book:
         - notebooks/M02_BasicPython/M02-03-Booleans.ipynb
         - notebooks/M02_BasicPython/M02-04-Strings.ipynb
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
-    - part: modules/m03/m03-intro.qmd
+    - part: modules/m03/m03-intro.qmd # "03 Control Structures"
       chapters:
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
-    - part: modules/m04/m04-intro.qmd
+    - part: modules/m04/m04-intro.qmd # "04 Functions"
       chapters: 
         - notebooks/M04_PythonFunctions/M04-01-Importing.ipynb
         - notebooks/M04_PythonFunctions/M04-02-Functions.ipynb
@@ -54,7 +55,7 @@ book:
         - notebooks/M04_PythonFunctions/M04-04-RecursiveFunctions.ipynb
         - notebooks/M04_PythonFunctions/M04-05-Scope.ipynb
         - notebooks/M04_PythonFunctions/M04-06-FunctionsCallingFunctions.ipynb
-    - part: modules/m05/m05-intro.qmd
+    - part: modules/m05/m05-intro.qmd # "05 NumPy"
       chapters:
         - notebooks/M05_NumPy/M05-00-Time.ipynb
         - notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb
@@ -126,12 +127,8 @@ format:
     fig-cap-location: bottom
     link-external-icon: true
     link-external-newwindow: true
-  pdf:
-    documentclass: scrreport    
+  # pdf:
+  #   documentclass: scrreport    
 
 bibliography:
   - refs.bib
-
-
-
-
