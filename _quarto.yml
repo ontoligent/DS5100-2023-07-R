@@ -15,8 +15,8 @@ book:
   repo-actions: [edit]
   # downloads: [pdf]
   sharing: [twitter, facebook, linkedin]
-  site-url: https://ontoligent.github.io/DS5100-2023-07-R
-  repo-url: https://github.com/ontoligent/DS5100-2023-07-R
+  site-url: "{{< var website_url >}}"
+  repo-url: "{{< var github_url >}}"
   chapters:
     - part: index.qmd 
       chapters:

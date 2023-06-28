@@ -8,7 +8,7 @@ During the technical orientation, you set up a GitHub account.
 
 You also spent a little time browsing a sample repository, which you may wish to revisit:
 
-* https://github.com/UVADS/orientation-technical
+* [Technical Orientation](https://github.com/UVADS/orientation-technical)
 
 You also should be able check off the following items:
 
@@ -22,7 +22,7 @@ Let's apply and extend this knowledge now with our course repo.
 Be sure you are inside the course directory we created earlier. 
 
 Also, we assume you have already created a GitHub account.
-å
+
 **_Fork_ the course GitHub hosted repository ("repo") to your GitHub account.**
 
 Go to {{< var github_url >}} in your web browser.
@@ -54,6 +54,7 @@ Then click on the copy icon and paste the value into the following command:
 ```bash
 git clone https://github.com:<github_user_name>/{{< var course_code >}}.git
 ```
+
 ::: {.callout-important}
 Be sure to clone the repo from _your_ GitHub account, replacing `<github_user_name>` with your GitHub user name. Do not just cut-and-paste the line above!
 :::

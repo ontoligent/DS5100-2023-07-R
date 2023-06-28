@@ -148,9 +148,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">DS 5001: Programming for Data Science</a> 
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/ontoligent/DS5100-2023-07-R" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="../../DS-5001--Programming-for-Data-Science.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+        <div class="sidebar-tools-main">
+    <a href="../../{{< var github_url >}}" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-git"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -640,7 +639,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#converting-data-types" id="toc-converting-data-types" class="nav-link" data-scroll-target="#converting-data-types">Converting Data Types</a></li>
   <li><a href="#some-difficulties" id="toc-some-difficulties" class="nav-link" data-scroll-target="#some-difficulties">Some Difficulties</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/ontoligent/DS5100-2023-07-R/blob/main/notebooks/M05_NumPy/M05-01-BasicFileIO.ipynb" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-git"></i></div><div class="action-links"></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -662,7 +661,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p><strong>Objectives</strong> - Demonstrate use of Python’s <code>open()</code> function - Show pattern using loops, comprehensions, and string operations to import a CSV - Show how to parse an imported CSV into a 2D list - Show how to convert a 2D list into a 2D Numpy array - Describe the difficulties associated with this importing CSV files using basic Python</p>
+<p><strong>Objectives</strong></p>
+<ul>
+<li>Demonstrate use of Python’s <code>open()</code> function</li>
+<li>Show pattern using loops, comprehensions, and string operations to import a CSV</li>
+<li>Show how to parse an imported CSV into a 2D list</li>
+<li>Show how to convert a 2D list into a 2D Numpy array</li>
+<li>Describe the difficulties associated with this importing CSV files using basic Python</li>
+</ul>
 <section id="open-files-with-open" class="level2">
 <h2 class="anchored" data-anchor-id="open-files-with-open">Open Files with <code>open()</code></h2>
 <p>Let’s open a sample CSV file, <code>biostats.csv</code>.</p>
@@ -943,7 +949,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/ontoligent\.github\.io\/DS5100-2023-07-R/);
+      var filterRegex = new RegExp(/{{&lt; var website_url &gt;}}/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
