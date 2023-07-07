@@ -256,14 +256,21 @@
     "href": "modules/m02/m02-activity-hello-world.html#the-python-interactive-shell",
     "title": "Activity: Hello, World!",
     "section": "The Python Interactive Shell",
-    "text": "The Python Interactive Shell\nLog onto the Rivanna shell and move into in the course directory you created for this class.\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)\nTo exit the Python Shell, enter quit() or exit() and hit return."
+    "text": "The Python Interactive Shell\nLog onto the Rivanna shell and move into in the course directory you created for this class.\nFrom the command line, enter python\nYou should get the Python Shell:\n\nThis is also called the Python standard REPL, which stands for “Read-Eval-Print Loop”.\nMake sure you see that you are using version 3 of Python.\nIf you see Python 2, exit the shell by entering quit() and try again by entering python3 at the command line.\nAt the >>> prompt type print(\"Hello, World!\") and press return.\nIf you’ve never used Python, you’ve just completed an important ritual. If you have used Python, well, you did it again :-)"
   },
   {
-    "objectID": "modules/m02/m02-activity-hello-world.html#python-files",
-    "href": "modules/m02/m02-activity-hello-world.html#python-files",
+    "objectID": "modules/m02/m02-activity-hello-world.html#try-this",
+    "href": "modules/m02/m02-activity-hello-world.html#try-this",
     "title": "Activity: Hello, World!",
-    "section": "Python Files",
-    "text": "Python Files\nNow create a file called hello.py using the command line editor nano.\nThen run it from the command line by directly invoking the Python interpreter python."
+    "section": "Try this",
+    "text": "Try this\nNow, enter following line at the prompt and press return:\nimport this\nWhat do you see?\nTo exit the Python Shell, enter quit() or exit() and hit return."
+  },
+  {
+    "objectID": "modules/m02/m02-activity-hello-world.html#running-python-files",
+    "href": "modules/m02/m02-activity-hello-world.html#running-python-files",
+    "title": "Activity: Hello, World!",
+    "section": "Running Python Files",
+    "text": "Running Python Files\nNow create a file called hello.py using the command line editor nano. Enter the same commands you used above.\nThen run it from the command line by directly invoking the Python interpreter python."
   },
   {
     "objectID": "modules/m02/m02-activity-jupyter-lab-on-rivanna.html",
