@@ -4,13 +4,7 @@ title: "Activity: Using Git and GitHub"
 
 ## Introduction
 
-During the technical orientation, you set up a GitHub account.
-
-You also spent a little time browsing a sample repository, which you may wish to revisit:
-
-* [Technical Orientation](https://github.com/UVADS/orientation-technical)
-
-You also should be able check off the following items:
+In this activity, you will go through steps of using Git and GitHub covered in the [the reading on GitHub](../../topics/git-and-github.qmd). You can also draw on the what you learned in the [Technical Orientation](https://github.com/UVADS/orientation-technical). At this point, you also should be able check off the following items:
 
 - Understand the difference between Git and GitHub.
 - Understand the purpose of Git and Github for data science work.
@@ -19,9 +13,13 @@ You also should be able check off the following items:
 
 Let's apply and extend this knowledge now with our course repo. 
 
-Be sure you are inside the course directory we created earlier. 
+Be sure you are inside the course directory on Rivanna we created earlier. 
 
 Also, we assume you have already created a GitHub account.
+
+::: {.callout-note}
+If you would like to access your GitHub account without having to enter your credentials each time, follow [these instructions](../../topics/setting-up-ssh.qmd) to set an SSH key. You can create this on both your computer and Rivanna.
+:::
 
 **_Fork_ the course GitHub hosted repository ("repo") to your GitHub account.**
 
