@@ -4,11 +4,22 @@
 
 Welcome to DS 5100 Programming for Data Science! In this course, we will develop skills in Python and R Programming, as well as the command line and GitHub. The objective of the course is to introduce essential programming concepts, structures, and techniques from a data science perspective. You will gain confidence in not only reading code, but learning what it means to write good quality code. Additionally, essential and complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization.
 
+
+### The Data Science Perspective 
+
+Learning to code from the data science perspective means that we will emphasize the role that code plays in working with the **data pipeline** that underlies nearly everything that a data scientist does, from acquiring data from a variety of sources to cleaning and reshaping it for exploration, analysis, and modeling, to visualizing and interpreting it for the world to understand. At each phase of this process, data are transformed through the medium of code, and so we will always being thinking of a programming language as a data processing language. The meaning of this will become clearer as the course progresses.
+
+### Code Fluency
+
 This course is designed to teach the programming knowledge and skills necessary to become an effective data scientist. The focus will be on **code fluency** -- the ability to both write and read code, as well as to understand the nature of high quality code. Code fluency encompasses a variety of skills, from the ability to write functions and classes to testing and debugging to packaging and visualizing the results of coding.
 
 Code fluency is important because code is the **primary medium** through which we represent and express our most basic and complex ideas in data science. These ideas include everything from the structure of web pages to the process of back propagation in a neural network. Code is the language with which we represent data and the models that process and interpret data, as well as the data products that make use of our data and the analytical results from it.
 
+### Python and R
+
 This course is specifically focused on your ability to read and write code in **Python and R**. It is not a course in computer science or in data wrangling or in software development. Each of those elements will obviously play into our work, but our focus is on the fundamental knowledge of programming -- the building blocks from which you can build complex (but not complicated) code to solve real world problems. 
+
+### Practice Makes Perfect
 
 The guiding philosophy of the course is that coding is a **practice** like many other practices -- such as the ability to speak a non-native human language, or to play a musical instrument, or to play a sport, or to perform such as in singing, acting, or dancing. These are all complex practices that involve higher forms of cognitive representation but are also **embodied** practices. This means that they have to be practiced, physically and repetitively, in order for you to be successful at them. Programming languages are like that.
 
@@ -26,7 +37,6 @@ Upon completion of this course, you are expected to be able to do the following.
 - Understand how data is related to programming.
 - Know broadly what kinds of data exist.
 
-
 **Confidently work in an appropriate programming environment**
 
 - Basic operations with Git and GitHub to manage and share your code.
@@ -34,23 +44,21 @@ Upon completion of this course, you are expected to be able to do the following.
 - Understand which editor is appropriate to which task.
 - Find and use documents, data, and code online.
 
-
 **Identify and use data types and data structures**
 
-- Know the elementary data types for each language:
-- booleans, integers, floats, strings, etc.
-- Know the elementary data structures for each language:
-- Python: set, list, dictionary, and tuple.
-- R: vectors, list, matrix, factor.
+- Know the elementary data types for each language: booleans, integers, floats, strings, etc.
+- Know the elementary data structures for each language: 
+  - Python: set, list, dictionary, and tuple.
+  - R: vectors, list, matrix, factor.
 - Know some of the advanced data structures for each language:
-- Python: Numpy arrays and Pandas series and dataframes.
-- R: dataframes and Tidy tibbles.
+  - Python: Numpy arrays and Pandas series and dataframes.
+  - R: dataframes and Tidy tibbles.
 - Know and perform basic operations for each data type and structure.
 - Select and apply an appropriate data structure based on the problem requirements.
 
 **Read and Write to and from various data formats**
 
-- Read text and data files from disc 
+- Read text and data files from disc.
 - Import data into a Pandas and R dataframes
 
 **Confidently call and write functions and methods**
@@ -70,9 +78,9 @@ Upon completion of this course, you are expected to be able to do the following.
 **Use packages to augment existing data structures**
 
 - In Python, NumPy and Pandas essentials (e.g. simple queries and small ML computation)
-- In Python and R, use a program API to utilize existing functions (e.g. assert statements.)
-- In R, apply the Tidyverse verbs, such as: select(), filter(), arrange(), mutate(), summarize()
-- In R, apply the Tidyverse Pipe operator to aggregate data
+- In Python and R, use a program API to utilize existing functions (e.g. assert statements).
+- In R, apply the Tidyverse verbs, such as: `select()`, `filter()`, `arrange()`, `mutate()`, and `summarize()`.
+- In R, apply the Tidyverse Pipe operator `%>%` to aggregate data.
 
 **Write your own modules of classes in Python**
 
@@ -87,16 +95,15 @@ Upon completion of this course, you are expected to be able to do the following.
 - Read error messages produced by the interpreter.
 - Fix and harden broken code. 
 
-
 ## Assessments
 
 ### Homework Assignments
 
-Homework assignments will given throughout the semester, typically one for each module. 
+Homework assignments will given throughout the course, typically one for each module. 
 
-You are encouraged to first try to complete the homework by yourself. If you work with others, be sure you understand all of the work, and that your final submission is your own work.
+You are encouraged to first try to complete the homework by yourself. 
 
-When submitting homework assignments, don't forget to write the assignment title, your name, your UVA computing ID, and date at the top of each assignment.
+If you work with others, be sure you understand all of the work, and that your final submission is your own work.
 
 Typically, homework assignments that involve Jupyter Notebooks will be submitted through GradeScope as PDFs. However, in some cases the assignment will be submitted through Canvas.  In either case, your assignment will be listed in the week's module.
 
@@ -110,7 +117,9 @@ If the HW is submitted late and it is not an excused lateness, 10% of the assign
 
 ### In-Class Activities
 
-During each class, there will be practice scripts and notebooks made available to you. These are designed to exemplify the concepts conveyed in reading and dialog. Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade.
+During each class there will be activities in which you will write code to demonstrate and extend your knowledge. These may be guided activities or peer-programming exercises. Each of these are designed to exemplify the concepts conveyed in reading and lecture. 
+
+Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade. 
 
 ### Quizzes
 
@@ -118,21 +127,21 @@ There will be several quizzes throughout the semester that will assess your know
 
 All quizzes are mandatory for all students to take.
 
-Quizzes typically have ten questions and are worth 10 points each.
-
 Although they can be completed in less time, you have one hour to finish and submit your work. 
 
 The quizzes should be done closed book: please do not consult any resources including notes, books, the web, devices, or other external media.
 
-Making up missed quizzes is not advised --- their timing is part of their value. However, if you know in advance that you will miss any of the scheduled quizzes, you must make arrangements in advance with the instructor. At least one week in advance if possible, or as soon as you are able if an unforeseen event occurs preventing you from taking the quiz.
+::: {.callout-warning}
+Making up missed quizzes is not advised &mdash; their timing is part of their value. However, if you know in advance that you will miss any of the scheduled quizzes, you must make arrangements in advance with the instructor. At least one week in advance if possible, or as soon as you are able if an unforeseen event occurs preventing you from taking the quiz.
+:::
 
 ### Course Project
 
-The final project will focus on creating a module in Python. This module will address a data science problem and be sharable on GitHub (in principle) and installable by others. It will have proper documentation and a testing file. 
+The final project will focus on creating and packaging a module in Python. This module will address a data science problem and be sharable on GitHub (in principle) and installable by others. It will have proper documentation and a testing file. 
 
 Project deliverables are due on the last day of course. See Collab for submission details.
 
-More information on the project will be forthcoming.
+More information on the project will be available near the half-way point of the course.
 
 ### Spirit of the Course
 
@@ -142,27 +151,30 @@ For the programming assignments and quizzes, you must submit your own work.
 
 ### Submission of Assignments
 
-All assignments must be submitted through Canvas or Gradescope by the specified due dates and times. It is crucial to complete all assigned work---failure to do so will likely result in failing the class.
+All assignments must be submitted through Canvas or Gradescope by the specified due dates and times. It is crucial to complete all assigned work&mdash;failure to do so will likely result in failing the class.
 
 ## Grading
 
 ### Model
 
-```{=html}
+Every assessment is equally important in this course.
+
+```
 Quizes         20%
 Homework       20%
 Project        20%
 Participation  20%
-Final          20%
+Final Exam     20%
 
 ```
+
 ### Scale
 
-We follow the 3-4-3 model of grading. That is, within each letter range, the `+` and `–` each span 3 values ($[0,1,2]$ and $[7,8,9]$ respectively), whereas the uninflected grade spans the middle 4 values ($[3,4,5,6]$).
+We follow the 3-4-3 model of grading. That is, within each letter range, the $+$ and $-$ each span 3 values ($[0,1,2]$ and $[7,8,9]$ respectively), whereas the neutral grade spans the middle 4 values ($[3,4,5,6]$).
 
-Note that it is by convention that we treat $0$ as standing for the initial value of a grade span, which leads to the anomaly of `A` having $11$ values, since it includes both $90$ and $100$. Past experience shows that treating $90$ as a `B+` is considered an outrage by students, so we accept the weirdness.
+Note that it is by convention that we treat $0$ in the $1$s place as standing for the initial value of a grade span, which leads to the anomaly of the `A` range having $11$ values, since it includes both $90$ and $100$. Past experience shows that treating $90$ as a `B+` is considered an outrage by students, so we accept the weirdness :-)
 
-```{=html}
+```
 Grade     Min  Max
 A+        97 - 100
 A         93 - 96
@@ -198,15 +210,14 @@ We occasionally draw from the following texts. They are listed here as supplemen
 - Douglas, et al 2022, **[An Introduction to](https://intro2r.com/) R**, self published.
 - Peng, 2020, **[R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)**, self published.
 
-
 **For Python**
 
-*Once you get the hang of Python, you will want to embark on becoming a more effect data science software developer. These books can help*
+*Once you get the hang of Python, you will want to embark on becoming a more effect data science software developer. These books can help.*
 
+- Matthis 2023, **[Python Crash Course](https://learning.oreilly.com/library/view/python-crash-course/9781098156664/)**, 3rd Edition. O'Reilly Media.
 - Brett Slatkin, 2019, **[Effective Python: 90 Specific Ways to Write Better Python, 2nd Edition](https://learning.oreilly.com/library/view/effective-python-90/9780134854717/)**, Addison-Wesley.
 - Katz, Philipp and David Katz, 2019, **[Learn Python by Building Data Science Applications](https://learning.oreilly.com/library/view/learn-python-by/9781789535365/),**<em> </em>Packt Publishing<em>.</em>
 - Lee Vaughan, 2020, [**Real-World Python**](https://learning.oreilly.com/library/view/real-world-python/9781098125721/), No Starch Press.
-
 
 ### Access to materials
 
@@ -224,19 +235,16 @@ This course uses a number of books from the O'Reilly Media's online library. Thi
 - [Tutorialspoint on Python](https://www.tutorialspoint.com/python/index.htm)
 - [Tutorialspoint on R](https://www.tutorialspoint.com/r/index.htm)
 
-
 ### Cheatsheets
 
 - [Python Cheatsheets](https://www.pythoncheatsheet.org/)
 - [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-
 
 ### Books to Broaden Your Horizons
 
 - Graham, 2010, [Hackers & Painters: Big Ideas from the Computer Age](https://www.amazon.com/Hackers-Painters-Big-Ideas-Computer/dp/1449389554)
 - Brooks, 1995, [The Mythical Man Month](https://www.google.com/books/edition/The_Mythical_Man_Month/Yq35BY5Fk3gC?hl=en&amp;gbpv=0&amp;kptab=morebyauthor)
 - Shetterly, 2016, [Hidden Figures: The American Dream and the Untold Story of the Black Women Mathematicians Who Helped Win the Space Race ](https://www.amazon.com/Hidden-Figures-American-Untold-Mathematicians/dp/0062363603)
-
 
 ## Academic Integrity
 

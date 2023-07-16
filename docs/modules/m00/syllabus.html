@@ -568,7 +568,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a>
+  <ul class="collapse">
+  <li><a href="#the-data-science-perspective" id="toc-the-data-science-perspective" class="nav-link" data-scroll-target="#the-data-science-perspective">The Data Science Perspective</a></li>
+  <li><a href="#code-fluency" id="toc-code-fluency" class="nav-link" data-scroll-target="#code-fluency">Code Fluency</a></li>
+  <li><a href="#python-and-r" id="toc-python-and-r" class="nav-link" data-scroll-target="#python-and-r">Python and R</a></li>
+  <li><a href="#practice-makes-perfect" id="toc-practice-makes-perfect" class="nav-link" data-scroll-target="#practice-makes-perfect">Practice Makes Perfect</a></li>
+  </ul></li>
   <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals">Learning Goals</a></li>
   <li><a href="#assessments" id="toc-assessments" class="nav-link" data-scroll-target="#assessments">Assessments</a>
   <ul class="collapse">
@@ -621,12 +627,25 @@ ul.task-list li input[type="checkbox"] {
 <section id="welcome" class="level2">
 <h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
 <p>Welcome to DS 5100 Programming for Data Science! In this course, we will develop skills in Python and R Programming, as well as the command line and GitHub. The objective of the course is to introduce essential programming concepts, structures, and techniques from a data science perspective. You will gain confidence in not only reading code, but learning what it means to write good quality code. Additionally, essential and complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization.</p>
+<section id="the-data-science-perspective" class="level3">
+<h3 class="anchored" data-anchor-id="the-data-science-perspective">The Data Science Perspective</h3>
+<p>Learning to code from the data science perspective means that we will emphasize the role that code plays in working with the <strong>data pipeline</strong> that underlies nearly everything that a data scientist does, from acquiring data from a variety of sources to cleaning and reshaping it for exploration, analysis, and modeling, to visualizing and interpreting it for the world to understand. At each phase of this process, data are transformed through the medium of code, and so we will always being thinking of a programming language as a data processing language. The meaning of this will become clearer as the course progresses.</p>
+</section>
+<section id="code-fluency" class="level3">
+<h3 class="anchored" data-anchor-id="code-fluency">Code Fluency</h3>
 <p>This course is designed to teach the programming knowledge and skills necessary to become an effective data scientist. The focus will be on&nbsp;<strong>code fluency</strong>&nbsp;– the ability to both write and read code, as well as to understand the nature of high quality code. Code fluency encompasses a variety of skills, from the ability to write functions and classes to testing and debugging to packaging and visualizing the results of coding.</p>
 <p>Code fluency is important because code is the&nbsp;<strong>primary medium</strong>&nbsp;through which we represent and express our most basic and complex ideas in data science. These ideas include everything from the structure of web pages to the process of back propagation in a neural network. Code is the language with which we represent data and the models that process and interpret data, as well as the data products that make use of our data and the analytical results from it.</p>
+</section>
+<section id="python-and-r" class="level3">
+<h3 class="anchored" data-anchor-id="python-and-r">Python and R</h3>
 <p>This course is specifically focused on your ability to read and write code in&nbsp;<strong>Python and R</strong>. It is not a course in computer science or in data wrangling or in software development. Each of those elements will obviously play into our work, but our focus is on the fundamental knowledge of programming – the building blocks from which you can build complex (but not complicated) code to solve real world problems.&nbsp;</p>
+</section>
+<section id="practice-makes-perfect" class="level3">
+<h3 class="anchored" data-anchor-id="practice-makes-perfect">Practice Makes Perfect</h3>
 <p>The guiding philosophy of the course is that coding is a&nbsp;<strong>practice</strong>&nbsp;like many other practices – such as the ability to speak a non-native human language, or to play a musical instrument, or to play a sport, or to perform such as in singing, acting, or dancing. These are all complex practices that involve higher forms of cognitive representation but are also&nbsp;<strong>embodied</strong>&nbsp;practices. This means that they have to be practiced, physically and repetitively, in order for you to be successful at them. Programming languages are like that.</p>
 <p>Put another way,&nbsp;<strong>programming is like cooking</strong>, carpentry, and other forms of material creation. Again, in each case high level cognition is involved, but so are the hands and eyes, and an appreciation of the subtle qualities of materials and ingredients is essential to successfully using them to create effective work – a sturdy and beautiful building or a satisfying and exquisite meal.</p>
 <p>All of these practices, some of which I am sure each of you has had experience in, are based on the ideas of imitation and drilling which develop into generalization and integration and finally into excellence and mastery of design and execution. Therefore, this course will require the student to observe principles and imitate examples (though writing) on the path to generalization and fluency.&nbsp;</p>
+</section>
 </section>
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
@@ -646,20 +665,23 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>Identify and use data types and data structures</strong></p>
 <ul>
-<li>Know the elementary data types for each language:</li>
-<li>booleans, integers, floats, strings, etc.</li>
-<li>Know the elementary data structures for each language:</li>
+<li>Know the elementary data types for each language: booleans, integers, floats, strings, etc.</li>
+<li>Know the elementary data structures for each language:
+<ul>
 <li>Python: set, list, dictionary, and tuple.</li>
 <li>R: vectors, list, matrix, factor.</li>
-<li>Know some of the advanced data structures for each language:</li>
+</ul></li>
+<li>Know some of the advanced data structures for each language:
+<ul>
 <li>Python: Numpy arrays and Pandas series and dataframes.</li>
 <li>R: dataframes and Tidy tibbles.</li>
+</ul></li>
 <li>Know and perform basic operations for each data type and structure.</li>
 <li>Select and apply an appropriate data structure based on the problem requirements.</li>
 </ul>
 <p><strong>Read and Write to and from various data formats</strong></p>
 <ul>
-<li>Read text and data files from disc&nbsp;</li>
+<li>Read text and data files from disc.</li>
 <li>Import data into a Pandas and R dataframes</li>
 </ul>
 <p><strong>Confidently call and write functions and methods</strong></p>
@@ -679,9 +701,9 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Use packages to augment existing data structures</strong></p>
 <ul>
 <li>In Python, NumPy and Pandas essentials (e.g.&nbsp;simple queries and small ML computation)</li>
-<li>In Python and R, use a program API to utilize existing functions (e.g.&nbsp;assert statements.)</li>
-<li>In R, apply the Tidyverse verbs, such as: select(), filter(), arrange(), mutate(), summarize()</li>
-<li>In R, apply the Tidyverse Pipe operator to aggregate data</li>
+<li>In Python and R, use a program API to utilize existing functions (e.g.&nbsp;assert statements).</li>
+<li>In R, apply the Tidyverse verbs, such as: <code>select()</code>, <code>filter()</code>, <code>arrange()</code>, <code>mutate()</code>, and <code>summarize()</code>.</li>
+<li>In R, apply the Tidyverse Pipe operator <code>%&gt;%</code> to aggregate data.</li>
 </ul>
 <p><strong>Write your own modules of classes in Python</strong></p>
 <ul>
@@ -701,9 +723,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="assessments">Assessments</h2>
 <section id="homework-assignments" class="level3">
 <h3 class="anchored" data-anchor-id="homework-assignments">Homework Assignments</h3>
-<p>Homework assignments will given throughout the semester, typically one for each module.&nbsp;</p>
-<p>You are encouraged to first try to complete the homework by yourself. If you work with others, be sure you understand all of the work, and that your final submission is your own work.</p>
-<p>When submitting homework assignments, don’t forget to write the assignment title, your name, your UVA computing ID, and date at the top of each assignment.</p>
+<p>Homework assignments will given throughout the course, typically one for each module.&nbsp;</p>
+<p>You are encouraged to first try to complete the homework by yourself.</p>
+<p>If you work with others, be sure you understand all of the work, and that your final submission is your own work.</p>
 <p>Typically, homework assignments that involve Jupyter Notebooks will be submitted through GradeScope as PDFs. However, in some cases the assignment will be submitted through Canvas.&nbsp; In either case, your assignment will be listed in the week’s module.</p>
 </section>
 <section id="lateness-policy" class="level3">
@@ -714,22 +736,34 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="in-class-activities" class="level3">
 <h3 class="anchored" data-anchor-id="in-class-activities">In-Class Activities</h3>
-<p>During each class, there will be practice scripts and notebooks made available to you. These are designed to exemplify the concepts conveyed in reading and dialog. Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade.</p>
+<p>During each class there will be activities in which you will write code to demonstrate and extend your knowledge. These may be guided activities or peer-programming exercises. Each of these are designed to exemplify the concepts conveyed in reading and lecture.</p>
+<p>Although the results of this work are not graded, you will be graded on your effort to complete them. This will count toward your participation grade.</p>
 </section>
 <section id="quizzes" class="level3">
 <h3 class="anchored" data-anchor-id="quizzes">Quizzes</h3>
 <p>There will be several quizzes throughout the semester that will assess your knowledge of the various topics. Quizzes are based on the topics and code covered in the readings and activities.</p>
 <p>All quizzes are mandatory for all students to take.</p>
-<p>Quizzes typically have ten questions and are worth 10 points each.</p>
 <p>Although they can be completed in less time, you have one hour to finish and submit your work.&nbsp;</p>
 <p>The quizzes should be done closed book: please do not consult any resources including notes, books, the web, devices, or other external media.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Making up missed quizzes is not advised — their timing is part of their value. However, if you know in advance that you will miss any of the scheduled quizzes, you must make arrangements in advance with the instructor. At least one week in advance if possible, or as soon as you are able if an unforeseen event occurs preventing you from taking the quiz.</p>
+</div>
+</div>
 </section>
 <section id="course-project" class="level3">
 <h3 class="anchored" data-anchor-id="course-project">Course Project</h3>
-<p>The final project will focus on creating a module in Python. This module will address a data science problem and be sharable on GitHub (in principle) and installable by others. It will have proper documentation and a testing file.&nbsp;</p>
+<p>The final project will focus on creating and packaging a module in Python. This module will address a data science problem and be sharable on GitHub (in principle) and installable by others. It will have proper documentation and a testing file.&nbsp;</p>
 <p>Project deliverables are due on the last day of course. See Collab for submission details.</p>
-<p>More information on the project will be forthcoming.</p>
+<p>More information on the project will be available near the half-way point of the course.</p>
 </section>
 <section id="spirit-of-the-course" class="level3">
 <h3 class="anchored" data-anchor-id="spirit-of-the-course">Spirit of the Course</h3>
@@ -745,28 +779,29 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
 <section id="model" class="level3">
 <h3 class="anchored" data-anchor-id="model">Model</h3>
-Quizes         20%
+<p>Every assessment is equally important in this course.</p>
+<pre><code>Quizes         20%
 Homework       20%
 Project        20%
 Participation  20%
-Final          20%
-
+Final Exam     20%
+</code></pre>
 </section>
 <section id="scale" class="level3">
 <h3 class="anchored" data-anchor-id="scale">Scale</h3>
-<p>We follow the 3-4-3 model of grading. That is, within each letter range, the <code>+</code> and <code>–</code> each span 3 values (<span class="math inline">\([0,1,2]\)</span> and <span class="math inline">\([7,8,9]\)</span> respectively), whereas the uninflected grade spans the middle 4 values (<span class="math inline">\([3,4,5,6]\)</span>).</p>
-<p>Note that it is by convention that we treat <span class="math inline">\(0\)</span> as standing for the initial value of a grade span, which leads to the anomaly of <code>A</code> having <span class="math inline">\(11\)</span> values, since it includes both <span class="math inline">\(90\)</span> and <span class="math inline">\(100\)</span>. Past experience shows that treating <span class="math inline">\(90\)</span> as a <code>B+</code> is considered an outrage by students, so we accept the weirdness.</p>
-Grade     Min  Max
+<p>We follow the 3-4-3 model of grading. That is, within each letter range, the <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> each span 3 values (<span class="math inline">\([0,1,2]\)</span> and <span class="math inline">\([7,8,9]\)</span> respectively), whereas the neutral grade spans the middle 4 values (<span class="math inline">\([3,4,5,6]\)</span>).</p>
+<p>Note that it is by convention that we treat <span class="math inline">\(0\)</span> in the <span class="math inline">\(1\)</span>s place as standing for the initial value of a grade span, which leads to the anomaly of the <code>A</code> range having <span class="math inline">\(11\)</span> values, since it includes both <span class="math inline">\(90\)</span> and <span class="math inline">\(100\)</span>. Past experience shows that treating <span class="math inline">\(90\)</span> as a <code>B+</code> is considered an outrage by students, so we accept the weirdness :-)</p>
+<pre><code>Grade     Min  Max
 A+        97 - 100
 A         93 - 96
 A-        90 - 92
 B+        87 - 89
 B         83 - 86
-B-        80 - 82 ← minimum passing grade
+B-        80 - 82 &amp;#8592; minimum passing grade
 ----------------- 
 C+        77 - 79
 C         73 - 76
-C-        70 - 72
+C-        70 - 72</code></pre>
 </section>
 </section>
 <section id="texts" class="level2">
@@ -792,8 +827,9 @@ C-        70 - 72
 <li>Peng, 2020,&nbsp;<strong><a href="https://bookdown.org/rdpeng/rprogdatascience/">R Programming for Data Science</a></strong>, self published.</li>
 </ul>
 <p><strong>For Python</strong></p>
-<p><em>Once you get the hang of Python, you will want to embark on becoming a more effect data science software developer. These books can help</em></p>
+<p><em>Once you get the hang of Python, you will want to embark on becoming a more effect data science software developer. These books can help.</em></p>
 <ul>
+<li>Matthis 2023, <strong><a href="https://learning.oreilly.com/library/view/python-crash-course/9781098156664/">Python Crash Course</a></strong>, 3rd Edition. O’Reilly Media.</li>
 <li>Brett Slatkin, 2019,&nbsp;<strong><a href="https://learning.oreilly.com/library/view/effective-python-90/9780134854717/">Effective Python: 90 Specific Ways to Write Better Python, 2nd Edition</a></strong>, Addison-Wesley.</li>
 <li>Katz, Philipp and David Katz, 2019,&nbsp;<strong><a href="https://learning.oreilly.com/library/view/learn-python-by/9781789535365/">Learn Python by Building Data Science Applications</a>,</strong><em>&nbsp;</em>Packt Publishing<em>.</em></li>
 <li>Lee Vaughan, 2020,&nbsp;<a href="https://learning.oreilly.com/library/view/real-world-python/9781098125721/"><strong>Real-World Python</strong></a>, No Starch Press.</li>
