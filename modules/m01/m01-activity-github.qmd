@@ -15,11 +15,10 @@ Let's apply and extend this knowledge now with our course repo.
 
 Be sure you are inside the course directory on Rivanna we created earlier. 
 
-Also, we assume you have already created a GitHub account.
+We assume you have already created a GitHub account.
 
-::: {.callout-note}
-If you would like to access your GitHub account without having to enter your credentials each time, follow [these instructions](../../topics/setting-up-ssh.qmd) to set an SSH key. You can create this on both your computer and Rivanna.
-:::
+Also, before you get started, follow [these instructions](../../topics/setting-up-ssh.qmd) to set an SSH key. You can create this on both your computer and Rivanna, but for the assignment you need only create it on Rivanna.
+
 
 **_Fork_ the course GitHub hosted repository ("repo") to your GitHub account.**
 
