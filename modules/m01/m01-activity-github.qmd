@@ -22,7 +22,7 @@ Also, before you get started, follow [these instructions](../../topics/setting-u
 
 **_Fork_ the course GitHub hosted repository ("repo") to your GitHub account.**
 
-Go to {{< var github_url >}} in your web browser.
+Go to [{{< var github_url >}}]({{< var github_url >}}) in your web browser.
 
 ::: {.callout-note}
 This is the course repo --- all of the course notebooks and other code will be available here.\ Each week, you will access your course materials here.
