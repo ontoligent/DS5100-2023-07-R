@@ -66,7 +66,7 @@ Go to your command line window on Rivanna.
 
 Use `cd` to move into the directory just created by the clone operation.
 
-Move into the directory `lessons/M01_GettingStarted/hello`
+Move into the directory `notebooks/M01_GettingStarted/hello`
 
 ::: {.callout-important}
 Make sure you are in this directory before proceeding.
