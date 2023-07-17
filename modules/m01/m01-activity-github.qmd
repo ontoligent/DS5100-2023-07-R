@@ -75,7 +75,7 @@ Make sure you are in this directory before proceeding.
 If you get lost – for example if you moved around the file system before this step – you can cd to the absolute path:
 
 ```bash
-cd ~/Documents/MSDS/DS5100/{{< var course_code >}}/lessons/M01_GettingStarted/hello 
+cd ~/Documents/MSDS/DS5100/{{< var course_code >}}/notebooks/M01_GettingStarted/hello 
 ```
 
 Note that the tilde sign `~` stands for the path to your home directory.
