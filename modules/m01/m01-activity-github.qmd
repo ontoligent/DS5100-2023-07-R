@@ -38,7 +38,7 @@ You will now have a copy of the repo in your GitHub account.
 
 Find the green Code button and click on it. You should see something like this:
 
-![](../../media/git-clone.jpg)
+![](../../media/git-clone.png)
 
 Make sure you have selected the SSH option.
 
