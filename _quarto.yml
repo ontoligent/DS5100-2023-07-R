@@ -7,7 +7,7 @@ execute:
   freeze: true
   
 book:
-  title: "DS 5001: Programming for Data Science"
+  title: "DS 5100: Programming for Data Science"
   subtitle: "{{< var academic_term >}}"
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
