@@ -44,6 +44,7 @@ book:
         - notebooks/M02_BasicPython/M02-05-Structures.ipynb
     - part: modules/m03/m03-intro.qmd # "03 Control Structures"
       chapters:
+        - topics/vals-vars-expressions-statements.qmd
         - notebooks/M03_ControlStructures/M03-01-ControlStructures.ipynb
         - notebooks/M03_ControlStructures/M03-02-IterablesAndIterators.ipynb
         - notebooks/M03_ControlStructures/M03-03-Comprehensions.ipynb
