@@ -1,6 +1,4 @@
----
-title: Data and Code
----
+# Data and Code
 
 ## Code should be simple
 
