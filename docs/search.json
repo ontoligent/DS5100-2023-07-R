@@ -613,7 +613,7 @@
     "href": "topics/vals-vars-expressions-statements.html#definitions",
     "title": "Values, Variables, Expressions, and Statements",
     "section": "Definitions",
-    "text": "Definitions\n\nValues: Raw data elements represented in a program, e.g. numbers and strings.\nVariables: Names to which values are assigned.\nExpressions: Combinations of values, variables, operators, functions, and other expressions that evaluate to a value.\nStatements: Groupings of expressions that produce some result."
+    "text": "Definitions\n\nValues: Raw data elements represented in a program, e.g. numbers and strings.\nVariables: Names to which values are assigned.\nExpressions: Combinations of values, variables, operators, functions, and other expressions that evaluate to a value.\nStatements: Groupings of expressions that produce some result. Statements do things."
   },
   {
     "objectID": "topics/vals-vars-expressions-statements.html#statement-types",
