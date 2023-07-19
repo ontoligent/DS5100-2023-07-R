@@ -22,7 +22,6 @@ book:
       chapters:
         - modules/m00/syllabus.qmd
         - modules/m00/schedule.qmd
-        - topics/oreilly-accounts.qmd
     - part: modules/m01/m01-intro.qmd # "01 Getting Started"
       chapters:
         - topics/rivanna.qmd
@@ -108,8 +107,11 @@ book:
         - topics/project-management.qmd
         - topics/agile-dev.qmd
         - topics/user-stories.qmd
-    # - appendices:
-    #   - topics/try-except-finally.qmd
+    - part: "Appendices"
+      chapters: 
+        - topics/oreilly-accounts.qmd
+        - topics/refreshing-the-course-repo.qmd
+  
   sidebar:
     style: docked
     # style: floating

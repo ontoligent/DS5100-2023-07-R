@@ -140,5 +140,6 @@ During the semester, you will not be making pull requests to submit your work. W
 
 Instead of making pull requests, you will be using a separate repository for your work So, you will be working with two repositories going forard:
 
-1. **The Course Repo**, which is where you will get course materials.
+1. **The Course Repo**, which is where you will get course materials. This should be [updated each day](../../topics/refreshing-the-course-repo.qmd).
+
 2. **Your Assessments Repo**, which is where you will be your finished work as assigned.
