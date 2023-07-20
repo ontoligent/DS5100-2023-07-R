@@ -721,27 +721,6 @@
     "text": "Readings\n\nRequired\n\n\nLutz 2019, Part IV, Chapter 16: Function Basics\n\n\nLutz 2019, Part IV, Chapter 17: Scopes Non-local is for advanced users\n\n\nLutz 2019, Part IV, Chapter 18. Arguments\n\n\nLutz 2019, Part IV, Chapter 19: Advanced Function Topics\n\n\n\n\nOptional\n\n\nMcKinney, Python for Data Analysis, Appendix A: Python Language Essentials\n\n\nRead section on Functions\n\n\nFunctions (W3S)\n\n\nGlobal and Local Variables (GFG)\n\n\nLambda Functions (Real Python)"
   },
   {
-    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing",
-    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing",
-    "title": "NB: Importing Functions",
-    "section": "Importing",
-    "text": "Importing\nCalling a function from the “math” library is straightforward:\n\nImport Python’s Math library with the command import math\nCall methods from the imported math object using “dot” notation, that is, .(any parameters).\n\nFor example:\nmath.sqrt(12)\nPut all of your import statements at the very top of your code, before anything else, other than any header comments (which you should have).\nHere are some example math functions:\n\nimport math # Typically best to put this line of code at the TOP of the file\n\n\nmath.sqrt(12)\n\n3.4641016151377544\n\n\n\nmath.floor(2.5) # returns largest whole number less than the argument\n\n2\n\n\nHere’s an example using the random library (a class).\n\nimport random # Typically best to put this line of code at the TOP of the file\n\n\nrandom.random()# will return a number between 0 and 1 \n\n0.3599068479674543\n\n\n\nrandom.randint(1, 100) # this will return a random integer in the range 1-100\n\n18"
-  },
-  {
-    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing-specific-functions",
-    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing-specific-functions",
-    "title": "NB: Importing Functions",
-    "section": "Importing Specific Functions",
-    "text": "Importing Specific Functions\nIf you know what specifics function you are going to use from a library, you can import them directly, like so:\nfrom math import sqrt\nThis has two effects: 1. It reduces the memory used by the library in your program. 2. It allows you to call the function directly, with the object dot notation.\n\nfrom math import sqrt\n\n\nsqrt(99)\n\n9.9498743710662"
-  },
-  {
-    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#aliasing",
-    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#aliasing",
-    "title": "NB: Importing Functions",
-    "section": "Aliasing",
-    "text": "Aliasing\nTo avoid having the function name conflict with an existing function in your program,\nyou can alias the imported function like so:\n\nfrom math import sqrt as SquareRoot\n\n\nSquareRoot(65000)\n\n254.95097567963924\n\n\n\ndef square(number):\n    return number * number  # square a number\n    \ndef addTen(number):\n    return number + 10  # Add 10 to the number   \n    \ndef numVowels(string):\n    string = string.lower()  # convert user input to lowercase\n    count = 0\n    for i in range(len(string)):\n        if string[i] == \"a\" or string[i] == \"e\" or \\\n           string[i] == \"i\" or string[i] == \"o\" or \\\n           string[i] == \"u\":\n           count += 1 # increment count\n    return count"
-  },
-  {
     "objectID": "notebooks/M04_PythonFunctions/M04-02-Functions.html#introduction",
     "href": "notebooks/M04_PythonFunctions/M04-02-Functions.html#introduction",
     "title": "NB: Introduction to Functions",
@@ -810,6 +789,34 @@
     "title": "NB: Introduction to Functions",
     "section": "Function Design",
     "text": "Function Design\nA function is not just a bag of code!\nSome good practices for creating and using functions:\n\ndesign a function to do one thing\n\nMake them as simple as possible, which makes them:\n\nmore comprehensible\neasier to maintain\nreusable\n\nThis helps avoid situations where a team has 20 variations of similar functions.\nGive your function a good name.\n\nIt should reflect the action it performs.\nBe consistent in your naming conventions.\nA name like compute_variances_sort_save_print suggests the function is overworked!\n\nIf the function compute_variances also produces plots and updates variables, it will cause confusion.\nAlways give your function a docstring - Particularly important since indicating data types is not required.\n- As a side note, you can include this information by using type annotation.\nFinally, at some point you may be interested to learn some of the formatting languages that have been developed to write docstrings. See Lutz 2019 and this web page about Documenting Python Code for more info."
+  },
+  {
+    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html",
+    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html",
+    "title": "NB: Importing Functions",
+    "section": "",
+    "text": "Extra"
+  },
+  {
+    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing",
+    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing",
+    "title": "NB: Importing Functions",
+    "section": "Importing",
+    "text": "Importing\nCalling a function from the “math” library is straightforward:\n\nImport Python’s Math library with the command import math\nCall methods from the imported math object using “dot” notation, that is, .(any parameters).\n\nFor example:\nmath.sqrt(12)\nPut all of your import statements at the very top of your code, before anything else, other than any header comments (which you should have).\nHere are some example math functions:\n\nimport math # Typically best to put this line of code at the TOP of the file\n\n\nmath.sqrt(12)\n\n3.4641016151377544\n\n\n\nmath.floor(2.5) # returns largest whole number less than the argument\n\n2\n\n\nHere’s an example using the random library (a class).\n\nimport random # Typically best to put this line of code at the TOP of the file\n\n\nrandom.random()# will return a number between 0 and 1 \n\n0.3599068479674543\n\n\n\nrandom.randint(1, 100) # this will return a random integer in the range 1-100\n\n18"
+  },
+  {
+    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing-specific-functions",
+    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#importing-specific-functions",
+    "title": "NB: Importing Functions",
+    "section": "Importing Specific Functions",
+    "text": "Importing Specific Functions\nIf you know what specifics function you are going to use from a library, you can import them directly, like so:\nfrom math import sqrt\nThis has two effects: 1. It reduces the memory used by the library in your program. 2. It allows you to call the function directly, with the object dot notation.\n\nfrom math import sqrt\n\n\nsqrt(99)\n\n9.9498743710662"
+  },
+  {
+    "objectID": "notebooks/M04_PythonFunctions/M04-01-Importing.html#aliasing",
+    "href": "notebooks/M04_PythonFunctions/M04-01-Importing.html#aliasing",
+    "title": "NB: Importing Functions",
+    "section": "Aliasing",
+    "text": "Aliasing\nTo avoid having the function name conflict with an existing function in your program,\nyou can alias the imported function like so:\n\nfrom math import sqrt as SquareRoot\n\n\nSquareRoot(65000)\n\n254.95097567963924"
   },
   {
     "objectID": "notebooks/M04_PythonFunctions/M04-03-LambdaFunctions.html#introduction",
