@@ -994,83 +994,6 @@
     "text": "Readings\n\nRequired\n\n\nMcKinney 2017, Chapter 4: Numpy Basics\n\n\n\n\nOptional\n\n\nMcKinney 2017, Appendix A. Advanced NumPy: A.4 Broadcasting\n\n\nNumPy for Beginners (Official)"
   },
   {
-    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-time",
-    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-time",
-    "title": "NB: Python Timing Experiment",
-    "section": "Using time",
-    "text": "Using time\nOne way to get the runtime of a code block is to use the time module.\nAbout time\nThe time module provides a number of functions to get and compute time.\nThe simplest function is time(), which just returns the number of seconds elapsed since the Epoch.\nThe Epoch is 00:00:00 UTC on 1 January 1970, excluding leapseconds.\nIt corresponds roughly to when Unix was invented.\n\nfrom time import time\n\n\nt0 = time()\n\nfor i in range(10):\n    print(i, end=' ')\n\nt1 = time()\n\ndelta_t = t1 - t0\n\n0 1 2 3 4 5 6 7 8 9 \n\n\n\nprint('t0 =', t0)\nprint('t1 =', t1)\nprint('runtime:', delta_t)\n\nt0 = 1663428793.540521\nt1 = 1663428793.541329\nruntime: 0.0008080005645751953"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-timeit",
-    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-timeit",
-    "title": "NB: Python Timing Experiment",
-    "section": "Using timeit",
-    "text": "Using timeit\nTo get a better measure of runtime, we can use timeit, which measures timing across many runs.\nNote that timeit() will return the runtime across ALL runs. To get the mean runtime, you need to divide by the number of runs.\ntimeit() works by evaluating code blocks written as strings.\n\nfrom timeit import timeit\n  \nNUM_RUNS = 100\n\nDefine code blocks to compare.\n\nloop_code = ''' \nvals = []\nfor i in range(1, 100001):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n'''\n\nlistcomp_code = ''' \nvals = [i*-1 for i in range(1,100001) if i % 2 == 1 ]\n'''\n\nPass code block strings to timeit functions.\n\nloop_mean_time = timeit(stmt = loop_code, number = NUM_RUNS) / NUM_RUNS\nlistcomp_mean_time = timeit(stmt = listcomp_code, number = NUM_RUNS) / NUM_RUNS\n\nPrint the results\n\nt_diff = loop_mean_time / listcomp_mean_time\nprint('loop =', loop_mean_time)\nprint('comp =', listcomp_mean_time)\nprint('loop/list =', t_diff)\nprint('list/loop =', 1/t_diff)\n\nloop = 0.011182495189999885\ncomp = 0.00927148506000009\nloop/list = 1.2061169400190757\nlist/loop = 0.8291070018336566"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-magic",
-    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-magic",
-    "title": "NB: Python Timing Experiment",
-    "section": "Using Magic",
-    "text": "Using Magic\nInstead of calling time and timeit directly, we can use the so-called magic commands.\nMagic commands are % or %% prefixed commands that work in Jupyter notebooks and other IPython environments.\n% commands apply to single lines; they go at the beginning of the line.\n%% commands apply to cell blocks; they go at the top of the cell.\nMagic commands can take arguments. For more info, see * Chapter 3 in Wes McKinney’s Python for Data Analysis. * The official documentation\nPlacing %%timeit or %%time at the top of a cell will appy these functions to the cell block.\nPlacing %timeit or %time as the first item on a line of code will apply the to a single line.\nTypes of Time\n\nWall clock time measures how much time has passed, as if you were looking at the clock on your wall.\nCPU time refers to how many seconds the CPU was actually busy.\n\n\nimax = 10000\n\nUsing time to compare loop and comprehension\n\n%%time\n\nvals = []\nfor i in range(1, imax+1):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n\nCPU times: user 1.69 ms, sys: 35 µs, total: 1.72 ms\nWall time: 1.73 ms\n\n\n\n%time vals = [i*-1 if i % 2 == 1 else i for i in range(1,imax+1)] \n\nCPU times: user 940 µs, sys: 32 µs, total: 972 µs\nWall time: 975 µs\n\n\nUsing timeit to compare loop and comprehension\n\n%%timeit\n\nvals = []\nimax = 10000\nfor i in range(1, imax+1):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n\n1.08 ms ± 88 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\n\n\n\nvals[:10]\n\n[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]\n\n\n\n%timeit vals = [i*-1 if i % 2 == 1 else i for i in range(1,imax+1)] \n\n749 µs ± 3.32 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#open-files-with-open",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#open-files-with-open",
-    "title": "NB: Basic File I/O",
-    "section": "Open Files with open()",
-    "text": "Open Files with open()\nLet’s open a sample CSV file, biostats.csv.\n\nThis has some biometric statistics for a group of office workers.\nThere are 18 records, recording Name, Sex, Age, Height, Weight\nThere is an initial header line.\nThis file was downloaded from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html and modified slightly.\n\n\nsrc_file_name = \"./sample_data_files/biostats.csv\"\n\nWe call the open() function and pass it two parameters: * The name of the file we want to open. * The mode in which the file is opened. It defaults to r which means open for reading in text mode. Other common values are: * w for writing (truncating the file if it already exists) * x for creating and writing to a new file * a for appending\nThe returns a file object whose type depends on the mode and through which the standard file operations such as reading and writing are performed. So, to read from the file, you need to have specified type r and to write you need to have specified w.\nThe file object is an iterator.\nFor more info, check out the Python docs or run open? from a code cell.\nNote, we sometimes call the file object a file “handle.”\n\n## open?\n\n\nfile_handle = open(src_file_name, 'r')\n\n.read() reads in the file as one long string.\n\nfile_as_big_string = file_handle.read()\n\n\nfile_as_big_string[:1000]\n\nSince the file object is an iterator, we can’t get the string again from the object.\n\nfile_as_big_string = file_handle.read() # Try reading from the handle again\nfile_as_big_string[:1000] # Nothing there since the iterator is exhausted\n\nSo, let’s create a new handle, read in the contents again, and then parse our string by newlines using .split(\"\\n\").\n\nfile_handle = open(\"./sample_data_files/biostats.csv\", 'r')\nfile_as_big_string = file_handle.read()\nfile_as_big_string.split(\"\\n\")\n\nA short-cut to this process is to call the .readlines() method, which returns a pre-made list of lines.\nNote that the newlines are preserved in this case.\n\nfile_handle = open(src_file_name, 'r')\nfile_as_list_of_strings = file_handle.readlines()\n\n\nfile_as_list_of_strings\n\nFile objects should be closed when you are done with them.\n\nfile_handle.close()"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#use-a-with-block",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#use-a-with-block",
-    "title": "NB: Basic File I/O",
-    "section": "Use a with block",
-    "text": "Use a with block\n… to automatically open and close the file i/o object\nThere is a better way to handle objects that need to be closed.\nOther examples of such objects are database handles.\nwith will automatically open and close the file handle.\n\nwith open(src_file_name, 'r') as infile:\n    file_as_list = infile.readlines()\n\n\nfile_as_list"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#convert-into-a-2d-list",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#convert-into-a-2d-list",
-    "title": "NB: Basic File I/O",
-    "section": "Convert into a 2D list",
-    "text": "Convert into a 2D list\nLet’s covert our list of strings to a list of lists, the former being the rows of data table and the latter the cells.\n\n## %%time\nlist_2d = []\nwith open(src_file_name, 'r') as infile:\n    for line in infile.readlines():\n        row = line.rstrip().split(\",\") # Note the use of rstrip()\n        list_2d.append(row)\n\n\nlist_2d\n\nNote that we now have do something with the column names and handle formating and casting each cell."
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#using-a-list-comprehension",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#using-a-list-comprehension",
-    "title": "NB: Basic File I/O",
-    "section": "Using a list comprehension",
-    "text": "Using a list comprehension\nWe can replace the entire code block above nested list comprehensions.\nRemember, you can put any expression into the first part of a comprehension, even another comprehension.\n\nlist_2d = [[cell.strip() for cell in line.rstrip().replace('\"', '').split(\",\")] \n        for line in open(src_file_name, 'r').readlines()]\n\n\nlist_2d"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-to-numpy",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-to-numpy",
-    "title": "NB: Basic File I/O",
-    "section": "Converting to Numpy",
-    "text": "Converting to Numpy\n\nimport numpy as np\n\nNumpy arrays must be of the same data types, and it also has no concept of column names, so we remove this row from our data.\n\ncol_names = list_2d[0]\n\n\ncol_names\n\n\nnp_matrix = np.array(list_2d[1:])\n\n\nnp_matrix\n\nHere we demonstrate slicing along both dimensions."
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#array-slices",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#array-slices",
-    "title": "NB: Basic File I/O",
-    "section": "Array Slices",
-    "text": "Array Slices\n\nnp_matrix[:2, :2]"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-data-types",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-data-types",
-    "title": "NB: Basic File I/O",
-    "section": "Converting Data Types",
-    "text": "Converting Data Types\nLet’s try to convert the data types of the numeric columns from strings to integers. One thing we might do is the following:\n\nnp_matrix[:, 2:5].astype(int)\n\nWe see that the strings are converted to integers.\nSo, let’s try to save the conversion results to the original array:\n\nnp_matrix[:, 2:5] = np_matrix[:, 2:5].astype(int)\n\n\nnp_matrix\n\nWhat happened?"
-  },
-  {
-    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#some-difficulties",
-    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#some-difficulties",
-    "title": "NB: Basic File I/O",
-    "section": "Some Difficulties",
-    "text": "Some Difficulties\nIt is pretty easy to import CSV files this way, but there are many difficulties you are likely to encounter if you use this as your default pattern for importing data. Here are just a few: - Not all sources are well-formed. They may have delimitters that are complex to parse, and the the data themselve may be hard to parse. - You have to keep the column names in a separate list or vector and then associate them with the data if and when necessary. - You have to convert each column vector into its appropriate data type yourself. Or, you have to create separate 2D arrays for each collection of columns with a common data type. This process also invovles human inspection of the file, as opposed to have a program try to figure it out for you.\nFor these reasons, other tools such as Pandas were created to make the work of a data scientist a bit easier and more productive."
-  },
-  {
     "objectID": "notebooks/M05_NumPy/M05-02-NumpyBasics.html#numpy",
     "href": "notebooks/M05_NumPy/M05-02-NumpyBasics.html#numpy",
     "title": "NB: NumPy First Steps",
@@ -1174,6 +1097,83 @@
     "title": "NB: NumPy Continued",
     "section": "Pseudorandom Number Generation",
     "text": "Pseudorandom Number Generation\n\nnp.random.normal()\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nsamples = np.random.normal(size=(4, 4))\nsamples\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nfrom random import normalvariate\nN = 1000000\n%timeit samples = [normalvariate(0, 1) for _ in range(N)]\n%timeit np.random.normal(size=N)\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nnp.random.seed(1234)\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nrng = np.random.RandomState(1234)\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nrng.randn(10)\n\n\n\nExample: Random Walks\nLet simulate a random walk. The walk will be represented as a vector.\nWe’ll do it first as loop, then with vectorization.\nLoops\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nimport random\nposition = 0\nwalk = [position] # initialize the walk\nsteps = 1000\nfor i in range(steps):\n    step = 1 if random.randint(0, 1) else -1  # Coin toss\n    position += step\n    walk.append(position)\n\n\nimport matplotlib.pyplot as plt\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nplt.figure()\nplt.plot(walk[:100]);\n\nVectors\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nnp.random.seed(12345)\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nnsteps = 1000\ndraws = np.random.randint(0, 2, size=nsteps)\nsteps = np.where(draws > 0, 1, -1)\nwalk2 = steps.cumsum()\n\n\nplt.plot(walk[:100]);\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nwalk2.min(), walk2.max()\n\n\n\nSimulating Many Random Walks at Once\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nnwalks = 5000\nnsteps = 1000\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\ndraws = np.random.randint(0, 2, size=(nwalks, nsteps)) # 0 or 1\nsteps = np.where(draws > 0, 1, -1)\nwalks = steps.cumsum(1)\n\n\ndraws\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nwalks\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nwalks.max(), walks.min()\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nhits30 = (np.abs(walks) >= 30).any(1)\nhits30\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nhits30.sum() # Number that hit 30 or -30\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\ncrossing_times = (np.abs(walks[hits30]) >= 30).argmax(1)\ncrossing_times.mean()\n\n\n##| collapsed: false\n##| jupyter: {outputs_hidden: false}\nsteps = np.random.normal(loc=0, scale=0.25, size=(nwalks, nsteps))\n\nFeel free to experiment with other distributions for the steps other than equal-sized coin flips. You need only use a different random generator method, like standard_normal to generate normally distributed steps with some mean and standard deviation:\n\ndraws = 0.25 * rng.standard_normal((nwalks, nsteps)) # Walks: observations, Steps: features\n\n\nsample_walk = np.random.choice(len(draws))\nplt.plot(draws[sample_walk])\nplt.title(f\"Walk #{sample_walk}\");"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-time",
+    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-time",
+    "title": "NB: Python Timing Experiment",
+    "section": "Using time",
+    "text": "Using time\nOne way to get the runtime of a code block is to use the time module.\nAbout time\nThe time module provides a number of functions to get and compute time.\nThe simplest function is time(), which just returns the number of seconds elapsed since the Epoch.\nThe Epoch is 00:00:00 UTC on 1 January 1970, excluding leapseconds.\nIt corresponds roughly to when Unix was invented.\n\nfrom time import time\n\n\nt0 = time()\n\nfor i in range(10):\n    print(i, end=' ')\n\nt1 = time()\n\ndelta_t = t1 - t0\n\n0 1 2 3 4 5 6 7 8 9 \n\n\n\nprint('t0 =', t0)\nprint('t1 =', t1)\nprint('runtime:', delta_t)\n\nt0 = 1663428793.540521\nt1 = 1663428793.541329\nruntime: 0.0008080005645751953"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-timeit",
+    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-timeit",
+    "title": "NB: Python Timing Experiment",
+    "section": "Using timeit",
+    "text": "Using timeit\nTo get a better measure of runtime, we can use timeit, which measures timing across many runs.\nNote that timeit() will return the runtime across ALL runs. To get the mean runtime, you need to divide by the number of runs.\ntimeit() works by evaluating code blocks written as strings.\n\nfrom timeit import timeit\n  \nNUM_RUNS = 100\n\nDefine code blocks to compare.\n\nloop_code = ''' \nvals = []\nfor i in range(1, 100001):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n'''\n\nlistcomp_code = ''' \nvals = [i*-1 for i in range(1,100001) if i % 2 == 1 ]\n'''\n\nPass code block strings to timeit functions.\n\nloop_mean_time = timeit(stmt = loop_code, number = NUM_RUNS) / NUM_RUNS\nlistcomp_mean_time = timeit(stmt = listcomp_code, number = NUM_RUNS) / NUM_RUNS\n\nPrint the results\n\nt_diff = loop_mean_time / listcomp_mean_time\nprint('loop =', loop_mean_time)\nprint('comp =', listcomp_mean_time)\nprint('loop/list =', t_diff)\nprint('list/loop =', 1/t_diff)\n\nloop = 0.011182495189999885\ncomp = 0.00927148506000009\nloop/list = 1.2061169400190757\nlist/loop = 0.8291070018336566"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-00-Time.html#using-magic",
+    "href": "notebooks/M05_NumPy/M05-00-Time.html#using-magic",
+    "title": "NB: Python Timing Experiment",
+    "section": "Using Magic",
+    "text": "Using Magic\nInstead of calling time and timeit directly, we can use the so-called magic commands.\nMagic commands are % or %% prefixed commands that work in Jupyter notebooks and other IPython environments.\n% commands apply to single lines; they go at the beginning of the line.\n%% commands apply to cell blocks; they go at the top of the cell.\nMagic commands can take arguments. For more info, see * Chapter 3 in Wes McKinney’s Python for Data Analysis. * The official documentation\nPlacing %%timeit or %%time at the top of a cell will appy these functions to the cell block.\nPlacing %timeit or %time as the first item on a line of code will apply the to a single line.\nTypes of Time\n\nWall clock time measures how much time has passed, as if you were looking at the clock on your wall.\nCPU time refers to how many seconds the CPU was actually busy.\n\n\nimax = 10000\n\nUsing time to compare loop and comprehension\n\n%%time\n\nvals = []\nfor i in range(1, imax+1):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n\nCPU times: user 1.69 ms, sys: 35 µs, total: 1.72 ms\nWall time: 1.73 ms\n\n\n\n%time vals = [i*-1 if i % 2 == 1 else i for i in range(1,imax+1)] \n\nCPU times: user 940 µs, sys: 32 µs, total: 972 µs\nWall time: 975 µs\n\n\nUsing timeit to compare loop and comprehension\n\n%%timeit\n\nvals = []\nimax = 10000\nfor i in range(1, imax+1):\n    if i % 2 == 1:\n        i *= -1\n    vals.append(i)\n\n1.08 ms ± 88 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)\n\n\n\nvals[:10]\n\n[-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]\n\n\n\n%timeit vals = [i*-1 if i % 2 == 1 else i for i in range(1,imax+1)] \n\n749 µs ± 3.32 µs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#open-files-with-open",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#open-files-with-open",
+    "title": "NB: Basic File I/O",
+    "section": "Open Files with open()",
+    "text": "Open Files with open()\nLet’s open a sample CSV file, biostats.csv.\n\nThis has some biometric statistics for a group of office workers.\nThere are 18 records, recording Name, Sex, Age, Height, Weight\nThere is an initial header line.\nThis file was downloaded from https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html and modified slightly.\n\n\nsrc_file_name = \"./sample_data_files/biostats.csv\"\n\nWe call the open() function and pass it two parameters: * The name of the file we want to open. * The mode in which the file is opened. It defaults to r which means open for reading in text mode. Other common values are: * w for writing (truncating the file if it already exists) * x for creating and writing to a new file * a for appending\nThe returns a file object whose type depends on the mode and through which the standard file operations such as reading and writing are performed. So, to read from the file, you need to have specified type r and to write you need to have specified w.\nThe file object is an iterator.\nFor more info, check out the Python docs or run open? from a code cell.\nNote, we sometimes call the file object a file “handle.”\n\n## open?\n\n\nfile_handle = open(src_file_name, 'r')\n\n.read() reads in the file as one long string.\n\nfile_as_big_string = file_handle.read()\n\n\nfile_as_big_string[:1000]\n\nSince the file object is an iterator, we can’t get the string again from the object.\n\nfile_as_big_string = file_handle.read() # Try reading from the handle again\nfile_as_big_string[:1000] # Nothing there since the iterator is exhausted\n\nSo, let’s create a new handle, read in the contents again, and then parse our string by newlines using .split(\"\\n\").\n\nfile_handle = open(\"./sample_data_files/biostats.csv\", 'r')\nfile_as_big_string = file_handle.read()\nfile_as_big_string.split(\"\\n\")\n\nA short-cut to this process is to call the .readlines() method, which returns a pre-made list of lines.\nNote that the newlines are preserved in this case.\n\nfile_handle = open(src_file_name, 'r')\nfile_as_list_of_strings = file_handle.readlines()\n\n\nfile_as_list_of_strings\n\nFile objects should be closed when you are done with them.\n\nfile_handle.close()"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#use-a-with-block",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#use-a-with-block",
+    "title": "NB: Basic File I/O",
+    "section": "Use a with block",
+    "text": "Use a with block\n… to automatically open and close the file i/o object\nThere is a better way to handle objects that need to be closed.\nOther examples of such objects are database handles.\nwith will automatically open and close the file handle.\n\nwith open(src_file_name, 'r') as infile:\n    file_as_list = infile.readlines()\n\n\nfile_as_list"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#convert-into-a-2d-list",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#convert-into-a-2d-list",
+    "title": "NB: Basic File I/O",
+    "section": "Convert into a 2D list",
+    "text": "Convert into a 2D list\nLet’s covert our list of strings to a list of lists, the former being the rows of data table and the latter the cells.\n\n## %%time\nlist_2d = []\nwith open(src_file_name, 'r') as infile:\n    for line in infile.readlines():\n        row = line.rstrip().split(\",\") # Note the use of rstrip()\n        list_2d.append(row)\n\n\nlist_2d\n\nNote that we now have do something with the column names and handle formating and casting each cell."
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#using-a-list-comprehension",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#using-a-list-comprehension",
+    "title": "NB: Basic File I/O",
+    "section": "Using a list comprehension",
+    "text": "Using a list comprehension\nWe can replace the entire code block above nested list comprehensions.\nRemember, you can put any expression into the first part of a comprehension, even another comprehension.\n\nlist_2d = [[cell.strip() for cell in line.rstrip().replace('\"', '').split(\",\")] \n        for line in open(src_file_name, 'r').readlines()]\n\n\nlist_2d"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-to-numpy",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-to-numpy",
+    "title": "NB: Basic File I/O",
+    "section": "Converting to Numpy",
+    "text": "Converting to Numpy\n\nimport numpy as np\n\nNumpy arrays must be of the same data types, and it also has no concept of column names, so we remove this row from our data.\n\ncol_names = list_2d[0]\n\n\ncol_names\n\n\nnp_matrix = np.array(list_2d[1:])\n\n\nnp_matrix\n\nHere we demonstrate slicing along both dimensions."
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#array-slices",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#array-slices",
+    "title": "NB: Basic File I/O",
+    "section": "Array Slices",
+    "text": "Array Slices\n\nnp_matrix[:2, :2]"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-data-types",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#converting-data-types",
+    "title": "NB: Basic File I/O",
+    "section": "Converting Data Types",
+    "text": "Converting Data Types\nLet’s try to convert the data types of the numeric columns from strings to integers. One thing we might do is the following:\n\nnp_matrix[:, 2:5].astype(int)\n\nWe see that the strings are converted to integers.\nSo, let’s try to save the conversion results to the original array:\n\nnp_matrix[:, 2:5] = np_matrix[:, 2:5].astype(int)\n\n\nnp_matrix\n\nWhat happened?"
+  },
+  {
+    "objectID": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#some-difficulties",
+    "href": "notebooks/M05_NumPy/M05-01-BasicFileIO.html#some-difficulties",
+    "title": "NB: Basic File I/O",
+    "section": "Some Difficulties",
+    "text": "Some Difficulties\nIt is pretty easy to import CSV files this way, but there are many difficulties you are likely to encounter if you use this as your default pattern for importing data. Here are just a few: - Not all sources are well-formed. They may have delimitters that are complex to parse, and the the data themselve may be hard to parse. - You have to keep the column names in a separate list or vector and then associate them with the data if and when necessary. - You have to convert each column vector into its appropriate data type yourself. Or, you have to create separate 2D arrays for each collection of columns with a common data type. This process also invovles human inspection of the file, as opposed to have a program try to figure it out for you.\nFor these reasons, other tools such as Pandas were created to make the work of a data scientist a bit easier and more productive."
   },
   {
     "objectID": "modules/m06/m06-intro.html#topics",
