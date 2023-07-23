@@ -659,9 +659,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#creating-ndarrays" id="toc-creating-ndarrays" class="nav-link" data-scroll-target="#creating-ndarrays">Creating ndarrays</a>
   <ul class="collapse">
   <li><a href="#data-types-for-ndarrays" id="toc-data-types-for-ndarrays" class="nav-link" data-scroll-target="#data-types-for-ndarrays">Data Types for ndarrays</a></li>
-  <li><a href="#arithmetic" id="toc-arithmetic" class="nav-link" data-scroll-target="#arithmetic">Arithmetic</a></li>
   </ul></li>
-  <li><a href="#basic-indexing-and-slicing" id="toc-basic-indexing-and-slicing" class="nav-link" data-scroll-target="#basic-indexing-and-slicing">Basic Indexing and Slicing</a>
+  <li><a href="#arithmetic" id="toc-arithmetic" class="nav-link" data-scroll-target="#arithmetic">Arithmetic</a></li>
+  <li><a href="#indexing-and-slicing" id="toc-indexing-and-slicing" class="nav-link" data-scroll-target="#indexing-and-slicing">Indexing and Slicing</a>
   <ul class="collapse">
   <li><a href="#indexing-with-slices" id="toc-indexing-with-slices" class="nav-link" data-scroll-target="#indexing-with-slices">Indexing with slices</a></li>
   <li><a href="#boolean-indexing" id="toc-boolean-indexing" class="nav-link" data-scroll-target="#boolean-indexing">Boolean Indexing</a></li>
@@ -917,8 +917,10 @@ S - string
 U - unicode string
 V - fixed chunk of memory for other type ( void )</code></pre>
 </section>
-<section id="arithmetic" class="level3">
-<h3 class="anchored" data-anchor-id="arithmetic">Arithmetic</h3>
+</section>
+<section id="arithmetic" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic">Arithmetic</h2>
+<p>These are all <strong>element-wise operations</strong>.</p>
 <div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([[<span class="fl">1.</span>, <span class="fl">2.</span>, <span class="fl">3.</span>], [<span class="fl">4.</span>, <span class="fl">5.</span>, <span class="fl">6.</span>]])</span>
 <span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>arr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -977,9 +979,8 @@ V - fixed chunk of memory for other type ( void )</code></pre>
 </div>
 </div>
 </section>
-</section>
-<section id="basic-indexing-and-slicing" class="level2">
-<h2 class="anchored" data-anchor-id="basic-indexing-and-slicing">Basic Indexing and Slicing</h2>
+<section id="indexing-and-slicing" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-and-slicing">Indexing and Slicing</h2>
 <div class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>foo <span class="op">=</span> np.zeros((<span class="dv">4</span>,<span class="dv">6</span>))</span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>foo.shape</span>
