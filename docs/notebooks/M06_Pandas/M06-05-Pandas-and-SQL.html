@@ -1197,38 +1197,332 @@ dtype: int64</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-tags="[]">
+<div class="cell" data-tags="[]" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>genres.plot.barh()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="M06-05-Pandas-and-SQL_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+</div>
 </div>
 </section>
 <section id="the-album-table" class="level2">
 <h2 class="anchored" data-anchor-id="the-album-table">The <code>album</code> table</h2>
-<div class="cell" data-tags="[]">
+<div class="cell" data-tags="[]" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> raw[[<span class="st">'album'</span>,<span class="st">'artist'</span>,<span class="st">'genre'</span>]].value_counts().to_frame(<span class="st">'n_reviews'</span>).reset_index().set_index([<span class="st">'artist'</span>,<span class="st">'album'</span>])</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>albums.index.names <span class="op">=</span> [<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>]</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> albums.rename(columns<span class="op">=</span>{<span class="st">'genre'</span>:<span class="st">'genre_id'</span>})</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>albums.to_sql(<span class="st">'album'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>albums.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>19506</code></pre>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>albums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>albums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>genre_id</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>NÙze</th>
+      <th>Songs on the Rocks</th>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>The Postal Service</th>
+      <th>Give Up</th>
+      <td>Electronic</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Enon</th>
+      <th>Believo!</th>
+      <td>Rock</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Tim Hecker</th>
+      <th>Radio Amor</th>
+      <td>Experimental</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Of Montreal</th>
+      <th>If He Is Protecting Our Nation, Then Who Will Protect Big Oil, Our Children?</th>
+      <td>Rock</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Russian Circles</th>
+      <th>Guidance</th>
+      <td>Metal</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Various Artists</th>
+      <th>Guess Who This Is: A Tribute to Dom Leone</th>
+      <td>None</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Beck</th>
+      <th>Guerolito</th>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Guero</th>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Pretty Girls Make Graves</th>
+      <th>…lan Vital</th>
+      <td>None</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>19506 rows × 2 columns</p>
+</div>
+</div>
 </div>
 </section>
 <section id="the-review-table" class="level2">
 <h2 class="anchored" data-anchor-id="the-review-table">The <code>review</code> table</h2>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> raw[[<span class="st">'album'</span>, <span class="st">'artist'</span>, <span class="st">'best'</span>, <span class="st">'date'</span>, <span class="st">'review'</span>, <span class="st">'score'</span>]].copy()</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>reviews.columns <span class="op">=</span> [<span class="st">'album_id'</span>, <span class="st">'artist_id'</span>, <span class="st">'is_best'</span>, <span class="st">'review_date'</span>, <span class="st">'review_content'</span>, <span class="st">'album_score'</span>]</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> reviews.set_index([<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>,<span class="st">'review_date'</span>])</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>reviews.to_sql(<span class="st">'review'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>reviews.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> raw[[<span class="st">'album'</span>, <span class="st">'artist'</span>, <span class="st">'best'</span>, <span class="st">'date'</span>, <span class="st">'review'</span>, <span class="st">'score'</span>]].copy()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>reviews.columns <span class="op">=</span> [<span class="st">'album_id'</span>, <span class="st">'artist_id'</span>, <span class="st">'is_best'</span>, <span class="st">'review_date'</span>, <span class="st">'review_content'</span>, <span class="st">'album_score'</span>]</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> reviews.set_index([<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>,<span class="st">'review_date'</span>])</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>reviews.to_sql(<span class="st">'review'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>reviews.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>19544</code></pre>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].sort_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>is_best</th>
+      <th>review_content</th>
+      <th>album_score</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th>review_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Wilco</th>
+      <th>A.M./Being There</th>
+      <th>December 6 2017</th>
+      <td>1</td>
+      <td>Best new reissue 1 / 2 Albums Newly reissued a...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Hopsin</th>
+      <th>No Shame</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On his corrosive fifth album, the rapper takes...</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>Glassjaw</th>
+      <th>Material Control</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On their first album in 15 years, the Long Isl...</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>Nabihah Iqbal</th>
+      <th>Weighing of the Heart</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On her debut LP, British producer Nabihah Iqba...</td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <th>Neil Young / Promise of the Real</th>
+      <th>The Visitor</th>
+      <th>December 5 2017</th>
+      <td>0</td>
+      <td>While still pointedly political, Neil Youngís ...</td>
+      <td>6.7</td>
+    </tr>
+  </tbody>
+</table>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].album_score.mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].sort_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>is_best</th>
+      <th>review_content</th>
+      <th>album_score</th>
+    </tr>
+    <tr>
+      <th>album_id</th>
+      <th>review_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>A Ghost Is Born</th>
+      <th>June 21 2004</th>
+      <td>0</td>
+      <td>At the time of Yankee Hotel Foxtrot's non-trad...</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>A.M./Being There</th>
+      <th>December 6 2017</th>
+      <td>1</td>
+      <td>Best new reissue 1 / 2 Albums Newly reissued a...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Alpha Mike Foxtrot: Rare Tracks 1994ñ2014/What's Your 20? Essential Tracks 1994ñ2014</th>
+      <th>November 19 2014</th>
+      <td>0</td>
+      <td>1 / 2 Albums Both the†Alpha Mike Foxtrot†rarit...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Kicking Television: Live in Chicago</th>
+      <th>November 13 2005</th>
+      <td>0</td>
+      <td>This 2xCD live album finds the now six-piece b...</td>
+      <td>8.3</td>
+    </tr>
+    <tr>
+      <th>More Like the Moon EP</th>
+      <th>April 27 2003</th>
+      <td>0</td>
+      <td>Okay, show of hands: how many of you people ha...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Schmilco</th>
+      <th>September 9 2016</th>
+      <td>0</td>
+      <td>Wilco's 10th album is a largely acoustic affai...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Sky Blue Sky</th>
+      <th>May 14 2007</th>
+      <td>0</td>
+      <td>Despite the experimental pedigree of their new...</td>
+      <td>5.2</td>
+    </tr>
+    <tr>
+      <th>Star Wars</th>
+      <th>July 23 2015</th>
+      <td>0</td>
+      <td>With its $0 asking price, lawsuit-baiting titl...</td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <th>Summerteeth</th>
+      <th>February 28 1999</th>
+      <td>0</td>
+      <td>After parting ways with Uncle Tupelo partner J...</td>
+      <td>9.4</td>
+    </tr>
+    <tr>
+      <th>The Whole Love</th>
+      <th>September 26 2011</th>
+      <td>0</td>
+      <td>Wilco's adventurous, self-produced eighth LP f...</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>The Wilco Book</th>
+      <th>October 31 2004</th>
+      <td>0</td>
+      <td>We don't usually review books, but seeing that...</td>
+      <td>7.5</td>
+    </tr>
+    <tr>
+      <th>Wilco (The Album)</th>
+      <th>June 29 2009</th>
+      <td>0</td>
+      <td>Jeff Tweedy and co.'s latest does what its tit...</td>
+      <td>7.3</td>
+    </tr>
+    <tr>
+      <th>Yankee Hotel Foxtrot</th>
+      <th>April 21 2002</th>
+      <td>0</td>
+      <td>Myth, it has been said, is the buried part of ...</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>iTunes Session</th>
+      <th>February 2 2012</th>
+      <td>0</td>
+      <td>This eight-song EP, comprised primarily of tra...</td>
+      <td>6.7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].album_score.mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>7.4</code></pre>
+</div>
 </div>
 <p>Note how the new <code>review</code> table has fewer columns – e.g.&nbsp;we no longer have genre.</p>
 </section>
@@ -1236,27 +1530,469 @@ dtype: int64</code></pre>
 <section id="results" class="level1">
 <h1>Results</h1>
 <p>So, we have create four primary tables from our raw data.</p>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>artists.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>artists.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Various Artists</th>
+      <td>717</td>
+    </tr>
+    <tr>
+      <th>Guided by Voices</th>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>David Bowie</th>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>Mogwai</th>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>The Beatles</th>
+      <td>21</td>
+    </tr>
+  </tbody>
+</table>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>albums.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>genres.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>albums.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>genre_id</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>NÙze</th>
+      <th>Songs on the Rocks</th>
+      <td>None</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>The Postal Service</th>
+      <th>Give Up</th>
+      <td>Electronic</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Enon</th>
+      <th>Believo!</th>
+      <td>Rock</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Tim Hecker</th>
+      <th>Radio Amor</th>
+      <td>Experimental</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Of Montreal</th>
+      <th>If He Is Protecting Our Nation, Then Who Will Protect Big Oil, Our Children?</th>
+      <td>Rock</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>genres.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>genre_id</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Rock</th>
+      <td>6954</td>
+    </tr>
+    <tr>
+      <th>Electronic</th>
+      <td>4020</td>
+    </tr>
+    <tr>
+      <th>None</th>
+      <td>2320</td>
+    </tr>
+    <tr>
+      <th>Experimental</th>
+      <td>1696</td>
+    </tr>
+    <tr>
+      <th>Rap</th>
+      <td>1481</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>is_best</th>
+      <th>review_content</th>
+      <th>album_score</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th>review_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Wilco</th>
+      <th>A.M./Being There</th>
+      <th>December 6 2017</th>
+      <td>1</td>
+      <td>Best new reissue 1 / 2 Albums Newly reissued a...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>Hopsin</th>
+      <th>No Shame</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On his corrosive fifth album, the rapper takes...</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>Glassjaw</th>
+      <th>Material Control</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On their first album in 15 years, the Long Isl...</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>Nabihah Iqbal</th>
+      <th>Weighing of the Heart</th>
+      <th>December 6 2017</th>
+      <td>0</td>
+      <td>On her debut LP, British producer Nabihah Iqba...</td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <th>Neil Young / Promise of the Real</th>
+      <th>The Visitor</th>
+      <th>December 5 2017</th>
+      <td>0</td>
+      <td>While still pointedly political, Neil Youngís ...</td>
+      <td>6.7</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
 </div>
 </section>
 <section id="use-.join" class="level1">
 <h1>Use <code>.join()</code></h1>
 <p>If we want to see genre in the review, we can create a join.</p>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>reviews.join(albums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-tags="[]" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>reviews.join(albums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>is_best</th>
+      <th>review_content</th>
+      <th>album_score</th>
+      <th>genre_id</th>
+      <th>n_reviews</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th>review_date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">!!!</th>
+      <th>As If</th>
+      <th>October 21 2015</th>
+      <td>0</td>
+      <td>Despite popular perception, !!! never quite fi...</td>
+      <td>6.9</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Jamie, My Intentions Are Bass EP</th>
+      <th>November 1 2010</th>
+      <td>0</td>
+      <td>The dance-rock fixtures enlist Bibio, Tim Gold...</td>
+      <td>6.8</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Louden Up Now</th>
+      <th>June 7 2004</th>
+      <td>0</td>
+      <td>For club-friendly artists to become or remain ...</td>
+      <td>7.0</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Myth Takes</th>
+      <th>March 2 2007</th>
+      <td>0</td>
+      <td>Nic Offer, now focused solely on this band aft...</td>
+      <td>8.0</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Shake the Shudder</th>
+      <th>May 24 2017</th>
+      <td>0</td>
+      <td>The new !!! album finds them working with a sl...</td>
+      <td>7.3</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">”lafur Arnalds</th>
+      <th>Found Songs</th>
+      <th>February 16 2010</th>
+      <td>0</td>
+      <td>The young Icelandic composer who has opened fo...</td>
+      <td>6.3</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Living Room Songs / Another Happy Day OST</th>
+      <th>February 16 2012</th>
+      <td>0</td>
+      <td>1 / 2 Albums The Icelandic composer, known for...</td>
+      <td>4.5</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Now I Am Winter</th>
+      <th>April 9 2013</th>
+      <td>0</td>
+      <td>The Icelandic composer who has toured with†Sig...</td>
+      <td>5.5</td>
+      <td>Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>”lˆf Arnalds</th>
+      <th>Innundir Skinni</th>
+      <th>October 26 2010</th>
+      <td>0</td>
+      <td>Icelandic singer/songwriter continues to slowl...</td>
+      <td>8.0</td>
+      <td>Pop/R&amp;B</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>∆vangelist</th>
+      <th>Omen Ex Simulacra</th>
+      <th>December 11 2013</th>
+      <td>0</td>
+      <td>On their second album Omen Ex Simulacra, the O...</td>
+      <td>7.0</td>
+      <td>None</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>19544 rows × 5 columns</p>
 </div>
-<div class="cell" data-tags="[]">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>albums.join(artists, rsuffix<span class="op">=</span><span class="st">'_artist'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>albums.join(artists, rsuffix<span class="op">=</span><span class="st">'_artist'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>genre_id</th>
+      <th>n_reviews</th>
+      <th>n_reviews_artist</th>
+    </tr>
+    <tr>
+      <th>artist_id</th>
+      <th>album_id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>NÙze</th>
+      <th>Songs on the Rocks</th>
+      <td>None</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>The Postal Service</th>
+      <th>Give Up</th>
+      <td>Electronic</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>Enon</th>
+      <th>Believo!</th>
+      <td>Rock</td>
+      <td>2</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Tim Hecker</th>
+      <th>Radio Amor</th>
+      <td>Experimental</td>
+      <td>2</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>Of Montreal</th>
+      <th>If He Is Protecting Our Nation, Then Who Will Protect Big Oil, Our Children?</th>
+      <td>Rock</td>
+      <td>2</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Russian Circles</th>
+      <th>Guidance</th>
+      <td>Metal</td>
+      <td>1</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Various Artists</th>
+      <th>Guess Who This Is: A Tribute to Dom Leone</th>
+      <td>None</td>
+      <td>1</td>
+      <td>717</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Beck</th>
+      <th>Guerolito</th>
+      <td>Rock</td>
+      <td>1</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Guero</th>
+      <td>Rock</td>
+      <td>1</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>Pretty Girls Make Graves</th>
+      <th>…lan Vital</th>
+      <td>None</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+<p>19506 rows × 3 columns</p>
+</div>
+</div>
 </div>
 
 
