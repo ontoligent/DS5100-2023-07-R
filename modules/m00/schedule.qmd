@@ -9,9 +9,9 @@
 | 05 | Fri | 07/21 | Review Day |  |
 | 06 | Mon | 07/24 | [M05 NumPy](../m05/m05-intro.qmd) |  |
 | 07 | Tue | 07/25 | [M06 Pandas](../m06/m06-intro.qmd) |  |
-| 08 | Wed | 07/26 | [M07 Classes](../m07/m07-intro.qmd)  |  |
-| 09 | Thu | 07/27 | [M08 Testing](../m08/m08-intro.qmd)  |  |
-| 10 | Fri | 07/28 | Review Day |  |
+| 08 | Wed | 07/26 | [M06 Pandas, continued](../m06/m06-intro.qmd)  |  |
+| 09 | Thu | 07/27 | [M07 Classes](../m07/m07-intro.qmd)  |  |
+| 10 | Fri | 07/28 | [M08 Testing](../m08/m08-intro.qmd)  |  |
 | 11 | Mon | 07/31 | [M09 Modules and Packages](../m09/m09-intro.qmd) |  |
 | 12 | Tue | 08/01 | [M10 Basic R](../m10/m10-intro.qmd) |  |
 | 13 | Wed | 08/02 | [M11 Dplyr](../m11/m11-intro.qmd) |  |
