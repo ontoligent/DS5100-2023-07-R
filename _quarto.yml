@@ -67,6 +67,7 @@ book:
         - notebooks/M06_Pandas/M06-02-Pandas2.ipynb
         - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
         - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
+        - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
     - part: modules/m07/m07-intro.qmd # "07 Classes"
       chapters: 
         - topics/what-is-oop.qmd      
