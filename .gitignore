@@ -1,7 +1,9 @@
 **/.DS_Store
 **/_HIDE
+**/_hide
 **/tmp
 **/Icon*
+**/*.db
 
 /.quarto/
 
