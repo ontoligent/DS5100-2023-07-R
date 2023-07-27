@@ -429,7 +429,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pandas and SQL</span></a>
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Pandas and SQL</span></a>
   </div>
 </li>
       </ul>
@@ -921,13 +921,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> iris.reset_index()<span class="op">\</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    .set_index([<span class="st">'species'</span>, <span class="st">'iris_id'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="7">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>iris</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="18">
 
 <div>
 
@@ -936,6 +936,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <tr>
       <th></th>
       <th></th>
+      <th>level_0</th>
+      <th>index</th>
       <th>sepal_length</th>
       <th>sepal_width</th>
       <th>petal_length</th>
@@ -948,12 +950,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th rowspan="5" valign="top">setosa</th>
       <th>0</th>
+      <td>0</td>
+      <td>0</td>
       <td>5.1</td>
       <td>3.5</td>
       <td>1.4</td>
@@ -961,6 +967,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
+      <td>1</td>
       <td>4.9</td>
       <td>3.0</td>
       <td>1.4</td>
@@ -968,6 +976,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
+      <td>2</td>
       <td>4.7</td>
       <td>3.2</td>
       <td>1.3</td>
@@ -975,6 +985,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>3</th>
+      <td>3</td>
+      <td>3</td>
       <td>4.6</td>
       <td>3.1</td>
       <td>1.5</td>
@@ -982,6 +994,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>4</th>
+      <td>4</td>
+      <td>4</td>
       <td>5.0</td>
       <td>3.6</td>
       <td>1.4</td>
@@ -994,10 +1008,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th rowspan="5" valign="top">virginica</th>
       <th>145</th>
+      <td>145</td>
+      <td>145</td>
       <td>6.7</td>
       <td>3.0</td>
       <td>5.2</td>
@@ -1005,6 +1023,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>146</th>
+      <td>146</td>
+      <td>146</td>
       <td>6.3</td>
       <td>2.5</td>
       <td>5.0</td>
@@ -1012,6 +1032,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>147</th>
+      <td>147</td>
+      <td>147</td>
       <td>6.5</td>
       <td>3.0</td>
       <td>5.2</td>
@@ -1019,6 +1041,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>148</th>
+      <td>148</td>
+      <td>148</td>
       <td>6.2</td>
       <td>3.4</td>
       <td>5.4</td>
@@ -1026,6 +1050,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
     <tr>
       <th>149</th>
+      <td>149</td>
+      <td>149</td>
       <td>5.9</td>
       <td>3.0</td>
       <td>5.1</td>
@@ -1033,23 +1059,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
   </tbody>
 </table>
-<p>150 rows × 4 columns</p>
+<p>150 rows × 6 columns</p>
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="38">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>iris.groupby(<span class="st">'species'</span>).mean(<span class="st">'mean'</span>).plot.barh()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="M06-04-MethodChaining_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="39">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>iris.groupby(<span class="st">'species'</span>).agg(<span class="st">'mean'</span>).T.setosa.plot.barh()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="M06-04-MethodChaining_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="40">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>iris.groupby([<span class="st">'sepal_length'</span>,<span class="st">'sepal_width'</span>]).petal_length<span class="op">\</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    .mean()<span class="op">\</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    .to_frame(<span class="st">'mean petal_length'</span>)<span class="op">\</span></span>
@@ -1220,7 +1246,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Pandas and SQL</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">NB: Pandas and SQL</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

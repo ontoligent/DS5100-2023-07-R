@@ -4,8 +4,6 @@ class DieGame():
     """
     Just another Python class.
     """
-    
-    # There are class level and can be overridden by each instance
     n_rolls = 10
     weights = [1,1,1,1,1,1]
     

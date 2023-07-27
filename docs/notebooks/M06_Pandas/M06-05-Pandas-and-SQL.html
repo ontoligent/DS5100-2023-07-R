@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 36&nbsp; Pandas and SQL</title>
+<title>DS 5100: Programming for Data Science - 36&nbsp; NB: Pandas and SQL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Pandas and SQL</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">NB: Pandas and SQL</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -429,7 +429,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Pandas and SQL</span></a>
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">NB: Pandas and SQL</span></a>
   </div>
 </li>
       </ul>
@@ -682,7 +682,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Pandas and SQL</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">NB: Pandas and SQL</span></h1>
 </div>
 
 
@@ -1031,6 +1031,152 @@ dtype: int64</code></pre>
 <pre><code>19544</code></pre>
 </div>
 </div>
+<div class="cell" data-tags="[]" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>raw</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>album</th>
+      <th>artist</th>
+      <th>best</th>
+      <th>date</th>
+      <th>genre</th>
+      <th>review</th>
+      <th>score</th>
+    </tr>
+    <tr>
+      <th>id</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>A.M./Being There</td>
+      <td>Wilco</td>
+      <td>1</td>
+      <td>December 6 2017</td>
+      <td>Rock</td>
+      <td>Best new reissue 1 / 2 Albums Newly reissued a...</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>No Shame</td>
+      <td>Hopsin</td>
+      <td>0</td>
+      <td>December 6 2017</td>
+      <td>Rap</td>
+      <td>On his corrosive fifth album, the rapper takes...</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Material Control</td>
+      <td>Glassjaw</td>
+      <td>0</td>
+      <td>December 6 2017</td>
+      <td>Rock</td>
+      <td>On their first album in 15 years, the Long Isl...</td>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Weighing of the Heart</td>
+      <td>Nabihah Iqbal</td>
+      <td>0</td>
+      <td>December 6 2017</td>
+      <td>Pop/R&amp;B</td>
+      <td>On her debut LP, British producer Nabihah Iqba...</td>
+      <td>7.7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>The Visitor</td>
+      <td>Neil Young / Promise of the Real</td>
+      <td>0</td>
+      <td>December 5 2017</td>
+      <td>Rock</td>
+      <td>While still pointedly political, Neil Youngís ...</td>
+      <td>6.7</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>19551</th>
+      <td>1999</td>
+      <td>Cassius</td>
+      <td>0</td>
+      <td>January 26 1999</td>
+      <td>Electronic</td>
+      <td>Well, it's been two weeks now, and I guess it'...</td>
+      <td>4.8</td>
+    </tr>
+    <tr>
+      <th>19552</th>
+      <td>Let Us Replay!</td>
+      <td>Coldcut</td>
+      <td>0</td>
+      <td>January 26 1999</td>
+      <td>Electronic</td>
+      <td>The marketing guys of yer average modern megac...</td>
+      <td>8.9</td>
+    </tr>
+    <tr>
+      <th>19553</th>
+      <td>Singles Breaking Up, Vol. 1</td>
+      <td>Don Caballero</td>
+      <td>0</td>
+      <td>January 12 1999</td>
+      <td>Experimental</td>
+      <td>Well, kids, I just went back and re-read my re...</td>
+      <td>7.2</td>
+    </tr>
+    <tr>
+      <th>19554</th>
+      <td>Out of Tune</td>
+      <td>Mojave 3</td>
+      <td>0</td>
+      <td>January 12 1999</td>
+      <td>Rock</td>
+      <td>Out of Tune is a Steve Martin album. Yes, I'll...</td>
+      <td>6.3</td>
+    </tr>
+    <tr>
+      <th>19555</th>
+      <td>Left for Dead in Malaysia</td>
+      <td>Neil Hamburger</td>
+      <td>0</td>
+      <td>January 5 1999</td>
+      <td>None</td>
+      <td>Neil Hamburger's third comedy release is a des...</td>
+      <td>6.5</td>
+    </tr>
+  </tbody>
+</table>
+<p>19544 rows × 7 columns</p>
+</div>
+</div>
+</div>
 </section>
 <section id="create-implied-subject-tables" class="level1">
 <h1>Create implied subject tables</h1>
@@ -1038,15 +1184,15 @@ dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="the-artist-table">The <code>artist</code> table</h2>
 <p>We get the unique artist names and save them to a new dataframe, and change the column name and the index name in the process so that we have well-named columns in our table.</p>
 <div class="cell" data-tags="[]" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>artists <span class="op">=</span> raw.artist.value_counts().to_frame(<span class="st">'n_reviews'</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>artists.index.name <span class="op">=</span> <span class="st">'artist_id'</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>artists.to_sql(<span class="st">'artist'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span><span class="st">'artist_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>artists <span class="op">=</span> raw.artist.value_counts().to_frame(<span class="st">'n_reviews'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>artists.index.name <span class="op">=</span> <span class="st">'artist_id'</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>artists.to_sql(<span class="st">'artist'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span><span class="st">'artist_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>9249</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>artists.sample(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>artists.sample(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 
 <div>
@@ -1110,7 +1256,7 @@ dtype: int64</code></pre>
 </div>
 <p>How many albums does Wilco have?</p>
 <div class="cell" data-tags="[]" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>artists.loc[<span class="st">'Wilco'</span>].n_reviews</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>artists.loc[<span class="st">'Wilco'</span>].n_reviews</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>14</code></pre>
 </div>
@@ -1127,15 +1273,15 @@ dtype: int64</code></pre>
 <section id="the-genre-table" class="level2">
 <h2 class="anchored" data-anchor-id="the-genre-table">The <code>genre</code> table</h2>
 <div class="cell" data-tags="[]" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>genres <span class="op">=</span> raw.genre.value_counts().to_frame(<span class="st">'n_reviews'</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>genres.index.name <span class="op">=</span> <span class="st">'genre_id'</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>genres.to_sql(<span class="st">'genre'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span><span class="st">'genre_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>genres <span class="op">=</span> raw.genre.value_counts().to_frame(<span class="st">'n_reviews'</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>genres.index.name <span class="op">=</span> <span class="st">'genre_id'</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>genres.to_sql(<span class="st">'genre'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span><span class="st">'genre_id'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>10</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>genres</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>genres</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 
 <div>
@@ -1198,25 +1344,25 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>genres.plot.barh()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>genres.plot.barh()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="M06-05-Pandas-and-SQL_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+<p><img src="M06-05-Pandas-and-SQL_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
 <section id="the-album-table" class="level2">
 <h2 class="anchored" data-anchor-id="the-album-table">The <code>album</code> table</h2>
 <div class="cell" data-tags="[]" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> raw[[<span class="st">'album'</span>,<span class="st">'artist'</span>,<span class="st">'genre'</span>]].value_counts().to_frame(<span class="st">'n_reviews'</span>).reset_index().set_index([<span class="st">'artist'</span>,<span class="st">'album'</span>])</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>albums.index.names <span class="op">=</span> [<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>]</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> albums.rename(columns<span class="op">=</span>{<span class="st">'genre'</span>:<span class="st">'genre_id'</span>})</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>albums.to_sql(<span class="st">'album'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>albums.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> raw[[<span class="st">'album'</span>,<span class="st">'artist'</span>,<span class="st">'genre'</span>]].value_counts().to_frame(<span class="st">'n_reviews'</span>).reset_index().set_index([<span class="st">'artist'</span>,<span class="st">'album'</span>])</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>albums.index.names <span class="op">=</span> [<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>]</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>albums <span class="op">=</span> albums.rename(columns<span class="op">=</span>{<span class="st">'genre'</span>:<span class="st">'genre_id'</span>})</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>albums.to_sql(<span class="st">'album'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>albums.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>19506</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>albums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>albums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="20">
 
 <div>
@@ -1312,16 +1458,16 @@ dtype: int64</code></pre>
 <section id="the-review-table" class="level2">
 <h2 class="anchored" data-anchor-id="the-review-table">The <code>review</code> table</h2>
 <div class="cell" data-tags="[]" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> raw[[<span class="st">'album'</span>, <span class="st">'artist'</span>, <span class="st">'best'</span>, <span class="st">'date'</span>, <span class="st">'review'</span>, <span class="st">'score'</span>]].copy()</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>reviews.columns <span class="op">=</span> [<span class="st">'album_id'</span>, <span class="st">'artist_id'</span>, <span class="st">'is_best'</span>, <span class="st">'review_date'</span>, <span class="st">'review_content'</span>, <span class="st">'album_score'</span>]</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> reviews.set_index([<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>,<span class="st">'review_date'</span>])</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>reviews.to_sql(<span class="st">'review'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>reviews.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> raw[[<span class="st">'album'</span>, <span class="st">'artist'</span>, <span class="st">'best'</span>, <span class="st">'date'</span>, <span class="st">'review'</span>, <span class="st">'score'</span>]].copy()</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>reviews.columns <span class="op">=</span> [<span class="st">'album_id'</span>, <span class="st">'artist_id'</span>, <span class="st">'is_best'</span>, <span class="st">'review_date'</span>, <span class="st">'review_content'</span>, <span class="st">'album_score'</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>reviews <span class="op">=</span> reviews.set_index([<span class="st">'artist_id'</span>,<span class="st">'album_id'</span>,<span class="st">'review_date'</span>])</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>reviews.to_sql(<span class="st">'review'</span>, db, index<span class="op">=</span><span class="va">True</span>, if_exists<span class="op">=</span><span class="st">'replace'</span>, index_label<span class="op">=</span>reviews.index.names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>19544</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="22">
 
 <div>
@@ -1392,7 +1538,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].sort_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].sort_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="23">
 
 <div>
@@ -1519,7 +1665,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].album_score.mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>reviews.loc[<span class="st">'Wilco'</span>].album_score.mean().<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>7.4</code></pre>
 </div>
@@ -1531,7 +1677,7 @@ dtype: int64</code></pre>
 <h1>Results</h1>
 <p>So, we have create four primary tables from our raw data.</p>
 <div class="cell" data-tags="[]" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>artists.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>artists.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 
 <div>
@@ -1574,7 +1720,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>albums.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>albums.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="26">
 
 <div>
@@ -1631,7 +1777,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>genres.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>genres.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
 
 <div>
@@ -1674,7 +1820,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>reviews.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 
 <div>
@@ -1749,7 +1895,7 @@ dtype: int64</code></pre>
 <h1>Use <code>.join()</code></h1>
 <p>If we want to see genre in the review, we can create a join.</p>
 <div class="cell" data-tags="[]" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>reviews.join(albums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>reviews.join(albums)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 
 <div>
@@ -1889,7 +2035,7 @@ dtype: int64</code></pre>
 </div>
 </div>
 <div class="cell" data-tags="[]" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>albums.join(artists, rsuffix<span class="op">=</span><span class="st">'_artist'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>albums.join(artists, rsuffix<span class="op">=</span><span class="st">'_artist'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 
 <div>

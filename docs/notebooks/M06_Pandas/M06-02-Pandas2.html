@@ -429,7 +429,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Pandas and SQL</span></a>
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Pandas and SQL</span></a>
   </div>
 </li>
       </ul>
@@ -2262,14 +2262,14 @@ The <code>key</code> is used for matching up the records.</p>
 <p>Notice the <code>NaN</code> inserted into the record with <code>key='asher'</code>, since the left table didn’t contain the key.</p>
 <p><strong>Matching column names</strong><br>
 In this next example, the value columns have the same name: <em>val</em>. Notice what happens to the column names.</p>
-<div class="cell" data-execution_count="25">
+<div class="cell" data-execution_count="320">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>left <span class="op">=</span> pd.DataFrame({<span class="st">"key"</span>: [<span class="st">"jamie"</span>, <span class="st">"bill"</span>], <span class="st">"val"</span>: [<span class="dv">15</span>, <span class="dv">22</span>]})</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>right <span class="op">=</span> pd.DataFrame({<span class="st">"key"</span>: [<span class="st">"jamie"</span>, <span class="st">"bill"</span>, <span class="st">"asher"</span>], <span class="st">"val"</span>: [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">8</span>]})</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>merged <span class="op">=</span> pd.merge(left, right, on<span class="op">=</span><span class="st">"key"</span>, how<span class="op">=</span><span class="st">"right"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="258">
+<div class="cell" data-execution_count="321">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>left</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="258">
+<div class="cell-output cell-output-display" data-execution_count="321">
 
 <div>
 
@@ -2278,7 +2278,7 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
     <tr>
       <th></th>
       <th>key</th>
-      <th>lval</th>
+      <th>val</th>
     </tr>
   </thead>
   <tbody>
@@ -2297,9 +2297,9 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="271">
+<div class="cell" data-execution_count="322">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>right</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="271">
+<div class="cell-output cell-output-display" data-execution_count="322">
 
 <div>
 
@@ -2308,7 +2308,7 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
     <tr>
       <th></th>
       <th>key</th>
-      <th>rval</th>
+      <th>val</th>
     </tr>
   </thead>
   <tbody>
@@ -2332,9 +2332,9 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="272">
+<div class="cell" data-execution_count="323">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>merged</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="272">
+<div class="cell-output cell-output-display" data-execution_count="323">
 
 <div>
 
@@ -2343,8 +2343,8 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
     <tr>
       <th></th>
       <th>key</th>
-      <th>lval</th>
-      <th>rval</th>
+      <th>val_x</th>
+      <th>val_y</th>
     </tr>
   </thead>
   <tbody>
@@ -2377,13 +2377,13 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 <p>An SQL-like joiner, but this one takes advantage of indexes.</p>
 <p>Give our dataframes indexes and distinctive columns names.</p>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html">Details</a></p>
-<div class="cell" data-execution_count="273">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>left2 <span class="op">=</span> left.set_index(<span class="st">'key'</span>)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>right2 <span class="op">=</span> right.set_index(<span class="st">'key'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="330">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>left2 <span class="op">=</span> left.set_index(<span class="st">'key'</span>).copy()</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>right2 <span class="op">=</span> right.set_index(<span class="st">'key'</span>).copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="274">
+<div class="cell" data-execution_count="331">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>left2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="274">
+<div class="cell-output cell-output-display" data-execution_count="331">
 
 <div>
 
@@ -2391,7 +2391,7 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
   <thead>
     <tr>
       <th></th>
-      <th>lval</th>
+      <th>val</th>
     </tr>
     <tr>
       <th>key</th>
@@ -2412,9 +2412,9 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="275">
+<div class="cell" data-execution_count="332">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>right2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="275">
+<div class="cell-output cell-output-display" data-execution_count="332">
 
 <div>
 
@@ -2422,7 +2422,7 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
   <thead>
     <tr>
       <th></th>
-      <th>rval</th>
+      <th>val</th>
     </tr>
     <tr>
       <th>key</th>
@@ -2447,9 +2447,9 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="276">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>right2.join(left2) <span class="co"># Defaults to 'inner'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="276">
+<div class="cell" data-execution_count="337">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>right2.join(left2, rsuffix<span class="op">=</span><span class="st">'_y'</span>) <span class="co"># Defaults to 'left'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="337">
 
 <div>
 
@@ -2457,8 +2457,8 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
   <thead>
     <tr>
       <th></th>
-      <th>rval</th>
-      <th>lval</th>
+      <th>val</th>
+      <th>val_y</th>
     </tr>
     <tr>
       <th>key</th>
@@ -2487,9 +2487,9 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="277">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>right2.join(left2, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="277">
+<div class="cell" data-execution_count="338">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>right2.join(left2, rsuffix<span class="op">=</span><span class="st">'_y'</span>, how<span class="op">=</span><span class="st">'inner'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="338">
 
 <div>
 
@@ -2497,8 +2497,8 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
   <thead>
     <tr>
       <th></th>
-      <th>rval</th>
-      <th>lval</th>
+      <th>val</th>
+      <th>val_y</th>
     </tr>
     <tr>
       <th>key</th>
@@ -2510,17 +2510,12 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
     <tr>
       <th>jamie</th>
       <td>4</td>
-      <td>15.0</td>
+      <td>15</td>
     </tr>
     <tr>
       <th>bill</th>
       <td>5</td>
-      <td>22.0</td>
-    </tr>
-    <tr>
-      <th>asher</th>
-      <td>8</td>
-      <td>NaN</td>
+      <td>22</td>
     </tr>
   </tbody>
 </table>
@@ -2534,6 +2529,7 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 <li>Use <strong>join</strong> if you have shared indexes</li>
 <li>Use <strong>merge</strong> if you do not have shared indexes</li>
 <li>Use <strong>concat</strong> to combine based on shared indexes or columns</li>
+<li>Pay attention to resulting dataframe indexes and column names</li>
 </ul>
 </section>
 </section>
@@ -3080,308 +3076,13 @@ In this next example, the value columns have the same name: <em>val</em>. Notice
 </div>
 </div>
 <p>You can call it one numeric columns, too.</p>
-<div class="cell" data-tags="[]" data-execution_count="319">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>pd.get_dummies(iris.sepal_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="319">
-
-<div>
-
-<table class="dataframe table table-sm table-striped">
-  <thead>
-    <tr>
-      <th></th>
-      <th>4.3</th>
-      <th>4.4</th>
-      <th>4.5</th>
-      <th>4.6</th>
-      <th>4.7</th>
-      <th>4.8</th>
-      <th>4.9</th>
-      <th>5.0</th>
-      <th>5.1</th>
-      <th>5.2</th>
-      <th>...</th>
-      <th>6.8</th>
-      <th>6.9</th>
-      <th>7.0</th>
-      <th>7.1</th>
-      <th>7.2</th>
-      <th>7.3</th>
-      <th>7.4</th>
-      <th>7.6</th>
-      <th>7.7</th>
-      <th>7.9</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>150 rows × 35 columns</p>
+<div class="cell" data-tags="[]" data-execution_count="341">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>pd.get_dummies(iris.sepal_length).<span class="bu">sum</span>().plot.bar()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="341">
+<pre><code>&lt;Axes: &gt;</code></pre>
 </div>
+<div class="cell-output cell-output-display">
+<p><img src="M06-02-Pandas2_files/figure-html/cell-61-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 
