@@ -7,12 +7,9 @@
 - Understand the relation to function and class design 
 - Understand benefits of literate and well-styled coding
 
-
 ## Readings
 
 ### Required
 
-<ul>
-<li><a target="_new" href="https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/part07.html">Lutz 2017, <span style="text-decoration: line-through;">Ch</span>. Part 7: Exceptions and Tools</a></li>
-<li>Testing and Verification (see next Module item)</li>
-</ul>
+- [Lutz 2017, Part 7: Exceptions and Tools](https://learning.oreilly.com/library/view/learning-python-5th/9781449355722/part07.html)
+- Testing and Verification (see next Module item)
