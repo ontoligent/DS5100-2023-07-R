@@ -2686,5 +2686,61 @@
     "title": "Refreshing the Course Repo",
     "section": "",
     "text": "Each day you will want to update the forked version of the course repo you created for your homework in Module 01.\nHere are the steps to do that:\nFirst, if you have made any changes to the course notebooks and want to keep your changes, make copies of these files in your private repo.\nSecond, enter the command git stash within your local repo to hide the changes you’ve made to the current branch. To learn more about how to use stash, check out the docs on GitHub. For now, we are just using it clean up the repo so when you pull, you don’t run into a conflict between local and remote changes.\nThird, go to the forked version of the course repo on GitHub and issue a Sync Fork command to refresh the content of your repo with the new course content. The screenshot below shows where this command is located on your repo’s web page:\n\nFourth, go back to your local repo and run git pull. You should now have the most recent content from the course repo."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#when-code-breaks",
+    "href": "modules/m08/m08-testing-and-verification.html#when-code-breaks",
+    "title": "Testing and Verification",
+    "section": "When Code Breaks",
+    "text": "When Code Breaks\nIn this module, we learn about how to deal with broken code.\n\nBy “broken code,” we mean everything from code that does not run to code that does not meet the purpose for writing the code.\n\nThis is a broad topic that covers many levels, facets, and many approaches.\nThese are some basic questions that define the space of the topic:\n\nWhat constitutes broken code?\nHow do you prevent your code from breaking?\nHow to tell if your code is broken?\n\nWe’ll try to cover this space, and introduce you to some Python tools designed to handle broken code."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#specifications",
+    "href": "modules/m08/m08-testing-and-verification.html#specifications",
+    "title": "Testing and Verification",
+    "section": "Specifications",
+    "text": "Specifications\nOne way to frame this topic is to think in terms of standards of code against which the concept of broken code makes sense.\nThis perspective begins with the concept of a specification: A precise and detailed statement that a stakeholder defines about the properties the code must have.\nThere are different kinds of specification, or “spec”. For example:\n\nA design specification specification provides exact instructions for how to build something.\nA requirements specification provides exact statements about what should be built.\n\nCode can meet specifications in different ways.\n\nWe can think of code quality in terms of the degree to which code meets requirements.\nQuality: falls on a scale; it’s not a black-and-white idea. Defining the scale can be difficult.\n\nTwo kinds of requirements matching are the following:\n\nVerification: Shows that the code meets the requirement specification. You verify that I wrote the program you asked me to write.\nValidation: Shows that the code meets the requirements. You show that the program is a valid solution to the user’s problem, but not necessarily the best.\n\nSpecifications are very important. Not only are they used to guide the creation of the project, but also they’re vital for program testing and verification.\n\nThat is, if you don’t have specifications for the product, you cannot verify that you’re doing the right thing.\nLikewise, if behavior is not defined, then it becomes difficult to know what is incorrect behavior.\n\n\n\n\n\n\n\nNote\n\n\n\nSpecifications are rarely perfect. They can change over time for a variety of reasons.\nIn fact, some have joked that programming is the act of “debugging the spec”. We’ll learn more about this when we cover project management."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#testing-and-verification",
+    "href": "modules/m08/m08-testing-and-verification.html#testing-and-verification",
+    "title": "Testing and Verification",
+    "section": "Testing and Verification",
+    "text": "Testing and Verification\nTo ensure that our code aligns with our requirements and is of the highest quality we can provide, we follow testing and verification processes."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#formal-verification",
+    "href": "modules/m08/m08-testing-and-verification.html#formal-verification",
+    "title": "Testing and Verification",
+    "section": "Formal Verification",
+    "text": "Formal Verification\nFormal verification involves proof. There are three types:\n\nHand-written, hand-checked\nHand-written, machine-checked (proof-carrying code)\nMachine-written, machine-checked (static analysis)\n\nNone of them are very widely used yet, but the latter two are increasing in popularity.\nFormal verification is complex, difficult, and takes a great deal of effort."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#empirical-testing",
+    "href": "modules/m08/m08-testing-and-verification.html#empirical-testing",
+    "title": "Testing and Verification",
+    "section": "Empirical Testing",
+    "text": "Empirical Testing\nInstead of formal verification, correctness is demonstrated through empirical testing. Empirical testing shows it works on several inputs. In general, testing is:\n\nA lot easier than proof\nA lot harder (and more involved) than writing code \n\nThere are many kinds of testing, but we will focus on unit testing in this module.\n\nUnit Testing is where we write code that tests the smallest possible units of the spec (must attempt to test every flow path). The programmer does unit testing as part of the coding process.\nThis assumes that code is componential, i.e. that the smallest units are functionally independent and can be combined in principled ways.\nThis raises the issue of writing well-designed functions and classes.\n\nTwo other kinds of testing are integration and acceptance (beta) testing, which are out of the scope of this lesson. See below for a short description.\n\nIntegration Testing: Test that units work together.\nAcceptance Testing (Beta Testing): Give product to real users to try it out."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#flow-paths",
+    "href": "modules/m08/m08-testing-and-verification.html#flow-paths",
+    "title": "Testing and Verification",
+    "section": "Flow Paths",
+    "text": "Flow Paths\nUnit testing is predicated on understand the flow of data in your program.\nA flow path is a unique execution sequence through a program unit.\nA good set of test data makes sure every possible path is followed (tests every possible behavior).\nNote, however, that there are virtually an infinite number of flow paths in a program!\nExhaustive testing is usually impossible.\nHowever, we can overcome these odds by being clever about the kinds of tests that we write."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#debugging",
+    "href": "modules/m08/m08-testing-and-verification.html#debugging",
+    "title": "Testing and Verification",
+    "section": "Debugging",
+    "text": "Debugging\nAnother aspect of testing and verification which we will not cover here is debugging.\nDebugging – derived from Grace Hopper’s expression “bug” – refers to the process of investigating precisely where and when code breaks.\nProgramming environments like Jupyter Lab and VS Code provide good tools for debugging."
+  },
+  {
+    "objectID": "modules/m08/m08-testing-and-verification.html#a-note-of-caution",
+    "href": "modules/m08/m08-testing-and-verification.html#a-note-of-caution",
+    "title": "Testing and Verification",
+    "section": "A Note of Caution",
+    "text": "A Note of Caution\nEdsger Dijkstra was a famous computer scientist and A. M. Turing award winner. He said:\n\n“Program testing can effectively show the presence of bugs but is\nhopeless for showing their absence.”     — Edsger Dijkstra\n\nEven if you write a test suite of carefully crafted test cases, and if they all run and pass, it doesn’t mean that no further bugs exist.\nIt is much easier to prove the existence of something than to disprove the existence of something. \nThis realization should motivate us to learn how to create carefully crafted unit tests so that we can test as much as we can."
   }
 ]

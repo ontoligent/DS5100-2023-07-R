@@ -588,7 +588,20 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#when-code-breaks" id="toc-when-code-breaks" class="nav-link active" data-scroll-target="#when-code-breaks">When Code Breaks</a></li>
+  <li><a href="#specifications" id="toc-specifications" class="nav-link" data-scroll-target="#specifications">Specifications</a></li>
+  <li><a href="#testing-and-verification" id="toc-testing-and-verification" class="nav-link" data-scroll-target="#testing-and-verification">Testing and Verification</a></li>
+  <li><a href="#formal-verification" id="toc-formal-verification" class="nav-link" data-scroll-target="#formal-verification">Formal Verification</a></li>
+  <li><a href="#empirical-testing" id="toc-empirical-testing" class="nav-link" data-scroll-target="#empirical-testing">Empirical Testing</a></li>
+  <li><a href="#flow-paths" id="toc-flow-paths" class="nav-link" data-scroll-target="#flow-paths">Flow Paths</a></li>
+  <li><a href="#debugging" id="toc-debugging" class="nav-link" data-scroll-target="#debugging">Debugging</a></li>
+  <li><a href="#a-note-of-caution" id="toc-a-note-of-caution" class="nav-link" data-scroll-target="#a-note-of-caution">A Note of Caution</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ontoligent/DS5100-2023-07-R/edit/main/modules/m08/m08-testing-and-verification.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -610,162 +623,132 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<h2 class="anchored">
-Definitions
-</h2>
-<p>
-Before we get started, let’s review some definitions.
-</p>
+<section id="when-code-breaks" class="level2">
+<h2 class="anchored" data-anchor-id="when-code-breaks">When Code Breaks</h2>
+<p>In this module, we learn about how to deal with broken code.</p>
+<ul>
+<li>By “broken code,” we mean everything from code that does not run to code that does not meet the purpose for writing the code.</li>
+</ul>
+<p>This is a broad topic that covers many levels, facets, and many approaches.</p>
+<p>These are some basic questions that define the space of the topic:</p>
+<ul>
+<li><p>What constitutes broken code?</p></li>
+<li><p>How do you prevent your code from breaking?</p></li>
+<li><p>How to tell if your code is broken?</p></li>
+</ul>
+<p>We’ll try to cover this space, and introduce you to some Python tools designed to handle broken code.</p>
+</section>
+<section id="specifications" class="level2">
+<h2 class="anchored" data-anchor-id="specifications">Specifications</h2>
+<p>One way to frame this topic is to think in terms of <strong>standards of code</strong> against which the concept of broken code makes sense.</p>
+<p>This perspective begins with the concept of a <strong>specification</strong>: A precise and detailed statement that a stakeholder defines about the properties the code must have.</p>
+<p>There are different kinds of specification, or “spec”. For example:</p>
+<ul>
+<li><p>A <strong>design specification</strong> specification provides exact instructions for <em>how</em> to build something.</p></li>
+<li><p>A <strong>requirements specification</strong> provides exact statements about <em>what</em> should be built.</p></li>
+</ul>
+<p>Code can meet specifications in different ways.</p>
+<ul>
+<li><p>We can think of code <strong>quality</strong> in terms of the degree to which code meets requirements.</p></li>
+<li><p><strong>Quality:</strong> falls on a scale; it’s not a black-and-white idea. Defining the scale can be difficult.</p></li>
+</ul>
+<p>Two kinds of requirements matching are the following:</p>
+<ul>
+<li><p><strong>Verification:</strong> Shows that the code <strong>meets the requirement specification</strong>. You verify that I wrote the program you asked me to write.</p></li>
+<li><p><strong>Validation:</strong> Shows that the code meets the requirements. You show that the program is a valid solution to the user’s problem, but not necessarily the best.</p></li>
+</ul>
+<p><strong>Specifications are very important</strong>. Not only are they used to guide the creation of the project, but also they’re&nbsp;<strong>vital for program testing and verification</strong>.</p>
+<ul>
+<li><p>That is, if you don’t have specifications for the product, you cannot verify that you’re doing the right thing.</p></li>
+<li><p>Likewise, if behavior is not defined, then it becomes difficult to know what is&nbsp;<em>incorrect</em>&nbsp;behavior.</p></li>
+</ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Specifications are rarely perfect. They can change over time for a variety of reasons.</p>
+<p>In fact, some have joked that programming is the act of <a href="http://johnunsworth.name/KR/halsted.html">“debugging the spec”</a>. We’ll learn more about this when we cover project management.</p>
+</div>
+</div>
+</section>
+<section id="testing-and-verification" class="level2">
+<h2 class="anchored" data-anchor-id="testing-and-verification">Testing and Verification</h2>
+<p>To ensure that our code aligns with our requirements and is of the highest quality we can provide, we follow testing and verification processes.</p>
+</section>
+<section id="formal-verification" class="level2">
+<h2 class="anchored" data-anchor-id="formal-verification">Formal Verification</h2>
+<p>Formal verification involves proof. There are three types:</p>
+<ul>
+<li><p>Hand-written, hand-checked</p></li>
+<li><p>Hand-written, machine-checked (proof-carrying code)</p></li>
+<li><p>Machine-written, machine-checked (static analysis)</p></li>
+</ul>
+<p>None of them are very widely used yet, but the latter two are increasing in popularity.</p>
+<p>Formal verification is complex, difficult, and takes a great deal of effort.</p>
+</section>
+<section id="empirical-testing" class="level2">
+<h2 class="anchored" data-anchor-id="empirical-testing">Empirical Testing</h2>
+<p>Instead of formal verification, correctness is demonstrated through empirical testing. Empirical testing shows it works on several inputs. In general, testing is:</p>
+<ul>
+<li><p>A lot easier than proof</p></li>
+<li><p>A lot harder (and more involved) than writing code&nbsp;</p></li>
+</ul>
+<p>There are many kinds of testing, but we will focus on <strong>unit testing</strong> in this module.</p>
+<ul>
+<li><p><strong>Unit Testing</strong> is where we write code that tests the <strong>smallest possible units</strong> of the spec (must attempt to test every flow path). The programmer does unit testing as part of the coding process.</p></li>
+<li><p>This assumes that code is componential, i.e.&nbsp;that the smallest units are functionally independent and can be combined in principled ways.</p></li>
+<li><p>This raises the issue of writing well-designed functions and classes.</p></li>
+</ul>
+<p>Two other kinds of testing are <strong>integration</strong> and <strong>acceptance</strong> (beta) testing, which are out of the scope of this lesson. See below for a short description.</p>
+<ul>
+<li><p><strong>Integration Testing:</strong> Test that units work together.</p></li>
+<li><p><strong>Acceptance Testing (Beta Testing):</strong> Give product to real users to try it out.</p></li>
+</ul>
+</section>
+<section id="flow-paths" class="level2">
+<h2 class="anchored" data-anchor-id="flow-paths">Flow Paths</h2>
+<p>Unit testing is predicated on understand <strong>the flow of data</strong> in your program.</p>
+<p>A flow path is a unique execution sequence through a program unit.</p>
+<p>A good set of test data makes sure <strong>every possible path</strong> is followed (tests every possible behavior).</p>
+<p>Note, however, that there are virtually an infinite number of flow paths in a program!</p>
+<p>Exhaustive testing is usually impossible.</p>
+<p>However, we can overcome these odds by being clever about the kinds of tests that we write.</p>
+<!-- We'll also learn about equivalence classes, which also help us overcome this hurdle. -->
+<!-- Example of code showing various flow paths. -->
+<!--
 
-<table style="width: 91.7209%;" border="1" cellspacing="1" cellpadding="1">
-<tbody>
-<tr>
-<td style="width: 15.99%;">
-<strong>verification</strong>
-</td>
-<td style="width: 83.9332%;">
-Shows that the code meets the requirement specification&nbsp;<br>Example: You verify that I wrote the program you asked me to write.
-</td>
-</tr>
-<tr>
-<td style="width: 15.99%;">
-<strong>validation</strong>
-</td>
-<td style="width: 83.9332%;">
-Shows that the code meets the real requirements Example: You show that the program is a valid solution to the user’s problem.
-</td>
-</tr>
-<tr>
-<td style="width: 15.99%;">
-<strong>quality</strong>
-</td>
-<td style="width: 83.9332%;">
-Suggests that validations falls on a scale, not a black-and-white idea. Defining the scale can be difficult.
-</td>
-</tr>
-<tr>
-<td style="width: 15.99%;">
-<strong>specification</strong>
-</td>
-<td style="width: 83.9332%;">
-<p>
-A precise and detailed statement about the properties some things must have
-</p>
-<p>
-Design specification: exact instructions for how to build something
-</p>
-<p>
-Requirements specifications: exact statements about what should be built
-</p>
-</td>
-</tr>
-</tbody>
+For example, starting at Stmt~1~, then the condition of the while loop (C~1~) is true, so that takes us to the condition of the if statement (C~2~) but maybe this is false, so we end up in the else portion, Stmt~3~. 
 
-</table>
-<p>
-<strong>Specifications are very important</strong>. Not only are they used to guide the creation of the project, but also they’re<span>&nbsp;</span><strong>vital for program testing and verification</strong>. That is, if you don’t have specifications for the product, you cannot verify that you’re doing the right thing. Likewise, if behavior is not defined, then it becomes difficult to know what is<span>&nbsp;</span><em>incorrect</em><span>&nbsp;</span>behavior.
-</p>
-<p>
-<strong>Edsger Dijkstra</strong><span>&nbsp;</span>was a famous computer scientist and A. M. Turing award winner. This quotation by him is a great one and very true. Even if you write a test suite of carefully crafted test cases, and if they all run and pass, it doesn’t mean that no further bugs exist.
-</p>
-<p>
-It is much easier to prove the existence of something than to disprove the existence of something.<span>&nbsp;</span><strong>This realization should motivate us to learn how to create carefully crafted unit tests so that we can test as much as we can.</strong>
-</p>
+![](../../media/FlowPathCode.png)
+
+This is an example of a flow path starting at Stmt~1~ and ending up at Stmt~3~. In other words, there are many paths through a given program.
+-->
+</section>
+<section id="debugging" class="level2">
+<h2 class="anchored" data-anchor-id="debugging">Debugging</h2>
+<p>Another aspect of testing and verification which we will not cover here is debugging.</p>
+<p>Debugging – derived from Grace Hopper’s expression “bug” – refers to the process of investigating precisely where and when code breaks.</p>
+<p>Programming environments like Jupyter Lab and VS Code provide good tools for debugging.</p>
+</section>
+<section id="a-note-of-caution" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-of-caution">A Note of Caution</h2>
+<p><strong><a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Dijkstra</a></strong>&nbsp;was a famous computer scientist and A. M. Turing award winner. He said:</p>
 <blockquote class="blockquote">
-<p>
-“Program testing can effectively show the presence of bugs but is hopeless for showing their absence.”<br>–Edsger Dijkstra
-</p>
+<p>“Program testing can effectively show the presence of bugs but is<br>
+hopeless for showing their absence.” &nbsp;&nbsp;&nbsp;&nbsp;— Edsger Dijkstra</p>
 </blockquote>
-<h2 class="anchored">
-Formal Verification
-</h2>
-<p>
-Formal verification involves proof. There are three types:
-</p>
-<ul>
-<li>
-Hand-written, hand-checked
-</li>
-<li>
-Hand-written, machine-checked (proof-carrying code)
-</li>
-<li>
-Machine-written, machine-checked (static analysis)
-</li>
-</ul>
-<p>
-None of them are very widely used yet, but the latter two are increasing in popularity. Formal verification is complex, difficult, and takes a great deal of effort.
-</p>
-<h2 class="anchored">
-Empirical Testing
-</h2>
-<p>
-Instead of formal verification, correctness is demonstrated through empirical testing. Empirical testing shows it works on several inputs. In general, testing is:
-</p>
-<ul>
-<li>
-A lot easier than proof
-</li>
-<li>
-A lot harder (and more involved) than writing code&nbsp;
-</li>
-</ul>
-<h2 class="anchored">
-Types of Empirical Testing
-</h2>
-<p>
-There are many kinds of testing, but we will focus on unit testing in this module. Two other kinds of testing are integration and acceptance (beta) testing, which are out of the scope of this lesson. See below for a short description.
-</p>
-
-<table border="1" cellspacing="1" cellpadding="1">
-<tbody>
-<tr>
-<td>
-<strong>Unit Testing</strong>
-</td>
-<td>
-Write code that tests the smallest possible units of the spec (must attempt to test every flow path). The programmer does unit testing as part of the coding process.
-</td>
-</tr>
-<tr>
-<td>
-<strong>Integration Testing</strong>
-</td>
-<td>
-Test that units work together.
-</td>
-</tr>
-<tr>
-<td>
-<strong>Acceptance Testing (Beta Testing)</strong>
-</td>
-<td>
-Give product to real users to try it out.
-</td>
-</tr>
-</tbody>
-
-</table>
-<h2 class="anchored">
-Flow Path
-</h2>
-<p>
-A flow path is a unique execution sequence through a program unit. It is done as part of the coding process by the programmer. A good set of test data makes sure every possible path is followed (tests every possible behavior). Because loops are able to execute an arbitrarily large number of times, and because there &nbsp;potentially are an infinite number of inputs into a program, there are virtually an infinite number of flow paths. Exhaustive testing is usually impossible. However, we can overcome these odds by being clever about the kinds of tests that we write. We’ll also learn about equivalence classes, which also help us overcome this hurdle.
-</p>
-<p>
-Example of code showing various flow paths. For example, starting at Stmt<sub>1</sub>, then the condition of the while loop (C<sub>1</sub>) is true, so that takes us to the condition of the if statement (C<sub>2</sub>) but maybe this is false, so we end up in the else portion, Stmt<sub>3</sub>. This is an example of a flow path starting at Stmt<sub>1</sub> and ending up at Stmt<sub>3</sub>. In other words, there are many paths through a given program.
-</p>
-<p><img src="../../media/FlowPathCode.png" class="img-fluid"></p>
-<div class="cell normal" data-type="normal">
-<div class="innerCell">
-<hr>
-<p class="auto-cursor-target">
-Source: Nada Basit&nbsp;
-</p>
-</div>
-</div>
+<p>Even if you write a test suite of carefully crafted test cases, and if they all run and pass, it doesn’t mean that no further bugs exist.</p>
+<p>It is much easier to prove the existence of something than to disprove the existence of something.&nbsp;</p>
+<p><strong>This realization should motivate us to learn how to create carefully crafted unit tests so that we can test as much as we can.</strong></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
