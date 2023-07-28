@@ -756,7 +756,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>To demonstrate, we define a class with two instance variables, one a scalar and one a list.</p>
 <p>We define a method to alter the value of each.</p>
 <p>We also define a method compare the state of the instance with that of its class.</p>
-<div class="cell" data-execution_count="26">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyTest():</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Two class attributes</span></span>
@@ -830,29 +830,41 @@ c.bar = [1, 1]</code></pre>
 </div>
 <div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    test1.add_one()</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    test1.compare_states()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Iter"</span>, i)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    test1.add_one()</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    test1.compare_states()</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>i.foo = 3
+<pre><code>Iter 0
+i.foo = 3
 c.foo = 0
 i.bar = [1]
 c.bar = [1, 1]
+
+Iter 1
 i.foo = 4
 c.foo = 0
 i.bar = [1, 1]
 c.bar = [1, 1]
+
+Iter 2
 i.foo = 5
 c.foo = 0
 i.bar = [1, 1, 1]
 c.bar = [1, 1]
+
+Iter 3
 i.foo = 6
 c.foo = 0
 i.bar = [1, 1, 1, 1]
 c.bar = [1, 1]
+
+Iter 4
 i.foo = 7
 c.foo = 0
 i.bar = [1, 1, 1, 1, 1]
-c.bar = [1, 1]</code></pre>
+c.bar = [1, 1]
+</code></pre>
 </div>
 </div>
 <p>Notice that now the class list is not altered by the instance list.</p>
@@ -876,30 +888,36 @@ c.bar = [1, 1]</code></pre>
 <p>We do it a few more times to drive the point home.</p>
 <div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    test2.add_one()</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    test2.compare_states()</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Iter"</span>, i)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    test2.add_one()</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    test2.compare_states()</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>i.foo = 1
+<pre><code>Iter 0
+i.foo = 1
 c.foo = 0
 i.bar = [1, 1, 1]
 c.bar = [1, 1, 1]
 
+Iter 1
 i.foo = 2
 c.foo = 0
 i.bar = [1, 1, 1, 1]
 c.bar = [1, 1, 1, 1]
 
+Iter 2
 i.foo = 3
 c.foo = 0
 i.bar = [1, 1, 1, 1, 1]
 c.bar = [1, 1, 1, 1, 1]
 
+Iter 3
 i.foo = 4
 c.foo = 0
 i.bar = [1, 1, 1, 1, 1, 1]
 c.bar = [1, 1, 1, 1, 1, 1]
 
+Iter 4
 i.foo = 5
 c.foo = 0
 i.bar = [1, 1, 1, 1, 1, 1, 1]
