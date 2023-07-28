@@ -1,4 +1,4 @@
-from student import Student
+from student2 import Student
 import unittest
 
 class EnrollInTestCase(unittest.TestCase): 
