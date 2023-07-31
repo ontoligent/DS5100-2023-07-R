@@ -655,8 +655,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#packages-modules-and-imports" id="toc-packages-modules-and-imports" class="nav-link active" data-scroll-target="#packages-modules-and-imports">Packages, modules, and imports</a></li>
-  <li><a href="#modules" id="toc-modules" class="nav-link" data-scroll-target="#modules">Modules</a></li>
+  <li><a href="#modules" id="toc-modules" class="nav-link active" data-scroll-target="#modules">Modules</a></li>
   <li><a href="#aside-on-namespaces" id="toc-aside-on-namespaces" class="nav-link" data-scroll-target="#aside-on-namespaces">Aside on Namespaces</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#packages-and-namespaces" id="toc-packages-and-namespaces" class="nav-link" data-scroll-target="#packages-and-namespaces">Packages and Namespaces</a></li>
@@ -686,9 +685,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="packages-modules-and-imports" class="level2">
-<h2 class="anchored" data-anchor-id="packages-modules-and-imports">Packages, modules, and imports</h2>
-</section>
 <section id="modules" class="level2">
 <h2 class="anchored" data-anchor-id="modules">Modules</h2>
 <p>In Python, a <strong>module</strong> is a file containing Python code – expressions and statements.</p>
@@ -831,6 +827,9 @@ and the values are the objects themselves.</p>
 <section id="packages-and-namespaces" class="level2">
 <h2 class="anchored" data-anchor-id="packages-and-namespaces">Packages and Namespaces</h2>
 <p>Packages structure Python’s <strong>module namespace</strong> by setting up <strong>dotted module names.</strong></p>
+<blockquote class="blockquote">
+<p>File system constructs are mapped onto Python name constructs.</p>
+</blockquote>
 <p>For example, the module name <code>A.B</code> designates a submodule named <code>B</code> in a package named <code>A</code>.</p>
 <p>The use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names.</p>
 </section>

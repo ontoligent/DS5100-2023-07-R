@@ -1936,7 +1936,7 @@
     "href": "notebooks/M09_PythonModules/M09-01-PackagesIntro.html#packages-and-namespaces",
     "title": "NB: Packages, Modules, and Imports",
     "section": "Packages and Namespaces",
-    "text": "Packages and Namespaces\nPackages structure Python’s module namespace by setting up dotted module names.\nFor example, the module name A.B designates a submodule named B in a package named A.\nThe use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names."
+    "text": "Packages and Namespaces\nPackages structure Python’s module namespace by setting up dotted module names.\n\nFile system constructs are mapped onto Python name constructs.\n\nFor example, the module name A.B designates a submodule named B in a package named A.\nThe use of dotted module names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s module names."
   },
   {
     "objectID": "notebooks/M09_PythonModules/M09-01-PackagesIntro.html#importing-packages-and-modules",
@@ -2055,7 +2055,7 @@
     "href": "notebooks/M09_PythonModules/M09-02-MakingYourOwn.html#a-more-complex-package-structure",
     "title": "NB: Building Your Own Package",
     "section": "A More Complex Package Structure",
-    "text": "A More Complex Package Structure\nproject_name/\n    bin/\n    CHANGES.txt\n    docs/\n    LICENSE.txt\n    MANIFEST.in\n    README.txt\n    setup.py\n    package_name/\n        __init__.py\n        module1.py\n        module2.py\n        test_module_1.py\n        test_module2.py      \nCHANGES.txt: log of changes with each release\nLICENSE.txt: text of the license you choose (do choose one!)\nMANIFEST.in: description of what non-code files to include\nREADME.txt: description of the package should be written in ReST or Markdown (for PyPi):\nsetup.py: the script for building/installing package.\nbin/: This is where you put top-level scripts\n( some folks use scripts )\ndocs/: the documentation\npackage_name/: The main package this is where the code goes.\ntest/: your unit tests. Options here:"
+    "text": "A More Complex Package Structure\nproject_name/\n    bin/\n    CHANGES.txt\n    docs/\n    LICENSE.txt\n    MANIFEST.in\n    README.txt\n    setup.py\n    test_module_1.py\n    test_module2.py      \n    package_name/\n        __init__.py\n        module1.py\n        module2.py\nCHANGES.txt: log of changes with each release\nLICENSE.txt: text of the license you choose (do choose one!)\nMANIFEST.in: description of what non-code files to include\nREADME.txt: description of the package should be written in ReST or Markdown (for PyPi):\nsetup.py: the script for building/installing package.\nbin/: This is where you put top-level scripts\n( some folks use scripts )\ndocs/: the documentation\npackage_name/: The main package this is where the code goes.\ntest/: your unit tests. Options here:"
   },
   {
     "objectID": "notebooks/M09_PythonModules/M09-02-MakingYourOwn.html#more-info",
