@@ -506,8 +506,8 @@ It allows us to perform a number of complex operations in just a few lines of co
 
 In particular, we can often conduct the beginnings of an exploratory analysis with the powerful combination of `group_by()` and `summarize()`.
 
-Once you learn the `dplyr` grammar there are a few additional benefits - `dplyr` can work with other data frame "back ends" such as SQL databases.
-There is an SQL interface for relational databases via the DBI package - `dplyr` can be integrated with the `data.table` package for large fast tables
+Once you learn the `dplyr` grammar there are a few additional benefits --- `dplyr` can work with other data frame "back ends" such as SQL databases.
+There is an SQL interface for relational databases via the DBI package --- `dplyr` can be integrated with the `data.table` package for large fast tables
 
 The `dplyr` package is handy way to both simplify and speed up your data frame management code.
 It's rare that you get such a combination at the same time!
