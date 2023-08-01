@@ -73,7 +73,9 @@ This is similar to **method chaining** in Python, but is more pervasive.
 
 It is similar to the pipe operator `|` in Unix shells.
 
-By the way, the operator is called the [**magrittr**](https://magrittr.tidyverse.org/) package, which is a central part of the Tidyverse. It provides a set of operators which make your code more readable.
+By the way, the operator comes with the [**magrittr**](https://magrittr.tidyverse.org/) package, which is a central part of the Tidyverse. It is so central, in fact, that packages in the tidyverse load `%>%` automatically.
+
+It provides a set of operators which make your code more readable.
 
 # Tibbles
 
@@ -183,7 +185,7 @@ You'll also need the backticks when working with these variables in other packag
 There are two main differences in the usage of a tibble vs. a classic `data.frame`: **printing** and **subsetting**.
 
 ::: {.callout-tip}
-If these difference cause problems when working with older packages, you can turn a tibble back to a regular data frame with `as.data.frame()`.
+If these differences cause problems when working with older packages, you can turn a tibble back to a regular data frame with `as.data.frame()`.
 :::
 
 ## Printing
@@ -191,7 +193,7 @@ If these difference cause problems when working with older packages, you can tur
 The print method:
 
 -   Only the first 10 rows
--   All the columns that fit on screen.
+-   All the columns that fit on screen
 
 This makes it much easier to work with large data.
 
@@ -322,5 +324,4 @@ With `data.frame`s, `[` sometimes returns a `data.frame`, and sometimes returns 
 With tibbles, **`[` always returns another tibble**.
 
 -   This can sometimes cause problems when working with older code.
-
 -   If you hit one of those functions, just use `as.data.frame()` to turn your tibble back to a `data.frame`.
