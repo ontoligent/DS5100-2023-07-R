@@ -1,4 +1,10 @@
-#  NB: Control Structures and Functions
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# NB: Control Structures and Functions
 
 ## `if`/`else` Statements
 
@@ -330,5 +336,6 @@ R's scoping rules are similar to Python's.
 Since `z` isn't in the function, **R looks in the function's
 environment** for it.
 
-For more on scoping rules, see [Chapter 15: Scoping Rules of R](https://bookdown.org/rdpeng/rprogdatascience/scoping-rules-of-r.html)
+For more on scoping rules, see [Chapter 15: Scoping Rules of
+R](https://bookdown.org/rdpeng/rprogdatascience/scoping-rules-of-r.html)
 in Peng's *R Programming For Data Science*.

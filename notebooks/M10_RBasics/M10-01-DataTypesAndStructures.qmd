@@ -1,3 +1,9 @@
+---
+editor: 
+  markdown: 
+    wrap: 72
+---
+
 # NB: Getting Started
 
 ## Preliminaries
@@ -60,7 +66,7 @@ There are several basic R data types.
 
 Decimal values are called "numerics" in R.
 
-It is the **default** computational data type.
+It is the **default** data type.
 
 If we assign a decimal value to a variable x, x will be of numeric type:
 
@@ -73,7 +79,7 @@ x              # print the value of x
 class(x)      # print the class name of x 
 ```
 
-Eve if we assign an integer to a variable k, it is will still be saved
+Even if we assign an integer to a variable k, it is will still be saved
 as a numeric value.
 
 ```{r}
@@ -287,10 +293,10 @@ A **data frame** is called a *table* in many languages.
 
 > Each column holds the same type, and the columns can have header
 > names.\
-> A data frame is essential a kind of a list --- a list of vectors each
-> with the same length, but of varying data types.
+> A data frame is essential a kind of a list --- **a list of vectors**
+> each with the same length, but of varying data types.
 
-**The two most frequently uses are Vector and Data frame.**
+**The two most frequently used are Vector and Data frame.**
 
 So, we will look at vectors and data frames.
 
@@ -299,10 +305,10 @@ So, we will look at vectors and data frames.
 
 ### Vectors and `c()`
 
-A vector is a sequence of data elements of the same basic type.
+A vector is a sequence of data elements of the **same basic type**.
 
-Members in a vector are officially called *components*, but many call
-them *members*.
+Members in a vector are officially called ***components***, but many
+call them ***members***.
 
 Vectors may be created with the `c()` function ("c" stands for combine).
 
@@ -728,7 +734,7 @@ We reference a data frame column with the double square bracket `[[]]`
 operator, just as we do for lists.
 
 For example, to retrieve the ninth column vector of the built-in data
-set mtcars, we write mtcars[[9]]
+set mtcars, we write mtcars\[\[9\]\]
 
 ```{r}
 mtcars[[9]] 
@@ -748,7 +754,7 @@ mtcars$am
 ```
 
 Yet another way to retrieve the same column vector is to use the single
-square bracket "[]" operator. We prepend the column name with a comma
+square bracket "\[\]" operator. We prepend the column name with a comma
 character, which signals a wildcard match for the row position
 
 ```{r}
