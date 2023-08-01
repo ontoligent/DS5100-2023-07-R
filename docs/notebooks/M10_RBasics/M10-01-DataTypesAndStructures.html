@@ -556,11 +556,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Errata and Addenda</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../notebooks/M11_RDplyr/M11-01-Tibbles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducing Tibbles</span></a>
   </div>
 </li>
@@ -762,7 +757,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="numeric" class="level3">
 <h3 class="anchored" data-anchor-id="numeric">Numeric</h3>
 <p>Decimal values are called “numerics” in R.</p>
-<p>It is the <strong>default</strong> computational data type.</p>
+<p>It is the <strong>default</strong> data type.</p>
 <p>If we assign a decimal value to a variable x, x will be of numeric type:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">10.5</span>       <span class="co"># assign a decimal value </span></span>
@@ -777,7 +772,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>[1] "numeric"</code></pre>
 </div>
 </div>
-<p>Eve if we assign an integer to a variable k, it is will still be saved as a numeric value.</p>
+<p>Even if we assign an integer to a variable k, it is will still be saved as a numeric value.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">1</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>k              <span class="co"># print the value of k </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1053,17 +1048,17 @@ An array with three or more dimensions is an n-dimensional array.</p>
 <p>A <strong>data frame</strong> is called a <em>table</em> in many languages.</p>
 <blockquote class="blockquote">
 <p>Each column holds the same type, and the columns can have header names.<br>
-A data frame is essential a kind of a list — a list of vectors each with the same length, but of varying data types.</p>
+A data frame is essential a kind of a list — <strong>a list of vectors</strong> each with the same length, but of varying data types.</p>
 </blockquote>
-<p><strong>The two most frequently uses are Vector and Data frame.</strong></p>
+<p><strong>The two most frequently used are Vector and Data frame.</strong></p>
 <p>So, we will look at vectors and data frames.</p>
 <blockquote class="blockquote">
 <p>We will also look at lists since they are used internally to construct data frames.</p>
 </blockquote>
 <section id="vectors-and-c" class="level3">
 <h3 class="anchored" data-anchor-id="vectors-and-c">Vectors and <code>c()</code></h3>
-<p>A vector is a sequence of data elements of the same basic type.</p>
-<p>Members in a vector are officially called <em>components</em>, but many call them <em>members</em>.</p>
+<p>A vector is a sequence of data elements of the <strong>same basic type</strong>.</p>
+<p>Members in a vector are officially called <strong><em>components</em></strong>, but many call them <strong><em>members</em></strong>.</p>
 <p>Vectors may be created with the <code>c()</code> function (“c” stands for combine).</p>
 <p>Here is a vector of three numeric values 2, 3 and 5.</p>
 <div class="cell">

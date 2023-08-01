@@ -94,7 +94,7 @@ book:
         - notebooks/M10_RBasics/M10-02-ControlStructuresAndFunctions.qmd
     - part: modules/m11/m11-intro.qmd # "11 Dplyr"
       chapters: 
-        - notebooks/M11_RDplyr/M11-00-Addenda.ipynb
+        # - notebooks/M11_RDplyr/M11-00-Addenda.ipynb
         - notebooks/M11_RDplyr/M11-01-Tibbles.qmd
         - notebooks/M11_RDplyr/M11-02-Dplyr.qmd
     - part: modules/m12/m12-intro.qmd # "12 Visualization"

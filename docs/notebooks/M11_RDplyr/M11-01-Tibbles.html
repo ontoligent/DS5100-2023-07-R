@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 53&nbsp; NB: Introducing Tibbles</title>
+<title>DS 5100: Programming for Data Science - 52&nbsp; NB: Introducing Tibbles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../notebooks/M11_RDplyr/M11-02-Dplyr.html" rel="next">
-<link href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" rel="prev">
+<link href="../../modules/m11/m11-intro.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -556,11 +556,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Errata and Addenda</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../notebooks/M11_RDplyr/M11-01-Tibbles.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">NB: Introducing Tibbles</span></a>
   </div>
 </li>
@@ -703,9 +698,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The packages included in the Tidyverse are designed to support the pipeline of activities associated with data science, such as filtering, transforming, visualizing, etc.</p>
 <p><img src="images/paste-EE0D9577.png" class="img-fluid"></p>
 <p>Tidyverse was created by <strong>Hadley Wickham</strong> and his team with the aim of providing all these utilities to clean and work with data.</p>
-<p>Here’s a graphic of the packages associated with the TV:</p>
+<p>Here’s a graphic of the packages associated with the Tidyverse:</p>
 <p><img src="images/paste-32BD3A67.png" class="img-fluid"></p>
-<p>We are going to focus on <code>dplyr</code> today and <code>ggplot</code> tomorrow.</p>
 </section>
 <section id="dplyr" class="level2">
 <h2 class="anchored" data-anchor-id="dplyr">Dplyr</h2>
@@ -717,7 +711,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>This makes it possible to imagine solutions verbally, and then to implement them in code.</li>
 </ul>
-<p>To use the TV, we usually import everything:</p>
+<p>To use the Tidyverse, we often import everything:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -735,7 +729,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="piping-with" class="level2">
 <h2 class="anchored" data-anchor-id="piping-with">Piping with <code>%&gt;%</code></h2>
 <p>Just a quick note about this <strong>odd looking</strong> operator that you will start to see.</p>
-<p>One of the key elements of the TV is the use of <strong>piping</strong>, or the ability of to pass the return values of one function to another, with without have to nest functions.</p>
+<p>One of the key elements of the Tidyverse is the use of <strong>piping</strong>, or the ability of to pass the return values of one function to another, with without have to nest functions.</p>
 <p>For example, instead of something like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="st">"Hello"</span></span>
@@ -768,20 +762,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is similar to <strong>method chaining</strong> in Python, but is more pervasive.</p>
 <ul>
 <li>In Python you can do it with individual objects that return themselves (as it were).</li>
-<li>In TV, you can apply it to <strong>any two methods</strong> so long as it makes sense to pass the output of as the input of another.</li>
+<li>In Tidyverse, you can apply it to <strong>any two methods</strong> so long as it makes sense to pass the output of as the input of another.</li>
 <li>Basically, the output of one function becomes the first argument of the following the <code>%&gt;%</code>.</li>
 </ul>
 <p>It is similar to the pipe operator <code>|</code> in Unix shells.</p>
+<p>By the way, the operator is called the <a href="https://magrittr.tidyverse.org/"><strong>magrittr</strong></a> package, which is a central part of the Tidyverse. It provides a set of operators which make your code more readable.</p>
 </section>
 <section id="tibbles" class="level1">
 <h1>Tibbles</h1>
 <p>Dplyr can work with different rectangular data structures:</p>
 <ul>
-<li>Data frames</li>
+<li>Plain old Dataframes</li>
 <li>Tibbles</li>
 <li>Data.tables (see <a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">data.table</a>)</li>
 </ul>
-<p>The foundational data structure of the TV is the <strong>tibble</strong>.</p>
+<p>The foundational data structure of the Tidyverse is the <strong>tibble</strong>.</p>
 <p>Tibbles are data frames, but they tweak some older behaviors to make your life a little easier.</p>
 <p>To learn more about tibbles, check out the vignette:</p>
 <div class="cell">
@@ -792,7 +787,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <section id="creating-tibbles" class="level2">
 <h2 class="anchored" data-anchor-id="creating-tibbles">Creating tibbles</h2>
-<p>If you need to make a tibble “by hand”, you can use <code>tibble()</code> or <code>tribble()</code>.</p>
+<p>If you need to make a tibble “by hand”, you can use <code>tibble()</code> or <code>tribble()</code> (see below).</p>
 <p><code>tibble()</code> works by assembling individual vectors, <strong>column-wise</strong> operation:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>)</span>
@@ -908,11 +903,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="tibbles-vs.-data.frame" class="level1">
 <h1>Tibbles vs.&nbsp;data.frame</h1>
-<p>There are two main differences in the usage of a tibble vs.&nbsp;a classic <code>dat frame</code>:</p>
-<ul>
-<li><strong>printing</strong> and <strong>subsetting</strong>.</li>
-</ul>
+<p>There are two main differences in the usage of a tibble vs.&nbsp;a classic <code>data.frame</code>: <strong>printing</strong> and <strong>subsetting</strong>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>If these difference cause problems when working with older packages, you can turn a tibble back to a regular data frame with <code>as.data.frame()</code>.</p>
+</div>
+</div>
 <section id="printing" class="level2">
 <h2 class="anchored" data-anchor-id="printing">Printing</h2>
 <p>The print method:</p>
@@ -933,16 +937,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 1,000 × 5
    a                   b              c      d e    
    &lt;dttm&gt;              &lt;date&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;
- 1 2023-06-20 06:50:09 2023-07-02     1 0.982  h    
- 2 2023-06-19 18:33:21 2023-07-13     2 0.0423 l    
- 3 2023-06-20 09:58:44 2023-07-17     3 0.0382 z    
- 4 2023-06-19 23:13:12 2023-07-14     4 0.430  w    
- 5 2023-06-20 09:40:44 2023-07-17     5 0.0412 h    
- 6 2023-06-19 14:02:25 2023-07-08     6 0.474  n    
- 7 2023-06-20 04:24:14 2023-06-19     7 0.425  i    
- 8 2023-06-19 14:26:35 2023-07-02     8 0.125  y    
- 9 2023-06-19 11:28:08 2023-07-07     9 0.877  q    
-10 2023-06-19 10:32:34 2023-07-18    10 0.191  d    
+ 1 2023-08-01 13:25:29 2023-08-08     1 0.0433 k    
+ 2 2023-08-02 03:14:49 2023-08-14     2 0.397  w    
+ 3 2023-08-01 16:30:03 2023-08-18     3 0.0588 q    
+ 4 2023-08-01 23:31:17 2023-08-24     4 0.484  r    
+ 5 2023-08-01 13:46:14 2023-08-14     5 0.118  z    
+ 6 2023-08-01 17:58:49 2023-08-13     6 0.766  q    
+ 7 2023-08-02 02:23:56 2023-08-28     7 0.944  x    
+ 8 2023-08-01 15:48:19 2023-08-23     8 0.150  o    
+ 9 2023-08-02 11:19:05 2023-08-24     9 0.808  q    
+10 2023-08-02 12:15:58 2023-08-15    10 0.787  i    
 # ℹ 990 more rows</code></pre>
 </div>
 </div>
@@ -1277,8 +1281,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">NB: Errata and Addenda</span></span>
+      <a href="../../modules/m11/m11-intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">M11 Dplyr</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
