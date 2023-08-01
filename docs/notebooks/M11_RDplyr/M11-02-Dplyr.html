@@ -685,9 +685,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>The <code>dplyr</code> package was developed by Hadley Wickham of RStudio and is an optimized and distilled version of his <code>plyr</code> package.</p>
-<blockquote class="blockquote">
-<p><code>plyr</code> is an attempt to organize much of the functionality of the <code>*apply</code> family of methods in R.</p>
-</blockquote>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -698,12 +695,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Some of these methods are superseded by dplyr and plyr, but <a href="https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family">they remain useful</a>.</p>
+<p><code>plyr</code> is an attempt to organize much of the functionality of the <code>*apply</code> family of methods in base R. Although in many ways superceded the <code>plyr</code> and <code>dplyr</code>, <a href="https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family">they remain useful</a>.</p>
 </div>
 </div>
 <p>The <code>dplyr</code> package does not provide any “new” functionality to R per se, in the sense that everything <code>dplyr</code> does could already be done with base R, but it <em>greatly</em> simplifies existing functionality in R.</p>
 <p>One important contribution of the <code>dplyr</code> package is that it provides a <strong>“grammar”</strong> (in particular, verbs) for data manipulation and for operating on data frames.</p>
-<p>With this grammar, you can sensibly communicate what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).</p>
+<p>With this grammar, you can sensibly <strong>communicate</strong> what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).</p>
 <p>This is useful because it provides an abstraction for data manipulation that previously did not exist.</p>
 <p>Another useful contribution is that the <code>dplyr</code> functions are <strong>very</strong> fast, as many key operations are coded in C++.</p>
 <section id="dplyr-grammar" class="level2">
@@ -727,12 +724,15 @@ Note
 <li><p>The first argument is a data frame.</p></li>
 <li><p>The subsequent arguments describe what to do with the data frame specified in the first argument, and you can refer to columns in the data frame directly without using the $ operator (just use the column names).</p></li>
 <li><p>The return result of a function is a new data frame.</p></li>
-<li><p>Data frames must be properly formatted and annotated for this to all be useful. In particular, the data must be <a href="http://www.jstatsoft.org/v59/i10/paper">tidy</a>. In short, there should be one observation per row, and each column should represent a feature or characteristic of that observation.</p></li>
+<li><p>Data frames must be properly formatted and annotated for this to all be useful.</p></li>
 </ol>
+<p>In particular, the data must be <a href="http://www.jstatsoft.org/v59/i10/paper">tidy</a>.</p>
+<p>In short, there should be one observation per row, and each column should represent a feature or characteristic of that observation.</p>
 </section>
 <section id="installing-the-dplyr-package" class="level2">
 <h2 class="anchored" data-anchor-id="installing-the-dplyr-package">Installing the <code>dplyr</code> package</h2>
-<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>devtools</code> package and the <code>install_github()</code> function. The GitHub repository will usually contain the latest updates to the package and the development version.</p>
+<p>The <code>dplyr</code> package can be installed from CRAN or from GitHub using the <code>devtools</code> package and the <code>install_github()</code> function.</p>
+<p>The GitHub repository will usually contain the latest updates to the package and the development version.</p>
 <p>To install from CRAN, just run</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -764,9 +764,7 @@ Attaching package: 'dplyr'</code></pre>
 <section id="getting-a-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="getting-a-dataset">Getting a dataset</h2>
 <p>Let’s use a dataset containing air pollution and temperature data for the <a href="http://www.biostat.jhsph.edu/~rpeng/leanpub/rprog/chicago_data.zip">city of Chicago</a> in the U.S.</p>
-<blockquote class="blockquote">
 <p>You will find the data in the directory for this module.</p>
-</blockquote>
 <p>Load the data into R using the <code>readRDS()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"chicago.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

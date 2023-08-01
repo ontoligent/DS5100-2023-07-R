@@ -717,7 +717,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
 ✔ ggplot2 3.3.5     ✔ purrr   1.0.1
-✔ tibble  3.2.1     ✔ dplyr   1.1.1
+✔ tibble  3.2.1     ✔ dplyr   1.1.2
 ✔ tidyr   1.2.1     ✔ stringr 1.5.0
 ✔ readr   2.1.3     ✔ forcats 1.0.0
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -766,7 +766,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Basically, the output of one function becomes the first argument of the following the <code>%&gt;%</code>.</li>
 </ul>
 <p>It is similar to the pipe operator <code>|</code> in Unix shells.</p>
-<p>By the way, the operator is called the <a href="https://magrittr.tidyverse.org/"><strong>magrittr</strong></a> package, which is a central part of the Tidyverse. It provides a set of operators which make your code more readable.</p>
+<p>By the way, the operator comes with the <a href="https://magrittr.tidyverse.org/"><strong>magrittr</strong></a> package, which is a central part of the Tidyverse. It is so central, in fact, that packages in the tidyverse load <code>%&gt;%</code> automatically.</p>
+<p>It provides a set of operators which make your code more readable.</p>
 </section>
 <section id="tibbles" class="level1">
 <h1>Tibbles</h1>
@@ -914,7 +915,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If these difference cause problems when working with older packages, you can turn a tibble back to a regular data frame with <code>as.data.frame()</code>.</p>
+<p>If these differences cause problems when working with older packages, you can turn a tibble back to a regular data frame with <code>as.data.frame()</code>.</p>
 </div>
 </div>
 <section id="printing" class="level2">
@@ -922,7 +923,7 @@ Tip
 <p>The print method:</p>
 <ul>
 <li>Only the first 10 rows</li>
-<li>All the columns that fit on screen.</li>
+<li>All the columns that fit on screen</li>
 </ul>
 <p>This makes it much easier to work with large data.</p>
 <div class="cell">
@@ -937,16 +938,16 @@ Tip
 <pre><code># A tibble: 1,000 × 5
    a                   b              c      d e    
    &lt;dttm&gt;              &lt;date&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;
- 1 2023-08-02 02:03:31 2023-08-23     1 0.324  e    
- 2 2023-08-02 07:48:10 2023-08-17     2 0.423  g    
- 3 2023-08-02 11:46:39 2023-08-01     3 0.894  n    
- 4 2023-08-02 00:35:34 2023-08-22     4 0.865  c    
- 5 2023-08-01 22:30:33 2023-08-08     5 0.115  s    
- 6 2023-08-02 02:52:33 2023-08-11     6 0.0147 t    
- 7 2023-08-02 07:51:28 2023-08-23     7 0.568  w    
- 8 2023-08-02 11:42:08 2023-08-28     8 0.0747 k    
- 9 2023-08-01 21:32:07 2023-08-10     9 0.394  b    
-10 2023-08-02 08:40:03 2023-08-01    10 0.290  j    
+ 1 2023-08-01 18:19:57 2023-08-13     1 0.681  k    
+ 2 2023-08-02 07:02:26 2023-08-23     2 0.388  b    
+ 3 2023-08-01 17:15:36 2023-08-14     3 0.0646 p    
+ 4 2023-08-02 02:44:58 2023-08-23     4 0.790  t    
+ 5 2023-08-01 17:00:15 2023-08-13     5 0.0857 p    
+ 6 2023-08-01 14:45:48 2023-08-26     6 0.287  v    
+ 7 2023-08-02 05:44:11 2023-08-20     7 0.343  c    
+ 8 2023-08-02 01:23:26 2023-08-11     8 0.879  d    
+ 9 2023-08-02 07:55:47 2023-08-10     9 0.777  h    
+10 2023-08-01 23:36:57 2023-08-18    10 0.693  p    
 # ℹ 990 more rows</code></pre>
 </div>
 </div>
@@ -1121,8 +1122,8 @@ Tip
 </ul>
 <p>With tibbles, <strong><code>[</code> always returns another tibble</strong>.</p>
 <ul>
-<li><p>This can sometimes cause problems when working with older code.</p></li>
-<li><p>If you hit one of those functions, just use <code>as.data.frame()</code> to turn your tibble back to a <code>data.frame</code>.</p></li>
+<li>This can sometimes cause problems when working with older code.</li>
+<li>If you hit one of those functions, just use <code>as.data.frame()</code> to turn your tibble back to a <code>data.frame</code>.</li>
 </ul>
 
 
