@@ -662,7 +662,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#tibbles-vs.-data.frame" id="toc-tibbles-vs.-data.frame" class="nav-link" data-scroll-target="#tibbles-vs.-data.frame">Tibbles vs.&nbsp;data.frame</a>
   <ul class="collapse">
   <li><a href="#printing" id="toc-printing" class="nav-link" data-scroll-target="#printing">Printing</a></li>
-  <li><a href="#using-view" id="toc-using-view" class="nav-link" data-scroll-target="#using-view">Using <code>View()</code></a></li>
+  <li><a href="#using-rstudio-view" id="toc-using-rstudio-view" class="nav-link" data-scroll-target="#using-rstudio-view">Using RStudio <code>View()</code></a></li>
   <li><a href="#extracting-variables" id="toc-extracting-variables" class="nav-link" data-scroll-target="#extracting-variables">Extracting variables</a></li>
   <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a></li>
   </ul></li>
@@ -921,8 +921,8 @@ Tip
 <h2 class="anchored" data-anchor-id="printing">Printing</h2>
 <p>The print method:</p>
 <ul>
-<li><p>Only the first 10 rows</p></li>
-<li><p>All the columns that fit on screen.</p></li>
+<li>Only the first 10 rows</li>
+<li>All the columns that fit on screen.</li>
 </ul>
 <p>This makes it much easier to work with large data.</p>
 <div class="cell">
@@ -937,16 +937,16 @@ Tip
 <pre><code># A tibble: 1,000 × 5
    a                   b              c      d e    
    &lt;dttm&gt;              &lt;date&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;
- 1 2023-08-01 13:25:29 2023-08-08     1 0.0433 k    
- 2 2023-08-02 03:14:49 2023-08-14     2 0.397  w    
- 3 2023-08-01 16:30:03 2023-08-18     3 0.0588 q    
- 4 2023-08-01 23:31:17 2023-08-24     4 0.484  r    
- 5 2023-08-01 13:46:14 2023-08-14     5 0.118  z    
- 6 2023-08-01 17:58:49 2023-08-13     6 0.766  q    
- 7 2023-08-02 02:23:56 2023-08-28     7 0.944  x    
- 8 2023-08-01 15:48:19 2023-08-23     8 0.150  o    
- 9 2023-08-02 11:19:05 2023-08-24     9 0.808  q    
-10 2023-08-02 12:15:58 2023-08-15    10 0.787  i    
+ 1 2023-08-02 02:03:31 2023-08-23     1 0.324  e    
+ 2 2023-08-02 07:48:10 2023-08-17     2 0.423  g    
+ 3 2023-08-02 11:46:39 2023-08-01     3 0.894  n    
+ 4 2023-08-02 00:35:34 2023-08-22     4 0.865  c    
+ 5 2023-08-01 22:30:33 2023-08-08     5 0.115  s    
+ 6 2023-08-02 02:52:33 2023-08-11     6 0.0147 t    
+ 7 2023-08-02 07:51:28 2023-08-23     7 0.568  w    
+ 8 2023-08-02 11:42:08 2023-08-28     8 0.0747 k    
+ 9 2023-08-01 21:32:07 2023-08-10     9 0.394  b    
+10 2023-08-02 08:40:03 2023-08-01    10 0.290  j    
 # ℹ 990 more rows</code></pre>
 </div>
 </div>
@@ -1019,8 +1019,8 @@ Tip
 </ul>
 <p>You can see a complete list of options by looking at the package help with <code>package?tibble</code>.</p>
 </section>
-<section id="using-view" class="level2">
-<h2 class="anchored" data-anchor-id="using-view">Using <code>View()</code></h2>
+<section id="using-rstudio-view" class="level2">
+<h2 class="anchored" data-anchor-id="using-rstudio-view">Using RStudio <code>View()</code></h2>
 <p>A final option is to use RStudio’s built-in data viewer to get a scrollable view of the complete dataset. This is also often useful at the end of a long chain of manipulations.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">%&gt;%</span></span>
