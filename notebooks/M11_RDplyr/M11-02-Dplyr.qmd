@@ -2,6 +2,8 @@
 editor: 
   markdown: 
     wrap: sentence
+editor_options: 
+  chunk_output_type: inline
 ---
 
 # NB: The `dplyr` package
@@ -10,6 +12,7 @@ The `dplyr` package was developed by Hadley Wickham of RStudio and is an optimiz
 
 ::: callout-note
 `plyr` is an attempt to organize much of the functionality of the `*apply` family of methods in base R.
+
 Although in many ways superceded the `plyr` and `dplyr`, [they remain useful](https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family).
 :::
 
@@ -70,7 +73,7 @@ The GitHub repository will usually contain the latest updates to the package and
 
 To install from CRAN, just run
 
-```{r}
+```{r,eval=FALSE}
 install.packages("dplyr")
 ```
 
@@ -112,7 +115,7 @@ str(chicago)
 ```
 
 ```{r}
-chicago
+head(chicago)
 ```
 
 # `select()`
@@ -139,7 +142,8 @@ chicago %>%
 Note the use of `:` inside the `select()` --- you can use it to specify a range of variable names.
 
 You can also *omit* variables using the `select()` function by using **the negative sign**.
-With `select()` you can do
+
+With `select()` you can do:
 
 ```{r}
 select(chicago, -(city:dptp))
@@ -206,7 +210,9 @@ Here is a set of helper functions that can be especially useful with `select()` 
 
 The `filter()` function extracts **subsets of rows** from a data frame.
 
-> `select()` is a **column-wise** operation, `filter()` is **row-wise**.
+::: callout-note
+`select()` is a **column-wise** operation, `filter()` is **row-wise**.
+:::
 
 This function is similar to the existing `subset()` function in R but is quite a bit faster.
 
@@ -238,7 +244,7 @@ chicago %>%
 Here's a table of helper functions specifically associated with `filter()`:
 
 | **Helper Function**  | **Description**                                                                                | **Example**                                          |
-|-----------------|-----------------------------|---------------------------|
+|------------------|----------------------------|--------------------------|
 | `between()`          | Check if a value lies between two other values.                                                | `filter(data, between(age, 18, 30))`                 |
 | `near()`             | Check for near equality (useful for floating-point numbers).                                   | `filter(data, near(price, 19.99, tolerance = 0.01))` |
 | `isin()` (or `%in%`) | Check if a value is in a set of values.                                                        | `filter(data, region %in% c("East", "West"))`        |
@@ -296,7 +302,7 @@ While `arrange()` itself is relatively straightforward, there are a few helper f
 Here's a table of helper functions specifically associated with `arrange()`:
 
 | **Helper Function** | **Description**                                                                     | **Example**                               |
-|-----------------|-----------------------------|--------------------------|
+|------------------|----------------------------|--------------------------|
 | `desc()`            | Order by descending instead of default ascending.                                   | `arrange(data, desc(salary))`             |
 | `across()`          | Apply to multiple columns, especially with `c_across()` in `dplyr` 1.0.0 and later. | `arrange(data, across(starts_with("X")))` |
 | `row_number()`      | Create an index based on the order of rows.                                         | `mutate(data, idx = row_number())`        |
