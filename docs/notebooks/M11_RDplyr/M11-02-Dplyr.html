@@ -654,6 +654,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#common-dplyr-function-properties" id="toc-common-dplyr-function-properties" class="nav-link" data-scroll-target="#common-dplyr-function-properties">Common <code>dplyr</code> Function Properties</a></li>
   <li><a href="#installing-the-dplyr-package" id="toc-installing-the-dplyr-package" class="nav-link" data-scroll-target="#installing-the-dplyr-package">Installing the <code>dplyr</code> package</a></li>
   <li><a href="#getting-a-dataset" id="toc-getting-a-dataset" class="nav-link" data-scroll-target="#getting-a-dataset">Getting a dataset</a></li>
+  <li><a href="#core-methods" id="toc-core-methods" class="nav-link" data-scroll-target="#core-methods">Core Methods</a>
+  <ul class="collapse">
   <li><a href="#select" id="toc-select" class="nav-link" data-scroll-target="#select"><code>select()</code></a></li>
   <li><a href="#aside-helper-functions" id="toc-aside-helper-functions" class="nav-link" data-scroll-target="#aside-helper-functions">Aside: Helper Functions</a></li>
   <li><a href="#filter" id="toc-filter" class="nav-link" data-scroll-target="#filter"><code>filter()</code></a></li>
@@ -661,6 +663,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#rename" id="toc-rename" class="nav-link" data-scroll-target="#rename"><code>rename()</code></a></li>
   <li><a href="#mutate" id="toc-mutate" class="nav-link" data-scroll-target="#mutate"><code>mutate()</code></a></li>
   <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by"><code>group_by()</code></a></li>
+  </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ontoligent/DS5100-2023-07-R/edit/main/notebooks/M11_RDplyr/M11-02-Dplyr.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
@@ -696,18 +699,17 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>plyr</code> is an attempt to organize much of the functionality of the <code>*apply</code> family of methods in base R.</p>
-<p>Although in many ways superceded the <code>plyr</code> and <code>dplyr</code>, <a href="https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family">they remain useful</a>.</p>
+<p><code>plyr</code> is an attempt to organize much of the functionality of the <code>*apply</code> family of methods in base R. Although in many ways superseded the <code>plyr</code> and <code>dplyr</code>, <a href="https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family">they remain useful</a>.</p>
 </div>
 </div>
-<p>The <code>dplyr</code> package does not provide any “new” functionality to R per se, in the sense that everything <code>dplyr</code> does could already be done with base R, but it <em>greatly</em> simplifies existing functionality in R.</p>
+<p>The <code>dplyr</code> package does not provide any “new” functionality to R per se; everything <code>dplyr</code> does could already be done with base R. But it <em>greatly</em> simplifies existing functionality in R.</p>
 <p>One important contribution of the <code>dplyr</code> package is that it provides a <strong>“grammar”</strong> (in particular, verbs) for data manipulation and for operating on data frames.</p>
-<p>With this grammar, you can sensibly <strong>communicate</strong> what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).</p>
-<p>This is useful because it provides an abstraction for data manipulation that previously did not exist.</p>
+<p>With this grammar, you can clearly <strong>communicate</strong> what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).</p>
+<p>This is useful because it provides an abstraction for data manipulation that previously did not exist within R and other programming languages.</p>
 <p>Another useful contribution is that the <code>dplyr</code> functions are <strong>very</strong> fast, as many key operations are coded in C++.</p>
 <section id="dplyr-grammar" class="level2">
 <h2 class="anchored" data-anchor-id="dplyr-grammar"><code>dplyr</code> Grammar</h2>
-<p>Some of the key “verbs” provided by the <code>dplyr</code> package are</p>
+<p>Some of the key “verbs” provided by the <code>dplyr</code> package are:</p>
 <ul>
 <li><p><code>select</code>: return a subset of the columns of a data frame, using a flexible notation</p></li>
 <li><p><code>filter</code>: extract a subset of rows from a data frame based on logical conditions</p></li>
@@ -717,19 +719,22 @@ Note
 <li><p><code>summarise</code> / <code>summarize</code>: generate summary statistics of different variables in the data frame, possibly within strata</p></li>
 <li><p><code>%&gt;%</code>: the “pipe” operator is used to connect multiple verb actions together into a pipeline</p></li>
 </ul>
-<p>The <code>dplyr</code> package as a number of its own data types that it takes advantage of. For example, there is a handy <code>print</code> method that prevents you from printing a lot of data to the console. Most of the time, these additional data types are transparent to the user and do not need to be worried about.</p>
 </section>
 <section id="common-dplyr-function-properties" class="level2">
 <h2 class="anchored" data-anchor-id="common-dplyr-function-properties">Common <code>dplyr</code> Function Properties</h2>
 <p>All of the functions that we will discuss in this Chapter will have a few common characteristics. In particular,</p>
 <ol type="1">
-<li><p>The first argument is a data frame.</p></li>
-<li><p>The subsequent arguments describe what to do with the data frame specified in the first argument, and you can refer to columns in the data frame directly without using the $ operator (just use the column names).</p></li>
-<li><p>The return result of a function is a new data frame.</p></li>
-<li><p>Data frames must be properly formatted and annotated for this to all be useful.</p></li>
+<li><p>The <strong>first argument</strong> is a <strong>data frame</strong>.</p></li>
+<li><p>The subsequent arguments describe what to do with the data frame specified in the first argument, and <strong>you can refer to columns in the data frame directly</strong> without using the $ operator (just use the column names).</p></li>
+<li><p>The <strong>return</strong> result of a function is <strong>a new data frame</strong>.</p></li>
+<li><p><strong>Data frames must be properly formatted and annotated</strong> for this to all be useful.</p></li>
 </ol>
-<p>In particular, the data must be <a href="http://www.jstatsoft.org/v59/i10/paper">tidy</a>.</p>
-<p>In short, there should be one observation per row, and each column should represent a feature or characteristic of that observation.</p>
+<p>In particular, the data must be <a href="https://tidyr.tidyverse.org/articles/tidy-data.html">tidy</a> The main principles of tidy data are:</p>
+<ol type="1">
+<li><p>Each variable forms a column.</p></li>
+<li><p>Each observation forms a row.</p></li>
+<li><p>Each type of observational unit forms a table.</p></li>
+</ol>
 </section>
 <section id="installing-the-dplyr-package" class="level2">
 <h2 class="anchored" data-anchor-id="installing-the-dplyr-package">Installing the <code>dplyr</code> package</h2>
@@ -805,8 +810,10 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 </div>
 </section>
-<section id="select" class="level1">
-<h1><code>select()</code></h1>
+<section id="core-methods" class="level1">
+<h1>Core Methods</h1>
+<section id="select" class="level2">
+<h2 class="anchored" data-anchor-id="select"><code>select()</code></h2>
 <p>We use the <code>select()</code> function to <strong>select columns you want to focus on</strong>.</p>
 <p>Suppose we wanted to take the first 3 columns only.</p>
 <p>There are a few ways to do this.</p>
@@ -827,7 +834,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(city<span class="sc">:</span>dptp) <span class="sc">%&gt;%</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="co"># This is like using head()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   city tmpd   dptp
 1  chic 31.5 31.500
@@ -846,7 +853,7 @@ Attaching package: 'dplyr'</code></pre>
 <p>You can also <em>omit</em> variables using the <code>select()</code> function by using <strong>the negative sign</strong>.</p>
 <p>With <code>select()</code> you can do:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(chicago, <span class="sc">-</span>(city<span class="sc">:</span>dptp)) <span class="sc">%&gt;%</span> <span class="fu">slice_head</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(chicago, <span class="sc">-</span>(city<span class="sc">:</span>dptp)) <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         date pm25tmean2 pm10tmean2  o3tmean2 no2tmean2
 1  1987-01-01         NA   34.00000  4.250000  19.98810
@@ -883,7 +890,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">ends_with</span>(<span class="st">"2"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   pm25tmean2 pm10tmean2  o3tmean2 no2tmean2
 1          NA   34.00000  4.250000  19.98810
@@ -902,7 +909,7 @@ Attaching package: 'dplyr'</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"d"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     dptp       date
 1  31.500 1987-01-01
@@ -924,16 +931,16 @@ Attaching package: 'dplyr'</code></pre>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>?select</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="aside-helper-functions" class="level1">
-<h1>Aside: Helper Functions</h1>
+<section id="aside-helper-functions" class="level2">
+<h2 class="anchored" data-anchor-id="aside-helper-functions">Aside: Helper Functions</h2>
 <p>Note the use the function <code>ends_with()</code> inside of the argument space for the function <code>select()</code> above.</p>
 <p><code>ends_with()</code> is an example of a “helper function” — a function that helps make dplyr functions more effective.</p>
 <p>There are many of these introduced by dplyer. Here is a set of helper functions that can be especially useful with <code>select()</code> and related functions to specify variable names based on certain patterns or characteristics:</p>
 <table class="table">
 <colgroup>
-<col style="width: 13%">
-<col style="width: 49%">
-<col style="width: 37%">
+<col style="width: 40%">
+<col style="width: 33%">
+<col style="width: 26%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -981,8 +988,8 @@ Attaching package: 'dplyr'</code></pre>
 </tbody>
 </table>
 </section>
-<section id="filter" class="level1">
-<h1><code>filter()</code></h1>
+<section id="filter" class="level2">
+<h2 class="anchored" data-anchor-id="filter"><code>filter()</code></h2>
 <p>The <code>filter()</code> function extracts <strong>subsets of rows</strong> from a data frame.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -1002,7 +1009,7 @@ Note
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pm25tmean2 <span class="sc">&gt;</span> <span class="dv">30</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   city tmpd dptp       date pm25tmean2 pm10tmean2  o3tmean2 no2tmean2
 1  chic   23 21.9 1998-01-17      38.10   32.46154  3.180556  25.30000
@@ -1067,9 +1074,9 @@ Using the first match ...</code></pre>
 <p>Here’s a table of helper functions specifically associated with <code>filter()</code>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 12%">
-<col style="width: 55%">
-<col style="width: 31%">
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1112,8 +1119,8 @@ Using the first match ...</code></pre>
 </tbody>
 </table>
 </section>
-<section id="arrange" class="level1">
-<h1><code>arrange()</code></h1>
+<section id="arrange" class="level2">
+<h2 class="anchored" data-anchor-id="arrange"><code>arrange()</code></h2>
 <p>Use <code>arrange()</code> to <strong>reorder rows</strong> of a data frame according to one or more of the <strong>columns</strong>.</p>
 <blockquote class="blockquote">
 <p>This normally called <strong>sorting</strong>, but this word is already used in R.</p>
@@ -1175,13 +1182,12 @@ Using the first match ...</code></pre>
 6 chic   35 29.6 2005-12-26    8.40000        8.5 14.041667  16.81944</code></pre>
 </div>
 </div>
-<p>Certainly! The <code>arrange()</code> function in <code>dplyr</code> is used to order the rows of a dataset based on values in one or more columns. While <code>arrange()</code> itself is relatively straightforward, there are a few helper functions that can be useful in conjunction with it.</p>
 <p>Here’s a table of helper functions specifically associated with <code>arrange()</code>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 57%">
-<col style="width: 28%">
+<col style="width: 25%">
+<col style="width: 38%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1212,8 +1218,8 @@ Using the first match ...</code></pre>
 <p>The <code>across()</code> function, introduced in <code>dplyr</code> version 1.0.0, provides a more concise syntax for working with multiple columns. It can be especially useful in <code>arrange()</code> when you’re trying to order rows based on a selection of columns that match a certain criterion.</p>
 <p>Note that most of the magic with <code>arrange()</code> happens through the way you structure its arguments and not necessarily through a large set of helper functions.</p>
 </section>
-<section id="rename" class="level1">
-<h1><code>rename()</code></h1>
+<section id="rename" class="level2">
+<h2 class="anchored" data-anchor-id="rename"><code>rename()</code></h2>
 <p>Renaming a variable in a data frame in R is surprisingly hard to do!</p>
 <p>The <code>rename()</code> function is designed to make this process easier.</p>
 <p>Here we the names of the first five variables in the <code>chicago</code> data frame.</p>
@@ -1246,9 +1252,9 @@ Using the first match ...</code></pre>
 <p>Here’s a table of helper functions that can be used with <code>rename()</code>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 26%">
-<col style="width: 63%">
+<col style="width: 22%">
+<col style="width: 36%">
+<col style="width: 41%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1288,10 +1294,10 @@ Using the first match ...</code></pre>
 <p>It’s worth noting that these helper functions will typically target the first column that meets the specified criterion. If there are multiple columns that match the criterion (e.g., multiple columns that start with “X”), you’ll need to use these helpers with more precision or utilize other techniques.</p>
 <p>Also, remember to always refer to the official <code>dplyr</code> documentation as the package continues to evolve and new functionalities might be added over time.</p>
 </section>
-<section id="mutate" class="level1">
-<h1><code>mutate()</code></h1>
+<section id="mutate" class="level2">
+<h2 class="anchored" data-anchor-id="mutate"><code>mutate()</code></h2>
 <p>The <code>mutate()</code> function creates new columns based on computations usually involving the other columns.</p>
-<p>For example, with air pollution data, <strong>we often want to <em>detrend</em> the data by subtracting the mean from the data</strong>.</p>
+<p>For example, with air pollution data, <strong>we often want to <em>de-trend</em> the data by subtracting the mean from the data</strong>.</p>
 <p>That way we can look at whether a given day’s air pollution level is higher than or less than average (as opposed to looking at its absolute level).</p>
 <p>Here we create a <code>pm25detrend</code> variable that subtracts the mean from the <code>pm25</code> variable.</p>
 <div class="cell">
@@ -8263,8 +8269,8 @@ Using the first match ...</code></pre>
 <p>Here’s a table of helper functions specifically associated with <code>mutate()</code>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 32%">
+<col style="width: 22%">
+<col style="width: 34%">
 <col style="width: 43%">
 </colgroup>
 <thead>
@@ -8338,8 +8344,8 @@ Using the first match ...</code></pre>
 </tbody>
 </table>
 </section>
-<section id="group_by" class="level1">
-<h1><code>group_by()</code></h1>
+<section id="group_by" class="level2">
+<h2 class="anchored" data-anchor-id="group_by"><code>group_by()</code></h2>
 <p>The <code>group_by()</code> function is used to generate <strong>summary or aggregate statistics</strong> from a data frame.</p>
 <p>For example, in this air pollution dataset, you might want to know the <strong>average annual level of PM2.5</strong>.</p>
 <p>So <strong>the stratum is the year</strong>, which we can derive from the <code>date</code> variable.</p>
@@ -8396,16 +8402,21 @@ Using the first match ...</code></pre>
 <p>A slicker way to do this would be through a regression model, but we can actually do this quickly with <code>group_by()</code> and <code>summarize()</code>.</p>
 <p>First, we can create a categorical variable of <code>pm25</code> divided into quantiles.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>qq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(chicago<span class="sc">$</span>pm25, <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.2</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>qq <span class="ot">&lt;-</span> <span class="fu">quantile</span>(chicago<span class="sc">$</span>pm25, <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.2</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>qq</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    0%    20%    40%    60%    80%   100% 
+ 1.700  8.700 12.375 16.700 22.610 61.500 </code></pre>
+</div>
 </div>
 <p>Then can group the data frame by the <code>pm25.quint</code> variable. and compute the mean of <code>o3</code> and <code>no2</code> within quantiles of <code>pm25</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pm25.quint =</span> <span class="fu">cut</span>(pm25, qq)) <span class="sc">%&gt;%</span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pm25.quint) <span class="sc">%&gt;%</span></span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">o3 =</span> <span class="fu">mean</span>(o3tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">no2 =</span> <span class="fu">mean</span>(no2tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pm25.quint =</span> <span class="fu">cut</span>(pm25, qq)) <span class="sc">%&gt;%</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pm25.quint) <span class="sc">%&gt;%</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">o3 =</span> <span class="fu">mean</span>(o3tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>          <span class="at">no2 =</span> <span class="fu">mean</span>(no2tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>          <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   pm25.quint     o3   no2
@@ -8422,13 +8433,13 @@ Using the first match ...</code></pre>
 <p>More sophisticated statistical modeling can help to provide precise answers to these questions, but a simple application of <code>dplyr</code> functions can often get you most of the way there.</p>
 <p>Here is another example:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span>  </span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">as.POSIXlt</span>(date)<span class="sc">$</span>mon <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span>                              <span class="co"># SPLIT</span></span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pm25 =</span> <span class="fu">mean</span>(pm25, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),       <span class="co"># APPLY </span></span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">o3 =</span> <span class="fu">max</span>(o3tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">no2 =</span> <span class="fu">median</span>(no2tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>chicago <span class="sc">%&gt;%</span>  </span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">month =</span> <span class="fu">as.POSIXlt</span>(date)<span class="sc">$</span>mon <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(month) <span class="sc">%&gt;%</span>                              <span class="co"># SPLIT</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">pm25 =</span> <span class="fu">mean</span>(pm25, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),       <span class="co"># APPLY </span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">o3 =</span> <span class="fu">max</span>(o3tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), </span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">no2 =</span> <span class="fu">median</span>(no2tmean2, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 4
    month  pm25    o3   no2
@@ -8446,14 +8457,14 @@ Using the first match ...</code></pre>
 11    11  15.2  29.5  23.6
 12    12  17.5  27.7  24.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>                                                   <span class="co"># COMBINE (in the result)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>                                                   <span class="co"># COMBINE (in the result)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here’s a table of helper functions specifically associated with <code>group_by()</code>:</p>
 <table class="table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 47%">
-<col style="width: 31%">
+<col style="width: 22%">
+<col style="width: 36%">
+<col style="width: 41%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -8496,6 +8507,7 @@ Using the first match ...</code></pre>
 </tbody>
 </table>
 <p>It’s worth noting that <code>group_by()</code> often works in tandem with other verbs, so the real power comes from the combined operations. For instance, after grouping data, one often uses <code>summarise()</code> to calculate summary statistics for each group. The combination of these functions and their associated helpers allow for a wide range of group-wise data manipulation tasks.</p>
+</section>
 </section>
 <section id="summary" class="level1">
 <h1>Summary</h1>
