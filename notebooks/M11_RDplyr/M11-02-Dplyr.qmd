@@ -413,9 +413,9 @@ For example, in this air pollution dataset, you might want to know the **average
 
 So **the stratum is the year**, which we can derive from the `date` variable.
 
-**In conjunction with the `group_by()` function we often use the `summarize()` function.** \> Or `summarise()` for some parts of the world.
+**In conjunction with the `group_by()` function we often use the `summarize()` function.**
 
-The general operation here is a combination of **splitting** a tabel into separate pieces defined by a variable or group of variables (`group_by()`), and then **applying** a summary function across those subsets (`summarize()`), then **combining** back into another table.
+The general operation here is a combination of **splitting** a table into separate pieces defined by a variable or group of variables (`group_by()`), and then **applying** a summary function across those subsets (`summarize()`), then **combining** back into another table.
 
 > This pattern is called **split, apply, and combine**.
 > It is a fundamental pattern in data processing.
@@ -428,7 +428,7 @@ chicago <- chicago %>%
 head(chicago)
 ```
 
-Now we can create a that computes summary statistics for each year in the data frame with the `summarize()` function.
+Now we can compute summary statistics for each year in the data frame with the `summarize()` function.
 
 ```{r}
 years <- chicago %>%
@@ -443,7 +443,7 @@ Note in the process, we implicitly created separate data frame that splits the o
 
 `summarize()` then returns a data frame with columns for `year` and the annual averages of `pm25`, `o3`, and `no2`.
 
-In a slightly more complicated example, we might want to know what are the average levels of ozone (`o3`) and nitrogen dioxide (`no2`) within quintiles of `pm25`.
+In a slightly more complicated example, we might want to know what are the average levels of ozone (`o3`) and nitrogen dioxide (`no2`) within quantiles of `pm25`.
 
 A slicker way to do this would be through a regression model, but we can actually do this quickly with `group_by()` and `summarize()`.
 
