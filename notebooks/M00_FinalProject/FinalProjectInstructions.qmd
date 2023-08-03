@@ -134,10 +134,10 @@ interpretation.
 -   Each game is initialized with a Python list that contains one or
     more dice.
 
--   Die objects have a behavior to play a game, i.e. to roll all of the
+-   Game objects have a behavior to play a game, i.e. to roll all of the
     dice a given number of times.
 
--   Die objects only keep the results of their most recent play.
+-   Game objects only keep the results of their most recent play.
 
 ### Specific Methods and Attributes
 
@@ -204,10 +204,11 @@ various descriptive statistical properties about it.
 
 **A face counts per roll method.**
 
--   Computes how many times a given face is rolled in each event. For
-    example, if a roll of five dice has all sixes, then the counts for
-    this roll would be $6$ for the face value '6' and $0$ for the other
-    faces.
+-   Computes how many times a given face is rolled in each event.
+
+    -   For example, if a roll of five dice has all sixes, then the
+        counts for this roll would be $5$ for the face value '6' and $0$
+        for the other faces.
 
 -   Returns a data frame of results.
 

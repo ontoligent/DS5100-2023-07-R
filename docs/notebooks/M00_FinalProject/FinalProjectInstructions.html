@@ -739,8 +739,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>A game consists of rolling of one or more similar dice (Die objects) one or more times.</p></li>
 <li><p>By similar dice, we mean that each die in a given game has the same number of sides and associated faces, but each die object may have its own weights.</p></li>
 <li><p>Each game is initialized with a Python list that contains one or more dice.</p></li>
-<li><p>Die objects have a behavior to play a game, i.e.&nbsp;to roll all of the dice a given number of times.</p></li>
-<li><p>Die objects only keep the results of their most recent play.</p></li>
+<li><p>Game objects have a behavior to play a game, i.e.&nbsp;to roll all of the dice a given number of times.</p></li>
+<li><p>Game objects only keep the results of their most recent play.</p></li>
 </ul>
 </section>
 <section id="specific-methods-and-attributes-1" class="level3">
@@ -786,7 +786,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p><strong>A face counts per roll method.</strong></p>
 <ul>
-<li><p>Computes how many times a given face is rolled in each event. For example, if a roll of five dice has all sixes, then the counts for this roll would be <span class="math inline">\(6\)</span> for the face value ‘6’ and <span class="math inline">\(0\)</span> for the other faces.</p></li>
+<li><p>Computes how many times a given face is rolled in each event.</p>
+<ul>
+<li>For example, if a roll of five dice has all sixes, then the counts for this roll would be <span class="math inline">\(5\)</span> for the face value ‘6’ and <span class="math inline">\(0\)</span> for the other faces.</li>
+</ul></li>
 <li><p>Returns a data frame of results.</p></li>
 <li><p>The data frame has an index of the roll number, face values as columns, and count values in the cells (i.e.&nbsp;it is in wide format)..</p></li>
 </ul>
