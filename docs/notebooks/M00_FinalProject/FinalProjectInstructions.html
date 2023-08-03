@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 8&nbsp; Activity: Using Rivanna</title>
+<title>DS 5100: Programming for Data Science - 3&nbsp; Final Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../modules/m01/m01-activity-github.html" rel="next">
-<link href="../../topics/git-and-github.html" rel="prev">
+<link href="../../modules/m01/m01-intro.html" rel="next">
+<link href="../../modules/m00/schedule.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -60,7 +60,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -71,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Activity: Using Rivanna</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-title">Final Project</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -121,11 +125,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../index.html" class="sidebar-item-text sidebar-link">Welcome</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../modules/m00/syllabus.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Syllabus</span></a>
@@ -138,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M00_FinalProject/FinalProjectInstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Project</span></a>
+  <a href="../../notebooks/M00_FinalProject/FinalProjectInstructions.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Final Project</span></a>
   </div>
 </li>
       </ul>
@@ -146,11 +150,11 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../../modules/m01/m01-intro.html" class="sidebar-item-text sidebar-link">M01 Getting Started</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../topics/rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">About Rivanna</span></a>
@@ -173,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../modules/m01/m01-using-rivanna.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Activity: Using Rivanna</span></a>
+  <a href="../../modules/m01/m01-using-rivanna.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Activity: Using Rivanna</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -588,14 +592,50 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#class-definitions" id="toc-class-definitions" class="nav-link" data-scroll-target="#class-definitions">Class Definitions</a>
+  <ul class="collapse">
+  <li><a href="#the-die-class" id="toc-the-die-class" class="nav-link" data-scroll-target="#the-die-class">The Die class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition" id="toc-general-definition" class="nav-link" data-scroll-target="#general-definition"><strong>General Definition</strong></a></li>
+  <li><a href="#specific-methods-and-attributes" id="toc-specific-methods-and-attributes" class="nav-link" data-scroll-target="#specific-methods-and-attributes"><strong>Specific Methods and Attributes</strong></a></li>
+  </ul></li>
+  <li><a href="#the-game-class" id="toc-the-game-class" class="nav-link" data-scroll-target="#the-game-class">The Game class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition-1" id="toc-general-definition-1" class="nav-link" data-scroll-target="#general-definition-1">General Definition</a></li>
+  <li><a href="#specific-methods-and-attributes-1" id="toc-specific-methods-and-attributes-1" class="nav-link" data-scroll-target="#specific-methods-and-attributes-1">Specific Methods and Attributes</a></li>
+  </ul></li>
+  <li><a href="#the-analyzer-class" id="toc-the-analyzer-class" class="nav-link" data-scroll-target="#the-analyzer-class">The Analyzer class</a>
+  <ul class="collapse">
+  <li><a href="#general-definition-2" id="toc-general-definition-2" class="nav-link" data-scroll-target="#general-definition-2">General Definition</a></li>
+  <li><a href="#specific-methods-and-attributes-2" id="toc-specific-methods-and-attributes-2" class="nav-link" data-scroll-target="#specific-methods-and-attributes-2">Specific Methods and Attributes</a></li>
+  </ul></li>
+  <li><a href="#general-requirements-for-classes" id="toc-general-requirements-for-classes" class="nav-link" data-scroll-target="#general-requirements-for-classes">General Requirements for Classes</a></li>
+  </ul></li>
+  <li><a href="#unit-tests" id="toc-unit-tests" class="nav-link" data-scroll-target="#unit-tests">Unit Tests</a></li>
+  <li><a href="#scenarios" id="toc-scenarios" class="nav-link" data-scroll-target="#scenarios">Scenarios</a>
+  <ul class="collapse">
+  <li><a href="#scenario-1-a-2-headed-coin" id="toc-scenario-1-a-2-headed-coin" class="nav-link" data-scroll-target="#scenario-1-a-2-headed-coin">Scenario 1: A 2-headed Coin</a></li>
+  <li><a href="#scenario-2-a-6-sided-die" id="toc-scenario-2-a-6-sided-die" class="nav-link" data-scroll-target="#scenario-2-a-6-sided-die">Scenario 2: A 6-sided Die</a></li>
+  <li><a href="#scenario-3-letters-of-the-alphabet" id="toc-scenario-3-letters-of-the-alphabet" class="nav-link" data-scroll-target="#scenario-3-letters-of-the-alphabet">Scenario 3: Letters of the Alphabet</a></li>
+  </ul></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#about-the-readme-file" id="toc-about-the-readme-file" class="nav-link" data-scroll-target="#about-the-readme-file">About the README file</a></li>
+  <li><a href="#collaboration" id="toc-collaboration" class="nav-link" data-scroll-target="#collaboration">Collaboration</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/ontoligent/DS5100-2023-07-R/edit/main/notebooks/M00_FinalProject/FinalProjectInstructions.qmd" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-title">Activity: Using Rivanna</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-title">Final Project</span></h1>
 </div>
 
 
@@ -610,34 +650,251 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>After reading the previous documents on <a href="../../topics/rivanna.html">Rivanna</a> and <a href="../../topics/unix.html">Unix</a>, try this activity to get acquainted with the Rivanna high-performance computing cluster at UVA.</p>
-<p>To get started, go to <a href="https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard">OpenOnDemand Dashboard page</a> and from the main menu select Clusters → Rivanna Shell Access.</p>
-<p>This should open a terminal to what is called the “shell” of the operating system.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../media/107383064.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Screenshot of Rivanna shell</figcaption><p></p>
-</figure>
+<p>DS 5100 | Summer 2023 | Residential</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>For your Final Project, you will write, test, use, package, and publish a Python module and accompanying files.</p>
+<p>The module will implement a simple <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo simulator</a> using a set of three related classes — a Die class, a Game class, and an Analyzer class.</p>
+<p>The classes are related in the following way: Game objects are initialized with a Die object, and Analyzer objects are initialized with a Game object.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<p>
+</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+  A[Die] --&gt; B[Game] --&gt; C[Analyzer]
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
 </div>
-<p>Rivanna uses Linux, a member of the Unix family of operating systems. Many cloud resources use Linux.</p>
-<p>Understanding how to do work from the command line on such systems is an essential skill of the data scientist.</p>
-<p>If you have never used the command line, have no fear! Just enter the commands exactly as shown and ask questions in the Teams chat if you are stuck.</p>
-<p><strong>Now, create a directory for your course and this course by entering the following commands:</strong></p>
-<pre><code>cd Documents 
-mdkir MSDS 
-cd MSDS 
-mkdir DS5100 
-cd DS5100</code></pre>
-<p>If the <code>Documents</code> directory does not exist, create that first using the mkdir command.</p>
+<p></p>
+</div>
+</div>
+</div>
+<p>In this simulator, a “die” can be any discrete random variable associated with a stochastic process, such as using a deck of card, flipping a coin, rolling an actual die, or speaking a language.</p>
+<p>The project is designed to integrate what you have learned in this class by calling upon the following areas of knowledge:</p>
 <ul>
-<li><code>cd</code> means “change directory,” and is a basic Unix command.</li>
-<li><code>mkdir</code> means “make directory.” It’s also a basic Unix command.</li>
+<li>Basic syntax, expressions, and statements in Python.</li>
+<li>Python Classes with initialization methods.</li>
+<li>Data manipulation with NumPy and Pandas.</li>
+<li>Literate programming with docstrings and documentation.</li>
+<li>Unit testing with Unittest.</li>
+<li>Simple plotting with Pandas.</li>
+<li>Program modularization and packaging with Setuptools.</li>
+<li>GitHub for managing and sharing code.</li>
 </ul>
-<p>Note that you can use the tab key to complete path and command names as you type.</p>
-<p>You don’t have to, but it would be a good idea to create subdirectories for any of your courses that use Rivanna.</p>
-<p>More information about Unix shell commands can be found the document <a href="../../topics/unix.html">Unix Shell Commands</a>.</p>
+</section>
+<section id="class-definitions" class="level1">
+<h1>Class Definitions</h1>
+<p>The following class definitions provide blueprints for creating the classes for your simulator. Note that although these provide some specific instructions, some elements of your code are left to your interpretation.</p>
+<section id="the-die-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-die-class">The Die class</h2>
+<section id="general-definition" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition"><strong>General Definition</strong></h3>
+<ul>
+<li><p>A die has <span class="math inline">\(N\)</span> sides, or “faces”, and <span class="math inline">\(W\)</span> weights, and can be rolled to select a face.</p>
+<ul>
+<li><p>For example, a “die” with <span class="math inline">\(N = 2\)</span> is a coin, and a one with <span class="math inline">\(N = 6\)</span> is a standard die.</p></li>
+<li><p>Normally, dice and coins are “fair,” meaning that the each side has an equal weight. An unfair die is one where the weights are unequal.</p></li>
+</ul></li>
+<li><p>Each side contains a unique symbol. Symbols may be all alphabetic or all numeric.</p></li>
+<li><p><span class="math inline">\(W\)</span> defaults to <span class="math inline">\(1.0\)</span> for each face but can be changed after the object is created.</p></li>
+<li><p>The weights are just numbers, not a normalized probability distribution.</p></li>
+<li><p>The die has one behavior, which is to be rolled one or more times.</p></li>
+</ul>
+</section>
+<section id="specific-methods-and-attributes" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes"><strong>Specific Methods and Attributes</strong></h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li><p>Takes a NumPy array of faces as an argument. Throws a <code>TypeError</code> if not a NumPy array.</p></li>
+<li><p>The array’s data type (<code>dtype</code>) may be strings or numbers.</p></li>
+<li><p>The array’s values must be distinct. Tests to see if the values are distinct and raises a <code>ValueError</code> if not.</p></li>
+<li><p>Internally initializes the weights to <span class="math inline">\(1.0\)</span> for each face.</p></li>
+<li><p>Saves both faces and weights in a private data frame with faces in the index.</p></li>
+</ul>
+<p><strong>A method to change the weight of a single side.</strong></p>
+<ul>
+<li><p>Takes two arguments: the face value to be changed and the new weight.</p></li>
+<li><p>Checks to see if the face passed is valid value, i.e.&nbsp;if it is in the die array. If not, raises an <code>IndexError</code>.</p></li>
+<li><p>Checks to see if the weight is a valid type, i.e.&nbsp;if it is numeric (integer or float) or castable as numeric. If not, raises a <code>TypeError</code>.</p></li>
+</ul>
+<p><strong>A method to roll the die one or more times.</strong></p>
+<ul>
+<li><p>Takes a parameter of how many times the die is to be rolled; defaults to <span class="math inline">\(1\)</span>.</p></li>
+<li><p>This is essentially a random sample with replacement, from the private die data frame, that applies the weights.</p></li>
+<li><p>Returns a Python list of outcomes.</p></li>
+<li><p>Does not store internally these results.</p></li>
+</ul>
+<p><strong>A method to show the die’s current state.</strong></p>
+<ul>
+<li>Returns a copy of the private die data frame.</li>
+</ul>
+</section>
+</section>
+<section id="the-game-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-game-class">The Game class</h2>
+<section id="general-definition-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition-1">General Definition</h3>
+<ul>
+<li><p>A game consists of rolling of one or more similar dice (Die objects) one or more times.</p></li>
+<li><p>By similar dice, we mean that each die in a given game has the same number of sides and associated faces, but each die object may have its own weights.</p></li>
+<li><p>Each game is initialized with a Python list that contains one or more dice.</p></li>
+<li><p>Die objects have a behavior to play a game, i.e.&nbsp;to roll all of the dice a given number of times.</p></li>
+<li><p>Die objects only keep the results of their most recent play.</p></li>
+</ul>
+</section>
+<section id="specific-methods-and-attributes-1" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes-1">Specific Methods and Attributes</h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li>Takes a single parameter, a list of already instantiated similar dice.</li>
+<li>Ideally this would check if the list actually contains Die objects and that they all have the same faces, but this is not required for this project.</li>
+</ul>
+<p><strong>A play method.</strong></p>
+<ul>
+<li><p>Takes an integer parameter to specify how many times the dice should be rolled.</p></li>
+<li><p>Saves the result of the play to a private data frame.</p></li>
+<li><p>The data frame should be in wide format, i.e.&nbsp;have the roll number as a named index, columns for each die number (using its list index as the column name), and the face rolled in that instance in each cell.</p></li>
+</ul>
+<p><strong>A method to show the user the results of the most recent play.</strong></p>
+<ul>
+<li><p>This method just returns a copy of the private play data frame to the user.</p></li>
+<li><p>Takes a parameter to return the data frame in narrow or wide form which defaults to wide form.</p></li>
+<li><p>The narrow form will have a <code>MultiIndex</code>, comprising the roll number and the die number (in that order), and a single column with the outcomes (i.e.&nbsp;the face rolled).</p></li>
+<li><p>This method should raise a <code>ValueError</code> if the user passes an invalid option for narrow or wide.</p></li>
+</ul>
+</section>
+</section>
+<section id="the-analyzer-class" class="level2">
+<h2 class="anchored" data-anchor-id="the-analyzer-class">The Analyzer class</h2>
+<section id="general-definition-2" class="level3">
+<h3 class="anchored" data-anchor-id="general-definition-2">General Definition</h3>
+<p>An Analyzer object takes the results of a single game and computes various descriptive statistical properties about it.</p>
+</section>
+<section id="specific-methods-and-attributes-2" class="level3">
+<h3 class="anchored" data-anchor-id="specific-methods-and-attributes-2">Specific Methods and Attributes</h3>
+<p><strong>An initializer</strong>.</p>
+<ul>
+<li>Takes a game object as its input parameter. Throw a <code>ValueError</code> if the passed value is not a Game object.</li>
+</ul>
+<p><strong>A jackpot method.</strong></p>
+<ul>
+<li><p>A jackpot is a result in which all faces are the same, e.g.&nbsp;all ones for a six-sided die.</p></li>
+<li><p>Computes how many times the game resulted in a jackpot.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame should have the roll number as a named index and a column for the jackpot count per roll.</p></li>
+</ul>
+<p><strong>A face counts per roll method.</strong></p>
+<ul>
+<li><p>Computes how many times a given face is rolled in each event. For example, if a roll of five dice has all sixes, then the counts for this roll would be <span class="math inline">\(6\)</span> for the face value ‘6’ and <span class="math inline">\(0\)</span> for the other faces.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame has an index of the roll number, face values as columns, and count values in the cells (i.e.&nbsp;it is in wide format)..</p></li>
+</ul>
+<p><strong>A combo count method.</strong></p>
+<ul>
+<li><p>Computes the distinct combinations of faces rolled, along with their counts.</p></li>
+<li><p>Combinations are order-independent and may contain repetitions.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame should have an MultiIndex of distinct combinations and a column for the associated counts.</p></li>
+</ul>
+<p><strong>An permutation count method.</strong></p>
+<ul>
+<li><p>Computes the distinct permutations of faces rolled, along with their counts.</p></li>
+<li><p>Permutations are order-dependent and may contain repetitions.</p></li>
+<li><p>Returns a data frame of results.</p></li>
+<li><p>The data frame should have an MultiIndex of distinct permutations and a column for the associated counts.</p></li>
+</ul>
+</section>
+</section>
+<section id="general-requirements-for-classes" class="level2">
+<h2 class="anchored" data-anchor-id="general-requirements-for-classes">General Requirements for Classes</h2>
+<ul>
+<li><p>All classes and methods must have appropriate docstrings.</p></li>
+<li><p>Class docstrings should describe the general purpose of the class.</p></li>
+<li><p>Method docstrings should describe the purpose of the method, any input arguments, any return values if applicable, and any changes to the object’s state that the user should know about.</p></li>
+<li><p>Input argument descriptions should describe data types and formats as well as any default values.</p></li>
+<li><p>You may use language included in this document to create these docstrings.</p></li>
+</ul>
+</section>
+</section>
+<section id="unit-tests" class="level1">
+<h1>Unit Tests</h1>
+<p>Write a unit test file using the Unittest package containing <strong>at least one method for each method in each of the three classes</strong> above. As a general rule, each test method should verify that the target method creates an appropriate data structure.</p>
+</section>
+<section id="scenarios" class="level1">
+<h1>Scenarios</h1>
+<p>To demonstrate the use of your simulator, you will produce a Jupyter Notebook that performs the following scenarios, each consisting of a set of tasks:</p>
+<section id="scenario-1-a-2-headed-coin" class="level2">
+<h2 class="anchored" data-anchor-id="scenario-1-a-2-headed-coin">Scenario 1: A 2-headed Coin</h2>
+<ol type="1">
+<li><p>Create a fair coin (with faces <span class="math inline">\(H\)</span> and <span class="math inline">\(T\)</span>) and one unfair coin in which one of the faces has a weight of <span class="math inline">\(5\)</span> and the others <span class="math inline">\(1\)</span>.</p></li>
+<li><p>Play a game of <span class="math inline">\(1000\)</span> flips with two fair dice.</p></li>
+<li><p>Play another game (using a new Game object) of <span class="math inline">\(1000\)</span> flips, this time using two unfair dice and one fair die. For the second unfair die, you can use the same die object twice in the list of dice you pass to the Game object.</p></li>
+<li><p>For each game, use an Analyzer object to determine the relative frequency of jackpots — i.e.&nbsp;getting either all <span class="math inline">\(H\)</span>s or all <span class="math inline">\(T\)</span>s.</p></li>
+<li><p>For each analyzer, compute relative frequency as the number of jackpots over the total number of rolls.</p></li>
+<li><p>Show your results, comparing the two relative frequencies, in a simple bar chart.</p></li>
+</ol>
+</section>
+<section id="scenario-2-a-6-sided-die" class="level2">
+<h2 class="anchored" data-anchor-id="scenario-2-a-6-sided-die">Scenario 2: A 6-sided Die</h2>
+<ol type="1">
+<li><p>Create three dice, each with six sides having the faces <span class="math inline">\(1\)</span> through <span class="math inline">\(6\)</span>.</p></li>
+<li><p>Convert one die to an unfair one by weighting the face <span class="math inline">\(6\)</span> five times more than the other weights (i.e.&nbsp;it has weight of <span class="math inline">\(5\)</span> and the others a weight of <span class="math inline">\(1\)</span> each).</p></li>
+<li><p>Convert another die to be unfair by weighting the face <span class="math inline">\(1\)</span> five times more than the others.</p></li>
+<li><p>Play a game of <span class="math inline">\(10000\)</span> rolls with <span class="math inline">\(5\)</span> fair dice.</p></li>
+<li><p>Play a game of <span class="math inline">\(10000\)</span> rolls with <span class="math inline">\(2\)</span> unfair dice, one as defined in steps #2 and #3 respectively, and <span class="math inline">\(3\)</span> fair dice.</p></li>
+<li><p>For each game, use an Analyzer object to determine the relative frequency of jackpots and show your results, comparing the two relative frequencies, in a simple bar chart.</p></li>
+<li><p>Also compute <span class="math inline">\(10\)</span> most frequent combinations of faces for each game.</p></li>
+<li><p>Plot each of these combination results as bar charts.</p></li>
+</ol>
+</section>
+<section id="scenario-3-letters-of-the-alphabet" class="level2">
+<h2 class="anchored" data-anchor-id="scenario-3-letters-of-the-alphabet">Scenario 3: Letters of the Alphabet</h2>
+<ol type="1">
+<li><p>Create a “die” of letters from <span class="math inline">\(A\)</span> to <span class="math inline">\(Z\)</span> with weights based on their frequency of usage as found in the data file <code>english_letters.txt</code>. Use the frequencies (i.e.&nbsp;raw counts) as weights.</p></li>
+<li><p>Play a game involving <span class="math inline">\(4\)</span> of these dice with <span class="math inline">\(1000\)</span> rolls.</p></li>
+<li><p>Determine wow many distinct permutations in your results are actual English words, based on the vocabulary found in <code>scrabble_words.txt</code>.</p></li>
+<li><p>Repeat steps #2 and #3 using <span class="math inline">\(5\)</span> dice and compare the results. Which word length generates a higher percentage of English words?</p></li>
+</ol>
+</section>
+</section>
+<section id="submission" class="level1">
+<h1>Submission</h1>
+<p>Details for submission will be provided in Canvas.</p>
+</section>
+<section id="about-the-readme-file" class="level1">
+<h1>About the README file</h1>
+<p>The <code>README.md</code> file will be your the main source of documentation for your users, in addition to your use of docstrings in your code. The file should consist of the following sections:</p>
+<ul>
+<li><p><strong>Metadata</strong>: Specify your name and the project name (i.e.&nbsp;Monte Carlo Simulator).</p></li>
+<li><p><strong>Synopsis:</strong> Show brief demo code of how the classes are used, i.e. code snippets showing how to install, import, and use the code to (1) create dice, (2) play a game, and (3) analyze a game. You can use preformatted blocks for the code.</p></li>
+<li><p><strong>API description</strong>: A list of all classes with their public methods and attributes. Each item should show their docstrings. All parameters (with data types and defaults) should be described. All return values should be described. Do not describe private methods and attributes.</p></li>
+</ul>
+</section>
+<section id="collaboration" class="level1">
+<h1>Collaboration</h1>
+<p>You may work in groups to discuss idea and approaches, but all deliverables must be yours.</p>
+</section>
+<section id="deliverables" class="level1">
+<h1>Deliverables</h1>
+<p>To complete the project, you will create the following deliverables:</p>
+<p>__ A <code>Die</code> Class.</p>
+<p>__ A <code>Game</code> Class.</p>
+<p>__ An <code>Analyzer</code> Class.</p>
+<p>__ A module file named <code>montecarlo.py</code> that contains the above three classes.</p>
+<p>__ Unit tests for each method in each class stored in a file named <code>montecarlo_test.py</code>.</p>
+<p>__ A text file containing the succsessful results of running the previous test file named <code>montecarlo_test_results.txt</code>.</p>
+<p>__ A scenario script that instantiates the classes in a Jupyter notebook called <code>montecarlo_demo.ipynb</code>.</p>
+<p>__ <code>docstring</code>s for each class and method (including the initializers).</p>
+<p>__ The appropriate files and directories in a project directory to distribute the above code, including a package subdirectoy called <code>montecarlo</code> with the module file inside of it.</p>
+<p>__ A private GitHub repo called <code>&lt;user_id&gt;_ds5100_montecarlo</code> that contains the package and is shared with the professor and grader.</p>
+<p>__ A <code>README.md</code> file that describes for a new user the purpose of the package and how to use it.</p>
+<p>__ A license file, such as the MIT license.</p>
+<p>__ A <code>.gitignore</code> file for Python projects.</p>
+<p>__ Everything named properly when names are specified.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -791,13 +1048,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../topics/git-and-github.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Git and GitHub</span></span>
+      <a href="../../modules/m00/schedule.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Schedule</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../modules/m01/m01-activity-github.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Activity: Using Git and GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../modules/m01/m01-intro.html" class="pagination-link">
+        <span class="nav-page-text">M01 Getting Started</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
