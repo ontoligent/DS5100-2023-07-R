@@ -145,6 +145,7 @@ interpretation.
 
 -   Takes a single parameter, a list of already instantiated similar
     dice.
+
 -   Ideally this would check if the list actually contains Die objects
     and that they all have the same faces, but this is not required for
     this project.
