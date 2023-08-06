@@ -112,6 +112,83 @@
     "text": "Scenario 3: Letters of the Alphabet\n\nCreate a “die” of letters from \\(A\\) to \\(Z\\) with weights based on their frequency of usage as found in the data file english_letters.txt. Use the frequencies (i.e. raw counts) as weights.\nPlay a game involving \\(4\\) of these dice with \\(1000\\) rolls.\nDetermine wow many distinct permutations in your results are actual English words, based on the vocabulary found in scrabble_words.txt.\nRepeat steps #2 and #3 using \\(5\\) dice and compare the results. Which word length generates a higher percentage of English words?"
   },
   {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html",
+    "title": "Metadata",
+    "section": "",
+    "text": "Instructions\nFollow the instructions in the Final Project isntructions and put your work in this notebook.\nTotal points for each subsection under Deliverables and Scenarios are given in parentheses.\nBreakdowns of points within subsections are specified within subsection instructions as bulleted lists.\nThis project is worth 50 points.\nUse code blocks to perform the tasks for each scenario.\nBe sure the outputs are visible before submitting.\nWhen finished completing the above tasks, save this file to your local repo (and within your project), and them push it to your GitHub repo.\nThen convert this file to a PDF and submit it to GradeScope according to the assignment instructions in Canvas."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#the-monte-carlo-module-10",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#the-monte-carlo-module-10",
+    "title": "Metadata",
+    "section": "The Monte Carlo Module (10)",
+    "text": "The Monte Carlo Module (10)\n\nURL included, appropriately named (1).\nIncludes all three specified classes (3).\nIncludes at least all 12 specified methods (6; .5 each).\n\nPut the URL to your GitHub repo here.\nRepo URL:\nPaste a copyy of your module here.\nNOTE: Paste as text, not as code. Use triple backticks to wrap your code blocks.\n\n# A code block with your classes."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#unitest-module-2",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#unitest-module-2",
+    "title": "Metadata",
+    "section": "Unitest Module (2)",
+    "text": "Unitest Module (2)\nPaste a copy of your test module below.\nNOTE: Paste as text, not as code. Use triple backticks to wrap your code blocks.\n\nAll methods have at least one test method (1).\nEach method employs one of Unittest’s Assert methods (1).\n\n\n# A code block with your test code."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#unittest-results-3",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#unittest-results-3",
+    "title": "Metadata",
+    "section": "Unittest Results (3)",
+    "text": "Unittest Results (3)\nPut a copy of the results of running your tests from the command line here.\nAgain, paste as text using triple backticks.\n\nAll 12 specified methods return OK (3; .25 each)."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#import-1",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#import-1",
+    "title": "Metadata",
+    "section": "Import (1)",
+    "text": "Import (1)\nImport your module here. This import should refer to the code in your package directory.\n\nModule successuflly imported (1).\n\n\n# e.g. import montecarlo.montecarlo"
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#help-docs-4",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#help-docs-4",
+    "title": "Metadata",
+    "section": "Help Docs (4)",
+    "text": "Help Docs (4)\nShow your docstring documentation by applying help() to your imported module.\n\nAll methods have a docstring (3; .25 each).\nAll classes have a docstring (1; .33 each).\n\n\n# help(montecarlo)"
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#readme.md-file-3",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#readme.md-file-3",
+    "title": "Metadata",
+    "section": "README.md File (3)",
+    "text": "README.md File (3)\nProvide link to the README.md file of your project’s repo.\n\nMetadata section or info present (1).\nSynopsis section showing how each class is called (1). (All must be included.)\nAPI section listing all classes and methods (1). (All must be included.)\n\nURL:"
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#successful-installation-2",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#successful-installation-2",
+    "title": "Metadata",
+    "section": "Successful installation (2)",
+    "text": "Successful installation (2)\nPut a screenshot or paste a copy of a terminal session where you successfully install your module with pip.\nIf pasting text, use a preformatted text block to show the results.\n\nInstalled with pip (1).\nSuccessfully installed message appears (1)."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-1-a-2-headed-coin-9",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-1-a-2-headed-coin-9",
+    "title": "Metadata",
+    "section": "Scenario 1: A 2-headed Coin (9)",
+    "text": "Scenario 1: A 2-headed Coin (9)\n\nCreate a fair coin (with faces \\(H\\) and \\(T\\)) and one unfair coin in which one of the faces has a weight of \\(5\\) and the others \\(1\\).\n\n\nFair coin created (1).\nUnfair coin created with weight as specified (1).\n\n\nPlay a game of \\(1000\\) flips with two fair dice.\n\n\nPlay method called correclty and without error (1).\n\n\nPlay another game (using a new Game object) of \\(1000\\) flips, this time using two unfair dice and one fair die. For the second unfair die, you can use the same die object twice in the list of dice you pass to the Game object.\n\n\nNew game object created (1).\nPlay method called correclty and without error (1).\n\n\nFor each game, use an Analyzer object to determine the raw frequency of jackpots — i.e. getting either all \\(H\\)s or all \\(T\\)s.\n\n\nAnalyzer objecs instantiated for both games (1).\nRaw frequencies reported for both (1).\n\n\nFor each analyzer, compute relative frequency as the number of jackpots over the total number of rolls.\n\n\nBoth relative frequencies computed (1).\n\n\nShow your results, comparing the two relative frequencies, in a simple bar chart.\n\n\nBar chart plotted and correct (1)."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-2-a-6-sided-die-9",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-2-a-6-sided-die-9",
+    "title": "Metadata",
+    "section": "Scenario 2: A 6-sided Die (9)",
+    "text": "Scenario 2: A 6-sided Die (9)\n\nCreate three dice, each with six sides having the faces 1 through 6.\n\n\nThree die objects created (1).\n\n\nConvert one of the dice to an unfair one by weighting the face \\(6\\) five times more than the other weights (i.e. it has weight of 5 and the others a weight of 1 each).\n\n\nUnfair die created with proper call to weight change method (1).\n\n\nConvert another of the dice to be unfair by weighting the face \\(1\\) five times more than the others.\n\n\nUnfair die created with proper call to weight change method (1).\n\n\nPlay a game of \\(10000\\) rolls with \\(5\\) fair dice.\n\n\nGame class properly instantiated (1).\nPlay method called properly (1).\n\n\nPlay another game of \\(10000\\) rolls, this time with \\(2\\) unfair dice, one as defined in steps #2 and #3 respectively, and \\(3\\) fair dice.\n\n\nGame class properly instantiated (1).\nPlay method called properly (1).\n\n\nFor each game, use an Analyzer object to determine the relative frequency of jackpots and show your results, comparing the two relative frequencies, in a simple bar chart.\n\n\nJackpot methods called (1).\nGraph produced (1)."
+  },
+  {
+    "objectID": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-3-letters-of-the-alphabet-7",
+    "href": "notebooks/M00_FinalProject/FinalProjectTemplate.html#scenario-3-letters-of-the-alphabet-7",
+    "title": "Metadata",
+    "section": "Scenario 3: Letters of the Alphabet (7)",
+    "text": "Scenario 3: Letters of the Alphabet (7)\n\nCreate a “die” of letters from \\(A\\) to \\(Z\\) with weights based on their frequency of usage as found in the data file english_letters.txt. Use the frequencies (i.e. raw counts) as weights.\n\n\nDie correctly instantiated with source file data (1).\nWeights properly applied using weight setting method (1).\n\n\nPlay a game involving \\(4\\) of these dice with \\(1000\\) rolls.\n\n\nGame play method properly called (1).\n\n\nDetermine how many permutations in your results are actual English words, based on the vocabulary found in scrabble_words.txt.\n\n\nUse permutation method (1).\nGet count as difference between permutations and vocabulary (1).\n\n\nRepeat steps #2 and #3, this time with \\(5\\) dice. How many actual words does this produce? Which produces more?\n\n\nSuccessfully repreats steps (1).\nIdentifies parameter with most found words (1)."
+  },
+  {
     "objectID": "modules/m01/m01-intro.html#topics",
     "href": "modules/m01/m01-intro.html#topics",
     "title": "M01 Getting Started",
