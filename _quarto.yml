@@ -11,7 +11,7 @@ book:
   subtitle: "{{< var academic_term >}}"
   author: "Rafael C. Alvarado"
   date: "05/08/2021"
-  page-navigation: true
+  page-navigation: trues
   repo-actions: [edit]
   # downloads: [pdf]
   sharing: [twitter, facebook, linkedin]
