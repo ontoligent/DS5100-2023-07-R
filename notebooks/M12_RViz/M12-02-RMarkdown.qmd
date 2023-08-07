@@ -17,12 +17,9 @@ How, the R approach differs in some important ways:
     -   This differs from Jupyter's cell-by-cell approach.
 -   RMarkdown **allows several programming languages** to be run in the same notebook.
 -   RMarkdown files are meant to be *published documents*, not work spaces for coding.
--   RMarkdown is written in markdown and uses [YAML](https://yaml.org/)to store configuration information.
-
-Compared to Jupyter:
-
--   Jupyter notebooks are written in **JavaScript**, which contains both configuration data and content data in the same structure.
--   This difference is what accounts for the different editing experiences. JavaScript is the native programming language of web browsers; the notebook format is executable code that can be integrated into a web application.
+-   RMarkdown is written in markdown and uses [YAML](https://yaml.org/) to store configuration information.
+    -   Jupyter notebooks are written in **JavaScript**, which contains both configuration data and content data in the same structure.
+    -   This difference is what accounts for the different editing experiences. JavaScript is the native programming language of web browsers; the notebook format is executable code that can be integrated into a web application.
 
 ## Varieties of R Markdown outputs
 
