@@ -1,15 +1,11 @@
 from student import Student
 import unittest
 
-class EnrollInCourseTest(unittest.TestCase): 
+class EnrollInTestCase(unittest.TestCase): 
     
-    def test_incremented_correctly(self):
-        """
-        Test if enroll_in_course() method successfully increments the
-        num_courses attribute of the Student object
-        """
+    def test_01_is_numCoursincremented_correctly(self):
 
-        # Create student instance and add some courses
+        # Create student instance, adding some courses
         student1 = Student('Katherine', ['DS 5100'])
         student1.enroll_in_course("CS 5050")
         student1.enroll_in_course("CS 5777")
@@ -18,11 +14,24 @@ class EnrollInCourseTest(unittest.TestCase):
         
         # Test
         expected = 3
-        # Note that unittest.TestCase brings in the assertEqual() method
+        # unittest.TestCase brings in the assertEqual() method
         self.assertEqual(student1.num_courses, expected)
+        
+    def test_02_is_course_added(self):
+        student1 = Student('Katherine', ['DS 5100'])
+        course = "CS 5050"
+        student1.enroll_in_course(course)
+        student1.unenroll_in_course(course)
+        self.assertFalse(course in student1.courses)
 
-    # def test_test(self):
-    #     self.assertTrue(False)
+    def test_03_is_course_not_added(self):
+        student1 = Student('Katherine', ['DS 5100'])
+        expected = len(student1.courses)
+        course = "CS 5050"
+        student1.unenroll_in_course(course)
+        actual = len(student1.courses)
+        self.assertEqual(actual, expected)
+        
         
 if __name__ == '__main__':
     unittest.main(verbosity=2)

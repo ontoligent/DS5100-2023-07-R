@@ -22,6 +22,8 @@ book:
       chapters:
         - modules/m00/syllabus.qmd
         - modules/m00/schedule.qmd
+        - notebooks/M00_FinalProject/FinalProjectInstructions.qmd
+        - notebooks/M00_FinalProject/FinalProjectTemplate.ipynb
     - part: modules/m01/m01-intro.qmd # "01 Getting Started"
       chapters:
         - topics/rivanna.qmd
@@ -67,13 +69,14 @@ book:
         - notebooks/M06_Pandas/M06-02-Pandas2.ipynb
         - notebooks/M06_Pandas/M06-03-NarrowWide.ipynb
         - notebooks/M06_Pandas/M06-04-MethodChaining.ipynb
+        - notebooks/M06_Pandas/M06-05-Pandas-and-SQL.ipynb
     - part: modules/m07/m07-intro.qmd # "07 Classes"
       chapters: 
         - topics/what-is-oop.qmd      
         - notebooks/M07_PythonClasses/M07-01-Classes.ipynb
         - notebooks/M07_PythonClasses/M07-02-ClassesExample.ipynb
         - notebooks/M07_PythonClasses/M07-03-MoreOnClasses.ipynb
-        - notebooks/M07_PythonClasses/M07-04-StaticWeirdness.ipynb
+        - notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.ipynb
     - part: modules/m08/m08-intro.qmd # "08 Testing"
       chapters: 
         - modules/m08/m08-testing-and-verification.qmd
@@ -93,7 +96,7 @@ book:
         - notebooks/M10_RBasics/M10-02-ControlStructuresAndFunctions.qmd
     - part: modules/m11/m11-intro.qmd # "11 Dplyr"
       chapters: 
-        - notebooks/M11_RDplyr/M11-00-Addenda.ipynb
+        # - notebooks/M11_RDplyr/M11-00-Addenda.ipynb
         - notebooks/M11_RDplyr/M11-01-Tibbles.qmd
         - notebooks/M11_RDplyr/M11-02-Dplyr.qmd
     - part: modules/m12/m12-intro.qmd # "12 Visualization"

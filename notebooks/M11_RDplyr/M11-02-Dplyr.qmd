@@ -1,22 +1,34 @@
-# NB: The `dplyr` package
+---
+editor: 
+  markdown: 
+    wrap: sentence
+editor_options: 
+  chunk_output_type: inline
+---
 
-> Based on [Peng 2022](https://bookdown.org/rdpeng/rprogdatascience/)
+# NB: The `dplyr` package
 
 The `dplyr` package was developed by Hadley Wickham of RStudio and is an optimized and distilled version of his `plyr` package.
 
-> `plyr` is an attempt to organize much of the functionality of the `*apply` family of methods in R.
-> Some of these methods are superseded by dplyr and plyr, but [they remain useful](https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family).
+::: callout-note
+`plyr` is an attempt to organize much of the functionality of the `*apply` family of methods in base R.
+Although in many ways superseded the `plyr` and `dplyr`, [they remain useful](https://stackoverflow.com/questions/3505701/grouping-functions-tapply-by-aggregate-and-the-apply-family).
+:::
 
-The `dplyr` package does not provide any "new" functionality to R per se, in the sense that everything `dplyr` does could already be done with base R, but it *greatly* simplifies existing functionality in R.
+The `dplyr` package does not provide any "new" functionality to R per se; everything `dplyr` does could already be done with base R.
+But it *greatly* simplifies existing functionality in R.
 
-One important contribution of the `dplyr` package is that it provides a "grammar" (in particular, verbs) for data manipulation and for operating on data frames.
-With this grammar, you can sensibly communicate what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).
-This is useful because it provides an abstraction for data manipulation that previously did not exist.
+One important contribution of the `dplyr` package is that it provides a **"grammar"** (in particular, verbs) for data manipulation and for operating on data frames.
+
+With this grammar, you can clearly **communicate** what it is that you are doing to a data frame that other people can understand (assuming they also know the grammar).
+
+This is useful because it provides an abstraction for data manipulation that previously did not exist within R and other programming languages.
+
 Another useful contribution is that the `dplyr` functions are **very** fast, as many key operations are coded in C++.
 
 ## `dplyr` Grammar
 
-Some of the key "verbs" provided by the `dplyr` package are
+Some of the key "verbs" provided by the `dplyr` package are:
 
 -   `select`: return a subset of the columns of a data frame, using a flexible notation
 
@@ -32,28 +44,31 @@ Some of the key "verbs" provided by the `dplyr` package are
 
 -   `%>%`: the "pipe" operator is used to connect multiple verb actions together into a pipeline
 
-The `dplyr` package as a number of its own data types that it takes advantage of.
-For example, there is a handy `print` method that prevents you from printing a lot of data to the console.
-Most of the time, these additional data types are transparent to the user and do not need to be worried about.
-
 ## Common `dplyr` Function Properties
 
 All of the functions that we will discuss in this Chapter will have a few common characteristics.
 In particular,
 
-1.  The first argument is a data frame.
+1.  The **first argument** is a **data frame**.
 
-2.  The subsequent arguments describe what to do with the data frame specified in the first argument, and you can refer to columns in the data frame directly without using the \$ operator (just use the column names).
+2.  The subsequent arguments describe what to do with the data frame specified in the first argument, and **you can refer to columns in the data frame directly** without using the \$ operator (just use the column names).
 
-3.  The return result of a function is a new data frame.
+3.  The **return** result of a function is **a new data frame**.
 
-4.  Data frames must be properly formatted and annotated for this to all be useful.
-    In particular, the data must be [tidy](http://www.jstatsoft.org/v59/i10/paper).
-    In short, there should be one observation per row, and each column should represent a feature or characteristic of that observation.
+4.  **Data frames must be properly formatted and annotated** for this to all be useful.
+
+In particular, the data must be [tidy](https://tidyr.tidyverse.org/articles/tidy-data.html) The main principles of tidy data are:
+
+1.  Each variable forms a column.
+
+2.  Each observation forms a row.
+
+3.  Each type of observational unit forms a table.
 
 ## Installing the `dplyr` package
 
 The `dplyr` package can be installed from CRAN or from GitHub using the `devtools` package and the `install_github()` function.
+
 The GitHub repository will usually contain the latest updates to the package and the development version.
 
 To install from CRAN, just run
@@ -81,7 +96,7 @@ For now you can ignore the warnings.
 
 Let's use a dataset containing air pollution and temperature data for the [city of Chicago](http://www.biostat.jhsph.edu/~rpeng/leanpub/rprog/chicago_data.zip) in the U.S.
 
-> You will find the data in the directory for this module.
+You will find the data in the directory for this module.
 
 Load the data into R using the `readRDS()` function.
 
@@ -100,10 +115,12 @@ str(chicago)
 ```
 
 ```{r}
-chicago
+head(chicago)
 ```
 
-# `select()`
+# Core Methods
+
+## `select()`
 
 We use the `select()` function to **select columns you want to focus on**.
 
@@ -114,30 +131,32 @@ There are a few ways to do this.
 We could for example use numerical indices.
 
 ```{r}
-names(chicago)[1:3]
+head(chicago[names(chicago)[1:3]])
 ```
 
 But we can also use the names directly.
 
 ```{r}
 chicago %>%
-  select(city:dptp)
+  select(city:dptp) %>%
+  head(10)
 ```
 
 Note the use of `:` inside the `select()` --- you can use it to specify a range of variable names.
 
 You can also *omit* variables using the `select()` function by using **the negative sign**.
-With `select()` you can do
 
-```{r,eval=FALSE}
-select(chicago, -(city:dptp))
+With `select()` you can do:
+
+```{r}
+select(chicago, -(city:dptp)) %>% head(10)
 ```
 
 This indicates that we should include every variable *except* the variables `city` through `dptp`.
 
 The equivalent code in base R would be
 
-```{r,eval=FALSE}
+```{r}
 i <- match("city", names(chicago))
 j <- match("dptp", names(chicago))
 head(chicago[, -(i:j)])
@@ -151,14 +170,16 @@ So, for example, if you wanted to keep every variable that ends with a "2", we c
 
 ```{r}
 chicago %>%
-  select(ends_with("2"))
+  select(ends_with("2")) %>%
+  head(10)
 ```
 
 Or if we wanted to keep every variable that starts with a "d", we could do
 
 ```{r}
 chicago %>%
-  select(starts_with("d"))
+  select(starts_with("d")) %>%
+  head(10)
 ```
 
 This is super useful if you have a table with prefixes, such as `doc_`.
@@ -171,11 +192,32 @@ See `?select` for more info.
 ?select
 ```
 
-# `filter()`
+## Aside: Helper Functions
+
+Note the use the function `ends_with()` inside of the argument space for the function `select()` above.
+
+`ends_with()` is an example of a "helper function" --- a function that helps make dplyr functions more effective.
+
+There are many of these introduced by dplyer.
+Here is a set of helper functions that can be especially useful with `select()` and related functions to specify variable names based on certain patterns or characteristics:
+
+| Helper Function | Description                                                    | Example                                        |
+|-----------------------------|------------------------|-------------------|
+| `starts_with()` | Matches variable names that start with a given prefix          | `select(data, starts_with("X"))`               |
+| `ends_with()`   | Matches variable names that end with a given suffix            | `select(data, ends_with("_2019"))`             |
+| `contains()`    | Matches variable names that contain a given string             | `select(data, contains("income"))`             |
+| `matches()`     | Matches variable names that match a given regular expression   | `select(data, matches("^X[1-3]$"))`            |
+| `num_range()`   | Matches variable names that match a pattern of prefix + number | `select(data, num_range("X", 1:3))`            |
+| `one_of()`      | Matches variable names that are in a given set of names        | `select(data, one_of(c("var1", "var2")))`      |
+| `everything()`  | Matches all variable names (used to reorder variables)         | `select(data, starts_with("X"), everything())` |
+
+## `filter()`
 
 The `filter()` function extracts **subsets of rows** from a data frame.
 
-> `select()` is a **column-wise** operation, `filter()` is **row-wise**.
+::: callout-note
+`select()` is a **column-wise** operation, `filter()` is **row-wise**.
+:::
 
 This function is similar to the existing `subset()` function in R but is quite a bit faster.
 
@@ -183,7 +225,8 @@ Suppose we wanted to extract the rows of the `chicago` data frame where **the le
 
 ```{r}
 chicago %>%
-  filter(pm25tmean2 > 30)
+  filter(pm25tmean2 > 30) %>%
+  head(10)
 ```
 
 You can see that there are now only 194 rows in the data frame and the distribution of the `pm25tmean2` values is.
@@ -204,7 +247,18 @@ chicago %>%
 ?filter
 ```
 
-# `arrange()`
+Here's a table of helper functions specifically associated with `filter()`:
+
+| **Helper Function**  | **Description**                                                                                | **Example**                                          |
+|------------------|----------------------------|--------------------------|
+| `between()`          | Check if a value lies between two other values.                                                | `filter(data, between(age, 18, 30))`                 |
+| `near()`             | Check for near equality (useful for floating-point numbers).                                   | `filter(data, near(price, 19.99, tolerance = 0.01))` |
+| `isin()` (or `%in%`) | Check if a value is in a set of values.                                                        | `filter(data, region %in% c("East", "West"))`        |
+| `all_of()`           | Check for all of the variables, even if some don't exist. Useful with character vectors.       | `filter(data, all_of(variables))`                    |
+| `any_of()`           | Check for any of the variables. Useful with character vectors.                                 | `filter(data, any_of(variables))`                    |
+| `cur_group_id()`     | Identify the current group inside `group_by()`. Useful for more complex filtering with groups. | `filter(data, cur_group_id() == 1)`                  |
+
+## `arrange()`
 
 Use `arrange()` to **reorder rows** of a data frame according to one or more of the **columns**.
 
@@ -219,8 +273,8 @@ Here we order the rows of the data frame by date in ascending order:
 ```{r}
 chicago_by_date <- chicago %>%
   arrange(date)
-chicago_by_date
-#chicago <- arrange(chicago, date)
+
+head(chicago_by_date)
 ```
 
 We can now check the first few rows
@@ -247,7 +301,22 @@ chicago %>%
   head()
 ```
 
-# `rename()`
+Here's a table of helper functions specifically associated with `arrange()`:
+
+| **Helper Function** | **Description**                                                                     | **Example**                               |
+|------------------|----------------------------|--------------------------|
+| `desc()`            | Order by descending instead of default ascending.                                   | `arrange(data, desc(salary))`             |
+| `across()`          | Apply to multiple columns, especially with `c_across()` in `dplyr` 1.0.0 and later. | `arrange(data, across(starts_with("X")))` |
+| `row_number()`      | Create an index based on the order of rows.                                         | `mutate(data, idx = row_number())`        |
+
+Note that while `row_number()` can be used in conjunction with `arrange()`, it's often seen in `mutate()` for creating an index column based on ordering.
+
+The `across()` function, introduced in `dplyr` version 1.0.0, provides a more concise syntax for working with multiple columns.
+It can be especially useful in `arrange()` when you're trying to order rows based on a selection of columns that match a certain criterion.
+
+Note that most of the magic with `arrange()` happens through the way you structure its arguments and not necessarily through a large set of helper functions.
+
+## `rename()`
 
 Renaming a variable in a data frame in R is surprisingly hard to do!
 
@@ -275,11 +344,26 @@ The syntax inside the `rename()` function is to have the new name on the left-ha
 
 I leave it as an exercise for the reader to figure how you do this in base R without `dplyr`.
 
-# `mutate()`
+Here's a table of helper functions that can be used with `rename()`:
+
+| **Helper Function** | **Description**                                      | **Example**                                                                                                                     |
+|----------------|--------------------------|------------------------------|
+| `starts_with()`     | Match columns that start with a given prefix.        | `rename(data, start_X = starts_with("X"))` (Note: This example would rename the first column that starts with "X" to "start_X") |
+| `ends_with()`       | Match columns that end with a given suffix.          | `rename(data, end_year = ends_with("_2021"))`                                                                                   |
+| `contains()`        | Match columns that contain a given string.           | `rename(data, has_rate = contains("rate"))`                                                                                     |
+| `matches()`         | Match columns that match a given regular expression. | `rename(data, match_num = matches("^X[1-3]$"))`                                                                                 |
+| `everything()`      | Match all columns.                                   | Rarely used with `rename()`, but possible.                                                                                      |
+
+It's worth noting that these helper functions will typically target the first column that meets the specified criterion.
+If there are multiple columns that match the criterion (e.g., multiple columns that start with "X"), you'll need to use these helpers with more precision or utilize other techniques.
+
+Also, remember to always refer to the official `dplyr` documentation as the package continues to evolve and new functionalities might be added over time.
+
+## `mutate()`
 
 The `mutate()` function creates new columns based on computations usually involving the other columns.
 
-For example, with air pollution data, **we often want to *detrend* the data by subtracting the mean from the data**.
+For example, with air pollution data, **we often want to *de-trend* the data by subtracting the mean from the data**.
 
 That way we can look at whether a given day's air pollution level is higher than or less than average (as opposed to looking at its absolute level).
 
@@ -304,7 +388,24 @@ chicago %>%
 
 Note that there are only two columns in the transmuted data frame.
 
-# `group_by()`
+Here's a table of helper functions specifically associated with `mutate()`:
+
+| **Helper Function**                             | **Description**                                                | **Example**                                                                          |
+|----------------|-------------------------|-------------------------------|
+| `if_else()`                                     | A vectorized conditional operation (if-else).                  | `mutate(data, status = if_else(age < 18, "minor", "adult"))`                         |
+| `case_when()`                                   | Generalized multiple conditions for transformations.           | `mutate(data, category = case_when(score > 90 ~ "A", score > 80 ~ "B", TRUE ~ "C"))` |
+| `lead()`                                        | Access the subsequent value in the column.                     | `mutate(data, next_value = lead(column_name))`                                       |
+| `lag()`                                         | Access the preceding value in the column.                      | `mutate(data, previous_value = lag(column_name))`                                    |
+| `row_number()`                                  | Generate row numbers, often used with `arrange()`.             | `mutate(data, rank = row_number())`                                                  |
+| `rank()`, `min_rank()`, `dense_rank()`          | Different types of ranking functions.                          | `mutate(data, rank = rank(score))`                                                   |
+| `cumsum()`, `cumprod()`, `cummin()`, `cummax()` | Cumulative functions.                                          | `mutate(data, cumulative_total = cumsum(total))`                                     |
+| `coalesce()`                                    | Return the first non-missing value among its arguments.        | `mutate(data, combined = coalesce(col1, col2))`                                      |
+| `na_if()`                                       | Replace a specified value with NA.                             | `mutate(data, updated_col = na_if(column_name, "replace_me"))`                       |
+| `replace_na()`                                  | Replace NA values with a specified value.                      | `mutate(data, updated_col = replace_na(column_name, "new_value"))`                   |
+| `recode()`                                      | Recode or replace values in a column.                          | `mutate(data, recoded_col = recode(column_name, old="new", ...))`                    |
+| `across()`                                      | Apply a function across multiple columns (from `dplyr` 1.0.0). | `mutate(data, across(c(col1, col2), function_name))`                                 |
+
+## `group_by()`
 
 The `group_by()` function is used to generate **summary or aggregate statistics** from a data frame.
 
@@ -312,9 +413,9 @@ For example, in this air pollution dataset, you might want to know the **average
 
 So **the stratum is the year**, which we can derive from the `date` variable.
 
-**In conjunction with the `group_by()` function we often use the `summarize()` function.** \> Or `summarise()` for some parts of the world.
+**In conjunction with the `group_by()` function we often use the `summarize()` function.**
 
-The general operation here is a combination of **splitting** a tabel into separate pieces defined by a variable or group of variables (`group_by()`), and then **applying** a summary function across those subsets (`summarize()`), then **combining** back into another table.
+The general operation here is a combination of **splitting** a table into separate pieces defined by a variable or group of variables (`group_by()`), and then **applying** a summary function across those subsets (`summarize()`), then **combining** back into another table.
 
 > This pattern is called **split, apply, and combine**.
 > It is a fundamental pattern in data processing.
@@ -327,7 +428,7 @@ chicago <- chicago %>%
 head(chicago)
 ```
 
-Now we can create a that computes summary statistics for each year in the data frame with the `summarize()` function.
+Now we can compute summary statistics for each year in the data frame with the `summarize()` function.
 
 ```{r}
 years <- chicago %>%
@@ -342,7 +443,7 @@ Note in the process, we implicitly created separate data frame that splits the o
 
 `summarize()` then returns a data frame with columns for `year` and the annual averages of `pm25`, `o3`, and `no2`.
 
-In a slightly more complicated example, we might want to know what are the average levels of ozone (`o3`) and nitrogen dioxide (`no2`) within quintiles of `pm25`.
+In a slightly more complicated example, we might want to know what are the average levels of ozone (`o3`) and nitrogen dioxide (`no2`) within quantiles of `pm25`.
 
 A slicker way to do this would be through a regression model, but we can actually do this quickly with `group_by()` and `summarize()`.
 
@@ -350,6 +451,7 @@ First, we can create a categorical variable of `pm25` divided into quantiles.
 
 ```{r}
 qq <- quantile(chicago$pm25, seq(0, 1, 0.2), na.rm = TRUE)
+qq
 ```
 
 Then can group the data frame by the `pm25.quint` variable.
@@ -381,6 +483,21 @@ chicago %>%
                                                    # COMBINE (in the result)
 ```
 
+Here's a table of helper functions specifically associated with `group_by()`:
+
+| **Helper Function**                             | **Description**                                                                                                 | **Example**                                                              |
+|----------------|--------------------------|------------------------------|
+| `add_tally()`                                   | Adds a column with the count of each group (equivalent to adding a count with `mutate()` after a `group_by()`). | `group_by(data, group_var) %>% add_tally()`                              |
+| `group_size()`                                  | Returns the size of each group.                                                                                 | `group_by(data, group_var) %>% summarise(size = group_size())`           |
+| `ntile()`                                       | Creates rank percentiles within groups.                                                                         | `group_by(data, group_var) %>% mutate(perc = ntile(score, 4))`           |
+| `cur_group_id()`                                | Gives an integer identifier for the current group.                                                              | `group_by(data, group_var) %>% filter(cur_group_id() == 1)`              |
+| `cur_group_rows()`                              | Provides row indices for the current group.                                                                     | Used internally, but can be useful for advanced operations.              |
+| `group_map()`, `group_modify()`, `group_walk()` | Functions to iterate over groups, modify them or walk them with side effects.                                   | `group_map(data, ~ head(.x, 2))` shows the first two rows of each group. |
+
+It's worth noting that `group_by()` often works in tandem with other verbs, so the real power comes from the combined operations.
+For instance, after grouping data, one often uses `summarise()` to calculate summary statistics for each group.
+The combination of these functions and their associated helpers allow for a wide range of group-wise data manipulation tasks.
+
 # Summary
 
 The `dplyr` package provides a concise set of operations for managing data frames and tibbles.
@@ -389,8 +506,12 @@ It allows us to perform a number of complex operations in just a few lines of co
 
 In particular, we can often conduct the beginnings of an exploratory analysis with the powerful combination of `group_by()` and `summarize()`.
 
-Once you learn the `dplyr` grammar there are a few additional benefits - `dplyr` can work with other data frame "back ends" such as SQL databases.
-There is an SQL interface for relational databases via the DBI package - `dplyr` can be integrated with the `data.table` package for large fast tables
+Once you learn the `dplyr` grammar there are a few additional benefits --- `dplyr` can work with other data frame "back ends" such as SQL databases.
+There is an SQL interface for relational databases via the DBI package --- `dplyr` can be integrated with the `data.table` package for large fast tables
 
 The `dplyr` package is handy way to both simplify and speed up your data frame management code.
 It's rare that you get such a combination at the same time!
+
+------------------------------------------------------------------------
+
+> Based on [Peng 2022](https://bookdown.org/rdpeng/rprogdatascience/)

@@ -13,14 +13,13 @@ How, the R approach differs in some important ways:
 
 -   RMarkdown is **not visually rendered** while your are editing.
     -   The document has to be 'knitted' to see this.
-    -   Newer versions of RStudio have a visual mode that does render Markdown, and also allows you to edit in this mode.
+    -   Newer versions of RStudio have a **visual mode** that does render Markdown, and also allows you to edit in this mode.
     -   This differs from Jupyter's cell-by-cell approach.
--   RMarkdown **allows several programming languages** to be run in the same notebook. - RMarkdown files are meant to be *published documents*, not workspaces for coding.
--   RMarkdown is written in markdown and uses [YAML](https://yaml.org/)to store configuration information.
+-   RMarkdown **allows several programming languages** to be run in the same notebook.
+-   RMarkdown files are meant to be *published documents*, not work spaces for coding.
+-   RMarkdown is written in markdown and uses [YAML](https://yaml.org/) to store configuration information.
     -   Jupyter notebooks are written in **JavaScript**, which contains both configuration data and content data in the same structure.
-
-    -   This difference is what accounts for the different editing experiences.
-        JavaScript is the native programming language of web browsers; the notebook format is executable code that can be integrated into a web application.
+    -   This difference is what accounts for the different editing experiences. JavaScript is the native programming language of web browsers; the notebook format is executable code that can be integrated into a web application.
 
 ## Varieties of R Markdown outputs
 
@@ -45,6 +44,7 @@ Knitting is the process of compiling all the code and visual assets of an RMarkd
 ## Publishing
 
 RMarkdown has publication in mind as an outcome.
+
 RStudio allows you to publish in these destinations:
 
 -   [RPubs](https://rpubs.com/)
@@ -57,7 +57,7 @@ There are two ways to set the output of a document:
 
 1.  Permanently, by modifying the YAML header:
 
-    ```yaml
+    ``` yaml
     title: "Viridis Demo"
     output: html_document
     ```
@@ -74,7 +74,7 @@ RStudio's knit button renders a file to the first format listed in its `output` 
 
 You can also do it by code:
 
-```
+```         
 knitr::include_graphics("screenshots/rmarkdown-knit.png")
 ```
 
@@ -90,8 +90,7 @@ For example, to figure out what parameters you can set with `html_document`, loo
 
 ### Output options
 
-To override the default parameter values, you need to use an expanded `output` field.
-For example, if you wanted to render an `html_document` with a floating table of contents, you'd use:
+To override the default parameter values, you need to use an expanded `output` field. For example, if you wanted to render an `html_document` with a floating table of contents, you'd use:
 
 ``` yaml
 output:

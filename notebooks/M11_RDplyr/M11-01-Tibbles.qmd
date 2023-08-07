@@ -12,11 +12,9 @@ The packages included in the Tidyverse are designed to support the pipeline of a
 
 Tidyverse was created by **Hadley Wickham** and his team with the aim of providing all these utilities to clean and work with data.
 
-Here's a graphic of the packages associated with the TV:
+Here's a graphic of the packages associated with the Tidyverse:
 
 ![](images/paste-32BD3A67.png)
-
-We are going to focus on `dplyr` today and `ggplot` tomorrow.
 
 ## Dplyr
 
@@ -28,7 +26,7 @@ But as important, it introduces a **vocabulary** for talking about data.
 
 -   This makes it possible to imagine solutions verbally, and then to implement them in code.
 
-To use the TV, we usually import everything:
+To use the Tidyverse, we often import everything:
 
 ```{r}
 library(tidyverse)
@@ -38,7 +36,7 @@ library(tidyverse)
 
 Just a quick note about this **odd looking** operator that you will start to see.
 
-One of the key elements of the TV is the use of **piping**, or the ability of to pass the return values of one function to another, with without have to nest functions.
+One of the key elements of the Tidyverse is the use of **piping**, or the ability of to pass the return values of one function to another, with without have to nest functions.
 
 For example, instead of something like this:
 
@@ -70,20 +68,24 @@ Although the last pattern is longer than the preceding, it is much easier to rea
 This is similar to **method chaining** in Python, but is more pervasive.
 
 -   In Python you can do it with individual objects that return themselves (as it were).
--   In TV, you can apply it to **any two methods** so long as it makes sense to pass the output of as the input of another.
+-   In Tidyverse, you can apply it to **any two methods** so long as it makes sense to pass the output of as the input of another.
 -   Basically, the output of one function becomes the first argument of the following the `%>%`.
 
 It is similar to the pipe operator `|` in Unix shells.
+
+By the way, the operator comes with the [**magrittr**](https://magrittr.tidyverse.org/) package, which is a central part of the Tidyverse. It is so central, in fact, that packages in the tidyverse load `%>%` automatically.
+
+It provides a set of operators which make your code more readable.
 
 # Tibbles
 
 Dplyr can work with different rectangular data structures:
 
--   Data frames
+-   Plain old Dataframes
 -   Tibbles
 -   Data.tables (see [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html))
 
-The foundational data structure of the TV is the **tibble**.
+The foundational data structure of the Tidyverse is the **tibble**.
 
 Tibbles are data frames, but they tweak some older behaviors to make your life a little easier.
 
@@ -95,7 +97,7 @@ vignette("tibble")
 
 ## Creating tibbles
 
-If you need to make a tibble "by hand", you can use `tibble()` or `tribble()`.
+If you need to make a tibble "by hand", you can use `tibble()` or `tribble()` (see below).
 
 `tibble()` works by assembling individual vectors, **column-wise** operation:
 
@@ -180,19 +182,18 @@ You'll also need the backticks when working with these variables in other packag
 
 # Tibbles vs. data.frame
 
-There are two main differences in the usage of a tibble vs. a classic `dat frame`:
+There are two main differences in the usage of a tibble vs. a classic `data.frame`: **printing** and **subsetting**.
 
--   **printing** and **subsetting**.
-
-If these difference cause problems when working with older packages, you can turn a tibble back to a regular data frame with `as.data.frame()`.
+::: callout-tip
+If these differences cause problems when working with older packages, you can turn a tibble back to a regular data frame with `as.data.frame()`.
+:::
 
 ## Printing
 
 The print method:
 
 -   Only the first 10 rows
-
--   All the columns that fit on screen.
+-   All the columns that fit on screen
 
 This makes it much easier to work with large data.
 
@@ -203,7 +204,7 @@ tibble(
   c = 1:1e3,
   d = runif(1e3),
   e = sample(letters, 1e3, replace = TRUE)
-)
+) %>% head()
 ```
 
 Where possible, **tibbles also use color** to draw your eye to important differences.
@@ -220,8 +221,7 @@ But **sometimes you need more output** than the default display.
 
 There are a few options that can help.
 
-First, you can explicitly `print()` the data frame and control the number of rows (`n`) and the `width` of the display.
-`width = Inf` will display all columns:
+First, you can explicitly `print()` the data frame and control the number of rows (`n`) and the `width` of the display. `width = Inf` will display all columns:
 
 ```{r}
 library(nycflights13)
@@ -237,10 +237,9 @@ You can also **control the default print behavior** by setting options:
 
 You can see a complete list of options by looking at the package help with `package?tibble`.
 
-## Using `View()`
+## Using RStudio `View()`
 
-A final option is to use RStudio's built-in data viewer to get a scrollable view of the complete dataset.
-This is also often useful at the end of a long chain of manipulations.
+A final option is to use RStudio's built-in data viewer to get a scrollable view of the complete dataset. This is also often useful at the end of a long chain of manipulations.
 
 ```{r}
 #| eval: false
@@ -279,8 +278,7 @@ tb %>%
   pull(x1, name = id)
 ```
 
-You can also use the base R tools `$` and `[[`.
-`[[` can extract by name or position; `$` only extracts by name but is a little less typing.
+You can also use the base R tools `$` and `[[`. `[[` can extract by name or position; `$` only extracts by name but is a little less typing.
 
 Extract by name:
 
@@ -323,5 +321,4 @@ With `data.frame`s, `[` sometimes returns a `data.frame`, and sometimes returns 
 With tibbles, **`[` always returns another tibble**.
 
 -   This can sometimes cause problems when working with older code.
-
 -   If you hit one of those functions, just use `as.data.frame()` to turn your tibble back to a `data.frame`.

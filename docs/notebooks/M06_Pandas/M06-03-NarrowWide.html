@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 34&nbsp; NB: Narrow vs Wide Tables</title>
+<title>DS 5100: Programming for Data Science - 36&nbsp; NB: Narrow vs Wide Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -200,6 +200,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../modules/m00/schedule.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M00_FinalProject/FinalProjectInstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Project</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M00_FinalProject/FinalProjectTemplate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Project Report</span></a>
   </div>
 </li>
       </ul>
@@ -427,6 +437,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../../notebooks/M06_Pandas/M06-04-MethodChaining.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Method Chaining</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Pandas and SQL</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -459,7 +474,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M07_PythonClasses/M07-04-StaticWeirdness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Understanding Static Attributes</span></a>
+  <a href="../../notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Understanding Class Attributes</span></a>
   </div>
 </li>
       </ul>
@@ -552,11 +567,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Errata and Addenda</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/M11_RDplyr/M11-01-Tibbles.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Introducing Tibbles</span></a>
@@ -895,7 +905,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>This is a wide table.</p>
 <p>One column’s values are projected onto the feature space (as columns).</p>
-<p>The othe column becomes a unique list (as is the feature space).</p>
+<p>The other column becomes a unique list (as is the feature space).</p>
 <div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>WIDE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -993,6 +1003,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>Narrow columns are more manageable by databases.</p>
+<p>In fact, relational databases impose a limit on the number of columns you can have for a table, excluding high-dimensional spaces.</p>
 <p>Wide columns are more usable for analysis.</p>
 <p>You can do also these things with narrow tables using <code>.group_by()</code></p>
 <div class="cell" data-execution_count="18">

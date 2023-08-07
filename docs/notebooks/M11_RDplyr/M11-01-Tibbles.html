@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DS 5100: Programming for Data Science - 52&nbsp; NB: Introducing Tibbles</title>
+<title>DS 5100: Programming for Data Science - 54&nbsp; NB: Introducing Tibbles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../notebooks/M11_RDplyr/M11-02-Dplyr.html" rel="next">
-<link href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" rel="prev">
+<link href="../../modules/m11/m11-intro.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -197,6 +197,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../modules/m00/schedule.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M00_FinalProject/FinalProjectInstructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Project</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M00_FinalProject/FinalProjectTemplate.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Final Project Report</span></a>
   </div>
 </li>
       </ul>
@@ -424,6 +434,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../../notebooks/M06_Pandas/M06-04-MethodChaining.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Method Chaining</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/M06_Pandas/M06-05-Pandas-and-SQL.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Pandas and SQL</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -456,7 +471,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M07_PythonClasses/M07-04-StaticWeirdness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Understanding Static Attributes</span></a>
+  <a href="../../notebooks/M07_PythonClasses/M07-04-ClassAttributeWeirdness.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Understanding Class Attributes</span></a>
   </div>
 </li>
       </ul>
@@ -549,11 +564,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </a> 
       </div>
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">NB: Errata and Addenda</span></a>
-  </div>
-</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notebooks/M11_RDplyr/M11-01-Tibbles.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">NB: Introducing Tibbles</span></a>
@@ -662,7 +672,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#tibbles-vs.-data.frame" id="toc-tibbles-vs.-data.frame" class="nav-link" data-scroll-target="#tibbles-vs.-data.frame">Tibbles vs.&nbsp;data.frame</a>
   <ul class="collapse">
   <li><a href="#printing" id="toc-printing" class="nav-link" data-scroll-target="#printing">Printing</a></li>
-  <li><a href="#using-view" id="toc-using-view" class="nav-link" data-scroll-target="#using-view">Using <code>View()</code></a></li>
+  <li><a href="#using-rstudio-view" id="toc-using-rstudio-view" class="nav-link" data-scroll-target="#using-rstudio-view">Using RStudio <code>View()</code></a></li>
   <li><a href="#extracting-variables" id="toc-extracting-variables" class="nav-link" data-scroll-target="#extracting-variables">Extracting variables</a></li>
   <li><a href="#subsetting" id="toc-subsetting" class="nav-link" data-scroll-target="#subsetting">Subsetting</a></li>
   </ul></li>
@@ -698,9 +708,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The packages included in the Tidyverse are designed to support the pipeline of activities associated with data science, such as filtering, transforming, visualizing, etc.</p>
 <p><img src="images/paste-EE0D9577.png" class="img-fluid"></p>
 <p>Tidyverse was created by <strong>Hadley Wickham</strong> and his team with the aim of providing all these utilities to clean and work with data.</p>
-<p>Here’s a graphic of the packages associated with the TV:</p>
+<p>Here’s a graphic of the packages associated with the Tidyverse:</p>
 <p><img src="images/paste-32BD3A67.png" class="img-fluid"></p>
-<p>We are going to focus on <code>dplyr</code> today and <code>ggplot</code> tomorrow.</p>
 </section>
 <section id="dplyr" class="level2">
 <h2 class="anchored" data-anchor-id="dplyr">Dplyr</h2>
@@ -712,13 +721,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>This makes it possible to imagine solutions verbally, and then to implement them in code.</li>
 </ul>
-<p>To use the TV, we usually import everything:</p>
+<p>To use the Tidyverse, we often import everything:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
 ✔ ggplot2 3.3.5     ✔ purrr   1.0.1
-✔ tibble  3.2.1     ✔ dplyr   1.1.1
+✔ tibble  3.2.1     ✔ dplyr   1.1.2
 ✔ tidyr   1.2.1     ✔ stringr 1.5.0
 ✔ readr   2.1.3     ✔ forcats 1.0.0
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -730,7 +739,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="piping-with" class="level2">
 <h2 class="anchored" data-anchor-id="piping-with">Piping with <code>%&gt;%</code></h2>
 <p>Just a quick note about this <strong>odd looking</strong> operator that you will start to see.</p>
-<p>One of the key elements of the TV is the use of <strong>piping</strong>, or the ability of to pass the return values of one function to another, with without have to nest functions.</p>
+<p>One of the key elements of the Tidyverse is the use of <strong>piping</strong>, or the ability of to pass the return values of one function to another, with without have to nest functions.</p>
 <p>For example, instead of something like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="st">"Hello"</span></span>
@@ -763,20 +772,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is similar to <strong>method chaining</strong> in Python, but is more pervasive.</p>
 <ul>
 <li>In Python you can do it with individual objects that return themselves (as it were).</li>
-<li>In TV, you can apply it to <strong>any two methods</strong> so long as it makes sense to pass the output of as the input of another.</li>
+<li>In Tidyverse, you can apply it to <strong>any two methods</strong> so long as it makes sense to pass the output of as the input of another.</li>
 <li>Basically, the output of one function becomes the first argument of the following the <code>%&gt;%</code>.</li>
 </ul>
 <p>It is similar to the pipe operator <code>|</code> in Unix shells.</p>
+<p>By the way, the operator comes with the <a href="https://magrittr.tidyverse.org/"><strong>magrittr</strong></a> package, which is a central part of the Tidyverse. It is so central, in fact, that packages in the tidyverse load <code>%&gt;%</code> automatically.</p>
+<p>It provides a set of operators which make your code more readable.</p>
 </section>
 <section id="tibbles" class="level1">
 <h1>Tibbles</h1>
 <p>Dplyr can work with different rectangular data structures:</p>
 <ul>
-<li>Data frames</li>
+<li>Plain old Dataframes</li>
 <li>Tibbles</li>
 <li>Data.tables (see <a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">data.table</a>)</li>
 </ul>
-<p>The foundational data structure of the TV is the <strong>tibble</strong>.</p>
+<p>The foundational data structure of the Tidyverse is the <strong>tibble</strong>.</p>
 <p>Tibbles are data frames, but they tweak some older behaviors to make your life a little easier.</p>
 <p>To learn more about tibbles, check out the vignette:</p>
 <div class="cell">
@@ -787,7 +798,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <section id="creating-tibbles" class="level2">
 <h2 class="anchored" data-anchor-id="creating-tibbles">Creating tibbles</h2>
-<p>If you need to make a tibble “by hand”, you can use <code>tibble()</code> or <code>tribble()</code>.</p>
+<p>If you need to make a tibble “by hand”, you can use <code>tibble()</code> or <code>tribble()</code> (see below).</p>
 <p><code>tibble()</code> works by assembling individual vectors, <strong>column-wise</strong> operation:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>)</span>
@@ -903,17 +914,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="tibbles-vs.-data.frame" class="level1">
 <h1>Tibbles vs.&nbsp;data.frame</h1>
-<p>There are two main differences in the usage of a tibble vs.&nbsp;a classic <code>dat frame</code>:</p>
-<ul>
-<li><strong>printing</strong> and <strong>subsetting</strong>.</li>
-</ul>
-<p>If these difference cause problems when working with older packages, you can turn a tibble back to a regular data frame with <code>as.data.frame()</code>.</p>
+<p>There are two main differences in the usage of a tibble vs.&nbsp;a classic <code>data.frame</code>: <strong>printing</strong> and <strong>subsetting</strong>.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If these differences cause problems when working with older packages, you can turn a tibble back to a regular data frame with <code>as.data.frame()</code>.</p>
+</div>
+</div>
 <section id="printing" class="level2">
 <h2 class="anchored" data-anchor-id="printing">Printing</h2>
 <p>The print method:</p>
 <ul>
-<li><p>Only the first 10 rows</p></li>
-<li><p>All the columns that fit on screen.</p></li>
+<li>Only the first 10 rows</li>
+<li>All the columns that fit on screen</li>
 </ul>
 <p>This makes it much easier to work with large data.</p>
 <div class="cell">
@@ -928,16 +948,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 1,000 × 5
    a                   b              c      d e    
    &lt;dttm&gt;              &lt;date&gt;     &lt;int&gt;  &lt;dbl&gt; &lt;chr&gt;
- 1 2023-06-20 06:50:09 2023-07-02     1 0.982  h    
- 2 2023-06-19 18:33:21 2023-07-13     2 0.0423 l    
- 3 2023-06-20 09:58:44 2023-07-17     3 0.0382 z    
- 4 2023-06-19 23:13:12 2023-07-14     4 0.430  w    
- 5 2023-06-20 09:40:44 2023-07-17     5 0.0412 h    
- 6 2023-06-19 14:02:25 2023-07-08     6 0.474  n    
- 7 2023-06-20 04:24:14 2023-06-19     7 0.425  i    
- 8 2023-06-19 14:26:35 2023-07-02     8 0.125  y    
- 9 2023-06-19 11:28:08 2023-07-07     9 0.877  q    
-10 2023-06-19 10:32:34 2023-07-18    10 0.191  d    
+ 1 2023-08-01 19:48:54 2023-08-12     1 0.564  v    
+ 2 2023-08-02 00:35:28 2023-08-17     2 0.0967 c    
+ 3 2023-08-02 13:42:30 2023-08-19     3 0.453  s    
+ 4 2023-08-02 05:56:08 2023-08-21     4 0.709  a    
+ 5 2023-08-02 15:22:58 2023-08-07     5 0.177  c    
+ 6 2023-08-01 22:38:30 2023-08-08     6 0.797  x    
+ 7 2023-08-02 01:17:24 2023-08-08     7 0.0214 b    
+ 8 2023-08-02 15:12:09 2023-08-30     8 0.264  m    
+ 9 2023-08-02 01:27:14 2023-08-27     9 0.705  c    
+10 2023-08-02 03:44:58 2023-08-08    10 0.638  i    
 # ℹ 990 more rows</code></pre>
 </div>
 </div>
@@ -1010,8 +1030,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>You can see a complete list of options by looking at the package help with <code>package?tibble</code>.</p>
 </section>
-<section id="using-view" class="level2">
-<h2 class="anchored" data-anchor-id="using-view">Using <code>View()</code></h2>
+<section id="using-rstudio-view" class="level2">
+<h2 class="anchored" data-anchor-id="using-rstudio-view">Using RStudio <code>View()</code></h2>
 <p>A final option is to use RStudio’s built-in data viewer to get a scrollable view of the complete dataset. This is also often useful at the end of a long chain of manipulations.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>flights <span class="sc">%&gt;%</span></span>
@@ -1112,8 +1132,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>With tibbles, <strong><code>[</code> always returns another tibble</strong>.</p>
 <ul>
-<li><p>This can sometimes cause problems when working with older code.</p></li>
-<li><p>If you hit one of those functions, just use <code>as.data.frame()</code> to turn your tibble back to a <code>data.frame</code>.</p></li>
+<li>This can sometimes cause problems when working with older code.</li>
+<li>If you hit one of those functions, just use <code>as.data.frame()</code> to turn your tibble back to a <code>data.frame</code>.</li>
 </ul>
 
 
@@ -1272,8 +1292,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notebooks/M11_RDplyr/M11-00-Addenda.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">NB: Errata and Addenda</span></span>
+      <a href="../../modules/m11/m11-intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">M11 Dplyr</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
