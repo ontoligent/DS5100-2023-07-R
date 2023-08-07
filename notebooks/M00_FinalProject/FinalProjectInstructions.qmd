@@ -198,10 +198,7 @@ various descriptive statistical properties about it.
 
 -   Computes how many times the game resulted in a jackpot.
 
--   Returns a data frame of results.
-
--   The data frame should have the roll number as a named index and a
-    column for the jackpot count per roll.
+-   Returns an integer for the number of jackpots.
 
 **A face counts per roll method.**
 
@@ -281,8 +278,8 @@ of tasks:
     die, you can use the same die object twice in the list of dice you
     pass to the Game object.
 
-4.  For each game, use an Analyzer object to determine the relative
-    frequency of jackpots --- i.e. getting either all $H$s or all $T$s.
+4.  For each game, use an Analyzer object to determine the raw frequency
+    of jackpots --- i.e. getting either all $H$s or all $T$s.
 
 5.  For each analyzer, compute relative frequency as the number of
     jackpots over the total number of rolls.
