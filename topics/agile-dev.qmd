@@ -1,56 +1,71 @@
 # Agile Development
 
-<div id="main-content" class="wiki-content">
-<p>Agile development is essentially a<span>&nbsp;</span><strong>philosophy</strong><span>&nbsp;</span>developed in response to<span>&nbsp;</span><strong>bureaucratic</strong><span>&nbsp;</span>software development processes.</p>
-<p>It is an approach that focuses on the realities of software:</p>
-<ul>
-<li><strong>Individuals and interactions</strong><span>&nbsp;</span>over<span>&nbsp;</span><strong>processes and tools</strong></li>
-<li><strong>Working software</strong><span>&nbsp;</span>over<span>&nbsp;</span><strong>comprehensive documentation</strong></li>
-<li><strong>Customer collaboration</strong><span>&nbsp;</span>over<span>&nbsp;</span><strong>contract negotiation</strong></li>
-<li><strong>Responding to change</strong><span>&nbsp;</span>over<span>&nbsp;</span><strong>following a plan</strong></li>
-</ul>
-<p>Essentially, it is based on a<span>&nbsp;</span><strong>mistrust</strong><span>&nbsp;</span>of machines, plans, contracts, documents, etc.</p>
-<p>The<span>&nbsp;</span><strong>Agile Manifesto</strong>&nbsp; was written in 2001 after a number of lighter and more flexible approaches were developed in the 1990s</p>
-<ul>
-<li>SCRUM</li>
-<li>XP (Extreme Program)&nbsp;</li>
-<li>Etc.</li>
-</ul>
-<p>It is also a collection of<span>&nbsp;</span><strong>methods and tools</strong></p>
-<ul>
-<li>User stories</li>
-<li>Scrum meetings</li>
-<li>Sprints</li>
-<li>Task weighting with cards</li>
-<li>Etc.</li>
-</ul>
-<p>Agile is also<span>&nbsp;</span><strong>counter-cultural</strong>, like many of the software movements that attended the rise of the web&nbsp;&nbsp;</p>
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" src="https://alistair.cockburn.us/wp-content/uploads/2018/09/ronaldok.jpg" height="250" data-image-src="https://alistair.cockburn.us/wp-content/uploads/2018/09/ronaldok.jpg" /></span></p>
-<p><a class="external-link" href="https://alistair.cockburn.us/coming-soon/">Source</a></p>
-<p>Here are the 12 Principles of Agile SD:</p>
-<ol>
-<li>Customer satisfaction by<span>&nbsp;</span><strong>early and continuous delivery</strong><span>&nbsp;</span>of valuable software. &rarr; The "early and often" of open source development.</li>
-<li><strong>Welcome changing requirements</strong>, even in<span>&nbsp;</span><strong>late</strong><span>&nbsp;</span>development.</li>
-<li>Deliver working software<span>&nbsp;</span><strong>frequently</strong><span>&nbsp;</span>(weeks rather than months)</li>
-<li>Close,<span>&nbsp;</span><strong>daily</strong><span>&nbsp;</span>cooperation between business people and developers</li>
-<li>Projects are built around<span>&nbsp;</span><strong>motivated individuals</strong>, who should be<span>&nbsp;</span><strong>trusted</strong></li>
-<li><strong>Face-to-face</strong><span>&nbsp;</span>conversation is the best form of communication (co-location)</li>
-<li><strong>Working software</strong><span>&nbsp;</span>is the primary measure of progress</li>
-<li><strong>Sustainable</strong><span>&nbsp;</span>development, able to maintain a constant pace</li>
-<li><strong>Continuous</strong><span>&nbsp;</span>attention to technical excellence and good design</li>
-<li><strong>Simplicity</strong>&mdash;the art of maximizing the amount of work not done&mdash;is essential</li>
-<li>Best<span>&nbsp;</span><a class="external-link" title="Agile Architecture" href="https://en.wikipedia.org/wiki/Agile_Architecture">architectures</a>, requirements, and designs emerge from<span>&nbsp;</span><strong>self-organizing</strong><span>&nbsp;</span>teams</li>
-<li>Regularly,<span>&nbsp;</span><strong>the team reflects</strong><span>&nbsp;</span>on how to become more effective, and adjusts accordingly</li>
-</ol>
-<p>As you can see, it's all about<span>&nbsp;</span><strong>giving teams the freedom and trust</strong><span>&nbsp;</span>to creatively respond to client needs and change.</p>
-<p>As an aside, it's worth noting the effect of the Web on these developments</p>
-<ul>
-<li>Agile was spurred by the<span>&nbsp;</span><strong>affordances of the Web</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong>open source software</strong></li>
-<li>And for teams to<span>&nbsp;</span><strong>organize organically</strong>,&nbsp;without the oversight of governmental bodies or corporations</li>
-<li>Influenced by the success of Open Source tools like<span>&nbsp;</span><strong>Linux</strong></li>
-<li>Consistent with<span>&nbsp;</span><strong>Git</strong><span>&nbsp;</span>as a tool for organically organizing software development</li>
-</ul>
-</div>
-<div id="likes-and-labels-container">
-<div id="likes-section" class="no-print"><a class="like-button" href="https://confluence.its.virginia.edu/display/D52R/Agile+Development"></a></div>
-</div>
+## Backstory
+
+Agile development is essentially a **philosophy** developed in response to **bureaucratic** software development processes.
+
+It is an approach that focuses on the realities of software:
+
+- **Individuals and interactions** over **processes and tools**
+- **Working software** over **comprehensive documentation**
+- **Customer collaboration** over **contract negotiation**
+- **Responding to change** over **following a plan**
+
+Essentially, it is based on a **mistrust** of machines, plans, contracts, documents, etc.
+
+The [Agile Manifesto](https://agilemanifesto.org/principles.html) was written in 2001 after a number of lighter and more flexible approaches were developed in the 1990s.
+
+- SCRUM
+- XP (Extreme Program)&nbsp;
+- Etc.
+
+It is also a collection of **methods and tools**:
+
+- User stories
+- Scrum meetings
+- Sprints
+- Task weighting with cards
+- Etc.
+
+Agile is also **counter-cultural**, like many of the software movements that attended the rise of the web.
+
+![](https://alistair.cockburn.us/wp-content/uploads/2018/09/ronaldok.jpg)
+
+## Principles
+
+Here are the 12 Principles of Agile SD:
+
+1. Customer satisfaction by **early and continuous delivery** of valuable software. &rarr; The "early and often" of open source development.
+
+2. **Welcome changing requirements**, even in **late** development.
+
+3. Deliver working software **frequently** (weeks rather than months).
+
+4. Close, **daily** cooperation between business people and developers.
+
+5. Projects are built around **motivated individuals**, who should be **trusted**.
+
+6. **Face-to-face** conversation is the best form of communication (co-location).
+
+7. **Working software** is the primary measure of progress.
+
+8. **Sustainable** development, able to maintain a constant pace.
+
+9. **Continuous** attention to technical excellence and good design.
+
+10. **Simplicity**&mdash;the art of maximizing the amount of work not done&mdash;is essential.
+
+11. Best [architectures](https://en.wikipedia.org/wiki/Agile_Architecture), requirements, and designs emerge from **self-organizing** teams.
+
+12. Regularly, **the team reflects** on how to become more effective, and adjusts accordingly.
+
+As you can see, it's all about **giving teams the freedom and trust** to creatively respond to client needs and change.
+
+## Aside
+
+As an aside, it's worth noting the effect of the Web on these developments.
+
+- Agile was spurred by the **affordances of the Web** and **open source software**
+- And for teams to **organize organically**,&nbsp;without the oversight of governmental bodies or corporations
+- Influenced by the success of Open Source tools like **Linux**
+- Consistent with **Git** as a tool for organically organizing software development.

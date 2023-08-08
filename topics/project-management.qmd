@@ -1,37 +1,33 @@
 # Project Management
 
-<p><strong>Some basic facts</strong></p>
-<ul>
-<li>Project management is an<span>&nbsp;</span><strong>established field</strong><span>&nbsp;</span>that is used for many activities.
-<ul>
-<li>It is a profession in which you can be<span>&nbsp;</span><strong>certified</strong><span>&nbsp;</span>as a&nbsp; CPM.</li>
-<li>It is a field with an established and large<span>&nbsp;</span><strong>body of knowledge</strong><span>&nbsp;</span>&ndash; PMBOK.</li>
-</ul>
-</li>
-<li>Broadly speaking, it refers to<span>&nbsp;</span><strong>a class of rational methods and protocols for organizing the labor of complex activities in order to achieve specific outcomes on time and on budget</strong>.
-<ul>
-<li>Think<span>&nbsp;</span><strong>NASA's</strong><span>&nbsp;</span>space program in the 1960s.</li>
-</ul>
-</li>
-</ul>
-<p>Its history dates to the early 20th century but becomes highly developed in the 1950s and 60s.</p>
-<ul>
-<li>It is closely associated with<span>&nbsp;</span><strong>US military</strong><span>&nbsp;</span>operations, e.g. Gantt Charts and PERT.</li>
-<li>It was later adapted to<span>&nbsp;</span><strong>software development</strong>, due to the complexity and importances of of this kind of work.</li>
-</ul>
+**Some basic facts**
+
+Project management is an <strong>established field</strong> that is used for many activities.
+
+- It is a profession in which you can be <strong>certified</strong> as a&nbsp; CPM.
+
+- It is a field with an established and large <strong>body of knowledge</strong> &ndash; PMBOK.</li>
+
+Broadly speaking, it refers to: 
+
+- A class of rational **methods** and protocols for organizing the **labor** of **complex activities** in order to achieve **specific outcomes** on **time and on budget**.
+
+Think <strong>NASA's</strong> space program in the 1960s.
+
+Its history dates to the early 20th century but becomes highly developed in the 1950s and 60s.
+
+- It is closely associated with <strong>US military</strong> operations, e.g. [Gantt Charts](https://en.wikipedia.org/wiki/Gantt_chart) and [PERT](https://en.wikipedia.org/wiki/Program_evaluation_and_review_technique).
+
+- It was later adapted to <strong>software development</strong>, due to the complexity and importances of of this kind of work.
 
 ![](../media/early-gantt-chart.png)
 
-<!--
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" src="https://www.onepager.com/community/blog/wp-content/uploads/2014/10/early-gantt-chart.png" alt="An early Gantt progress chart" height="250" data-image-src="https://www.onepager.com/community/blog/wp-content/uploads/2014/10/early-gantt-chart.png" /></span></p>
--->
+[Source](https://www.onepager.com/community/blog/a-brief-history-of-the-gantt-chart/)
 
-<p><a class="external-link" href="https://www.onepager.com/community/blog/a-brief-history-of-the-gantt-chart/">Source</a></p>
-
-<p>Software is also<span>&nbsp;</span><strong>mission critical</strong></p>
+<p>Software is also <strong>mission critical</strong></p>
 <ul>
-<li>From the beginning, it has been used to support<span>&nbsp;</span><strong>critical operations</strong>: weapons systems, air traffic control, financial systems, health care, etc.</li>
-<li>Only recently are we seeing the effects of software design &ndash; in the form of data products &ndash; fail on the basis of bias and other flaws that lead to<span>&nbsp;</span><strong>social harm</strong></li>
+<li>From the beginning, it has been used to support <strong>critical operations</strong>: weapons systems, air traffic control, financial systems, health care, etc.</li>
+<li>Only recently are we seeing the effects of software design &ndash; in the form of data products &ndash; fail on the basis of bias and other flaws that lead to <strong>social harm</strong></li>
 </ul>
 <p><strong>In the 1960s</strong>, the US Department of Defenses study of software problems found that:</p>
 <ul class="uva-lessons-ul">
@@ -39,104 +35,97 @@
 <li>29% of funded software was never delivered, as it was usually canceled due to cost/schedule overruns</li>
 <li>19% of software was useful after extensive rework, and it usually cost 36 times more to fix problems after release</li>
 </ul>
-<p>Because of this,<span>&nbsp;</span><strong>software engineering was developed.</strong></p>
-<p><strong>But Software development is hard</strong><span>&nbsp;</span>for many reasons:</p>
+<p>Because of this, <strong>software engineering was developed.</strong></p>
+<p><strong>But Software development is hard</strong> for many reasons:</p>
 <ul>
-<li>Hardware and software are inherently<span>&nbsp;</span><strong>complex</strong>.</li>
-<li>Code is imperfect and<span>&nbsp;</span><strong>error-prone</strong>.</li>
-<li>Code is always<span>&nbsp;</span><strong>an interpretation of specifications</strong><span>&nbsp;</span>that are always<span>&nbsp;</span><strong>underspecified</strong>. &rarr; DEBUGGING THE SPEC</li>
+<li>Hardware and software are inherently <strong>complex</strong>.</li>
+<li>Code is imperfect and <strong>error-prone</strong>.</li>
+<li>Code is always <strong>an interpretation of specifications</strong> that are always <strong>underspecified</strong>. &rarr; [DEBUGGING THE SPEC](http://johnunsworth.name/KR/halsted.html)</li>
 </ul>
-<p><strong>Underspecified</strong><span>&nbsp;</span>in two senses:</p>
+<p><strong>Underspecified</strong> in two senses:</p>
 <ul>
-<li>The inherent<span>&nbsp;</span><strong>inadequacy of language</strong><span>&nbsp;</span>to represent reality.
+<li>The inherent <strong>inadequacy of language</strong> to represent reality.
 <ul>
 <li>"The map is not the terrain"</li>
 </ul>
 </li>
-<li>The fact that<span>&nbsp;</span><strong>people don't know what they want</strong><span>&nbsp;</span>even when they say they do.
+<li>The fact that <strong>people don't know what they want</strong> even when they say they do.
 <ul>
 <li>That is, reality itself changes.</li>
 </ul>
 </li>
 </ul>
 
-<!--
-<p>The slipperiness of writing code that achieves our goals is<span>&nbsp;</span><strong>the subject of humor</strong>:&nbsp;</p>
-<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image confluence-external-resource" src="https://collab.its.virginia.edu/access/content/group/27269be0-4ef5-4658-a28e-18b0c52c68b9/Module%2006/mod06image01.jpg" height="400" data-image-src="https://collab.its.virginia.edu/access/content/group/27269be0-4ef5-4658-a28e-18b0c52c68b9/Module%2006/mod06image01.jpg" /></span></p>
-<p><a class="external-link" href="https://www.reddit.com/r/techsupportanimals/comments/41i1wv/richards_guide_to_software_development/">Source</a></p>
--->
+----
+
+The slipperiness of writing code that achieves our goals is **the subject of humor**:
 
 ![](../media/pm-operation-success.jpg)
-<!--
-<img class="confluence-embedded-image confluence-external-resource image-left" src="https://i.pinimg.com/564x/cd/b5/67/cdb5676e16727d8bef13e67a8aab9937.jpg" data-image-src="https://i.pinimg.com/564x/cd/b5/67/cdb5676e16727d8bef13e67a8aab9937.jpg" />
--->
-<p>
-<a class="external-link" href="https://www.pinterest.com/pin/411446115951363129/">Source</a>
-</p>
 
-<p>Many<span>&nbsp;</span><strong>paradigms of the software development</strong><span>&nbsp;</span><strong>life cycle</strong><span>&nbsp;</span>(SDLC) have been introduced over the years to address these issues:</p>
+[Source](https://www.pinterest.com/pin/411446115951363129/)
+
+----
+
+<p>Many <strong>paradigms of the software development</strong> <strong>life cycle</strong> (SDLC) have been introduced over the years to address these issues:</p>
 <ul>
 <li>Waterfall</li>
 <li>Spiral</li>
-<li>Etc. &rarr; See<span>&nbsp;</span><a class="external-link" href="https://www.tutorialspoint.com/sdlc/index.htm">Tutorialspoint on SDLC.</a></li>
+<li>Etc. &rarr; See <a class="external-link" href="https://www.tutorialspoint.com/sdlc/index.htm">Tutorialspoint on SDLC.</a></li>
 </ul>
 <p><strong>The Waterfall Model</strong></p>
-<!--
-<p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://cdn.techbeamers.com/wp-content/uploads/2018/10/Waterfall-Methodology.png" alt="Waterfall Methodology" data-image-src="https://cdn.techbeamers.com/wp-content/uploads/2018/10/Waterfall-Methodology.png" /></span></p>
-<p><a class="external-link" href="https://www.techbeamers.com/waterfall-methodology/">Source</a></p>
--->
 
 ![Waterfall Methodology](../media/pm-waterfall.jpg)
 
 [Source](https://4.bp.blogspot.com/-FJ4rlfMcDfc/V8mDTJfcDQI/AAAAAAAAA4s/f1dd7JC9-QsBh-67gdIDpq5ThubrTcVywCK4B/s1600/maxresdefault.jpg)
 
-<p>What they all have in is a<span>&nbsp;</span><strong>faith in the power of planning and engineering</strong><span>&nbsp;</span>to achieve results:</p>
+<p>What they all have in is a <strong>faith in the power of planning and engineering</strong> to achieve results:</p>
 <ul>
-<li>Planning as the ability to<span>&nbsp;</span><strong>predict accurately how things will unfold</strong>
+<li>Planning as the ability to <strong>predict accurately how things will unfold</strong>
 <ul>
-<li>and have people understand and<span>&nbsp;</span><strong>follow rules</strong>.</li>
+<li>and have people understand and <strong>follow rules</strong>.</li>
 </ul>
 </li>
-<li>Engineering as the<span>&nbsp;</span><strong>operationalization</strong><span>&nbsp;</span>of labor processes
+<li>Engineering as the <strong>operationalization</strong> of labor processes
 <ul>
-<li>The ability to treat<span>&nbsp;</span><strong>human behavior</strong><span>&nbsp;</span>as a<span>&nbsp;</span><strong>tractable variable</strong>.&nbsp;</li>
+<li>The ability to treat <strong>human behavior</strong> as a <strong>tractable variable</strong>.</li>
 <li><strong>the logic of the machine applied to the the organization of labor.</strong></li>
 </ul>
 </li>
 </ul>
-<p>These assumptions are reflected in the<span>&nbsp;</span><strong>relationship between client and developer</strong></p>
+<p>These assumptions are reflected in the <strong>relationship between client and developer</strong></p>
 <ul>
 <li>Notice that absence of the client in the design, building, and validation</li>
 </ul>
-<p>This is partly the result of mitigating the<span>&nbsp;</span><strong>mission creep</strong><span>&nbsp;</span>introduced by the client&nbsp;</p>
+<p>This is partly the result of mitigating the <strong>mission creep</strong> introduced by the client.</p>
+
 <p><strong>The Iron Triangle</strong></p>
 
+The Iron Triangle concept shows the effect of changing user requirements on a project.
+
+If users want to add something to a project --- a new feature, for example --- this means that **scope** has increased.
+
+Therefore, either **tine** or **resources** must expand as well to allow for the change.
+
+
 ![](../media/pm-iron-triangle.png)
-<!--
-<p><strong><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image confluence-external-resource image-center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Project-triangle-en.svg/220px-Project-triangle-en.svg.png" data-image-src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Project-triangle-en.svg/220px-Project-triangle-en.svg.png" /></span></strong></p>
--->
 
 <p><strong>The Spiral Method</strong></p>
-<p>The Spiral Method recognizes the need to be more iterative, and introduces the client at points in an<span>&nbsp;</span><strong>ongoing cycle</strong>.&nbsp;</p>
+<p>The Spiral Method recognizes the need to be more iterative, and introduces the client at points in an <strong>ongoing cycle</strong>.&nbsp;</p>
 <ul>
 <li>Presumably, clients are involved in objective identification and testing ...</li>
 </ul>
 ![](../media/pm-sdlc_spiral_model.jpg)
 
-<!--
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image confluence-external-resource" src="https://www.tutorialspoint.com/sdlc/images/sdlc_spiral_model.jpg" alt="SDLC Spiral Model" data-image-src="https://www.tutorialspoint.com/sdlc/images/sdlc_spiral_model.jpg" /></span></strong></p>
--->
 
 <p><span class="placeholder-inline-tasks"><a class="external-link" href="https://www.tutorialspoint.com/sdlc/sdlc_spiral_model.htm">Source</a></span></p>
 
-<p>The methods have the virtue of being<span>&nbsp;</span><strong>rational</strong><span>&nbsp;</span>and<span>&nbsp;</span><strong>comprehensive</strong>, defining all the things involved in software development</p>
+<p>The methods have the virtue of being <strong>rational</strong> and <strong>comprehensive</strong>, defining all the things involved in software development</p>
 <ul>
-<li>But they are<span>&nbsp;</span><strong>very linear</strong></li>
+<li>But they are <strong>very linear</strong></li>
 </ul>
 <p>Even the Spiral method, which is really a 2D linear process, where phases are features and iterations are observations:</p>
-<ul>
-<li>Primary sequence <strong><code>S = OI &rarr; AE &rarr; PD &rarr; NPP</code></strong></li>
-<li>Process<strong><code>P = S<sub>1</sub><span>&nbsp;</span>&rarr; S<sub>2</sub><span>&nbsp;</span>&rarr; S<sub>3</sub><span>&nbsp;</span>&rarr; ... &rarr; S<sub>N</sub></code></strong></li>
-</ul>
+
+| | |
+|-|-|
+| Primary sequence | <b><tt>S = OI &rarr; AE &rarr; PD &rarr; NPP</tt></b> |
+| Process          | <b><tt>P = S<sub>1</sub> &rarr; S<sub>2</sub> &rarr; S<sub>3</sub> &rarr; ... &rarr; S<sub>N</sub></tt></b> |

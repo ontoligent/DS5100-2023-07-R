@@ -1,38 +1,44 @@
-# Activity: User Stories 
+# Activity: User Stories
 
 This activity will help you understand how to create and develop user stories in the requirements phase of software development.
 
-# Instruction
+## Instructions
 
-**Organize into teams of 5.**
+**Step 1: Organize into teams (5 minutes)**
 
-Each team divide into two groups (5 min)
+-   Divide into teams of 5.
+-   Divide each team into the following two groups:
+    -   2 users --- a generalist and a specialist.
+    -   3 developers --- a database developer, a coder, and a user interface and experience designer.
+-   Use a Google Doc (or something similar) to record your work.
+    -   Designate a scribe.
+    -   List the members of your team at the top of the document.
+    -   Submit the URL to this document for your participation grade.
 
-- 2 users -- generalist, specialist.
-- 3 developers -- Data, Code, Interface.
-- Use a Google Doc (or something similar) to record your work.
-- Or, use another word process and designate a scribe.
+**Step 2: Define the scope of your project (5 minutes)**
 
-Step 1: Define the scope of your project (5 minutes)
+-   Come up with a software project idea, for example an app.
+-   Define the main purpose of the project.
+    -   What is the value proposition?
+    -   This is not a mission statement or vision statement.
+    -   It's designed to allow you to accept or reject features and designs.
 
-- What is main purpose of the project?
-- What is the value proposition?
-- Not a mission statement or vision.
-- Designed to allow you to accept or reject features and designs.
+**Step 3: Elicit user stories (10 minutes)**
 
-Step 2: Elicit user stories (10 minutes)
+-   Write these on your document.
 
-- Write these on your document.
+**Step 4: Convert user stories into requirements (10 minutes)**
 
-Step 3: Convert user stories into requirements (10 minutes)
+-   Think of a requirement as a feature --- what the product will do.
+-   Think of functional requirements as guides to actually develop code.
+-   Create so-called non-functional requirements, too.
 
-- Think of a requirement as a feature – what the product will do.
-- Think of functional requirements as guides to actually develop code.
-- Create so-called non-functional requirements, too. 
+**Step 5: Prioritize requirements (10 minutes)**
 
-Step 4: Prioritize requirements (10 minutes)
+-   Prioritize requirements by giving them a status of M, S, C, W.
+-   Throw out everything but the Ms 😄
 
-- Prioritize requirements by giving them a status of M, S, C, W.
-- Throw out everything but the Ms (smile)
+**Step 6: Show and tell**
 
-Step 5: Show and tell
+-   If there is time, each team will present its work.
+-   To present, copy the URL to your document in the Teams chat for this course.
