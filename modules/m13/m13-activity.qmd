@@ -4,9 +4,9 @@ This activity will help you understand how to create and develop user stories in
 
 ## Instructions
 
-**Step 1: Organize into teams (5 minutes)**
+**Step 1: Organize into teams**
 
--   Divide into teams of 5.
+-   Divide into teams of about 5 or 6.
 -   Divide each team into the following two groups:
     -   2 users --- a generalist and a specialist.
     -   3 developers --- a database developer, a coder, and a user interface and experience designer.
@@ -15,25 +15,25 @@ This activity will help you understand how to create and develop user stories in
     -   List the members of your team at the top of the document.
     -   Submit the URL to this document for your participation grade.
 
-**Step 2: Define the scope of your project (5 minutes)**
+**Step 2: Define the scope of your project**
 
--   Come up with a software project idea, for example an app.
--   Define the main purpose of the project.
-    -   What is the value proposition?
+-   Brainstorm a software project idea, for example an app.
+-   Define the main purpose of the project. What is the value proposition?
     -   This is not a mission statement or vision statement.
     -   It's designed to allow you to accept or reject features and designs.
 
-**Step 3: Elicit user stories (10 minutes)**
+**Step 3: Elicit user stories**
 
 -   Write these on your document.
+-   Follow the form: "As a <user_type>, I want to <action> in order to <goal>."
 
-**Step 4: Convert user stories into requirements (10 minutes)**
+**Step 4: Convert user stories into requirements**
 
--   Think of a requirement as a feature --- what the product will do.
+-   By requirement, we mean functional requirement --- a specific function or feature that a software system needs to perform. 
 -   Think of functional requirements as guides to actually develop code.
--   Create so-called non-functional requirements, too.
+-   For example, if you are creating an app to locate medical resources within a radius, you would want it to allow you to search for facilities by doctor type.
 
-**Step 5: Prioritize requirements (10 minutes)**
+**Step 5: Prioritize requirements**
 
 -   Prioritize requirements by giving them a status of M, S, C, W.
 -   Throw out everything but the Ms 😄
