@@ -14,6 +14,13 @@ This activity will help you understand how to create and develop user stories in
     -   Designate a scribe.
     -   List the members of your team at the top of the document.
     -   Submit the URL to this document for your participation grade.
+-  Use headers in your document for each of the following stages
+   -  Project Name
+   -  Team
+   -  Scope
+   -  User Stories
+   -  Requirements
+      -  Priorities (subheaders)
 
 **Step 2: Define the scope of your project**
 
@@ -29,6 +36,7 @@ This activity will help you understand how to create and develop user stories in
 
 **Step 4: Convert user stories into requirements**
 
+-   Abstract requirements from the user stories.
 -   By requirement, we mean functional requirement --- a specific function or feature that a software system needs to perform. 
 -   Think of functional requirements as guides to actually develop code.
 -   For example, if you are creating an app to locate medical resources within a radius, you would want it to allow you to search for facilities by doctor type.
@@ -36,6 +44,7 @@ This activity will help you understand how to create and develop user stories in
 **Step 5: Prioritize requirements**
 
 -   Prioritize requirements by giving them a status of M, S, C, W.
+-   Create subheaders under Requirements for these statuses, and move your requirements into these as appropriate.
 -   Throw out everything but the Ms 😄
 
 **Step 6: Show and tell**
