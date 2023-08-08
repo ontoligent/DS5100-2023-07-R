@@ -4,6 +4,7 @@
 **/tmp
 **/Icon*
 **/*.db
+**/.Rhistory
 
 /.quarto/
 
