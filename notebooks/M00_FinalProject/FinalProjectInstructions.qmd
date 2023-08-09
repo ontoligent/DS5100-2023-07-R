@@ -378,7 +378,8 @@ classes.
 previous test file named `montecarlo_test_results.txt`.
 
 \_\_ A scenario script that instantiates the classes in a Jupyter
-notebook called `montecarlo_demo.ipynb`.
+notebook called `montecarlo_demo.ipynb`. NOTE: This file can be the
+notebook template provided.
 
 \_\_ `docstring`s for each class and method (including the
 initializers).
