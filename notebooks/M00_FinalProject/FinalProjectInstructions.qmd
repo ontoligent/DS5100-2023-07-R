@@ -308,9 +308,10 @@ of tasks:
     frequency of jackpots and show your results, comparing the two
     relative frequencies, in a simple bar chart.
 
-7.  Also compute $10$ most frequent combinations of faces for each game.
+7.  ~~Also compute~~ $10$ ~~most frequent combinations of faces for each
+    game.~~
 
-8.  Plot each of these combination results as bar charts.
+8.  ~~Plot each of these combination results as bar charts.~~
 
 ## Scenario 3: Letters of the Alphabet
 
