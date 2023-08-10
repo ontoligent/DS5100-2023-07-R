@@ -11,14 +11,9 @@
 
 ### Required
 
-<ul>
-<li><a target="_new" href="https://agilemanifesto.org/">Manifesto for Agile Software Development (agilemanifesto.org)</a></li>
-<li><a target="_new" href="https://agilemanifesto.org/principles.html">Twelve Principles of Agile Software (agilemanifesto.org)</a></li>
-<li><a target="_new" href="https://www.digite.com/agile/user-stories/">User Stories: An Overview (Digit&eacute;)</a></li>
-<li><a target="_new" href="https://cdh.princeton.edu/research/project-management/charters/">Project Charters (Princeton)</a></li>
-<li><a target="_new" href="https://cdh.princeton.edu/documents/11/dataset_curation_charter_template_(2).pdf">Dataset Curation Template (Princeton)</a></li>
-</ul>
+- [Manifesto for Agile Software Development (agilemanifesto.org)](https://agilemanifesto.org/)
+- [Twelve Principles of Agile Software (agilemanifesto.org)](https://agilemanifesto.org/principles.html)
+- [User Stories: An Overview (Digit&eacute;)](https://www.digite.com/agile/user-stories/)
+- [Project Charters (Princeton)](https://cdh.princeton.edu/research/project-management/charters/)
+- [Dataset Curation Template (Princeton)](https://cdh.princeton.edu/documents/11/dataset_curation_charter_template_(2).pdf)
 
-<!--
-### Optional
--->

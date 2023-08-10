@@ -1,50 +1,52 @@
 # User Stories
 
-<p><strong>User Stories</strong><span>&nbsp;</span>are at the heart of Agile development.</p>
-<p>Instead of eliciting requirements through a formal process, teams ask clients to provide statements in verbal form:</p>
-<ul>
-<li><code>As a [type of user],</code></li>
-<li><code>I want [an action]</code></li>
-<li><code>so that [a benefit/value]</code></li>
-</ul>
-<p>These are written on<span>&nbsp;</span><strong>index cards</strong>.</p>
-<p>These are accompanied by<span>&nbsp;</span><strong>conversation</strong><span>&nbsp;</span>to clarify the meaning of the sentences.</p>
-<p>These are then converted into<span>&nbsp;</span><strong>requirements:</strong></p>
-<ul>
-<li><strong>Functional</strong><span>&nbsp;</span>&ndash; relating specifically to how the software will work, i.e. function.</li>
-<li><strong>Non-functional</strong><span>&nbsp;</span>(so-called) &ndash; relating to the broader purpose and context of usage.</li>
-<li>These map roughly onto the second and third parts of the user story.</li>
-<li>They also map on MACHINE and HUMAN.</li>
-<li>This<span>&nbsp;</span><a class="external-link" href="https://cuitandokter.com/">page</a><span>&nbsp;</span>shows some examples of stories mapping onto features (so-called acceptance criteria).</li>
-</ul>
-<p>These requirements are then<span>&nbsp;</span><strong>prioritized</strong></p>
-<ul>
-<li>Using<span>&nbsp;</span><strong>MSCW</strong><span>&nbsp;</span>&ndash; Must / Should / Can / Won't</li>
-<li>Within the context of a<span>&nbsp;</span><strong>scope</strong><span>&nbsp;</span>definition in a<span>&nbsp;</span><strong>charter</strong><span>&nbsp;</span>(not discussed here)</li>
-<li>See<span>&nbsp;</span><a class="external-link" href="https://paper-leaf.com/insights/prioritize-user-stories/">this link</a><span>&nbsp;</span>for some guidance.</li>
-</ul>
-<p>After this, requirements are serialized into a rough schedule, grouped into<span>&nbsp;</span><strong>milestones</strong>.</p>
-<p>In executing the "plan," teams meet regularly in brief, stand-up meetings called<span>&nbsp;</span><strong>scrums</strong>.</p>
-<ul>
-<li>These happen daily</li>
-<li>These involve the development team</li>
-<li>Stakeholder representatives, such as the product manager, may attend too</li>
-</ul>
-<p>At regular intervals,<span>&nbsp;</span><strong>clients</strong><span>&nbsp;</span>are introduced to the process</p>
-<ul>
-<li><strong>Prototypes</strong>, MVPs, etc. are presented</li>
-<li><strong>Feedback</strong><span>&nbsp;</span>is elicited early and often</li>
-</ul>
-<p>The process is driven by a<span>&nbsp;</span><strong>communication</strong><span>&nbsp;</span>plan:</p>
-<ul>
-<li>Frequency of meeting</li>
-<li>Mode of communication &ndash; F2F, Slack, Git</li>
-<li>Task management tools &ndash; Jira, Trello, Smartsheet, etc.</li>
-</ul>
-<p>Other<span>&nbsp;</span><strong>artifacts</strong><span>&nbsp;</span>are involved in this process:</p>
-<ul>
-<li>The project<span>&nbsp;</span><strong>charter</strong></li>
-<li>The project<span>&nbsp;</span><strong>plan</strong></li>
-<li>A<span>&nbsp;</span><strong>Kan Ban</strong><span>&nbsp;</span>board</li>
-</ul>
-<p>But we will get into these later.</p>
+**User Stories** are at the heart of Agile development.
+
+Instead of eliciting requirements through a formal process, teams ask clients to provide statements in verbal form:
+
+- `As a [type of user]`
+- `I want [an action or behavior]`
+- `so that [a benefit/value]`
+
+These are written on **index cards**.
+
+These are accompanied by **conversation** to clarify the meaning of the sentences.
+
+These are then converted into **requirements:**
+
+- **Functional** &ndash; relating specifically to how the software will work, i.e. function.
+- **Non-functional** (so-called) &ndash; relating to the broader purpose and context of usage.
+- These map roughly onto the second and third parts of the user story.
+- They also map on MACHINE and HUMAN.
+- This [page](https://cuitandokter.com/) shows some examples of stories mapping onto features (so-called acceptance criteria).
+
+These requirements are then **prioritized**
+
+- Using **MSCW** &ndash; Must / Should / Can / Won't
+- Within the context of a **scope** definition in a **charter** (not discussed here)
+- See [this link](https://paper-leaf.com/insights/prioritize-user-stories/) for some guidance.
+
+After this, requirements are serialized into a rough schedule, grouped into **milestones**.
+
+In executing the "plan," teams meet regularly in brief, stand-up meetings called **scrums**.
+
+- These happen daily.
+- These involve the development team.
+- Stakeholder representatives, such as the product manager, may attend too.
+
+At regular intervals, **clients** are introduced to the process
+
+- **Prototypes**, MVPs, etc. are presented.
+- **Feedback** is elicited early and often.
+
+The process is driven by a **communication** plan:
+
+- Frequency of meeting.
+- Mode of communication &ndash; F2F, Slack, Git.
+- Task management tools &ndash; Jira, Trello, Smartsheet, etc.
+
+Other **artifacts** are involved in this process:
+
+- The project **charter**.
+- The project **plan**.
+- A **Kan Ban** board.

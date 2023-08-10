@@ -4,6 +4,9 @@
 **/tmp
 **/Icon*
 **/*.db
+**/.Rhistory
+**/.RData
+**/.Rproj.user
 
 /.quarto/
 
