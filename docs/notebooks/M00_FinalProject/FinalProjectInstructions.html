@@ -60,9 +60,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -661,20 +658,10 @@ ul.task-list li input[type="checkbox"] {
 <p>For your Final Project, you will write, test, use, package, and publish a Python module and accompanying files.</p>
 <p>The module will implement a simple <a href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo simulator</a> using a set of three related classes — a Die class, a Game class, and an Analyzer class.</p>
 <p>The classes are related in the following way: Game objects are initialized with a Die object, and Analyzer objects are initialized with a Game object.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid mermaid-js" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
-  A[Die] --&gt; B[Game] --&gt; C[Analyzer]
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
+<!-- ```{mermaid}
+flowchart LR
+  A[Die] -->
+<p>B[Game] –&gt; C[Analyzer] ``` –&gt;</p>
 <p>In this simulator, a “die” can be any discrete random variable associated with a stochastic process, such as using a deck of card, flipping a coin, rolling an actual die, or speaking a language.</p>
 <p>The project is designed to integrate what you have learned in this class by calling upon the following areas of knowledge:</p>
 <ul>
